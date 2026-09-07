@@ -13,7 +13,7 @@ const items = [
   ["Market Radar", "/market-radar", "◌"],
 ] as const;
 
-function SidebarNavContent() {
+function SidebarNavContent({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
   const search = useSearchParams();
 
@@ -30,7 +30,7 @@ function SidebarNavContent() {
             : pathname === href || pathname.startsWith(`${href}/`);
 
         return (
-          <Link key={label} href={href} className={matches ? "active" : ""}>
+          <Link key={label} href={href} className={matches ? "active" : ""} onClick={onNavigate}>
             <span aria-hidden="true">{icon}</span>
             {label}
           </Link>
@@ -40,10 +40,10 @@ function SidebarNavContent() {
   );
 }
 
-export function SidebarNav() {
+export function SidebarNav({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <Suspense fallback={<nav className="sidebar-nav" />}>
-      <SidebarNavContent />
+      <SidebarNavContent onNavigate={onNavigate} />
     </Suspense>
   );
 }
