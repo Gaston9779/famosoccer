@@ -1,0 +1,51 @@
+{
+  "name": "famosoccer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^20.19.0 || ^22.12.0 || >=24.0.0"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "postinstall": "prisma generate",
+    "db:setup": "node scripts/db-prepare.mjs && prisma migrate deploy",
+    "db:generate": "prisma generate",
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "tm:probe": "tsx scripts/tm.ts probe",
+    "bootstrap:uzbekistan": "tsx scripts/tm.ts bootstrap",
+    "bootstrap:small": "tsx scripts/tm.ts small",
+    "sync:uzbekistan": "tsx scripts/tm.ts daily",
+    "sync:status": "tsx scripts/tm.ts status",
+    "score:players": "tsx scripts/score.ts players",
+    "score:clubs": "tsx scripts/score.ts clubs",
+    "score:all": "tsx scripts/score.ts all",
+    "seed:uzbekistan": "tsx scripts/import-uzbekistan-seed.ts",
+    "enrich:uz1-v3": "tsx scripts/enrich-uz1-v3.ts",
+    "reconcile:uz1-current": "tsx scripts/reconcile-uz1-current.ts",
+    "import:uz1-squad-portraits": "tsx scripts/import-uz1-squad-portraits.ts"
+  },
+  "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.10.0",
+    "@prisma/client": "^7.10.0",
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.4.2",
+    "next": "^16.3.4",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "prisma": "^7.10.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3"
+  }
+}

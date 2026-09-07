@@ -1,0 +1,40 @@
+[
+  {
+    "season": "2026",
+    "competitionName": "Superliga",
+    "competitionCode": "UZ1",
+    "competitionKey": "UZ1",
+    "possibleGames": 5,
+    "gamesPlayed": 4,
+    "goals": 1,
+    "assists": 0,
+    "yellowCards": 0,
+    "secondYellowCards": 0,
+    "redCards": 0,
+    "startElevenPercent": 40,
+    "minutesPlayedPercent": 44.44444444444444,
+    "minutesPlayed": 200,
+    "nameSeason": "2026",
+    "competitionDescription": "Superliga",
+    "goalsScored": 1
+  },
+  {
+    "season": "2026",
+    "competitionName": "Uzbekistan Cup",
+    "competitionCode": "KOBU",
+    "competitionKey": "KOBU",
+    "possibleGames": 1,
+    "gamesPlayed": 1,
+    "goals": 0,
+    "assists": 0,
+    "yellowCards": 0,
+    "secondYellowCards": 0,
+    "redCards": 0,
+    "startElevenPercent": 100,
+    "minutesPlayedPercent": 100,
+    "minutesPlayed": 90,
+    "nameSeason": "2026",
+    "competitionDescription": "Uzbekistan Cup",
+    "goalsScored": 0
+  }
+]

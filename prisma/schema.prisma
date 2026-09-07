@@ -1,0 +1,239 @@
+generator client {
+  provider = "prisma-client"
+  output = "../src/generated/prisma"
+}
+datasource db {
+  provider = "sqlite"
+}
+enum RepresentationStatus {
+  NO_AGENT
+  FAMILY
+  AGENCY
+  NOT_LISTED
+  UNKNOWN
+}
+enum SyncStatus {
+  RUNNING
+  SUCCESS
+  PARTIAL
+  FAILED
+  BLOCKED
+}
+model Competition {
+  id String @id @default(cuid())
+  tmCompetitionId String @unique
+  name String
+  country String
+  season String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  clubs Club[]
+}
+model Club {
+  id String @id @default(cuid())
+  tmClubId String @unique
+  name String
+  tmUrl String?
+  competitionId String?
+  competition Competition? @relation(fields: [competitionId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  lastSyncedAt DateTime?
+  players Player[]
+  needHistory ClubNeedHistory[]
+  events ClubEvent[]
+}
+model Player {
+  id String @id @default(cuid())
+  tmPlayerId String @unique
+  tmUrl String
+  portraitUrl String?
+  name String
+  firstName String?
+  lastName String?
+  birthDate DateTime?
+  age Int?
+  birthPlace String?
+  nationalities String @default("[]")
+  heightCm Int?
+  preferredFoot String?
+  mainPosition String?
+  positionGroup String?
+  secondaryPositions String?
+  shirtNumber String?
+  clubId String?
+  club Club? @relation(fields: [clubId], references: [id])
+  joinedDate DateTime?
+  contractExpires DateTime?
+  contractOption String?
+  marketValueEur Int?
+  marketValueRaw String?
+  agentRaw String?
+  agencyName String?
+  representationStatus RepresentationStatus @default(UNKNOWN)
+  manuallyAdded Boolean @default(false)
+  profileLastSyncedAt DateTime?
+  performanceLastSyncedAt DateTime?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  performances PlayerPerformance[]
+  snapshots PlayerSnapshot[]
+  opportunityHistory PlayerOpportunityHistory[]
+  events PlayerEvent[]
+  notes PlayerNote[]
+  tags PlayerTagAssignment[]
+  confirmedFreeAgent Boolean @default(false)
+}
+model PlayerPerformance {
+  id String @id @default(cuid())
+  playerId String
+  player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  season String
+  competitionName String
+  competitionCode String?
+  competitionKey String
+  possibleGames Int?
+  gamesPlayed Int?
+  goals Int?
+  assists Int?
+  yellowCards Int?
+  secondYellowCards Int?
+  redCards Int?
+  startElevenPercent Float?
+  minutesPlayedPercent Float?
+  minutesPlayed Int?
+  sourceUpdatedAt DateTime
+  createdAt DateTime @default(now())
+  @@unique([playerId, season, competitionKey])
+}
+model SyncRun {
+  id String @id @default(cuid())
+  type String
+  status SyncStatus @default(RUNNING)
+  startedAt DateTime @default(now())
+  finishedAt DateTime?
+  requestsAttempted Int @default(0)
+  requestsSucceeded Int @default(0)
+  requestsFailed Int @default(0)
+  http403Count Int @default(0)
+  http429Count Int @default(0)
+  http503Count Int @default(0)
+  message String?
+  metadata String?
+}
+model PlayerSnapshot {
+  id String @id @default(cuid())
+  playerId String
+  player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  contractExpires DateTime?
+  representationStatus RepresentationStatus
+  agencyName String?
+  marketValueEur Int?
+  clubId String?
+  capturedAt DateTime @default(now())
+}
+
+model PlayerOpportunityHistory {
+ id String @id @default(cuid())
+ playerId String
+ player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
+ total Float
+ contractScore Float
+ representationScore Float
+ playingTimeScore Float
+ ageScore Float
+ marketAccessibilityScore Float
+ confidence Float
+ reasonsJson String
+ warningsJson String
+ confidenceReasonsJson String
+ algorithmVersion String
+ isCurrent Boolean @default(true)
+ calculatedAt DateTime @default(now())
+ @@index([isCurrent, total])
+ @@index([playerId, calculatedAt])
+}
+model ClubNeedHistory {
+ id String @id @default(cuid())
+ clubId String
+ club Club @relation(fields: [clubId], references: [id], onDelete: Cascade)
+ role String
+ total Float
+ depthScore Float
+ contractRiskScore Float
+ ageRiskScore Float
+ qualityDepthScore Float
+ currentDepth Int
+ projectedDepth12Months Int
+ idealDepth Int
+ avgAge Float?
+ expiring6Months Int
+ expiring12Months Int
+ unknownRoleCount Int
+ available Boolean
+ compositionHash String
+ reasonsJson String
+ warningsJson String
+ algorithmVersion String
+ isCurrent Boolean @default(true)
+ calculatedAt DateTime @default(now())
+ @@index([isCurrent, total])
+ @@index([clubId, role, calculatedAt])
+}
+model PlayerEvent {
+ id String @id @default(cuid())
+ playerId String
+ player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
+ type String
+ severity String
+ title String
+ description String
+ oldValue String?
+ newValue String?
+ metadata String?
+ dedupeKey String @unique
+ createdAt DateTime @default(now())
+ readAt DateTime?
+ @@index([createdAt])
+ @@index([playerId, createdAt])
+ @@index([type, severity, readAt])
+}
+model ClubEvent {
+ id String @id @default(cuid())
+ clubId String
+ club Club @relation(fields: [clubId], references: [id], onDelete: Cascade)
+ type String
+ severity String
+ title String
+ description String
+ oldValue String?
+ newValue String?
+ metadata String?
+ dedupeKey String @unique
+ createdAt DateTime @default(now())
+ readAt DateTime?
+ @@index([createdAt])
+ @@index([type, severity, readAt])
+}
+model PlayerNote {
+ id String @id @default(cuid())
+ playerId String
+ player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
+ content String
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ @@index([playerId, createdAt])
+}
+model PlayerTag {
+ id String @id @default(cuid())
+ name String @unique
+ color String?
+ assignments PlayerTagAssignment[]
+}
+model PlayerTagAssignment {
+ playerId String
+ tagId String
+ player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
+ tag PlayerTag @relation(fields: [tagId], references: [id], onDelete: Cascade)
+ @@id([playerId, tagId])
+}

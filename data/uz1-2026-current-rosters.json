@@ -1,0 +1,3379 @@
+{
+  "competitionCode": "UZ1",
+  "exportedAt": "2026-09-07T12:08:21.079Z",
+  "httpRequests": 17,
+  "clubs": [
+    {
+      "tmClubId": 13306,
+      "clubName": "Neftchi Fergana",
+      "players": [
+        {
+          "tmPlayerId": 481513,
+          "name": "Koffi Kouao",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/koffi-kouao/profil/spieler/481513"
+        },
+        {
+          "tmPlayerId": 260857,
+          "name": "Jamshid Iskanderov",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/jamshid-iskanderov/profil/spieler/260857"
+        },
+        {
+          "tmPlayerId": 500289,
+          "name": "Abrorbek Ismoilov",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abrorbek-ismoilov/profil/spieler/500289"
+        },
+        {
+          "tmPlayerId": 704545,
+          "name": "Ibrokhimkhalil Yuldoshev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/ibrokhimkhalil-yuldoshev/profil/spieler/704545"
+        },
+        {
+          "tmPlayerId": 630017,
+          "name": "Alisher Odilov",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/alisher-odilov/profil/spieler/630017"
+        },
+        {
+          "tmPlayerId": 375957,
+          "name": "Khurshid Giyosov",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/khurshid-giyosov/profil/spieler/375957"
+        },
+        {
+          "tmPlayerId": 246827,
+          "name": "Vladimir Jovovic",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/vladimir-jovovic/profil/spieler/246827"
+        },
+        {
+          "tmPlayerId": 220780,
+          "name": "Zoran Marusic",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/zoran-marusic/profil/spieler/220780"
+        },
+        {
+          "tmPlayerId": 245072,
+          "name": "Stipe Perica",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/stipe-perica/profil/spieler/245072"
+        },
+        {
+          "tmPlayerId": 312690,
+          "name": "Botirali Ergashev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/botirali-ergashev/profil/spieler/312690"
+        },
+        {
+          "tmPlayerId": 493443,
+          "name": "Anvarjon Gofurov",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/anvarjon-gofurov/profil/spieler/493443"
+        },
+        {
+          "tmPlayerId": 570272,
+          "name": "Abdulla Abdullaev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abdulla-abdullaev/profil/spieler/570272"
+        },
+        {
+          "tmPlayerId": 196448,
+          "name": "Jovan Djokic",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/jovan-djokic/profil/spieler/196448"
+        },
+        {
+          "tmPlayerId": 613190,
+          "name": "Ratinho",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ratinho/profil/spieler/613190"
+        },
+        {
+          "tmPlayerId": 772000,
+          "name": "Bilolkhon Toshmirzaev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/bilolkhon-toshmirzaev/profil/spieler/772000"
+        },
+        {
+          "tmPlayerId": 1125083,
+          "name": "Asilbek Jumaev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/asilbek-jumaev/profil/spieler/1125083"
+        },
+        {
+          "tmPlayerId": 580784,
+          "name": "Bojan Ciger",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/bojan-ciger/profil/spieler/580784"
+        },
+        {
+          "tmPlayerId": 311898,
+          "name": "Ikromzhon Alibaev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ikromzhon-alibaev/profil/spieler/311898"
+        },
+        {
+          "tmPlayerId": 1061557,
+          "name": "Rustambek Fomin",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/rustambek-fomin/profil/spieler/1061557"
+        },
+        {
+          "tmPlayerId": 189641,
+          "name": "Mukhsin Ubaydullaev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/mukhsin-ubaydullaev/profil/spieler/189641"
+        },
+        {
+          "tmPlayerId": 212499,
+          "name": "Farrukh Sayfiev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/farrukh-sayfiev/profil/spieler/212499"
+        },
+        {
+          "tmPlayerId": 989072,
+          "name": "Izzatillo Pulatov",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/izzatillo-pulatov/profil/spieler/989072"
+        },
+        {
+          "tmPlayerId": 1256823,
+          "name": "Nurmukhammad Abduganiev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/nurmukhammad-abduganiev/profil/spieler/1256823"
+        },
+        {
+          "tmPlayerId": 185373,
+          "name": "Akbar Turaev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/akbar-turaev/profil/spieler/185373"
+        },
+        {
+          "tmPlayerId": 1004452,
+          "name": "Fayzullo Nurmukhammadov",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/fayzullo-nurmukhammadov/profil/spieler/1004452"
+        },
+        {
+          "tmPlayerId": 1258659,
+          "name": "Nurbek Sarsenbaev",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/nurbek-sarsenbaev/profil/spieler/1258659"
+        },
+        {
+          "tmPlayerId": 1419072,
+          "name": "Omadillo Abdubannobov",
+          "clubName": "Neftchi Fergana",
+          "tmClubId": 13306,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/omadillo-abdubannobov/profil/spieler/1419072"
+        }
+      ]
+    },
+    {
+      "tmClubId": 3718,
+      "clubName": "Pakhtakor Tashkent",
+      "players": [
+        {
+          "tmPlayerId": 562022,
+          "name": "Akmal Mozgovoy",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/akmal-mozgovoy/profil/spieler/562022"
+        },
+        {
+          "tmPlayerId": 492558,
+          "name": "Khozhiakbar Alizhonov",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/khozhiakbar-alizhonov/profil/spieler/492558"
+        },
+        {
+          "tmPlayerId": 608537,
+          "name": "Sherzod Nasrullaev",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/sherzod-nasrullaev/profil/spieler/608537"
+        },
+        {
+          "tmPlayerId": 630015,
+          "name": "Khozhimat Erkinov",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/khozhimat-erkinov/profil/spieler/630015"
+        },
+        {
+          "tmPlayerId": 294502,
+          "name": "Dostonbek Khamdamov",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/dostonbek-khamdamov/profil/spieler/294502"
+        },
+        {
+          "tmPlayerId": 295483,
+          "name": "Bashar Resan",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/bashar-resan/profil/spieler/295483"
+        },
+        {
+          "tmPlayerId": 1133645,
+          "name": "Mukhammadrasul Abdumazhidov",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadrasul-abdumazhidov/profil/spieler/1133645"
+        },
+        {
+          "tmPlayerId": 631352,
+          "name": "Oybek Bozorov",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/oybek-bozorov/profil/spieler/631352"
+        },
+        {
+          "tmPlayerId": 931147,
+          "name": "Zaid Tahseen",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/zaid-tahseen/profil/spieler/931147"
+        },
+        {
+          "tmPlayerId": 465858,
+          "name": "Flamarion",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/flamarion/profil/spieler/465858"
+        },
+        {
+          "tmPlayerId": 743864,
+          "name": "Abdurauf Buriev",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abdurauf-buriev/profil/spieler/743864"
+        },
+        {
+          "tmPlayerId": 189636,
+          "name": "Sardor Sobirkhuzhaev",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/sardor-sobirkhuzhaev/profil/spieler/189636"
+        },
+        {
+          "tmPlayerId": 401054,
+          "name": "Aymen Hussein",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/aymen-hussein/profil/spieler/401054"
+        },
+        {
+          "tmPlayerId": 888630,
+          "name": "Vladimir Nazarov",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/vladimir-nazarov/profil/spieler/888630"
+        },
+        {
+          "tmPlayerId": 630010,
+          "name": "Ibrokhim Ibrokhimov",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ibrokhim-ibrokhimov/profil/spieler/630010"
+        },
+        {
+          "tmPlayerId": 702082,
+          "name": "Stephen Chinedu",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/stephen-chinedu/profil/spieler/702082"
+        },
+        {
+          "tmPlayerId": 132563,
+          "name": "Morteza Pouraliganji",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/morteza-pouraliganji/profil/spieler/132563"
+        },
+        {
+          "tmPlayerId": 596250,
+          "name": "Dilshod Saitov",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/dilshod-saitov/profil/spieler/596250"
+        },
+        {
+          "tmPlayerId": 1079574,
+          "name": "Dilshod Abdullaev",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/dilshod-abdullaev/profil/spieler/1079574"
+        },
+        {
+          "tmPlayerId": 127748,
+          "name": "Sandzhar Kuvvatov",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/sandzhar-kuvvatov/profil/spieler/127748"
+        },
+        {
+          "tmPlayerId": 1304081,
+          "name": "Abubakir Shukurullaev",
+          "clubName": "Pakhtakor Tashkent",
+          "tmClubId": 3718,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abubakir-shukurullaev/profil/spieler/1304081"
+        }
+      ]
+    },
+    {
+      "tmClubId": 20591,
+      "clubName": "Nasaf Qarshi",
+      "players": [
+        {
+          "tmPlayerId": 527866,
+          "name": "Abduvokhid Nematov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/abduvokhid-nematov/profil/spieler/527866"
+        },
+        {
+          "tmPlayerId": 431912,
+          "name": "Bobur Abdikholikov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/bobur-abdikholikov/profil/spieler/431912"
+        },
+        {
+          "tmPlayerId": 431913,
+          "name": "Sharof Mukhitdinov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/sharof-mukhitdinov/profil/spieler/431913"
+        },
+        {
+          "tmPlayerId": 493716,
+          "name": "Oybek Rustamov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/oybek-rustamov/profil/spieler/493716"
+        },
+        {
+          "tmPlayerId": 989049,
+          "name": "Zafarmurod Abdirakhmatov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/zafarmurod-abdirakhmatov/profil/spieler/989049"
+        },
+        {
+          "tmPlayerId": 1228939,
+          "name": "Sardorbek Bakhromov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/sardorbek-bakhromov/profil/spieler/1228939"
+        },
+        {
+          "tmPlayerId": 493725,
+          "name": "Umar Eshmurodov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/umar-eshmurodov/profil/spieler/493725"
+        },
+        {
+          "tmPlayerId": 500288,
+          "name": "Golib Gaybullaev",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/golib-gaybullaev/profil/spieler/500288"
+        },
+        {
+          "tmPlayerId": 650354,
+          "name": "Abbos Gulomov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/abbos-gulomov/profil/spieler/650354"
+        },
+        {
+          "tmPlayerId": 712357,
+          "name": "Alibek Davronov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/alibek-davronov/profil/spieler/712357"
+        },
+        {
+          "tmPlayerId": 756948,
+          "name": "Murodbek Rakhmatov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/murodbek-rakhmatov/profil/spieler/756948"
+        },
+        {
+          "tmPlayerId": 513570,
+          "name": "Adenis Shala",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/adenis-shala/profil/spieler/513570"
+        },
+        {
+          "tmPlayerId": 448162,
+          "name": "Paata Ghudushauri",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/paata-ghudushauri/profil/spieler/448162"
+        },
+        {
+          "tmPlayerId": 131710,
+          "name": "Yusuf Otubanjo",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/yusuf-otubanjo/profil/spieler/131710"
+        },
+        {
+          "tmPlayerId": 1513082,
+          "name": "Kuvonchbek Khushvaktov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/kuvonchbek-khushvaktov/profil/spieler/1513082"
+        },
+        {
+          "tmPlayerId": 288933,
+          "name": "Akramzhon Komilov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/akramzhon-komilov/profil/spieler/288933"
+        },
+        {
+          "tmPlayerId": 1082405,
+          "name": "Samandar Muratbaev",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/samandar-muratbaev/profil/spieler/1082405"
+        },
+        {
+          "tmPlayerId": 1347132,
+          "name": "Diyorbek Abdunazarov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/diyorbek-abdunazarov/profil/spieler/1347132"
+        },
+        {
+          "tmPlayerId": 1169468,
+          "name": "Bekjon Rakhmatov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/bekjon-rakhmatov/profil/spieler/1169468"
+        },
+        {
+          "tmPlayerId": 1079572,
+          "name": "Dilshod Murtozoev",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/dilshod-murtozoev/profil/spieler/1079572"
+        },
+        {
+          "tmPlayerId": 1513083,
+          "name": "Yashnarbek Berdirakhmonov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/yashnarbek-berdirakhmonov/profil/spieler/1513083"
+        },
+        {
+          "tmPlayerId": 1383135,
+          "name": "Davronbek Usmonov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/davronbek-usmonov/profil/spieler/1383135"
+        },
+        {
+          "tmPlayerId": 316072,
+          "name": "Kingsley Sokari",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/kingsley-sokari/profil/spieler/316072"
+        },
+        {
+          "tmPlayerId": 1079573,
+          "name": "Asilbek Numonov",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/asilbek-numonov/profil/spieler/1079573"
+        },
+        {
+          "tmPlayerId": 1523786,
+          "name": "Zafar Sadullaev",
+          "clubName": "Nasaf Qarshi",
+          "tmClubId": 20591,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/zafar-sadullaev/profil/spieler/1523786"
+        }
+      ]
+    },
+    {
+      "tmClubId": 15300,
+      "clubName": "Dinamo Samarqand",
+      "players": [
+        {
+          "tmPlayerId": 486759,
+          "name": "Nurillo Tukhtasinov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/nurillo-tukhtasinov/profil/spieler/486759"
+        },
+        {
+          "tmPlayerId": 520064,
+          "name": "Tigran Avanesyan",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/tigran-avanesyan/profil/spieler/520064"
+        },
+        {
+          "tmPlayerId": 517918,
+          "name": "Azizbek Amanov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/azizbek-amanov/profil/spieler/517918"
+        },
+        {
+          "tmPlayerId": 399925,
+          "name": "Haris Hajdarevic",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/haris-hajdarevic/profil/spieler/399925"
+        },
+        {
+          "tmPlayerId": 744137,
+          "name": "Anvar Khozhimirzaev",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/anvar-khozhimirzaev/profil/spieler/744137"
+        },
+        {
+          "tmPlayerId": 1332994,
+          "name": "Firdavs Abdurakhmonov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/firdavs-abdurakhmonov/profil/spieler/1332994"
+        },
+        {
+          "tmPlayerId": 1030001,
+          "name": "Abdugafur Khaydarov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/abdugafur-khaydarov/profil/spieler/1030001"
+        },
+        {
+          "tmPlayerId": 991060,
+          "name": "Khislat Khalilov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/khislat-khalilov/profil/spieler/991060"
+        },
+        {
+          "tmPlayerId": 719242,
+          "name": "Mihail Stefan",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/mihail-stefan/profil/spieler/719242"
+        },
+        {
+          "tmPlayerId": 661081,
+          "name": "Jaloliddin Jumaboev",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/jaloliddin-jumaboev/profil/spieler/661081"
+        },
+        {
+          "tmPlayerId": 614028,
+          "name": "Jakhongir Abdusalomov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/jakhongir-abdusalomov/profil/spieler/614028"
+        },
+        {
+          "tmPlayerId": 294503,
+          "name": "Sanzhar Kodirkulov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/sanzhar-kodirkulov/profil/spieler/294503"
+        },
+        {
+          "tmPlayerId": 571209,
+          "name": "Rasul Yuldoshev",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/rasul-yuldoshev/profil/spieler/571209"
+        },
+        {
+          "tmPlayerId": 843338,
+          "name": "Ravshanbek Yagudin",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/ravshanbek-yagudin/profil/spieler/843338"
+        },
+        {
+          "tmPlayerId": 1109178,
+          "name": "Oybek Urmonjonov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/oybek-urmonjonov/profil/spieler/1109178"
+        },
+        {
+          "tmPlayerId": 989032,
+          "name": "Edem Nemanov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/edem-nemanov/profil/spieler/989032"
+        },
+        {
+          "tmPlayerId": 1000815,
+          "name": "Amadou Doumbouya",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/amadou-doumbouya/profil/spieler/1000815"
+        },
+        {
+          "tmPlayerId": 1004528,
+          "name": "Bekhruzbek Oblakulov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/bekhruzbek-oblakulov/profil/spieler/1004528"
+        },
+        {
+          "tmPlayerId": 658822,
+          "name": "Ulugbek Abdullaev",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/ulugbek-abdullaev/profil/spieler/658822"
+        },
+        {
+          "tmPlayerId": 503499,
+          "name": "Mirzhakhon Mirakhmadov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/mirzhakhon-mirakhmadov/profil/spieler/503499"
+        },
+        {
+          "tmPlayerId": 47533,
+          "name": "Marko Stanojevic",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/marko-stanojevic/profil/spieler/47533"
+        },
+        {
+          "tmPlayerId": 208180,
+          "name": "Salim Mustafoev",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/salim-mustafoev/profil/spieler/208180"
+        },
+        {
+          "tmPlayerId": 143820,
+          "name": "Bakhodir Nasimov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/bakhodir-nasimov/profil/spieler/143820"
+        },
+        {
+          "tmPlayerId": 288926,
+          "name": "Sarvar Karimov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/sarvar-karimov/profil/spieler/288926"
+        },
+        {
+          "tmPlayerId": 983912,
+          "name": "Artem Radaev",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/artem-radaev/profil/spieler/983912"
+        },
+        {
+          "tmPlayerId": 1257473,
+          "name": "Akbar Khudoyberdiev",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/akbar-khudoyberdiev/profil/spieler/1257473"
+        },
+        {
+          "tmPlayerId": 1257476,
+          "name": "Abdulakhadjon Khoshimov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abdulakhadjon-khoshimov/profil/spieler/1257476"
+        },
+        {
+          "tmPlayerId": 1348575,
+          "name": "Oybek Khamrakulov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/oybek-khamrakulov/profil/spieler/1348575"
+        },
+        {
+          "tmPlayerId": 1388503,
+          "name": "Raul Djeparov",
+          "clubName": "Dinamo Samarqand",
+          "tmClubId": 15300,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/raul-djeparov/profil/spieler/1388503"
+        }
+      ]
+    },
+    {
+      "tmClubId": 19401,
+      "clubName": "Bunyodkor Tashkent",
+      "players": [
+        {
+          "tmPlayerId": 343870,
+          "name": "Dmitriy Pletnev",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/dmitriy-pletnev/profil/spieler/343870"
+        },
+        {
+          "tmPlayerId": 1077648,
+          "name": "Azizbek Tulkinbekov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/azizbek-tulkinbekov/profil/spieler/1077648"
+        },
+        {
+          "tmPlayerId": 189635,
+          "name": "Sardor Rakhmanov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/sardor-rakhmanov/profil/spieler/189635"
+        },
+        {
+          "tmPlayerId": 872176,
+          "name": "Matija Krivokapic",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/matija-krivokapic/profil/spieler/872176"
+        },
+        {
+          "tmPlayerId": 1005724,
+          "name": "Nosirzhon Abdusalomov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/nosirzhon-abdusalomov/profil/spieler/1005724"
+        },
+        {
+          "tmPlayerId": 548511,
+          "name": "Federico Botti",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/federico-botti/profil/spieler/548511"
+        },
+        {
+          "tmPlayerId": 630012,
+          "name": "Muzaffar Olimzhonov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/muzaffar-olimzhonov/profil/spieler/630012"
+        },
+        {
+          "tmPlayerId": 1129758,
+          "name": "Amir Turakulov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/amir-turakulov/profil/spieler/1129758"
+        },
+        {
+          "tmPlayerId": 1082385,
+          "name": "Narimonjon Akhmadjonov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/narimonjon-akhmadjonov/profil/spieler/1082385"
+        },
+        {
+          "tmPlayerId": 263459,
+          "name": "Boburbek Yuldashov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/boburbek-yuldashov/profil/spieler/263459"
+        },
+        {
+          "tmPlayerId": 189618,
+          "name": "Abdumavlon Abdujalilov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/abdumavlon-abdujalilov/profil/spieler/189618"
+        },
+        {
+          "tmPlayerId": 659959,
+          "name": "Sardor Abdunabiev",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/sardor-abdunabiev/profil/spieler/659959"
+        },
+        {
+          "tmPlayerId": 1065972,
+          "name": "Mukhammadyusuf Sobirov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadyusuf-sobirov/profil/spieler/1065972"
+        },
+        {
+          "tmPlayerId": 1061551,
+          "name": "Aleksandr Zevadinov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/aleksandr-zevadinov/profil/spieler/1061551"
+        },
+        {
+          "tmPlayerId": 1146592,
+          "name": "Islom Anvarov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/islom-anvarov/profil/spieler/1146592"
+        },
+        {
+          "tmPlayerId": 989029,
+          "name": "Fakhriddin Mukhammadov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/fakhriddin-mukhammadov/profil/spieler/989029"
+        },
+        {
+          "tmPlayerId": 902513,
+          "name": "Shakhzod Nematzhonov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/shakhzod-nematzhonov/profil/spieler/902513"
+        },
+        {
+          "tmPlayerId": 1146366,
+          "name": "Mukhammad Khakimov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/mukhammad-khakimov/profil/spieler/1146366"
+        },
+        {
+          "tmPlayerId": 1146585,
+          "name": "Alijon Bekmurudov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/alijon-bekmurudov/profil/spieler/1146585"
+        },
+        {
+          "tmPlayerId": 1258542,
+          "name": "Mukhammadali Adkhamov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadali-adkhamov/profil/spieler/1258542"
+        },
+        {
+          "tmPlayerId": 1401673,
+          "name": "Shamsiddin Tursunmakhamadov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/shamsiddin-tursunmakhamadov/profil/spieler/1401673"
+        },
+        {
+          "tmPlayerId": 1458224,
+          "name": "Abulfayz Bobomurodov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abulfayz-bobomurodov/profil/spieler/1458224"
+        },
+        {
+          "tmPlayerId": 1472839,
+          "name": "Mirkamol Annamatov",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/mirkamol-annamatov/profil/spieler/1472839"
+        },
+        {
+          "tmPlayerId": 1546836,
+          "name": "Abdulkodir Mirfayziev",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abdulkodir-mirfayziev/profil/spieler/1546836"
+        },
+        {
+          "tmPlayerId": 1546845,
+          "name": "Ivan Bukrin",
+          "clubName": "Bunyodkor Tashkent",
+          "tmClubId": 19401,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/ivan-bukrin/profil/spieler/1546845"
+        }
+      ]
+    },
+    {
+      "tmClubId": 31216,
+      "clubName": "FC OKMK Olmaliq",
+      "players": [
+        {
+          "tmPlayerId": 763083,
+          "name": "Nodir Abdurazzakov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/nodir-abdurazzakov/profil/spieler/763083"
+        },
+        {
+          "tmPlayerId": 538764,
+          "name": "Avazbek Ulmasaliev",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/avazbek-ulmasaliev/profil/spieler/538764"
+        },
+        {
+          "tmPlayerId": 1004372,
+          "name": "Aziz Kholmurodov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/aziz-kholmurodov/profil/spieler/1004372"
+        },
+        {
+          "tmPlayerId": 427878,
+          "name": "Dilshod Akhmadaliev",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/dilshod-akhmadaliev/profil/spieler/427878"
+        },
+        {
+          "tmPlayerId": 492562,
+          "name": "Javokhir Ilyosov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/javokhir-ilyosov/profil/spieler/492562"
+        },
+        {
+          "tmPlayerId": 989070,
+          "name": "Saidafzalkhon Akhrorov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/saidafzalkhon-akhrorov/profil/spieler/989070"
+        },
+        {
+          "tmPlayerId": 527070,
+          "name": "Arihiro Sentoku",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/arihiro-sentoku/profil/spieler/527070"
+        },
+        {
+          "tmPlayerId": 661763,
+          "name": "Khamidullo Abdunabiev",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/khamidullo-abdunabiev/profil/spieler/661763"
+        },
+        {
+          "tmPlayerId": 1061552,
+          "name": "Abror Karimov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/abror-karimov/profil/spieler/1061552"
+        },
+        {
+          "tmPlayerId": 1005528,
+          "name": "Akhmadullo Mukimzhonov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/akhmadullo-mukimzhonov/profil/spieler/1005528"
+        },
+        {
+          "tmPlayerId": 845855,
+          "name": "Uros Kojic",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/uros-kojic/profil/spieler/845855"
+        },
+        {
+          "tmPlayerId": 658827,
+          "name": "Asad Sobirzhonov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/asad-sobirzhonov/profil/spieler/658827"
+        },
+        {
+          "tmPlayerId": 306360,
+          "name": "Siavash Haghnazari",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/siavash-haghnazari/profil/spieler/306360"
+        },
+        {
+          "tmPlayerId": 319512,
+          "name": "Mirzhamol Kosimov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/mirzhamol-kosimov/profil/spieler/319512"
+        },
+        {
+          "tmPlayerId": 756911,
+          "name": "Ali Abdurakhmonov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ali-abdurakhmonov/profil/spieler/756911"
+        },
+        {
+          "tmPlayerId": 659922,
+          "name": "Khazrat Tursunkulov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/khazrat-tursunkulov/profil/spieler/659922"
+        },
+        {
+          "tmPlayerId": 947110,
+          "name": "Naoaki Senaga",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/naoaki-senaga/profil/spieler/947110"
+        },
+        {
+          "tmPlayerId": 203722,
+          "name": "Giorgi Papava",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/giorgi-papava/profil/spieler/203722"
+        },
+        {
+          "tmPlayerId": 115133,
+          "name": "Ivan Pesic",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ivan-pesic/profil/spieler/115133"
+        },
+        {
+          "tmPlayerId": 756949,
+          "name": "Abubakrrizo Turdialiev",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abubakrrizo-turdialiev/profil/spieler/756949"
+        },
+        {
+          "tmPlayerId": 807652,
+          "name": "Shakhzod Toirov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/shakhzod-toirov/profil/spieler/807652"
+        },
+        {
+          "tmPlayerId": 630042,
+          "name": "Eldorbek Begimov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/eldorbek-begimov/profil/spieler/630042"
+        },
+        {
+          "tmPlayerId": 930076,
+          "name": "Abror Sarimsakov",
+          "clubName": "FC OKMK Olmaliq",
+          "tmClubId": 31216,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abror-sarimsakov/profil/spieler/930076"
+        }
+      ]
+    },
+    {
+      "tmClubId": 15310,
+      "clubName": "Navbahor Namangan",
+      "players": [
+        {
+          "tmPlayerId": 754040,
+          "name": "Ruslanbek Jiyanov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ruslanbek-jiyanov/profil/spieler/754040"
+        },
+        {
+          "tmPlayerId": 704549,
+          "name": "Khusayin Norchaev",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/khusayin-norchaev/profil/spieler/704549"
+        },
+        {
+          "tmPlayerId": 883732,
+          "name": "Mukhammadkodir Khamraliev",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadkodir-khamraliev/profil/spieler/883732"
+        },
+        {
+          "tmPlayerId": 410799,
+          "name": "Anri Chichinadze",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/anri-chichinadze/profil/spieler/410799"
+        },
+        {
+          "tmPlayerId": 571337,
+          "name": "Joel Kojo",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/joel-kojo/profil/spieler/571337"
+        },
+        {
+          "tmPlayerId": 599478,
+          "name": "Vanja Ilic",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/vanja-ilic/profil/spieler/599478"
+        },
+        {
+          "tmPlayerId": 1096528,
+          "name": "Asadbek Rakhimzhonov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/asadbek-rakhimzhonov/profil/spieler/1096528"
+        },
+        {
+          "tmPlayerId": 311958,
+          "name": "Utkir Yusupov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/utkir-yusupov/profil/spieler/311958"
+        },
+        {
+          "tmPlayerId": 603416,
+          "name": "Jasurbek Jaloliddinov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/jasurbek-jaloliddinov/profil/spieler/603416"
+        },
+        {
+          "tmPlayerId": 629995,
+          "name": "Saidazamat Mirsaidov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/saidazamat-mirsaidov/profil/spieler/629995"
+        },
+        {
+          "tmPlayerId": 704546,
+          "name": "Diyor Kholmatov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/diyor-kholmatov/profil/spieler/704546"
+        },
+        {
+          "tmPlayerId": 983977,
+          "name": "Alex Fernandes",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/alex-fernandes/profil/spieler/983977"
+        },
+        {
+          "tmPlayerId": 661084,
+          "name": "Umar Adkhamzoda",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/umar-adkhamzoda/profil/spieler/661084"
+        },
+        {
+          "tmPlayerId": 661080,
+          "name": "Dilshod Komilov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/dilshod-komilov/profil/spieler/661080"
+        },
+        {
+          "tmPlayerId": 208907,
+          "name": "Giorgi Jgerenaia",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/giorgi-jgerenaia/profil/spieler/208907"
+        },
+        {
+          "tmPlayerId": 661557,
+          "name": "Shokhrukh Abdurakhmonov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/shokhrukh-abdurakhmonov/profil/spieler/661557"
+        },
+        {
+          "tmPlayerId": 757312,
+          "name": "Islombek Mamatkazin",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/islombek-mamatkazin/profil/spieler/757312"
+        },
+        {
+          "tmPlayerId": 763085,
+          "name": "Mukhammadali Usmonov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadali-usmonov/profil/spieler/763085"
+        },
+        {
+          "tmPlayerId": 234528,
+          "name": "Benjamin Teidi",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/benjamin-teidi/profil/spieler/234528"
+        },
+        {
+          "tmPlayerId": 758474,
+          "name": "Mukhammadali Giyosov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadali-giyosov/profil/spieler/758474"
+        },
+        {
+          "tmPlayerId": 754022,
+          "name": "Valizhon Rakhimov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/valizhon-rakhimov/profil/spieler/754022"
+        },
+        {
+          "tmPlayerId": 743837,
+          "name": "Shukron Yuldashev",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/shukron-yuldashev/profil/spieler/743837"
+        },
+        {
+          "tmPlayerId": 1198061,
+          "name": "Zafarbek Rakhimzhonov",
+          "clubName": "Navbahor Namangan",
+          "tmClubId": 15310,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/zafarbek-rakhimzhonov/profil/spieler/1198061"
+        }
+      ]
+    },
+    {
+      "tmClubId": 35157,
+      "clubName": "Sogdiana Jizzakh",
+      "players": [
+        {
+          "tmPlayerId": 329200,
+          "name": "Ljupco Doriev",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ljupco-doriev/profil/spieler/329200"
+        },
+        {
+          "tmPlayerId": 343963,
+          "name": "Petar Micin",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/petar-micin/profil/spieler/343963"
+        },
+        {
+          "tmPlayerId": 288887,
+          "name": "Jamshid Boltaboev",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/jamshid-boltaboev/profil/spieler/288887"
+        },
+        {
+          "tmPlayerId": 486760,
+          "name": "Islomzhon Kobilov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/islomzhon-kobilov/profil/spieler/486760"
+        },
+        {
+          "tmPlayerId": 513883,
+          "name": "Zoir Dzhuraboev",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/zoir-dzhuraboev/profil/spieler/513883"
+        },
+        {
+          "tmPlayerId": 494128,
+          "name": "Javokhir Kakhramonov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/javokhir-kakhramonov/profil/spieler/494128"
+        },
+        {
+          "tmPlayerId": 1061556,
+          "name": "Nodir Soyibov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/nodir-soyibov/profil/spieler/1061556"
+        },
+        {
+          "tmPlayerId": 989030,
+          "name": "Bekhruz Askarov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/bekhruz-askarov/profil/spieler/989030"
+        },
+        {
+          "tmPlayerId": 315092,
+          "name": "Filip Ivanovic",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/filip-ivanovic/profil/spieler/315092"
+        },
+        {
+          "tmPlayerId": 1077869,
+          "name": "Ollobergan Karimov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ollobergan-karimov/profil/spieler/1077869"
+        },
+        {
+          "tmPlayerId": 189642,
+          "name": "Zabikhillo Urinboev",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/zabikhillo-urinboev/profil/spieler/189642"
+        },
+        {
+          "tmPlayerId": 1040233,
+          "name": "Samandarzhon Mavlonkulov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/samandarzhon-mavlonkulov/profil/spieler/1040233"
+        },
+        {
+          "tmPlayerId": 1079578,
+          "name": "Bekhruz Dzhumatov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/bekhruz-dzhumatov/profil/spieler/1079578"
+        },
+        {
+          "tmPlayerId": 1209192,
+          "name": "Khondamir Mustafokulov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/khondamir-mustafokulov/profil/spieler/1209192"
+        },
+        {
+          "tmPlayerId": 128936,
+          "name": "Igor Golban",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/igor-golban/profil/spieler/128936"
+        },
+        {
+          "tmPlayerId": 846418,
+          "name": "Abdulazizkhon Abdurashidov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/abdulazizkhon-abdurashidov/profil/spieler/846418"
+        },
+        {
+          "tmPlayerId": 756906,
+          "name": "Shokhrukh Isokov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/shokhrukh-isokov/profil/spieler/756906"
+        },
+        {
+          "tmPlayerId": 583732,
+          "name": "Oybek Nurmatov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/oybek-nurmatov/profil/spieler/583732"
+        },
+        {
+          "tmPlayerId": 661768,
+          "name": "Shokhzhakhon Sultonmurodov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/shokhzhakhon-sultonmurodov/profil/spieler/661768"
+        },
+        {
+          "tmPlayerId": 339370,
+          "name": "Milan Mitrovic",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/milan-mitrovic/profil/spieler/339370"
+        },
+        {
+          "tmPlayerId": 1079580,
+          "name": "Amirbek Saidov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/amirbek-saidov/profil/spieler/1079580"
+        },
+        {
+          "tmPlayerId": 1141467,
+          "name": "Sardorbek Erkinov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/sardorbek-erkinov/profil/spieler/1141467"
+        },
+        {
+          "tmPlayerId": 1251433,
+          "name": "Sardorbek Khoshimov",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/sardorbek-khoshimov/profil/spieler/1251433"
+        },
+        {
+          "tmPlayerId": 1341818,
+          "name": "Dilshod Misraliev",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/dilshod-misraliev/profil/spieler/1341818"
+        },
+        {
+          "tmPlayerId": 278769,
+          "name": "Dzenan Zajmovic",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/dzenan-zajmovic/profil/spieler/278769"
+        },
+        {
+          "tmPlayerId": 1061549,
+          "name": "Bayram Nadzhafaliev",
+          "clubName": "Sogdiana Jizzakh",
+          "tmClubId": 35157,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/bayram-nadzhafaliev/profil/spieler/1061549"
+        }
+      ]
+    },
+    {
+      "tmClubId": 20115,
+      "clubName": "FC Qizilqum",
+      "players": [
+        {
+          "tmPlayerId": 988939,
+          "name": "Shakhzod Rakhmatullaev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/shakhzod-rakhmatullaev/profil/spieler/988939"
+        },
+        {
+          "tmPlayerId": 485501,
+          "name": "Islom Kenjaboev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/islom-kenjaboev/profil/spieler/485501"
+        },
+        {
+          "tmPlayerId": 903133,
+          "name": "Roman Paparyga",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/roman-paparyga/profil/spieler/903133"
+        },
+        {
+          "tmPlayerId": 743866,
+          "name": "Otabek Jurakuziev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/otabek-jurakuziev/profil/spieler/743866"
+        },
+        {
+          "tmPlayerId": 250893,
+          "name": "Grigol Chabradze",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/grigol-chabradze/profil/spieler/250893"
+        },
+        {
+          "tmPlayerId": 390078,
+          "name": "Nikola Kumburovic",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/nikola-kumburovic/profil/spieler/390078"
+        },
+        {
+          "tmPlayerId": 745398,
+          "name": "Samandar Shukurillaev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/samandar-shukurillaev/profil/spieler/745398"
+        },
+        {
+          "tmPlayerId": 754034,
+          "name": "Nodirkhon Nematkhonov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/nodirkhon-nematkhonov/profil/spieler/754034"
+        },
+        {
+          "tmPlayerId": 630014,
+          "name": "Ruslan Roziev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ruslan-roziev/profil/spieler/630014"
+        },
+        {
+          "tmPlayerId": 1180956,
+          "name": "Giyosdzhon Rizakulov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/giyosdzhon-rizakulov/profil/spieler/1180956"
+        },
+        {
+          "tmPlayerId": 845300,
+          "name": "Ilkhomzhon Vakhobov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/ilkhomzhon-vakhobov/profil/spieler/845300"
+        },
+        {
+          "tmPlayerId": 1122102,
+          "name": "Diyor Rakhmatilloev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/diyor-rakhmatilloev/profil/spieler/1122102"
+        },
+        {
+          "tmPlayerId": 883722,
+          "name": "Farkhod Rakhmatov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/farkhod-rakhmatov/profil/spieler/883722"
+        },
+        {
+          "tmPlayerId": 848899,
+          "name": "Elbek Otakulov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/elbek-otakulov/profil/spieler/848899"
+        },
+        {
+          "tmPlayerId": 188184,
+          "name": "Jaba Jigauri",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/jaba-jigauri/profil/spieler/188184"
+        },
+        {
+          "tmPlayerId": 820017,
+          "name": "Fayzullo Jumankuziev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/fayzullo-jumankuziev/profil/spieler/820017"
+        },
+        {
+          "tmPlayerId": 660262,
+          "name": "Shakhzod Turopov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/shakhzod-turopov/profil/spieler/660262"
+        },
+        {
+          "tmPlayerId": 890258,
+          "name": "Bobomurod Bozorov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/bobomurod-bozorov/profil/spieler/890258"
+        },
+        {
+          "tmPlayerId": 677346,
+          "name": "Maykon Douglas",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/maykon-douglas/profil/spieler/677346"
+        },
+        {
+          "tmPlayerId": 1150915,
+          "name": "Akmal Muzaffarov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/akmal-muzaffarov/profil/spieler/1150915"
+        },
+        {
+          "tmPlayerId": 1409429,
+          "name": "Abbosbek Abdugafforov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abbosbek-abdugafforov/profil/spieler/1409429"
+        },
+        {
+          "tmPlayerId": 1200321,
+          "name": "Ozodbek Ergashev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ozodbek-ergashev/profil/spieler/1200321"
+        },
+        {
+          "tmPlayerId": 989033,
+          "name": "Khumoyunshokh Sayyotov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/khumoyunshokh-sayyotov/profil/spieler/989033"
+        },
+        {
+          "tmPlayerId": 660294,
+          "name": "Ilkhomzhon Kenzhaev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ilkhomzhon-kenzhaev/profil/spieler/660294"
+        },
+        {
+          "tmPlayerId": 660296,
+          "name": "Farrukh Juraev",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/farrukh-juraev/profil/spieler/660296"
+        },
+        {
+          "tmPlayerId": 1209189,
+          "name": "Murodali Usmonov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/murodali-usmonov/profil/spieler/1209189"
+        },
+        {
+          "tmPlayerId": 1209191,
+          "name": "Doston Tursunov",
+          "clubName": "FC Qizilqum",
+          "tmClubId": 20115,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/doston-tursunov/profil/spieler/1209191"
+        }
+      ]
+    },
+    {
+      "tmClubId": 65036,
+      "clubName": "Surkhon Termiz",
+      "players": [
+        {
+          "tmPlayerId": 661764,
+          "name": "Dostonbek Tursunov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/dostonbek-tursunov/profil/spieler/661764"
+        },
+        {
+          "tmPlayerId": 630018,
+          "name": "Bekhzod Shamsiev",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/bekhzod-shamsiev/profil/spieler/630018"
+        },
+        {
+          "tmPlayerId": 661576,
+          "name": "Bekhruz Shaydulov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/bekhruz-shaydulov/profil/spieler/661576"
+        },
+        {
+          "tmPlayerId": 696545,
+          "name": "Sunnatilla Abdullajonov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/sunnatilla-abdullajonov/profil/spieler/696545"
+        },
+        {
+          "tmPlayerId": 754038,
+          "name": "Khumoyun Sherbutaev",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/khumoyun-sherbutaev/profil/spieler/754038"
+        },
+        {
+          "tmPlayerId": 262718,
+          "name": "Dzhamaldin Khodzhaniyazov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/dzhamaldin-khodzhaniyazov/profil/spieler/262718"
+        },
+        {
+          "tmPlayerId": 772911,
+          "name": "Davron Merganov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/davron-merganov/profil/spieler/772911"
+        },
+        {
+          "tmPlayerId": 504175,
+          "name": "Tornike Dzebniauri",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/tornike-dzebniauri/profil/spieler/504175"
+        },
+        {
+          "tmPlayerId": 664617,
+          "name": "Richard Friday",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/richard-friday/profil/spieler/664617"
+        },
+        {
+          "tmPlayerId": 763117,
+          "name": "Otabek Boymurodov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/otabek-boymurodov/profil/spieler/763117"
+        },
+        {
+          "tmPlayerId": 1472841,
+          "name": "Tokhirjon Ashurboev",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/tokhirjon-ashurboev/profil/spieler/1472841"
+        },
+        {
+          "tmPlayerId": 1277183,
+          "name": "Bekhruz Uktamov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/bekhruz-uktamov/profil/spieler/1277183"
+        },
+        {
+          "tmPlayerId": 1177021,
+          "name": "Sarvar Abdukhamidov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/sarvar-abdukhamidov/profil/spieler/1177021"
+        },
+        {
+          "tmPlayerId": 1258665,
+          "name": "Mukhammadali Musakhonov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadali-musakhonov/profil/spieler/1258665"
+        },
+        {
+          "tmPlayerId": 933455,
+          "name": "Dilshod Yuldoshev",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/dilshod-yuldoshev/profil/spieler/933455"
+        },
+        {
+          "tmPlayerId": 630016,
+          "name": "Diyor Ramazonov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/diyor-ramazonov/profil/spieler/630016"
+        },
+        {
+          "tmPlayerId": 1109168,
+          "name": "Bekhruz Shukurullaev",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/bekhruz-shukurullaev/profil/spieler/1109168"
+        },
+        {
+          "tmPlayerId": 1206135,
+          "name": "Farrukhjon Kodirov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/farrukhjon-kodirov/profil/spieler/1206135"
+        },
+        {
+          "tmPlayerId": 1106183,
+          "name": "Kamronbek Yusupov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/kamronbek-yusupov/profil/spieler/1106183"
+        },
+        {
+          "tmPlayerId": 1244774,
+          "name": "Sirojiddin Solijonov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/sirojiddin-solijonov/profil/spieler/1244774"
+        },
+        {
+          "tmPlayerId": 1106184,
+          "name": "Muminkhon Bakhodirkhonov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/muminkhon-bakhodirkhonov/profil/spieler/1106184"
+        },
+        {
+          "tmPlayerId": 1398349,
+          "name": "Boburjon Rakhimjonov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/boburjon-rakhimjonov/profil/spieler/1398349"
+        },
+        {
+          "tmPlayerId": 1454546,
+          "name": "Santiago Garcia",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/santiago-garcia/profil/spieler/1454546"
+        },
+        {
+          "tmPlayerId": 1064828,
+          "name": "Mirmakstud Mirusmonov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/mirmakstud-mirusmonov/profil/spieler/1064828"
+        },
+        {
+          "tmPlayerId": 1522794,
+          "name": "Umidbek Kuvondikov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/umidbek-kuvondikov/profil/spieler/1522794"
+        },
+        {
+          "tmPlayerId": 1522798,
+          "name": "Azamjon Temirkhonov",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/azamjon-temirkhonov/profil/spieler/1522798"
+        },
+        {
+          "tmPlayerId": 1522799,
+          "name": "Kamronbek Ergashev",
+          "clubName": "Surkhon Termiz",
+          "tmClubId": 65036,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/kamronbek-ergashev/profil/spieler/1522799"
+        }
+      ]
+    },
+    {
+      "tmClubId": 20099,
+      "clubName": "FC Andijon",
+      "players": [
+        {
+          "tmPlayerId": 448764,
+          "name": "Nemanja Calasan",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/nemanja-calasan/profil/spieler/448764"
+        },
+        {
+          "tmPlayerId": 493593,
+          "name": "Azizbek Turgunboev",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/azizbek-turgunboev/profil/spieler/493593"
+        },
+        {
+          "tmPlayerId": 427569,
+          "name": "Aleksandre Andronikashvili",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/aleksandre-andronikashvili/profil/spieler/427569"
+        },
+        {
+          "tmPlayerId": 763092,
+          "name": "Rustam Turdimurodov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/rustam-turdimurodov/profil/spieler/763092"
+        },
+        {
+          "tmPlayerId": 630038,
+          "name": "Odil Abdumazhidov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/odil-abdumazhidov/profil/spieler/630038"
+        },
+        {
+          "tmPlayerId": 421302,
+          "name": "Martin Boakye",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/martin-boakye/profil/spieler/421302"
+        },
+        {
+          "tmPlayerId": 887436,
+          "name": "Pulatkhuzha Kholdorkhonov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/pulatkhuzha-kholdorkhonov/profil/spieler/887436"
+        },
+        {
+          "tmPlayerId": 411193,
+          "name": "Imeda Ashortia",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/imeda-ashortia/profil/spieler/411193"
+        },
+        {
+          "tmPlayerId": 519899,
+          "name": "Eldor Adkhamov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/eldor-adkhamov/profil/spieler/519899"
+        },
+        {
+          "tmPlayerId": 658914,
+          "name": "Usmonali Ismonaliev",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/usmonali-ismonaliev/profil/spieler/658914"
+        },
+        {
+          "tmPlayerId": 660020,
+          "name": "Shokhmalik Komilov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/shokhmalik-komilov/profil/spieler/660020"
+        },
+        {
+          "tmPlayerId": 661063,
+          "name": "Mukhammadkarim Toirov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadkarim-toirov/profil/spieler/661063"
+        },
+        {
+          "tmPlayerId": 658912,
+          "name": "Damir Temirov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/damir-temirov/profil/spieler/658912"
+        },
+        {
+          "tmPlayerId": 659912,
+          "name": "Abduvokhid Gulomov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/abduvokhid-gulomov/profil/spieler/659912"
+        },
+        {
+          "tmPlayerId": 661061,
+          "name": "Doniyor Abdumannopov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/doniyor-abdumannopov/profil/spieler/661061"
+        },
+        {
+          "tmPlayerId": 651333,
+          "name": "Khumoyunmirzo Iminov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/khumoyunmirzo-iminov/profil/spieler/651333"
+        },
+        {
+          "tmPlayerId": 35976,
+          "name": "Dragan Ceran",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/dragan-ceran/profil/spieler/35976"
+        },
+        {
+          "tmPlayerId": 148484,
+          "name": "Artem Potapov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/artem-potapov/profil/spieler/148484"
+        },
+        {
+          "tmPlayerId": 1418698,
+          "name": "Bekzod Sulaymonov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/bekzod-sulaymonov/profil/spieler/1418698"
+        },
+        {
+          "tmPlayerId": 914670,
+          "name": "Abdurakhmon Komilov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abdurakhmon-komilov/profil/spieler/914670"
+        },
+        {
+          "tmPlayerId": 1004459,
+          "name": "Shokhzhakhon Yorkinboev",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/shokhzhakhon-yorkinboev/profil/spieler/1004459"
+        },
+        {
+          "tmPlayerId": 102683,
+          "name": "Islom Tukhtakhuzhaev",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/islom-tukhtakhuzhaev/profil/spieler/102683"
+        },
+        {
+          "tmPlayerId": 1004465,
+          "name": "Khamidullo Karimov",
+          "clubName": "FC Andijon",
+          "tmClubId": 20099,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/khamidullo-karimov/profil/spieler/1004465"
+        }
+      ]
+    },
+    {
+      "tmClubId": 53299,
+      "clubName": "FC Kokand 1912",
+      "players": [
+        {
+          "tmPlayerId": 291744,
+          "name": "Sylvanus Nimely",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/sylvanus-nimely/profil/spieler/291744"
+        },
+        {
+          "tmPlayerId": 288957,
+          "name": "Javokhir Sidikov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/javokhir-sidikov/profil/spieler/288957"
+        },
+        {
+          "tmPlayerId": 426805,
+          "name": "Andro Giorgadze",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/andro-giorgadze/profil/spieler/426805"
+        },
+        {
+          "tmPlayerId": 651311,
+          "name": "Alisher Salimov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/alisher-salimov/profil/spieler/651311"
+        },
+        {
+          "tmPlayerId": 629996,
+          "name": "Asliddin Toshtemirov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/asliddin-toshtemirov/profil/spieler/629996"
+        },
+        {
+          "tmPlayerId": 527939,
+          "name": "Rakhimzhon Davronov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/rakhimzhon-davronov/profil/spieler/527939"
+        },
+        {
+          "tmPlayerId": 183687,
+          "name": "Toma Tabatadze",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/toma-tabatadze/profil/spieler/183687"
+        },
+        {
+          "tmPlayerId": 660654,
+          "name": "Jasur Yakubov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/jasur-yakubov/profil/spieler/660654"
+        },
+        {
+          "tmPlayerId": 918837,
+          "name": "Javokhir Khusanov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/javokhir-khusanov/profil/spieler/918837"
+        },
+        {
+          "tmPlayerId": 632712,
+          "name": "Ibrokhim Yuldoshev",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/ibrokhim-yuldoshev/profil/spieler/632712"
+        },
+        {
+          "tmPlayerId": 501829,
+          "name": "Ikboljon Malikjonov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ikboljon-malikjonov/profil/spieler/501829"
+        },
+        {
+          "tmPlayerId": 493715,
+          "name": "Mukhammadanas Khasanov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadanas-khasanov/profil/spieler/493715"
+        },
+        {
+          "tmPlayerId": 989031,
+          "name": "Zafar Khakimov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/zafar-khakimov/profil/spieler/989031"
+        },
+        {
+          "tmPlayerId": 661066,
+          "name": "Farkhod Sokhibzhonov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/farkhod-sokhibzhonov/profil/spieler/661066"
+        },
+        {
+          "tmPlayerId": 668301,
+          "name": "Yegor Kondratyuk",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/yegor-kondratyuk/profil/spieler/668301"
+        },
+        {
+          "tmPlayerId": 212463,
+          "name": "Shokhrukh Gadoev",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/shokhrukh-gadoev/profil/spieler/212463"
+        },
+        {
+          "tmPlayerId": 763093,
+          "name": "Shakhzod Akromov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/shakhzod-akromov/profil/spieler/763093"
+        },
+        {
+          "tmPlayerId": 483094,
+          "name": "Rustam Nartadzhiev",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/rustam-nartadzhiev/profil/spieler/483094"
+        },
+        {
+          "tmPlayerId": 763078,
+          "name": "Mukhridin Pazildinov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/mukhridin-pazildinov/profil/spieler/763078"
+        },
+        {
+          "tmPlayerId": 493437,
+          "name": "Gulyamkhaydar Gulyamov",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/gulyamkhaydar-gulyamov/profil/spieler/493437"
+        },
+        {
+          "tmPlayerId": 364369,
+          "name": "Shota Gvazava",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/shota-gvazava/profil/spieler/364369"
+        },
+        {
+          "tmPlayerId": 503498,
+          "name": "Shokhrukh Makhmudkhozhiev",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/shokhrukh-makhmudkhozhiev/profil/spieler/503498"
+        },
+        {
+          "tmPlayerId": 1256837,
+          "name": "Elbek Yulchiev",
+          "clubName": "FC Kokand 1912",
+          "tmClubId": 53299,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/elbek-yulchiev/profil/spieler/1256837"
+        }
+      ]
+    },
+    {
+      "tmClubId": 13649,
+      "clubName": "Mash'al Mubarek",
+      "players": [
+        {
+          "tmPlayerId": 377846,
+          "name": "Drago Bumbar",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/drago-bumbar/profil/spieler/377846"
+        },
+        {
+          "tmPlayerId": 492573,
+          "name": "Khumoyun Murtazoev",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/khumoyun-murtazoev/profil/spieler/492573"
+        },
+        {
+          "tmPlayerId": 747986,
+          "name": "Mukhammadali Alikulov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadali-alikulov/profil/spieler/747986"
+        },
+        {
+          "tmPlayerId": 492567,
+          "name": "Sardor Abduraimov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/sardor-abduraimov/profil/spieler/492567"
+        },
+        {
+          "tmPlayerId": 993108,
+          "name": "Mukhammadbobur Muydinov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/mukhammadbobur-muydinov/profil/spieler/993108"
+        },
+        {
+          "tmPlayerId": 345041,
+          "name": "Vlatko Stojanovski",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/vlatko-stojanovski/profil/spieler/345041"
+        },
+        {
+          "tmPlayerId": 745388,
+          "name": "Doston Tukhtaboev",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/doston-tukhtaboev/profil/spieler/745388"
+        },
+        {
+          "tmPlayerId": 1405282,
+          "name": "Sukhrobjon Parmonkulov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/sukhrobjon-parmonkulov/profil/spieler/1405282"
+        },
+        {
+          "tmPlayerId": 492555,
+          "name": "Ibrokhim Ganikhonov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ibrokhim-ganikhonov/profil/spieler/492555"
+        },
+        {
+          "tmPlayerId": 493262,
+          "name": "Ergash Ismoilov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/ergash-ismoilov/profil/spieler/493262"
+        },
+        {
+          "tmPlayerId": 881803,
+          "name": "Izzatillo Abdulkhakov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/izzatillo-abdulkhakov/profil/spieler/881803"
+        },
+        {
+          "tmPlayerId": 659936,
+          "name": "Komilzhon Tozhidinov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/komilzhon-tozhidinov/profil/spieler/659936"
+        },
+        {
+          "tmPlayerId": 745390,
+          "name": "Zafar Akromov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/zafar-akromov/profil/spieler/745390"
+        },
+        {
+          "tmPlayerId": 364298,
+          "name": "Ifeanyi Ifeanyi",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ifeanyi-ifeanyi/profil/spieler/364298"
+        },
+        {
+          "tmPlayerId": 1134139,
+          "name": "Nuriddin Nuriddinov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/nuriddin-nuriddinov/profil/spieler/1134139"
+        },
+        {
+          "tmPlayerId": 1002472,
+          "name": "Ilkhomzhon Abduganiev",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ilkhomzhon-abduganiev/profil/spieler/1002472"
+        },
+        {
+          "tmPlayerId": 431914,
+          "name": "Doniyor Narzullaev",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/doniyor-narzullaev/profil/spieler/431914"
+        },
+        {
+          "tmPlayerId": 372599,
+          "name": "Sherzod Fayziev",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/sherzod-fayziev/profil/spieler/372599"
+        },
+        {
+          "tmPlayerId": 651310,
+          "name": "Bobur Askarov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/bobur-askarov/profil/spieler/651310"
+        },
+        {
+          "tmPlayerId": 374798,
+          "name": "Strahinja Bosnjak",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/strahinja-bosnjak/profil/spieler/374798"
+        },
+        {
+          "tmPlayerId": 748142,
+          "name": "Azamat Soyibov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/azamat-soyibov/profil/spieler/748142"
+        },
+        {
+          "tmPlayerId": 763053,
+          "name": "Tokhir Tukhtasinov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/tokhir-tukhtasinov/profil/spieler/763053"
+        },
+        {
+          "tmPlayerId": 518820,
+          "name": "Farrukhzhon Ibrokhimov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/farrukhzhon-ibrokhimov/profil/spieler/518820"
+        },
+        {
+          "tmPlayerId": 1384774,
+          "name": "Samandar Jurabekov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/samandar-jurabekov/profil/spieler/1384774"
+        },
+        {
+          "tmPlayerId": 685866,
+          "name": "Vladislav Rusanov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/vladislav-rusanov/profil/spieler/685866"
+        },
+        {
+          "tmPlayerId": 1061535,
+          "name": "Makhmud Jurabaev",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/makhmud-jurabaev/profil/spieler/1061535"
+        },
+        {
+          "tmPlayerId": 1436682,
+          "name": "Javokhir Ubaydullaev",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/javokhir-ubaydullaev/profil/spieler/1436682"
+        },
+        {
+          "tmPlayerId": 1382272,
+          "name": "Pavel Bureev",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/pavel-bureev/profil/spieler/1382272"
+        },
+        {
+          "tmPlayerId": 1405283,
+          "name": "Farrukh Toshpulatov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/farrukh-toshpulatov/profil/spieler/1405283"
+        },
+        {
+          "tmPlayerId": 1405287,
+          "name": "Azizbek Choriev",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/azizbek-choriev/profil/spieler/1405287"
+        },
+        {
+          "tmPlayerId": 1546838,
+          "name": "Akhrorbek Rakhimov",
+          "clubName": "Mash'al Mubarek",
+          "tmClubId": 13649,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/akhrorbek-rakhimov/profil/spieler/1546838"
+        }
+      ]
+    },
+    {
+      "tmClubId": 38976,
+      "clubName": "Xorazm Urganch",
+      "players": [
+        {
+          "tmPlayerId": 320861,
+          "name": "Matija Rom",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/matija-rom/profil/spieler/320861"
+        },
+        {
+          "tmPlayerId": 630041,
+          "name": "Sunnatillokh Khamidzhonov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/sunnatillokh-khamidzhonov/profil/spieler/630041"
+        },
+        {
+          "tmPlayerId": 988921,
+          "name": "Diyor Ortikboev",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/diyor-ortikboev/profil/spieler/988921"
+        },
+        {
+          "tmPlayerId": 318061,
+          "name": "Abbos Otakhonov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/abbos-otakhonov/profil/spieler/318061"
+        },
+        {
+          "tmPlayerId": 395485,
+          "name": "Maksim Shiryaev",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/maksim-shiryaev/profil/spieler/395485"
+        },
+        {
+          "tmPlayerId": 598992,
+          "name": "Rafael Sabino",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/rafael-sabino/profil/spieler/598992"
+        },
+        {
+          "tmPlayerId": 1046141,
+          "name": "Nodirbek Abdikholikov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/nodirbek-abdikholikov/profil/spieler/1046141"
+        },
+        {
+          "tmPlayerId": 519898,
+          "name": "Sukhrob Izzatov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/sukhrob-izzatov/profil/spieler/519898"
+        },
+        {
+          "tmPlayerId": 629998,
+          "name": "Ulugbek Khoshimov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ulugbek-khoshimov/profil/spieler/629998"
+        },
+        {
+          "tmPlayerId": 758470,
+          "name": "Nurzhakhon Muzaffarov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/nurzhakhon-muzaffarov/profil/spieler/758470"
+        },
+        {
+          "tmPlayerId": 810626,
+          "name": "Elzio Lohan",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/elzio-lohan/profil/spieler/810626"
+        },
+        {
+          "tmPlayerId": 843326,
+          "name": "Azizbek Pirmukhamedov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/azizbek-pirmukhamedov/profil/spieler/843326"
+        },
+        {
+          "tmPlayerId": 487325,
+          "name": "Umid Ergashev",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/umid-ergashev/profil/spieler/487325"
+        },
+        {
+          "tmPlayerId": 324748,
+          "name": "Sardorbek Azimov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/sardorbek-azimov/profil/spieler/324748"
+        },
+        {
+          "tmPlayerId": 845298,
+          "name": "Rustamzhon Abdukhamidov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/rustamzhon-abdukhamidov/profil/spieler/845298"
+        },
+        {
+          "tmPlayerId": 186317,
+          "name": "Nikola Stosic",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/nikola-stosic/profil/spieler/186317"
+        },
+        {
+          "tmPlayerId": 658915,
+          "name": "Temur Ismoilov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/temur-ismoilov/profil/spieler/658915"
+        },
+        {
+          "tmPlayerId": 644994,
+          "name": "Rafael Tavares",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/rafael-tavares/profil/spieler/644994"
+        },
+        {
+          "tmPlayerId": 581626,
+          "name": "Mashkhur Mukhammadjonov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/mashkhur-mukhammadjonov/profil/spieler/581626"
+        },
+        {
+          "tmPlayerId": 1188359,
+          "name": "Azizjon Akhrorov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/azizjon-akhrorov/profil/spieler/1188359"
+        },
+        {
+          "tmPlayerId": 1398347,
+          "name": "Daniil Nugumanov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/daniil-nugumanov/profil/spieler/1398347"
+        },
+        {
+          "tmPlayerId": 837433,
+          "name": "Umid Sultonov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/umid-sultonov/profil/spieler/837433"
+        },
+        {
+          "tmPlayerId": 934286,
+          "name": "Danila Ezhov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/danila-ezhov/profil/spieler/934286"
+        },
+        {
+          "tmPlayerId": 494104,
+          "name": "Abror Khusinov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/abror-khusinov/profil/spieler/494104"
+        },
+        {
+          "tmPlayerId": 883809,
+          "name": "Ravshanbek Sultonov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/ravshanbek-sultonov/profil/spieler/883809"
+        },
+        {
+          "tmPlayerId": 1197198,
+          "name": "Ismandiyor Ummatov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ismandiyor-ummatov/profil/spieler/1197198"
+        },
+        {
+          "tmPlayerId": 1405292,
+          "name": "Odamboy Olimov",
+          "clubName": "Xorazm Urganch",
+          "tmClubId": 38976,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/odamboy-olimov/profil/spieler/1405292"
+        }
+      ]
+    },
+    {
+      "tmClubId": 20151,
+      "clubName": "FC Buxoro",
+      "players": [
+        {
+          "tmPlayerId": 989068,
+          "name": "Sherzod Esanov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/sherzod-esanov/profil/spieler/989068"
+        },
+        {
+          "tmPlayerId": 510495,
+          "name": "Shakhboz Jurabekov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/shakhboz-jurabekov/profil/spieler/510495"
+        },
+        {
+          "tmPlayerId": 562021,
+          "name": "Umid Khamroev",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/umid-khamroev/profil/spieler/562021"
+        },
+        {
+          "tmPlayerId": 1130739,
+          "name": "Javokhir Ruziev",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/javokhir-ruziev/profil/spieler/1130739"
+        },
+        {
+          "tmPlayerId": 569949,
+          "name": "Veljko Filipovic",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/veljko-filipovic/profil/spieler/569949"
+        },
+        {
+          "tmPlayerId": 1082393,
+          "name": "Ravshan Khayrullaev",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/ravshan-khayrullaev/profil/spieler/1082393"
+        },
+        {
+          "tmPlayerId": 754039,
+          "name": "Temur Mamasidikov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/temur-mamasidikov/profil/spieler/754039"
+        },
+        {
+          "tmPlayerId": 570429,
+          "name": "Dominik Begic",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/dominik-begic/profil/spieler/570429"
+        },
+        {
+          "tmPlayerId": 661762,
+          "name": "Azizkhon Isokov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/azizkhon-isokov/profil/spieler/661762"
+        },
+        {
+          "tmPlayerId": 423566,
+          "name": "Kuvondik Ruziev",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/kuvondik-ruziev/profil/spieler/423566"
+        },
+        {
+          "tmPlayerId": 283917,
+          "name": "Vladimir Rodic",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/vladimir-rodic/profil/spieler/283917"
+        },
+        {
+          "tmPlayerId": 657709,
+          "name": "Shakhzod Ubaydullaev",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/shakhzod-ubaydullaev/profil/spieler/657709"
+        },
+        {
+          "tmPlayerId": 658820,
+          "name": "Mukhammad Yuldoshev",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/mukhammad-yuldoshev/profil/spieler/658820"
+        },
+        {
+          "tmPlayerId": 423565,
+          "name": "Khurshidbek Mukhtorov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/khurshidbek-mukhtorov/profil/spieler/423565"
+        },
+        {
+          "tmPlayerId": 526443,
+          "name": "Bojan Mladjovic",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/bojan-mladjovic/profil/spieler/526443"
+        },
+        {
+          "tmPlayerId": 756951,
+          "name": "Islombek Baratov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/islombek-baratov/profil/spieler/756951"
+        },
+        {
+          "tmPlayerId": 763054,
+          "name": "Kirill Todorov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/kirill-todorov/profil/spieler/763054"
+        },
+        {
+          "tmPlayerId": 580096,
+          "name": "Anvar Juraev",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/anvar-juraev/profil/spieler/580096"
+        },
+        {
+          "tmPlayerId": 494100,
+          "name": "Sardor Kulmatov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/sardor-kulmatov/profil/spieler/494100"
+        },
+        {
+          "tmPlayerId": 251028,
+          "name": "Nika Kacharava",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/nika-kacharava/profil/spieler/251028"
+        },
+        {
+          "tmPlayerId": 847481,
+          "name": "Asilbek Kayumov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/asilbek-kayumov/profil/spieler/847481"
+        },
+        {
+          "tmPlayerId": 494110,
+          "name": "Shirinboy Abdullaev",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/shirinboy-abdullaev/profil/spieler/494110"
+        },
+        {
+          "tmPlayerId": 1061534,
+          "name": "Asadbek Joraboev",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/asadbek-joraboev/profil/spieler/1061534"
+        },
+        {
+          "tmPlayerId": 1449699,
+          "name": "Nodirbek Akhmadjonov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/nodirbek-akhmadjonov/profil/spieler/1449699"
+        },
+        {
+          "tmPlayerId": 1524911,
+          "name": "Ogabek Makhmadaminov",
+          "clubName": "FC Buxoro",
+          "tmClubId": 20151,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ogabek-makhmadaminov/profil/spieler/1524911"
+        }
+      ]
+    },
+    {
+      "tmClubId": 15309,
+      "clubName": "Lokomotiv Tashkent",
+      "players": [
+        {
+          "tmPlayerId": 523314,
+          "name": "Nikolay Ivanov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/nikolay-ivanov/profil/spieler/523314"
+        },
+        {
+          "tmPlayerId": 343958,
+          "name": "Jovan Nisic",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/jovan-nisic/profil/spieler/343958"
+        },
+        {
+          "tmPlayerId": 1064826,
+          "name": "Mukhammedali Reimov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/mukhammedali-reimov/profil/spieler/1064826"
+        },
+        {
+          "tmPlayerId": 180182,
+          "name": "Temurkhuzha Abdukholikov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/temurkhuzha-abdukholikov/profil/spieler/180182"
+        },
+        {
+          "tmPlayerId": 206836,
+          "name": "Aleksandar Susnjar",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/aleksandar-susnjar/profil/spieler/206836"
+        },
+        {
+          "tmPlayerId": 493692,
+          "name": "Jasur Yakhshiboev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/jasur-yakhshiboev/profil/spieler/493692"
+        },
+        {
+          "tmPlayerId": 425052,
+          "name": "Aleksey Kozlov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/aleksey-kozlov/profil/spieler/425052"
+        },
+        {
+          "tmPlayerId": 355876,
+          "name": "Sukhrob Nurullaev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/sukhrob-nurullaev/profil/spieler/355876"
+        },
+        {
+          "tmPlayerId": 1144074,
+          "name": "Nurlan Ibraimov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/nurlan-ibraimov/profil/spieler/1144074"
+        },
+        {
+          "tmPlayerId": 1079577,
+          "name": "Shodiyor Shodiboev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/shodiyor-shodiboev/profil/spieler/1079577"
+        },
+        {
+          "tmPlayerId": 274557,
+          "name": "Diyorzhon Turopov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/diyorzhon-turopov/profil/spieler/274557"
+        },
+        {
+          "tmPlayerId": 917316,
+          "name": "Bilol Tupliev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/bilol-tupliev/profil/spieler/917316"
+        },
+        {
+          "tmPlayerId": 1109162,
+          "name": "Kuvonch Abraev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/kuvonch-abraev/profil/spieler/1109162"
+        },
+        {
+          "tmPlayerId": 1007109,
+          "name": "Abdullokh Yuldashev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/abdullokh-yuldashev/profil/spieler/1007109"
+        },
+        {
+          "tmPlayerId": 763058,
+          "name": "Sunnatilla Poyonov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/sunnatilla-poyonov/profil/spieler/763058"
+        },
+        {
+          "tmPlayerId": 358956,
+          "name": "Oleksandr Kucherenko",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/oleksandr-kucherenko/profil/spieler/358956"
+        },
+        {
+          "tmPlayerId": 208188,
+          "name": "Oleg Zoteev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/oleg-zoteev/profil/spieler/208188"
+        },
+        {
+          "tmPlayerId": 325617,
+          "name": "Shukhrat Mukhammadiev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/shukhrat-mukhammadiev/profil/spieler/325617"
+        },
+        {
+          "tmPlayerId": 1133384,
+          "name": "Abrorjon Aliev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/abrorjon-aliev/profil/spieler/1133384"
+        },
+        {
+          "tmPlayerId": 127751,
+          "name": "Sardor Mirzaev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 3,
+          "tmUrl": "https://www.transfermarkt.com/sardor-mirzaev/profil/spieler/127751"
+        },
+        {
+          "tmPlayerId": 866959,
+          "name": "Nikita Shevchenko",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/nikita-shevchenko/profil/spieler/866959"
+        },
+        {
+          "tmPlayerId": 86710,
+          "name": "Anzur Ismoilov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/anzur-ismoilov/profil/spieler/86710"
+        },
+        {
+          "tmPlayerId": 1079582,
+          "name": "Ozodbek Uktamov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/ozodbek-uktamov/profil/spieler/1079582"
+        },
+        {
+          "tmPlayerId": 1000889,
+          "name": "Akhmadzhon Anvarov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/akhmadzhon-anvarov/profil/spieler/1000889"
+        },
+        {
+          "tmPlayerId": 1241169,
+          "name": "Danil Baklanov",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 1,
+          "tmUrl": "https://www.transfermarkt.com/danil-baklanov/profil/spieler/1241169"
+        },
+        {
+          "tmPlayerId": 1384805,
+          "name": "Ilya Jelicic",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 4,
+          "tmUrl": "https://www.transfermarkt.com/ilya-jelicic/profil/spieler/1384805"
+        },
+        {
+          "tmPlayerId": 1079575,
+          "name": "Sherzodbek Abdulboriev",
+          "clubName": "Lokomotiv Tashkent",
+          "tmClubId": 15309,
+          "positionId": 2,
+          "tmUrl": "https://www.transfermarkt.com/sherzodbek-abdulboriev/profil/spieler/1079575"
+        }
+      ]
+    }
+  ],
+  "totalRosterRows": 409,
+  "uniqueTmPlayerIds": 409,
+  "duplicateTmPlayerIdsAcrossDifferentClubs": [],
+  "matchesExpected409": true
+}
