@@ -1,5 +1,5 @@
 "use client";
-export const dynamic = 'force-dynamic';
+
 import { Suspense } from "react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
@@ -13,7 +13,6 @@ const items = [
   ["Market Radar", "/market-radar", "◌"],
 ] as const;
 
-// 1. Componente interno con la logica dei parametri di ricerca
 function SidebarNavContent() {
   const pathname = usePathname();
   const search = useSearchParams();
@@ -41,7 +40,6 @@ function SidebarNavContent() {
   );
 }
 
-// 2. Componente principale esportato avvolto da Suspense
 export function SidebarNav() {
   return (
     <Suspense fallback={<nav className="sidebar-nav" />}>
