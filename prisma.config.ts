@@ -1,10 +1,17 @@
 import "dotenv/config";
-import { resolve } from "node:path";
 import { defineConfig } from "prisma/config";
+
 export default defineConfig({
   schema: "prisma/schema.prisma",
-  migrations: { path: "prisma/migrations" },
+  migrations: {
+    path: "prisma/postgres-migrations",
+  },
   datasource: {
-    url: `file:${resolve((process.env.DATABASE_URL ?? "file:./prisma/dev.db").replace(/^file:/, ""))}`,
+    // Direct Neon connections are for Prisma CLI and migrations. The running
+    // application uses DATABASE_URL through the PostgreSQL driver adapter.
+    url:
+      process.env.DIRECT_URL ??
+      process.env.DATABASE_URL ??
+      "postgresql://unused:unused@localhost:5432/famosoccer",
   },
 });

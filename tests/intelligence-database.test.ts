@@ -1,17 +1,10 @@
 import { test, after } from "node:test";
 import assert from "node:assert/strict";
-import { mkdtempSync, writeFileSync, rmSync } from "node:fs";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
-import { execFileSync } from "node:child_process";
-const dir = mkdtempSync(join(tmpdir(), "famosoccer-intelligence-"));
-process.env.DATABASE_URL = `file:${dir}/test.db`;
-writeFileSync(`${dir}/test.db`, "");
-execFileSync(
-  process.execPath,
-  ["node_modules/prisma/build/index.js", "migrate", "deploy"],
-  { env: process.env, stdio: "pipe" },
-);
+import { createPostgresTestDatabase } from "./helpers/postgres";
+
+const testDatabase = await createPostgresTestDatabase();
+process.env.DATABASE_URL = testDatabase.connectionString;
+process.env.DATABASE_SCHEMA = testDatabase.schema;
 const { db } = await import("../src/lib/db");
 const {
   recalculateAllScores,
@@ -32,7 +25,7 @@ const {
 const now = new Date("2026-09-06T12:00:00Z");
 after(async () => {
   await db.$disconnect();
-  rmSync(dir, { recursive: true, force: true });
+  await testDatabase.cleanup();
 });
 test("score persistence, history threshold, events and read-only queries", async () => {
   const comp = await db.competition.create({

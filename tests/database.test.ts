@@ -1,19 +1,13 @@
 import { test, after } from "node:test";
 import assert from "node:assert/strict";
-import { readFileSync, mkdtempSync, rmSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
-import { execFileSync } from "node:child_process";
-const dir = mkdtempSync(join(tmpdir(), "famosoccer-test-"));
-process.env.DATABASE_URL = `file:${dir}/test.db`;
+import { readFileSync } from "node:fs";
+import { createPostgresTestDatabase } from "./helpers/postgres";
+
+const testDatabase = await createPostgresTestDatabase();
+process.env.DATABASE_URL = testDatabase.connectionString;
+process.env.DATABASE_SCHEMA = testDatabase.schema;
 process.env.TM_REQUEST_DELAY_MS = "0";
 process.env.TM_REQUEST_JITTER_MS = "0";
-writeFileSync(`${dir}/test.db`, "");
-execFileSync(
-  process.execPath,
-  ["node_modules/prisma/build/index.js", "migrate", "deploy"],
-  { env: process.env, stdio: "pipe" },
-);
 const { db } = await import("../src/lib/db");
 const { saveProfile } = await import("../src/lib/services/players");
 const { parseProfile } = await import(
@@ -22,7 +16,7 @@ const { parseProfile } = await import(
 const { TransfermarktClient } = await import("../src/lib/transfermarkt/client");
 after(async () => {
   await db.$disconnect();
-  rmSync(dir, { recursive: true, force: true });
+  await testDatabase.cleanup();
 });
 test("upsert unique ID and snapshots only on tracked changes", async () => {
   const p = parseProfile(

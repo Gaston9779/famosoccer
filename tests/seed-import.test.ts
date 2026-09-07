@@ -1,18 +1,10 @@
 import { after, test } from "node:test";
 import assert from "node:assert/strict";
-import { execFileSync } from "node:child_process";
-import { mkdtempSync, rmSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { createPostgresTestDatabase } from "./helpers/postgres";
 
-const directory = mkdtempSync(join(tmpdir(), "famosoccer-seed-"));
-process.env.DATABASE_URL = `file:${directory}/seed.db`;
-writeFileSync(`${directory}/seed.db`, "");
-execFileSync(
-  process.execPath,
-  ["node_modules/prisma/build/index.js", "migrate", "deploy"],
-  { env: process.env, stdio: "pipe" },
-);
+const testDatabase = await createPostgresTestDatabase();
+process.env.DATABASE_URL = testDatabase.connectionString;
+process.env.DATABASE_SCHEMA = testDatabase.schema;
 
 const { db } = await import("../src/lib/db");
 const { importUzbekistanSeed } = await import(
@@ -21,7 +13,7 @@ const { importUzbekistanSeed } = await import(
 
 after(async () => {
   await db.$disconnect();
-  rmSync(directory, { recursive: true, force: true });
+  await testDatabase.cleanup();
 });
 
 const seed = {

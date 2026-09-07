@@ -3,7 +3,7 @@ generator client {
   output = "../src/generated/prisma"
 }
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
 }
 enum RepresentationStatus {
   NO_AGENT

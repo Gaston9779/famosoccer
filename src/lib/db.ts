@@ -1,18 +1,24 @@
 import "dotenv/config";
 import { PrismaClient } from "../generated/prisma/client";
-import { PrismaLibSql } from "@prisma/adapter-libsql";
+import { PrismaPg } from "@prisma/adapter-pg";
 
-const databaseUrl =
-  process.env.TURSO_DATABASE_URL ??
-  process.env.DATABASE_URL ??
-  "file:./prisma/dev.db";
+const connectionString = process.env.DATABASE_URL;
 
-const adapter = new PrismaLibSql({
-  url: databaseUrl,
-  ...(process.env.TURSO_AUTH_TOKEN
-    ? { authToken: process.env.TURSO_AUTH_TOKEN }
-    : {}),
-});
+if (
+  !connectionString ||
+  !["postgresql://", "postgres://"].some((protocol) =>
+    connectionString.startsWith(protocol),
+  )
+) {
+  throw new Error(
+    "DATABASE_URL must be a PostgreSQL pooled connection URL for the application runtime.",
+  );
+}
+
+const adapter = new PrismaPg(
+  { connectionString },
+  process.env.DATABASE_SCHEMA ? { schema: process.env.DATABASE_SCHEMA } : undefined,
+);
 
 const globalDb = globalThis as unknown as { db?: PrismaClient };
 
