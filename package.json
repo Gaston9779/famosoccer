@@ -13,6 +13,7 @@
     "postinstall": "prisma generate",
     "db:setup": "node scripts/db-prepare.mjs && prisma migrate deploy",
     "db:generate": "prisma generate",
+    "db:migrate:turso": "tsx scripts/migrate-local-sqlite-to-turso.ts",
     "test": "tsx --test tests/*.test.ts",
     "typecheck": "tsc --noEmit",
     "tm:probe": "tsx scripts/tm.ts probe",
@@ -29,7 +30,8 @@
     "import:uz1-squad-portraits": "tsx scripts/import-uz1-squad-portraits.ts"
   },
   "dependencies": {
-    "@prisma/adapter-better-sqlite3": "^7.10.0",
+    "@libsql/client": "^0.17.0",
+    "@prisma/adapter-libsql": "^7.10.0",
     "@prisma/client": "^7.10.0",
     "cheerio": "^1.2.0",
     "dotenv": "^17.4.2",
