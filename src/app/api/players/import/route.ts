@@ -1,9 +1,13 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { importPlayerFromTransfermarktUrl } from "@/lib/services/players";
-import { ProviderError } from "@/lib/transfermarkt/errors";
 import { playerUrl } from "@/lib/transfermarkt/endpoints";
+import { categorizeImportFailure, describeError, importLog } from "@/lib/import-diagnostics";
 export const runtime = "nodejs";
+// A manual import makes two rate-limited Transfermarkt requests plus DB writes and
+// routinely needs more than Netlify's 10s default. @netlify/plugin-nextjs reads this
+// and raises the function timeout (clamped to the site plan's ceiling).
+export const maxDuration = 26;
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
   const requestOrigin = new URL(request.url).origin;
@@ -46,27 +50,13 @@ export async function POST(request: Request) {
     const imported = await importPlayerFromTransfermarktUrl(parsed.data.url);
     return NextResponse.json(imported);
   } catch (error) {
-    const known = error instanceof ProviderError;
-    const code = known ? error.code : "INTERNAL_ERROR";
-    const status =
-      code === "INVALID_URL"
-        ? 400
-        : code === "SYNC_BUSY"
-          ? 409
-          : code === "BLOCKED"
-            ? 503
-            : 502;
-    console.error(error);
+    const { category, message, httpStatus } = categorizeImportFailure(error);
+    // Full root cause stays in the server log; the client only sees the safe category.
+    importLog("IMPORT_ERROR", { at: "route", ...describeError(error), category, responseStatus: httpStatus });
+    console.error("[players/import]", error);
     return NextResponse.json(
-      {
-        error: {
-          code,
-          message: known
-            ? error.message
-            : "Import failed; inspect sync status and server logs.",
-        },
-      },
-      { status },
+      { error: { code: category, message } },
+      { status: httpStatus },
     );
   }
 }

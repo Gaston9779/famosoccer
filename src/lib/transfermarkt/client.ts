@@ -42,6 +42,8 @@ export class TransfermarktClient {
           data: { requestsAttempted: { increment: 1 } },
         });
         let response: Response;
+        const fetchStartedAt = Date.now();
+        console.log(JSON.stringify({ event: "TM_FETCH_START", runId: this.runId, path, format, attempt: attempt + 1 }));
         try {
           response = await this.transport(url, {
             headers: {
@@ -58,21 +60,21 @@ export class TransfermarktClient {
             where: { id: this.runId },
             data: { requestsFailed: { increment: 1 } },
           });
+          console.log(JSON.stringify({
+            event: "TM_FETCH_RESULT",
+            runId: this.runId,
+            path,
+            outcome: "NETWORK_ERROR",
+            errorName: error instanceof Error ? error.name : "NonError",
+            errorMessage: error instanceof Error ? error.message : String(error),
+            durationMs: Date.now() - fetchStartedAt,
+          }));
           throw new ProviderError(
             "NETWORK",
             `Network request failed: ${String(error)}`,
           );
         }
         const status = response.status;
-        console.log(
-          JSON.stringify({
-            event: "tm.request",
-            runId: this.runId,
-            path,
-            status,
-            attempt: attempt + 1,
-          }),
-        );
         if (response.redirected && new URL(response.url).origin !== base.origin)
           throw new ProviderError("INVALID_URL", "Provider redirect left the configured origin.");
         // Error status handling must not wait for (or depend on) the response body.
@@ -86,6 +88,18 @@ export class TransfermarktClient {
         } else {
           void response.body?.cancel().catch(() => {});
         }
+        console.log(JSON.stringify({
+          event: "TM_FETCH_RESULT",
+          runId: this.runId,
+          path,
+          status,
+          attempt: attempt + 1,
+          responseUrl: response.url,
+          redirected: response.redirected,
+          contentType: response.headers.get("content-type"),
+          bodyLength: body.length,
+          durationMs: Date.now() - fetchStartedAt,
+        }));
         const softBlock =
           status === 200 &&
           /<title>[^<]*(access denied|just a moment|captcha)|verify you are human|enable javascript and cookies to continue/i.test(

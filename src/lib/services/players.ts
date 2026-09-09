@@ -10,6 +10,7 @@ import { ProviderError } from "../transfermarkt/errors";
 import { scoringInputs } from "../scoring";
 import { calculateAndPersistPlayerOpportunity } from "../intelligence/persistence";
 import { finishRun, withSyncLock } from "./runs";
+import { describeError, importLog, type ImportStage } from "../import-diagnostics";
 export type Counts = {
   playersCreated: number;
   playersUpdated: number;
@@ -227,6 +228,10 @@ export async function markPerformanceChecked(playerId: string) {
 }
 export async function importPlayerFromTransfermarktUrl(url: string) {
   const parsed = playerUrl(url);
+  const importStartedAt = Date.now();
+  const since = () => Date.now() - importStartedAt;
+  importLog("IMPORT_START", { tmPlayerId: parsed.id });
+  let stage: ImportStage = "IMPORT_START";
   return withSyncLock(async () => {
     const run = await db.syncRun.create({ data: { type: "MANUAL" } });
     const counts = emptyCounts();
@@ -234,11 +239,21 @@ export async function importPlayerFromTransfermarktUrl(url: string) {
       new TransfermarktClient(run.id, 10),
     );
     try {
-      const player = await saveProfile(
-        await provider.fetchPlayerProfile(parsed.id, parsed.url),
-        counts,
-        true,
-      );
+      stage = "TM_FETCH_START";
+      // TransfermarktClient emits its own TM_FETCH_START / TM_FETCH_RESULT lines.
+      const profile = await provider.fetchPlayerProfile(parsed.id, parsed.url);
+      stage = "PROFILE_PARSE_RESULT";
+      importLog("PROFILE_PARSE_RESULT", {
+        runId: run.id,
+        tmPlayerId: parsed.id,
+        name: profile.name,
+        hasCurrentClub: !!profile.currentClub?.name,
+        durationMs: since(),
+      });
+
+      stage = "DB_WRITE_START";
+      importLog("DB_WRITE_START", { runId: run.id, durationMs: since() });
+      const player = await saveProfile(profile, counts, true);
       const operation: ManualImportOperation = counts.playersCreated === 1 ? "IMPORTED" : "UPDATED";
       let performanceUnavailable = false;
       try {
@@ -262,6 +277,14 @@ export async function importPlayerFromTransfermarktUrl(url: string) {
           opportunityHistory: { where: { isCurrent: true }, take: 1 },
         },
       });
+      stage = "DB_WRITE_RESULT";
+      importLog("DB_WRITE_RESULT", {
+        runId: run.id,
+        playerId: player.id,
+        operation,
+        performanceUnavailable,
+        durationMs: since(),
+      });
       const enriched = { ...complete, ...scoringInputs(complete), syncRunId: run.id };
       if (performanceUnavailable) {
         await finishRun(
@@ -269,6 +292,7 @@ export async function importPlayerFromTransfermarktUrl(url: string) {
           new ProviderError("HTTP", "Performance data unavailable (HTTP 404).", 404),
           { counts },
         );
+        importLog("IMPORT_COMPLETE", { runId: run.id, playerId: player.id, status: "PARTIAL", operation, durationMs: since() });
         return {
           status: "PARTIAL" as const,
           operation,
@@ -277,10 +301,17 @@ export async function importPlayerFromTransfermarktUrl(url: string) {
         };
       }
       await finishRun(run.id, undefined, { counts });
+      importLog("IMPORT_COMPLETE", { runId: run.id, playerId: player.id, status: operation, operation, durationMs: since() });
       return { status: operation, player: enriched };
     } catch (error) {
+      importLog("IMPORT_ERROR", { runId: run.id, stage, durationMs: since(), ...describeError(error) });
       await finishRun(run.id, error, { counts });
       throw error;
     }
+  }).catch((error) => {
+    // Failures before the run row exists (sync lock, read-only filesystem) still get one line.
+    if (stage === "IMPORT_START")
+      importLog("IMPORT_ERROR", { stage, durationMs: since(), ...describeError(error) });
+    throw error;
   });
 }

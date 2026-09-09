@@ -1,10 +1,16 @@
 import { mkdir, open, readFile, unlink } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { db } from "../db";
 import { ProviderError } from "../transfermarkt/errors";
 // One process owns all provider work, including CLI and Next.js. Stale lock recovery checks PID.
+// The lock lives under the OS temp directory: it is the only writable location on a
+// read-only serverless filesystem (Netlify/Lambda expose it as /tmp), and locally it is
+// still shared between the CLI and the Next.js dev server on the same machine.
 export async function withSyncLock<T>(work: () => Promise<T>): Promise<T> {
-  await mkdir(".runtime", { recursive: true });
-  const path = ".runtime/transfermarkt.lock";
+  const lockDir = join(tmpdir(), "famosoccer");
+  await mkdir(lockDir, { recursive: true });
+  const path = join(lockDir, "transfermarkt.lock");
   for (let attempt = 0; attempt < 2; attempt++) {
     try {
       const file = await open(path, "wx");
@@ -17,7 +23,7 @@ export async function withSyncLock<T>(work: () => Promise<T>): Promise<T> {
       if (!Number.isInteger(pid) || pid <= 0)
         throw new ProviderError(
           "SYNC_BUSY",
-          "Invalid sync lock; inspect .runtime/transfermarkt.lock.",
+          `Invalid sync lock; inspect ${path}.`,
         );
       try {
         process.kill(pid, 0);
