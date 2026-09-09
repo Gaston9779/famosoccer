@@ -24,6 +24,7 @@
     "score:players": "tsx scripts/score.ts players",
     "score:opportunity-confidence": "tsx scripts/recalculate-opportunities-confidence.ts",
     "score:clubs": "tsx scripts/score.ts clubs",
+    "recalculate:club-needs": "tsx scripts/recalculate-club-needs.ts",
     "score:all": "tsx scripts/score.ts all",
     "score:free-agents": "tsx scripts/recalculate-confirmed-free-agents.ts",
     "seed:uzbekistan": "tsx scripts/import-uzbekistan-seed.ts",

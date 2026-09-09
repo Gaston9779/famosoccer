@@ -3,7 +3,6 @@ import { db } from "@/lib/db";
 import { loadIntelligenceView, topMatches } from "@/lib/intelligence/queries";
 import { normalizeRole } from "@/lib/scoring/roles";
 import { playerAge } from "@/lib/scoring/types";
-import { formatRepresentation } from "@/lib/presentation";
 import { IntelligenceTable, type TableColumn, type TableRow } from "@/components/intelligence-table";
 import { PlayerTable } from "@/components/player-table";
 import { MatchesBrowser, type MatchRow } from "@/components/matches-browser";
@@ -20,6 +19,8 @@ function MetricIcon({ icon, tone }: { icon: string; tone: string }) {
 export default async function Opportunities({ searchParams }: { searchParams: Promise<{ tab?: string }> }) {
   const { tab: requested } = await searchParams;
   const tab = requested === "needs" || requested === "matches" ? requested : "players";
+  const dbStart = Date.now();
+  if (tab === "matches") console.log(JSON.stringify({ event: "MATCHES_START" }));
   const [view, players] = await Promise.all([
     loadIntelligenceView(true),
     db.player.findMany({
@@ -28,6 +29,7 @@ export default async function Opportunities({ searchParams }: { searchParams: Pr
       orderBy: { name: "asc" },
     }),
   ]);
+  if (tab === "matches") console.log(JSON.stringify({ event: "MATCHES_DB_COMPLETE", durationMs: Date.now() - dbStart, players: view.players.length, clubs: view.clubs.length, opportunities: view.opportunities.length, needs: view.needs.length }));
   const scored = players.flatMap((player) => player.opportunityHistory[0]?.total == null ? [] : [player.opportunityHistory[0].total]);
   const averageOpportunity = scored.length ? scored.reduce((total, score) => total + score, 0) / scored.length : null;
   const highOpportunityCount = scored.filter((score) => score >= 70).length;
@@ -45,30 +47,36 @@ export default async function Opportunities({ searchParams }: { searchParams: Pr
       rows: view.needs.filter((need) => need.available).map((need) => ({ id: need.id, href: `/clubs/${need.clubId}`, values: { club: need.clubName, role: need.role, score: need.total, depth: need.currentDepth, projected: need.projectedDepth12Months, ideal: need.idealDepth, warnings: need.warnings.join("; ") || "—" } })),
     };
   }
+  let matchTotal = 0;
+  let matchHighQuality = 0;
   if (tab === "matches") {
-    const playerMap = new Map(view.players.map((player) => [player.id, player]));
-    const databasePlayerMap = new Map(players.map((player) => [player.id, player]));
-    const clubMap = new Map(view.clubs.map((club) => [club.id, club]));
-    const opportunityMap = new Map(view.opportunities.map((opportunity) => [opportunity.playerId, opportunity.total]));
-    const matches = topMatches(view, { limit: view.players.length * view.needs.length });
-    matchRows = matches.map((match) => {
-      const player = playerMap.get(match.playerId)!;
-      const databasePlayer = databasePlayerMap.get(match.playerId);
-      const targetClub = clubMap.get(match.clubId)!;
-      return { id: `${match.playerId}-${match.clubId}-${match.role}`, playerId: match.playerId, playerName: match.playerName, portraitUrl: databasePlayer?.portraitUrl ?? null, age: databasePlayer ? playerAge(databasePlayer, new Date()) : null, nationality: databasePlayer?.nationalities ?? "[]", role: match.role, currentClub: databasePlayer?.club ? { id: databasePlayer.club.id, name: databasePlayer.club.name, tmClubId: databasePlayer.club.tmClubId } : null, targetClub: { id: targetClub.id, name: targetClub.name, tmClubId: targetClub.tmClubId }, matchScore: match.matchScore, opportunity: opportunityMap.get(match.playerId) ?? null, contract: databasePlayer?.contractExpires?.toISOString().slice(0, 10) ?? null, marketValue: databasePlayer?.marketValueEur ?? null };
-    });
-    table = {
-      columns: [{ key: "name", label: "Player" }, { key: "currentClub", label: "Current club" }, { key: "club", label: "Target club" }, { key: "role", label: "Role" }, { key: "representation", label: "Representation" }, { key: "contract", label: "Contract" }, { key: "score", label: "Match", numeric: true }, { key: "opportunity", label: "Opportunity", numeric: true }, { key: "need", label: "Club need", numeric: true }],
-      rows: matches.map((match) => {
-        const player = playerMap.get(match.playerId)!;
-        return { id: `${match.playerId}-${match.clubId}-${match.role}`, href: `/players/${match.playerId}`, links: { club: `/clubs/${match.clubId}`, ...(player.clubId ? { currentClub: `/clubs/${player.clubId}` } : {}) }, values: { name: match.playerName, currentClub: player.clubId ? clubMap.get(player.clubId)?.name ?? null : null, club: match.clubName, role: match.role, representation: formatRepresentation(player.representationStatus), contract: player.contractExpires?.toISOString().slice(0, 10) ?? null, score: match.matchScore, opportunity: opportunityMap.get(match.playerId) ?? null, need: match.clubNeedScore } };
-      }),
-    };
+    const calcStart = Date.now();
+    try {
+      const databasePlayerMap = new Map(players.map((player) => [player.id, player]));
+      const clubMap = new Map(view.clubs.map((club) => [club.id, club]));
+      const opportunityMap = new Map(view.opportunities.map((opportunity) => [opportunity.playerId, opportunity.total]));
+      // topMatches is O(n log n) after the in-loop-sort fix; asking for "all" is cheap now.
+      const allMatches = topMatches(view, { limit: Number.MAX_SAFE_INTEGER });
+      matchTotal = allMatches.length;
+      matchHighQuality = allMatches.filter((match) => match.matchScore >= 70).length;
+      // The browser table is paginated; shipping every low-score pairing bloats the RSC
+      // payload with no scouting value. Keep the top matches by score.
+      const MATCH_ROW_CAP = 2000;
+      matchRows = allMatches.slice(0, MATCH_ROW_CAP).map((match) => {
+        const databasePlayer = databasePlayerMap.get(match.playerId);
+        const targetClub = clubMap.get(match.clubId)!;
+        return { id: `${match.playerId}-${match.clubId}-${match.role}`, playerId: match.playerId, playerName: match.playerName, portraitUrl: databasePlayer?.portraitUrl ?? null, age: databasePlayer ? playerAge(databasePlayer, new Date()) : null, nationality: databasePlayer?.nationalities ?? "[]", role: match.role, currentClub: databasePlayer?.club ? { id: databasePlayer.club.id, name: databasePlayer.club.name, tmClubId: databasePlayer.club.tmClubId } : null, targetClub: { id: targetClub.id, name: targetClub.name, tmClubId: targetClub.tmClubId }, matchScore: match.matchScore, opportunity: opportunityMap.get(match.playerId) ?? null, contract: databasePlayer?.contractExpires?.toISOString().slice(0, 10) ?? null, marketValue: databasePlayer?.marketValueEur ?? null };
+      });
+      console.log(JSON.stringify({ event: "MATCHES_CALC_COMPLETE", durationMs: Date.now() - calcStart, players: view.players.length, needs: view.needs.length, matchTotal, matchHighQuality, rowsShipped: matchRows.length }));
+    } catch (error) {
+      console.error(JSON.stringify({ event: "MATCHES_ERROR", durationMs: Date.now() - calcStart, errorName: error instanceof Error ? error.name : "NonError", errorMessage: error instanceof Error ? error.message : String(error) }));
+      throw error; // surface to the route error boundary (src/app/error.tsx)
+    }
   }
 
   if (tab === "matches") {
-    const highQuality = matchRows.filter((match) => match.matchScore >= 70).length;
-    return <div className="matches-page"><header className="matches-page-header"><p className="eyebrow">Matches</p><h1>Player ↔ Club matches</h1><p>Discover the best fit between players and clubs using our matching algorithm</p></header><section className="matches-kpis" aria-label="Match metrics">{[["⌘", "cyan", matchRows.length, "Total matches", "Current eligible matches"], ["✦", "red", highQuality, "High quality matches", "Match score ≥ 70"], ["▥", "teal", view.clubs.length, "Clubs analyzed", "Current UZ1 clubs"], ["◉", "violet", view.players.length, "Players analyzed", "Current UZ1 roster"]].map(([icon, tone, value, label, detail]) => <article key={String(label)}><div><span className={`matches-kpi-icon matches-kpi-icon-${tone}`}>{icon}</span><strong>{value}</strong></div><h2>{label}</h2><p>{detail}</p></article>)}</section><MatchesBrowser rows={matchRows} /></div>;
+    console.log(JSON.stringify({ event: "MATCHES_RENDER_COMPLETE", rows: matchRows.length }));
+    return <div className="matches-page"><header className="matches-page-header"><p className="eyebrow">Matches</p><h1>Player ↔ Club matches</h1><p>Discover the best fit between players and clubs using our matching algorithm</p></header><section className="matches-kpis" aria-label="Match metrics">{[["⌘", "cyan", matchTotal, "Total matches", "Eligible player–club pairings"], ["✦", "red", matchHighQuality, "High quality matches", "Match score ≥ 70"], ["▥", "teal", view.clubs.length, "Clubs analyzed", "Current UZ1 clubs"], ["◉", "violet", view.players.length, "Players analyzed", "Current UZ1 roster"]].map(([icon, tone, value, label, detail]) => <article key={String(label)}><div><span className={`matches-kpi-icon matches-kpi-icon-${tone}`}>{icon}</span><strong>{value}</strong></div><h2>{label}</h2><p>{detail}</p></article>)}</section><MatchesBrowser rows={matchRows} /></div>;
   }
 
   return <div className="opportunities-page">

@@ -214,7 +214,7 @@ export function topMatches(
 ) {
   const scores = new Map(view.opportunities.map((p) => [p.playerId, p]));
   const limit = filters.limit ?? 50;
-  const best: NonNullable<ReturnType<typeof calculatePlayerClubMatch>>[] = [];
+  const matched: NonNullable<ReturnType<typeof calculatePlayerClubMatch>>[] = [];
   const needs = view.needs.filter(
     (n) =>
       n.available &&
@@ -242,18 +242,20 @@ export function topMatches(
       );
       if (match && match.matchScore >= (filters.minScore ?? 0)) {
         match.warnings.push(...opportunity.warnings);
-        best.push(match);
-        best.sort(
-          (a, b) =>
-            b.matchScore - a.matchScore ||
-            a.playerId.localeCompare(b.playerId) ||
-            a.clubId.localeCompare(b.clubId) ||
-            a.role.localeCompare(b.role),
-        );
-        if (best.length > limit) best.pop();
+        matched.push(match);
       }
     }
   }
+  // Sort once (not on every push): the previous in-loop sort was O(n² log n) and,
+  // with a large `limit`, timed out serverless functions on the Matches page.
+  matched.sort(
+    (a, b) =>
+      b.matchScore - a.matchScore ||
+      a.playerId.localeCompare(b.playerId) ||
+      a.clubId.localeCompare(b.clubId) ||
+      a.role.localeCompare(b.role),
+  );
+  const best = matched.slice(0, limit);
   const names = new Map(view.players.map((p) => [p.id, p.name]));
   const clubNames = new Map(view.clubs.map((c) => [c.id, c.name]));
   const playerClubNames = new Map(
