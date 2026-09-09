@@ -3,28 +3,20 @@ import { z } from "zod";
 import { importPlayerFromTransfermarktUrl } from "@/lib/services/players";
 import { playerUrl } from "@/lib/transfermarkt/endpoints";
 import { categorizeImportFailure, describeError, importLog } from "@/lib/import-diagnostics";
+import { isSameOrigin, originRejectionFields } from "@/lib/http-origin";
 export const runtime = "nodejs";
 // A manual import makes two rate-limited Transfermarkt requests plus DB writes and
 // routinely needs more than Netlify's 10s default. @netlify/plugin-nextjs reads this
 // and raises the function timeout (clamped to the site plan's ceiling).
 export const maxDuration = 26;
 export async function POST(request: Request) {
-  const origin = request.headers.get("origin");
-  const requestOrigin = new URL(request.url).origin;
-  const localDevelopmentOrigin = (value: string) => {
-    const url = new URL(value);
-    return process.env.NODE_ENV === "development" && ["localhost", "127.0.0.1"].includes(url.hostname) && url.protocol === "http:";
-  };
-  if (origin && origin !== requestOrigin && !(localDevelopmentOrigin(origin) && localDevelopmentOrigin(requestOrigin)))
+  if (!isSameOrigin(request)) {
+    console.log(JSON.stringify({ event: "IMPORT_ORIGIN_REJECTED", ...originRejectionFields(request) }));
     return NextResponse.json(
-      {
-        error: {
-          code: "INVALID_ORIGIN",
-          message: "Same-origin requests only.",
-        },
-      },
+      { error: { code: "INVALID_ORIGIN", message: "Same-origin requests only." } },
       { status: 403 },
     );
+  }
   let body: unknown;
   try {
     body = await request.json();

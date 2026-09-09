@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { ROLES } from "../scoring/config";
 import { EVENT_TYPES } from "./events";
+import { isSameOrigin } from "../http-origin";
 export const idSchema = z.string().min(1).max(128);
 const number = (max: number) => z.coerce.number().finite().min(0).max(max);
 const page = {
@@ -86,8 +87,9 @@ export function query<T extends z.ZodType>(
   return schema.parse(params);
 }
 export function sameOrigin(request: Request) {
-  const origin = request.headers.get("origin");
-  if (origin && origin !== new URL(request.url).origin)
+  // Proxy-aware: behind Netlify, new URL(request.url).origin is the internal function
+  // origin, not the public site origin. See src/lib/http-origin.ts.
+  if (!isSameOrigin(request))
     throw new ApiError(403, "INVALID_ORIGIN", "Same-origin writes only.");
 }
 export async function body<T extends z.ZodType>(
