@@ -7,6 +7,6 @@ export const dynamic = "force-dynamic";
 export async function GET(request: Request) {
   return api(async () => {
     const filters = query(request, playerFilters);
-    return filterPlayerOpportunities(await loadIntelligenceView(), filters);
+    return filterPlayerOpportunities(await loadIntelligenceView(true), filters);
   });
 }

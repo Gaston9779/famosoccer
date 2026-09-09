@@ -2,10 +2,16 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { importPlayerFromTransfermarktUrl } from "@/lib/services/players";
 import { ProviderError } from "@/lib/transfermarkt/errors";
+import { playerUrl } from "@/lib/transfermarkt/endpoints";
 export const runtime = "nodejs";
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
-  if (origin && origin !== new URL(request.url).origin)
+  const requestOrigin = new URL(request.url).origin;
+  const localDevelopmentOrigin = (value: string) => {
+    const url = new URL(value);
+    return process.env.NODE_ENV === "development" && ["localhost", "127.0.0.1"].includes(url.hostname) && url.protocol === "http:";
+  };
+  if (origin && origin !== requestOrigin && !(localDevelopmentOrigin(origin) && localDevelopmentOrigin(requestOrigin)))
     return NextResponse.json(
       {
         error: {
@@ -36,9 +42,9 @@ export async function POST(request: Request) {
       { status: 400 },
     );
   try {
-    return NextResponse.json({
-      player: await importPlayerFromTransfermarktUrl(parsed.data.url),
-    });
+    playerUrl(parsed.data.url);
+    const imported = await importPlayerFromTransfermarktUrl(parsed.data.url);
+    return NextResponse.json(imported);
   } catch (error) {
     const known = error instanceof ProviderError;
     const code = known ? error.code : "INTERNAL_ERROR";

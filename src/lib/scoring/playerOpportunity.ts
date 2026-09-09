@@ -1,106 +1,99 @@
-import { clamp, daysBetween, scoringConfig } from "./config";
+import { clamp, daysBetween, round, scoringConfig } from "./config";
 import { normalizeRole } from "./roles";
 import { playerAge, type IntelligencePlayer } from "./types";
 import type { Representation } from "../transfermarkt/types";
-export type Component = { score: number; reason: string; warning?: string };
+export type Component = { score: number | null; maxScore: number; status: "KNOWN" | "UNKNOWN"; reason: string; warning?: string };
+const known = (score: number, maxScore: number, reason: string, warning?: string): Component => ({ score, maxScore, status: "KNOWN", reason, ...(warning ? { warning } : {}) });
+const unknown = (maxScore: number, reason: string): Component => ({ score: null, maxScore, status: "UNKNOWN", reason, warning: reason });
 export function scoreContractOpportunity(
   contractExpires: Date | null,
   now: Date,
   confirmedFreeAgent = false,
-  clubId: string | null = null,
+  // Retain the legacy fourth argument for existing callers; a missing club is
+  // intentionally no longer evidence of availability.
+  _clubId: string | null = null,
+  careerStatus: "ACTIVE" | "FREE_AGENT" | "RETIRED" | "UNKNOWN" = "UNKNOWN",
 ): Component {
-  if (confirmedFreeAgent && clubId === null)
-    return { score: 35, reason: "Confirmed free agent: +35" };
+  // A retired player must not be treated as an available free agent, even if
+  // an older record still carries the confirmed-free-agent flag.
+  if (
+    careerStatus !== "RETIRED" &&
+    (confirmedFreeAgent || careerStatus === "FREE_AGENT")
+  )
+    return known(35, 35, "Free agent: immediately available");
   if (!contractExpires || !Number.isFinite(contractExpires.getTime()))
-    return {
-      score: 0,
-      reason: "Contract: +0",
-      warning: "Contract data unavailable",
-    };
+    return unknown(35, "Contract expiry unavailable");
   const days = daysBetween(contractExpires, now);
   if (days < 0)
-    return {
-      score: 0,
-      reason: "Past contract date is not proof of free agency: +0",
-      warning:
-        "Contract date is in the past; current status requires verification",
-    };
+    return known(0, 35, "Contract expiry date has passed", "Contract date is in the past; current status requires verification");
   const score =
-    days <= 90
+    days < 180
       ? 32
-      : days <= 180
+      : days <= 365
         ? 28
-        : days <= 365
-          ? 22
-          : days <= 540
+        : days <= 420
+          ? 24
+          : days <= 547
             ? 12
             : days <= 730
               ? 5
               : 0;
-  return { score, reason: `Contract expires in ${days} days: +${score}` };
+  const reason =
+    days < 180
+      ? "Contract expires within 6 months"
+      : days <= 365
+        ? "Contract expires within 12 months"
+        : days <= 420
+          ? "Contract expires in approximately 12–14 months"
+          : days <= 547
+            ? "Contract expires in approximately 14–18 months"
+            : days <= 730
+              ? "Contract expires in approximately 18–24 months"
+              : "Contract expires in more than 24 months";
+  return known(score, 35, reason);
 }
 export function scoreRepresentationOpportunity(
   status: Representation,
 ): Component {
+  if (status === "UNKNOWN") return unknown(30, "Representation unavailable");
   const score = {
     NO_AGENT: 30,
     FAMILY: 28,
     NOT_LISTED: 23,
-    UNKNOWN: 15,
     AGENCY: 0,
   }[status];
-  return {
+  return known(
     score,
-    reason: `Representation ${status}: +${score}`,
-    ...(status === "NOT_LISTED"
-      ? { warning: "Agent field not listed; this does not mean no agent" }
-      : status === "UNKNOWN"
-        ? { warning: "Representation data unknown" }
-        : {}),
-  };
+    30,
+    `Representation ${status}: +${score}`,
+    status === "NOT_LISTED"
+      ? "Agent field not listed; this does not mean no agent"
+      : undefined,
+  );
 }
-export function scorePlayingTimeOpportunity(pct: number | null): Component {
-  if (pct === null || !Number.isFinite(pct) || pct < 0 || pct > 100)
-    return {
-      score: 0,
-      reason: "Playing time: +0",
-      warning: "Playing time unavailable",
-    };
-  const score = pct < 10 ? 15 : pct < 25 ? 12 : pct < 50 ? 8 : pct < 75 ? 3 : 0;
-  return {
-    score,
-    reason: `${pct.toFixed(2)}% of league minutes: +${score} (commercial availability, not quality)`,
-  };
+export function scorePlayingTime(pct: number | null | undefined): Component {
+  if (pct == null || !Number.isFinite(pct) || pct < 0 || pct > 100)
+    return unknown(15, "Playing time unavailable");
+  const score = pct < 10 ? 0 : pct < 25 ? 3 : pct < 50 ? 8 : pct < 75 ? 12 : 15;
+  return known(score, 15, `${pct.toFixed(1)}% of league minutes: +${score}`);
 }
+export const scorePlayingTimeOpportunity = scorePlayingTime;
 export function scoreAgeOpportunity(age: number | null): Component {
   if (age === null || !Number.isFinite(age) || age < 0)
-    return { score: 0, reason: "Age: +0", warning: "Age unavailable" };
+    return unknown(10, "Age unavailable");
   if (age < 18)
-    return { score: 0, reason: "Under 18: +0", warning: "Minor player" };
+    return known(0, 10, "Under 18: +0", "Minor player");
   const score =
     age <= 21 ? 10 : age <= 24 ? 8 : age <= 27 ? 5 : age <= 30 ? 2 : 0;
-  return { score, reason: `Age ${age}: +${score}` };
+  return known(score, 10, `Age ${age}: +${score}`);
 }
 export function scoreMarketAccessibility(value: number | null): Component {
   if (value === null || !Number.isFinite(value) || value < 0)
-    return {
-      score: 0,
-      reason: "Market accessibility: +0",
-      warning: "Market value unavailable",
-    };
+    return unknown(10, "Market value unavailable");
   const score =
     value <= 100000
-      ? 8
-      : value <= 500000
-        ? 10
-        : value <= 1000000
-          ? 8
-          : value <= 2000000
-            ? 5
-            : value <= 5000000
-              ? 2
-              : 0;
-  return { score, reason: `Market value €${value}: accessibility +${score}` };
+      ? 10 : value <= 250000 ? 9 : value <= 500000 ? 8 : value <= 750000 ? 7 : value <= 1000000 ? 6 : value <= 2000000 ? 4 : value <= 3000000 ? 3 : value <= 5000000 ? 2 : 1;
+  return known(score, 10, `Market value €${value}: accessibility +${score}`);
 }
 export function currentScoringPerformance<T extends IntelligencePlayer>(
   player: T,
@@ -126,59 +119,26 @@ export function currentScoringPerformance<T extends IntelligencePlayer>(
       )[0] ?? null
   );
 }
-export function calculateConfidence(
-  player: IntelligencePlayer,
-  season: string | null,
-  now: Date,
-) {
-  const reasons: string[] = [];
-  let total = 0;
-  const add = (n: number, reason: string) => {
-    total += n;
-    reasons.push(`${reason}: +${n}`);
+export function calculateConfidence(components: Component[] | IntelligencePlayer, season?: string | null, now?: Date) {
+  const values = Array.isArray(components) ? components : [
+    scoreContractOpportunity(components.contractExpires, now!, components.confirmedFreeAgent, components.clubId, components.careerStatus),
+    scoreRepresentationOpportunity(components.representationStatus),
+    scorePlayingTime(currentScoringPerformance(components, season ?? null, now!)?.minutesPlayedPercent),
+    scoreAgeOpportunity(playerAge(components, now!)),
+    scoreMarketAccessibility(components.marketValueEur),
+  ];
+  const knownMaxScoreSum = values.filter((c) => c.status === "KNOWN").reduce((sum, c) => sum + c.maxScore, 0);
+  return {
+    // Compatibility for callers that consume this helper as a coverage summary.
+    total: knownMaxScoreSum,
+    knownMaxScoreSum,
+    confidence: knownMaxScoreSum / 100,
+    reasons: values.map((c) => `${c.maxScore}-point ${c.reason}: ${c.status}`),
   };
-  const age = player.profileLastSyncedAt
-    ? daysBetween(now, player.profileLastSyncedAt)
-    : null;
-  add(
-    age === null || age < 0 ? 0 : age <= 7 ? 25 : age <= 30 ? 18 : 8,
-    "Profile freshness",
-  );
-  add(
-    (player.contractExpires && daysBetween(player.contractExpires, now) >= 0) ||
-      (player.confirmedFreeAgent && player.clubId === null)
-      ? 20
-      : 0,
-    "Verified contract/status availability",
-  );
-  add(
-    player.representationStatus !== "UNKNOWN" ? 20 : 0,
-    "Representation field classification (NOT_LISTED is absence, not no agent)",
-  );
-  const perf = currentScoringPerformance(player, season, now);
-  const perfAge = perf ? daysBetween(now, perf.sourceUpdatedAt) : null;
-  const syncAge = player.performanceLastSyncedAt
-    ? daysBetween(now, player.performanceLastSyncedAt)
-    : null;
-  add(
-    perfAge !== null &&
-      syncAge !== null &&
-      syncAge >= 0 &&
-      syncAge <= scoringConfig.performanceFreshDays &&
-      perfAge <= scoringConfig.performanceFreshDays
-      ? 15
-      : 0,
-    "Current-season performance freshness",
-  );
-  add(
-    normalizeRole(player.mainPosition) !== "UNKNOWN" ? 10 : 0,
-    "Known main role",
-  );
-  add(
-    player.marketValueEur !== null && player.marketValueEur >= 0 ? 10 : 0,
-    "Market value availability",
-  );
-  return { total: clamp(total), reasons };
+}
+export function adjustOpportunity(rawOpportunity: number | null, confidence: number): number | null {
+  if (rawOpportunity === null) return null;
+  return round(50 + (rawOpportunity - 50) * confidence);
 }
 export function calculatePlayerOpportunity(
   player: IntelligencePlayer,
@@ -192,13 +152,19 @@ export function calculatePlayerOpportunity(
       now,
       player.confirmedFreeAgent,
       player.clubId,
+      player.careerStatus,
     ),
     scoreRepresentationOpportunity(player.representationStatus),
-    scorePlayingTimeOpportunity(performance?.minutesPlayedPercent ?? null),
+    scorePlayingTime(performance?.minutesPlayedPercent),
     scoreAgeOpportunity(playerAge(player, now)),
     scoreMarketAccessibility(player.marketValueEur),
   ];
-  const confidence = calculateConfidence(player, season, now);
+  const coverage = calculateConfidence(components);
+  const knownScoreSum = components.reduce((sum, component) => sum + (component.status === "KNOWN" ? component.score ?? 0 : 0), 0);
+  const rawOpportunity = coverage.knownMaxScoreSum
+    ? round(knownScoreSum / coverage.knownMaxScoreSum * 100)
+    : null;
+  const adjustedOpportunity = adjustOpportunity(rawOpportunity, coverage.confidence);
   const warnings = components.flatMap((c) => (c.warning ? [c.warning] : []));
   if (!player.profileLastSyncedAt)
     warnings.push("Profile not imported; score is provisional");
@@ -211,14 +177,19 @@ export function calculatePlayerOpportunity(
   if (normalizeRole(player.mainPosition) === "UNKNOWN")
     warnings.push("Main role unavailable");
   return {
-    total: clamp(components.reduce((n, c) => n + c.score, 0)),
+    // `total` is the product score: confidence-adjusted, not raw known-data score.
+    total: adjustedOpportunity,
+    rawOpportunity,
+    adjustedOpportunity,
+    knownScoreSum,
+    knownMaxScoreSum: coverage.knownMaxScoreSum,
     contractScore: components[0].score,
     representationScore: components[1].score,
     playingTimeScore: components[2].score,
     ageScore: components[3].score,
     marketAccessibilityScore: components[4].score,
-    confidence: confidence.total,
-    confidenceReasons: confidence.reasons,
+    confidence: coverage.confidence,
+    confidenceReasons: coverage.reasons,
     reasons: components.map((c) => c.reason),
     warnings,
   };

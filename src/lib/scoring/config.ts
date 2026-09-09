@@ -31,7 +31,7 @@ export const scoringConfig = {
   dailyNeedSnapshot: false,
   performanceFreshDays: 7,
   minimumMarketContext: 5,
-  algorithmVersion: "uz1-v1",
+  algorithmVersion: "uz1-v2-contract-thresholds",
 };
 export const clamp = (n: number, max = 100) =>
   Math.max(0, Math.min(max, Number.isFinite(n) ? n : 0));

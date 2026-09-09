@@ -3,15 +3,20 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { ClubLogo, PlayerAvatar } from "@/components/media";
+import { FavoriteToggle } from "@/components/favorite-toggle";
 import { formatRepresentation } from "@/lib/presentation";
+import { numericRangeIncludes } from "@/lib/player-filters";
 
 type PlayerRow = {
   id: string;
+  isFavorite: boolean;
   name: string;
   portraitUrl: string | null;
-  club: { id: string; name: string; tmClubId: string } | null;
+  club: { id: string; name: string; tmClubId: string; competitionCode?: string | null } | null;
   role: string;
   age: number | null;
+  height: number | null;
+  foot: string;
   nationality: string | null;
   contract: string | null;
   representation: string;
@@ -50,6 +55,8 @@ const date = (value: string) => {
 };
 
 const labelRole = (role: string) => role === "UNKNOWN" ? "Unknown role" : role;
+const footShort = (foot: string) => foot === "RIGHT" ? "Right foot" : foot === "LEFT" ? "Left foot" : foot === "BOTH" ? "Both feet" : null;
+const physicalLine = (height: number | null, foot: string) => [height ? `${height} cm` : null, footShort(foot)].filter(Boolean).join(" · ");
 const nationalityCodes: Record<string, [string, string]> = {
   Uzbekistan: ["🇺🇿", "UZB"], Russia: ["🇷🇺", "RUS"], Kazakhstan: ["🇰🇿", "KAZ"], Kyrgyzstan: ["🇰🇬", "KGZ"], Tajikistan: ["🇹🇯", "TJK"],
   Turkmenistan: ["🇹🇲", "TKM"], Belarus: ["🇧🇾", "BLR"], Ukraine: ["🇺🇦", "UKR"], Azerbaijan: ["🇦🇿", "AZE"], Georgia: ["🇬🇪", "GEO"],
@@ -69,18 +76,18 @@ function PlayerCard({ row }: { row: PlayerRow }) {
   return (
     <article className="player-card">
       <Link className="player-card-player-link" href={`/players/${row.id}`} aria-label={`View ${row.name}`} />
-      <div className="player-card-top">
+      <div className="player-card-top"><FavoriteToggle playerId={row.id} initial={row.isFavorite} compact/>
         <PlayerAvatar name={row.name} portraitUrl={row.portraitUrl} />
         <span className={`player-card-score player-card-score-${scoreTone(row.opportunity)}`}>{row.opportunity == null ? "—" : row.opportunity.toFixed(1)}</span>
       </div>
       <div className="player-card-identity">
         <strong title={row.name}>{row.name}</strong>
-        <span>{row.age == null ? "Age unavailable" : `${row.age} years old`}</span>
+        <span>{row.age == null ? "Age —" : `${row.age} yrs`}{row.nationality && ` · ${nationalityDisplay(row.nationality).flag} ${nationalityDisplay(row.nationality).code}`}</span>
         <em>{labelRole(row.role)}</em>
+        {physicalLine(row.height, row.foot) && <small className="player-card-physical">{physicalLine(row.height, row.foot)}</small>}
       </div>
       <div className="player-card-club-row">
-        {row.club ? <Link href={`/clubs/${row.club.id}`} className="player-card-club"><ClubLogo name={row.club.name} tmClubId={row.club.tmClubId} /><b title={row.club.name}>{row.club.name}</b></Link> : <span className="player-card-club muted">No current club</span>}
-        <small title={row.nationality ?? undefined}>{nationalityDisplay(row.nationality).flag} {nationalityDisplay(row.nationality).code}</small>
+        {row.club ? <Link href={`/clubs/${row.club.id}`} className="player-card-club"><ClubLogo name={row.club.name} tmClubId={row.club.tmClubId} /><span><b title={row.club.name}>{row.club.name}</b>{row.club.competitionCode && <small className="player-card-league">{row.club.competitionCode}</small>}</span></Link> : <span className="player-card-club muted">No current club</span>}
       </div>
       <div className="player-card-meta">
         <div><span>Contract</span><strong>{row.contract ? date(row.contract) : "—"}</strong></div>
@@ -91,8 +98,8 @@ function PlayerCard({ row }: { row: PlayerRow }) {
   );
 }
 
-export function PlayerTable({ rows }: { rows: PlayerRow[] }) {
-  const [filters, setFilters] = useState<Filters>(emptyFilters);
+export function PlayerTable({ rows, initialSearch = "", initialFavorites = false }: { rows: PlayerRow[]; initialSearch?: string; initialFavorites?: boolean }) {
+  const [filters, setFilters] = useState<Filters>({ ...emptyFilters, search: initialSearch });
   const [sort, setSort] = useState<SortKey>("opportunity");
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(20);
@@ -106,16 +113,15 @@ export function PlayerTable({ rows }: { rows: PlayerRow[] }) {
     const now = new Date();
     const thisYear = now.getUTCFullYear();
     const contains = (value: string | null | undefined, target: string) => !target || String(value ?? "").toLowerCase().includes(target.toLowerCase());
-    const inRange = (value: number | null, min: string, max: string) => value != null && (!min || value >= Number(min)) && (!max || value <= Number(max));
     return contains(row.name, filters.search)
       && (!filters.role || labelRole(row.role) === filters.role)
       && (!filters.club || row.club?.id === filters.club)
       && (!filters.nationality || nationalityDisplay(row.nationality).code === filters.nationality)
       && (!filters.representation || row.representation === filters.representation)
       && (!filters.contract || (filters.contract === "known" ? !!contractStatus : filters.contract === "expiring" ? !!contractStatus && contractStatus.getUTCFullYear() <= thisYear + 1 : !contractStatus))
-      && inRange(row.age, filters.minAge, filters.maxAge)
-      && inRange(row.marketValue, filters.minValue, filters.maxValue)
-      && inRange(row.opportunity, filters.minScore, filters.maxScore);
+      && numericRangeIncludes(row.age, filters.minAge, filters.maxAge)
+      && numericRangeIncludes(row.marketValue, filters.minValue, filters.maxValue)
+      && numericRangeIncludes(row.opportunity, filters.minScore, filters.maxScore);
   }).sort((a, b) => {
     const score = (value: number | null) => value ?? -1;
     const dateValue = (value: string | null) => value ? new Date(`${value}T00:00:00Z`).getTime() : Number.POSITIVE_INFINITY;
@@ -150,6 +156,7 @@ export function PlayerTable({ rows }: { rows: PlayerRow[] }) {
         <button type="button" className="players-reset" onClick={reset}>↻ Reset</button>
       </div>
     </section>
+    <div className="players-favorite-filter"><Link href={initialFavorites ? `/players?search=${initialSearch}` : `/players?search=${initialSearch}&favorites=1`}>{initialFavorites ? "★ Favorites only — active" : "☆ Favorites only"}</Link></div>
     <section className="players-results-header">
       <h2>{visible.length} players</h2>
       <div><label>Sort by <select value={sort} onChange={(event) => { setSort(event.target.value as SortKey); setPage(1); }}><option value="opportunity">Opportunity score</option><option value="marketValue">Market value</option><option value="age">Age</option><option value="contract">Contract expiry</option><option value="name">Name</option></select></label><div className="players-view-switch" role="group" aria-label="Player result view"><button type="button" className={view === "grid" ? "active" : ""} onClick={() => setView("grid")}>▦ Grid</button><button type="button" className={view === "list" ? "active" : ""} onClick={() => setView("list")}>☷ List</button></div></div>

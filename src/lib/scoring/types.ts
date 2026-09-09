@@ -14,6 +14,7 @@ export interface IntelligencePlayer {
   profileLastSyncedAt: Date | null;
   performanceLastSyncedAt: Date | null;
   confirmedFreeAgent?: boolean;
+  careerStatus?: "ACTIVE" | "FREE_AGENT" | "RETIRED" | "UNKNOWN";
   performances: {
     season: string;
     competitionCode: string | null;

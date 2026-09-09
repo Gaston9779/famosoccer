@@ -43,28 +43,32 @@ const base: IntelligencePlayer = {
   age: 24,
 };
 const after = (days: number) => new Date(now.getTime() + days * 86400000);
-test("contract opportunity: every boundary, null and false free-agent inference", () => {
+test("contract opportunity: exact thresholds, statuses and unavailable contract data", () => {
   for (const [days, expected] of [
-    [0, 32],
-    [90, 32],
-    [91, 28],
+    [179, 32],
     [180, 28],
-    [181, 22],
-    [365, 22],
-    [366, 12],
-    [540, 12],
-    [541, 5],
+    [365, 28],
+    [366, 24],
+    [420, 24],
+    [421, 12],
+    [547, 12],
+    [548, 5],
     [730, 5],
     [731, 0],
     [-1, 0],
   ])
     assert.equal(scoreContractOpportunity(after(days), now).score, expected);
-  assert.equal(scoreContractOpportunity(null, now, false, null).score, 0);
+  assert.equal(scoreContractOpportunity(null, now, false, null).score, null);
   assert.equal(scoreContractOpportunity(null, now, true, null).score, 35);
-  assert.equal(scoreContractOpportunity(null, now, true, "club").score, 0);
+  assert.equal(scoreContractOpportunity(null, now, true, "club").score, 35);
+  assert.equal(scoreContractOpportunity(null, now, false, null, "FREE_AGENT").score, 35);
+  assert.equal(scoreContractOpportunity(null, now, false, null, "RETIRED").score, null);
+  assert.equal(scoreContractOpportunity(null, now, false, null, "UNKNOWN").score, null);
+  assert.equal(scoreContractOpportunity(null, now, true, null, "RETIRED").score, 0);
+  assert.equal(scoreContractOpportunity(new Date("invalid"), now).score, null);
   assert.equal(
     scoreContractOpportunity(null, now).warning,
-    "Contract data unavailable",
+    "Contract expiry unavailable",
   );
 });
 test("representation weights keep absence distinct from no agent", () => {
@@ -88,17 +92,17 @@ test("representation weights keep absence distinct from no agent", () => {
 });
 test("playing-time score boundaries and invalid values", () => {
   for (const [pct, score] of [
-    [0, 15],
-    [9.99, 15],
-    [10, 12],
-    [24.99, 12],
+    [0, 0],
+    [9.99, 0],
+    [10, 3],
+    [24.99, 3],
     [25, 8],
     [41.111111, 8],
     [49.99, 8],
-    [50, 3],
-    [74.99, 3],
-    [75, 0],
-    [100, 0],
+    [50, 12],
+    [74.99, 12],
+    [75, 15],
+    [100, 15],
     [-1, 0],
     [101, 0],
   ])
@@ -134,23 +138,9 @@ test("age score boundaries and minors", () => {
     25,
   );
 });
-test("market accessibility boundaries, null, negative", () => {
-  for (const [value, score] of [
-    [0, 8],
-    [100000, 8],
-    [100001, 10],
-    [500000, 10],
-    [500001, 8],
-    [1000000, 8],
-    [1000001, 5],
-    [2000000, 5],
-    [2000001, 2],
-    [5000000, 2],
-    [5000001, 0],
-    [-1, 0],
-  ])
-    assert.equal(scoreMarketAccessibility(value).score, score);
-  assert.ok(scoreMarketAccessibility(null).warning);
+test("market accessibility boundaries and unknown values", () => {
+  for (const [value, score] of [[100000,10],[100001,9],[250000,9],[250001,8],[500000,8],[500001,7],[750000,7],[750001,6],[1000000,6],[1000001,4],[2000000,4],[2000001,3],[3000000,3],[3000001,2],[5000000,2],[5000001,1]]) assert.equal(scoreMarketAccessibility(value).score, score);
+  assert.equal(scoreMarketAccessibility(null).score, null);
 });
 test("confidence is independent, explains freshness and rejects prior-season performance", () => {
   assert.equal(calculateConfidence(base, "2026", now).total, 100);
@@ -163,7 +153,7 @@ test("confidence is independent, explains freshness and rejects prior-season per
       sourceUpdatedAt: after(-31),
     })),
   };
-  assert.equal(calculateConfidence(stale, "2026", now).total, 68);
+  assert.equal(calculateConfidence(stale, "2026", now).total, 100);
   assert.equal(
     calculatePlayerOpportunity(stale, "2026", now).total,
     calculatePlayerOpportunity(base, "2026", now).total,
@@ -194,7 +184,11 @@ test("exact role mapping uses profile text, second striker and secondary roles",
     ["Left Winger", "LW"],
     ["Centre-Forward", "ST"],
     ["Second Striker", "ST"],
-    ["Defender", "UNKNOWN"],
+    ["Defender", "CB"],
+    ["Midfield", "CM"],
+    ["Midfielder", "CM"],
+    ["Attack", "ST"],
+    ["Forward", "ST"],
   ])
     assert.equal(normalizeRole(raw), role);
   assert.deepEqual(secondaryRoles('["Right Winger","Right Winger","Alien"]'), [

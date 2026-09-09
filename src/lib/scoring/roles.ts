@@ -1,4 +1,25 @@
 import type { Role } from "./config";
+
+export type GenericRoleFallback = {
+  mainPosition: Extract<Role, "CB" | "CM" | "ST">;
+  positionGroup: "DEFENDER" | "MIDFIELDER" | "FORWARD";
+};
+
+/**
+ * Transfermarkt sometimes publishes only a broad category. These are explicit
+ * scouting fallbacks, used only when no detailed role is present in the source.
+ */
+export function genericRoleFallback(raw?: string | null): GenericRoleFallback | null {
+  switch (raw?.trim().toLowerCase()) {
+    case "defender": return { mainPosition: "CB", positionGroup: "DEFENDER" };
+    case "midfield":
+    case "midfielder": return { mainPosition: "CM", positionGroup: "MIDFIELDER" };
+    case "attack":
+    case "forward": return { mainPosition: "ST", positionGroup: "FORWARD" };
+    default: return null;
+  }
+}
+
 export function normalizeRole(raw?: string | null): Role {
   const p = raw
     ?.trim()
@@ -26,6 +47,14 @@ export function normalizeRole(raw?: string | null): Role {
     "centre-forward": "ST",
     "center-forward": "ST",
     "second striker": "ST",
+    cb: "CB",
+    cm: "CM",
+    st: "ST",
+    defender: "CB",
+    midfield: "CM",
+    midfielder: "CM",
+    attack: "ST",
+    forward: "ST",
   };
   return p ? (roles[p] ?? "UNKNOWN") : "UNKNOWN";
 }

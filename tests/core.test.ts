@@ -16,6 +16,18 @@ import {
 import { parseListings } from "../src/lib/transfermarkt/parsers/listings";
 import { scoringInputs, shouldFetchPerformance } from "../src/lib/scoring";
 import { RateLimiter } from "../src/lib/transfermarkt/rateLimiter";
+import { scorePlayingTimeOpportunity } from "../src/lib/scoring/playerOpportunity";
+import { numericRangeIncludes } from "../src/lib/player-filters";
+test("empty numeric ranges keep players with unknown optional values visible", () => {
+  assert.equal(numericRangeIncludes(null, "", ""), true);
+  assert.equal(numericRangeIncludes(null, "20", ""), false);
+  assert.equal(numericRangeIncludes(null, "", "80"), false);
+  assert.equal(numericRangeIncludes(50, "20", "80"), true);
+});
+test("playing time rewards greater participation at canonical boundaries", () => {
+  for (const [pct, score] of [[null,null],[0,0],[9.99,0],[10,3],[24.99,3],[25,8],[41.111,8],[49.99,8],[50,12],[64.5,12],[74.99,12],[75,15],[83.44,15],[100,15]] as const)
+    assert.equal(scorePlayingTimeOpportunity(pct).score, score);
+});
 const fixture = (name: string) =>
   readFileSync(`tests/fixtures/transfermarkt/${name}`, "utf8");
 test("player IDs across country domains; rejects lookalikes and unrelated paths", () => {

@@ -10,12 +10,14 @@ try {
   const result =
     command === "players"
       ? await recalculateAllPlayerOpportunities()
+      : command === "players-current"
+        ? await recalculateAllPlayerOpportunities(new Date(), true)
       : command === "clubs"
         ? await recalculateAllClubNeeds()
         : command === "all"
           ? await recalculateAllScores()
           : null;
-  if (!result) throw new Error("Use players, clubs or all");
+  if (!result) throw new Error("Use players, players-current, clubs or all");
   console.log(JSON.stringify(result, null, 2));
 } catch (error) {
   console.error(error);

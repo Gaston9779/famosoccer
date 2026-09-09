@@ -4,6 +4,6 @@ export const dynamic = "force-dynamic";
 export async function GET(request: Request) {
   return api(async () => {
     const filters = query(request, matchFilters);
-    return { items: topMatches(await loadIntelligenceView(), filters) };
+    return { items: topMatches(await loadIntelligenceView(true), filters) };
   });
 }

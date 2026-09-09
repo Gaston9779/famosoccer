@@ -1,0 +1,12 @@
+import "dotenv/config";
+import { db } from "../src/lib/db";
+import { calculateAndPersistPlayerOpportunity } from "../src/lib/intelligence/persistence";
+const pseudoClubs = await db.club.findMany({ where: { name: { contains: "Without Club", mode: "insensitive" } }, select: { id: true } });
+if (pseudoClubs.length) await db.player.updateMany({ where: { clubId: { in: pseudoClubs.map((club) => club.id) } }, data: { clubId: null, confirmedFreeAgent: true } });
+const availabilityWhere = { OR: [{ confirmedFreeAgent: true }, { clubId: null }] };
+const players = await db.player.findMany({ where: availabilityWhere, select: { id: true } });
+const before = await db.playerOpportunityHistory.aggregate({ where: { isCurrent: true, player: availabilityWhere }, _avg: { total: true } });
+for (const player of players) await calculateAndPersistPlayerOpportunity(player.id);
+const after = await db.playerOpportunityHistory.aggregate({ where: { isCurrent: true, player: availabilityWhere }, _avg: { total: true } });
+console.log(JSON.stringify({ count: players.length, oldAverage: before._avg.total, newAverage: after._avg.total }));
+await db.$disconnect();

@@ -1,6 +1,6 @@
 import "dotenv/config";
 import { randomUUID } from "node:crypto";
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 import { Pool } from "pg";
 
 function quoteIdentifier(identifier: string) {
@@ -15,15 +15,20 @@ export async function createPostgresTestDatabase() {
 
   const schema = `test_${randomUUID().replaceAll("-", "")}`;
   const pool = new Pool({ connectionString });
-  const migration = readFileSync(
-    "prisma/postgres-migrations/20260908000000_init/migration.sql",
-    "utf8",
-  ).replace(
+  const migrations = readdirSync("prisma/postgres-migrations", {
+    withFileTypes: true,
+  })
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => entry.name)
+    .sort()
+    .map((entry) => `prisma/postgres-migrations/${entry}/migration.sql`)
+    .map((path) => readFileSync(path, "utf8"));
+  migrations[0] = migrations[0].replace(
     'CREATE SCHEMA IF NOT EXISTS "public";',
     `CREATE SCHEMA IF NOT EXISTS ${quoteIdentifier(schema)}; SET search_path TO ${quoteIdentifier(schema)};`,
   );
 
-  await pool.query(migration);
+  await pool.query(migrations.join("\n"));
 
   return {
     connectionString,

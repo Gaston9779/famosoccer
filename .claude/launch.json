@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "/Users/nicolaviola/.nvm/versions/node/v20.19.6/bin/node",
+      "runtimeArgs": ["node_modules/next/dist/bin/next", "dev", "--hostname", "127.0.0.1", "--port", "3111"],
+      "port": 3111,
+      "url": "http://127.0.0.1:3111"
+    }
+  ]
+}

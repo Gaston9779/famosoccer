@@ -5,6 +5,8 @@ import { ScoreBadge } from "@/components/scouting-ui";
 import { dashboardSummary } from "@/lib/intelligence/queries";
 import { db } from "@/lib/db";
 import { normalizeRole } from "@/lib/scoring/roles";
+import { playerCoverage } from "@/lib/intelligence/coverage";
+import { CoverageCard } from "@/components/coverage-card";
 
 export const dynamic = "force-dynamic";
 
@@ -72,7 +74,7 @@ function ListHeader({
 }
 
 export default async function Home() {
-  const [data, players] = await Promise.all([
+  const [data, players, exactRoleCoverage] = await Promise.all([
     dashboardSummary(),
     db.player.findMany({
       where: { club: { competition: { tmCompetitionId: "UZ1" } } },
@@ -82,6 +84,7 @@ export default async function Home() {
         opportunityHistory: { where: { isCurrent: true }, select: { total: true } },
       },
     }),
+    playerCoverage("EXACT_ROLE_COVERED"),
   ]);
 
   const playerById = new Map(players.map((player) => [player.id, player]));
@@ -137,7 +140,9 @@ export default async function Home() {
           ["contract", data.contractsExpiring12Months, "Contracts expiring", "Within 12 months"],
           ["representation", data.openRepresentationCount, "Representation opportunities", "No agent or family"],
           ["coverage", `${data.coverage.knownMainRoles} / ${data.playerCount}`, "Data coverage", "Exact roles known"],
-        ].map(([kind, value, label, detail]) => (
+        ].map(([kind, value, label, detail]) => kind === "coverage" ? (
+          <CoverageCard key={String(label)} value={String(value)} coverage={exactRoleCoverage} />
+        ) : (
           <article className="dashboard-kpi-card" key={String(label)}>
             <div className="dashboard-kpi-value"><MetricIcon kind={kind as Parameters<typeof MetricIcon>[0]["kind"]} /><strong>{value}</strong></div>
             <h2>{label}</h2>

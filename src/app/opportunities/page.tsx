@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { db } from "@/lib/db";
-import { dashboardSummary, loadIntelligenceView, topMatches } from "@/lib/intelligence/queries";
+import { loadIntelligenceView, topMatches } from "@/lib/intelligence/queries";
 import { normalizeRole } from "@/lib/scoring/roles";
 import { playerAge } from "@/lib/scoring/types";
 import { formatRepresentation } from "@/lib/presentation";
@@ -20,17 +20,22 @@ function MetricIcon({ icon, tone }: { icon: string; tone: string }) {
 export default async function Opportunities({ searchParams }: { searchParams: Promise<{ tab?: string }> }) {
   const { tab: requested } = await searchParams;
   const tab = requested === "needs" || requested === "matches" ? requested : "players";
-  const [view, summary, players] = await Promise.all([
+  const [view, players] = await Promise.all([
     loadIntelligenceView(true),
-    dashboardSummary(),
     db.player.findMany({
       where: { club: { competition: { tmCompetitionId: "UZ1" } } },
       include: { club: true, performances: true, opportunityHistory: { where: { isCurrent: true }, take: 1 } },
       orderBy: { name: "asc" },
     }),
   ]);
-  const scored = players.flatMap((player) => player.opportunityHistory[0] ? [player.opportunityHistory[0].total] : []);
+  const scored = players.flatMap((player) => player.opportunityHistory[0]?.total == null ? [] : [player.opportunityHistory[0].total]);
   const averageOpportunity = scored.length ? scored.reduce((total, score) => total + score, 0) / scored.length : null;
+  const highOpportunityCount = scored.filter((score) => score >= 70).length;
+  const contractsExpiring12Months = players.filter((player) => {
+    if (!player.contractExpires) return false;
+    const days = Math.ceil((player.contractExpires.getTime() - Date.now()) / 86_400_000);
+    return days >= 0 && days <= 365;
+  }).length;
   let table: { columns: TableColumn[]; rows: TableRow[] } | null = null;
   let matchRows: MatchRow[] = [];
 
@@ -70,13 +75,13 @@ export default async function Opportunities({ searchParams }: { searchParams: Pr
     <header className="opportunities-header"><p className="eyebrow">Opportunities</p><h1>Player opportunities</h1><p>Find undervalued players with high commercial potential</p></header>
     <section className="opportunities-kpis" aria-label="Opportunity metrics">
       {[
-        ["✦", "emerald", summary.highOpportunityCount, "High opportunities", "Opportunity score ≥ 70"],
+        ["✦", "emerald", highOpportunityCount, "High opportunities", "Opportunity score ≥ 70"],
         ["◉", "blue", view.players.length, "Players analyzed", "Current UZ1 roster"],
         ["◌", "amber", averageOpportunity == null ? "—" : averageOpportunity.toFixed(1), "Average opportunity", scored.length ? `${scored.length} scored players` : "No score data"],
-        ["▤", "rose", summary.contractsExpiring12Months, "Contracts expiring", "Within 12 months"],
+        ["▤", "rose", contractsExpiring12Months, "Contracts expiring", "Within 12 months"],
       ].map(([icon, tone, value, label, detail]) => <article className="opportunities-kpi" key={String(label)}><div><MetricIcon icon={String(icon)} tone={String(tone)} /><strong>{value}</strong></div><h2>{label}</h2><p>{detail}</p></article>)}
     </section>
     <nav aria-label="Opportunity views" className="opportunities-tabs">{[["players", "Player opportunities"], ["needs", "Club needs"], ["matches", "Player ↔ Club matches"]].map(([key, label]) => <Link key={key} href={`/opportunities?tab=${key}`} aria-current={tab === key ? "page" : undefined} className={tab === key ? "active" : ""}>{label}</Link>)}</nav>
-    {tab === "players" ? <PlayerTable rows={players.map((player) => ({ id: player.id, name: player.name, portraitUrl: player.portraitUrl, club: player.club ? { id: player.club.id, name: player.club.name, tmClubId: player.club.tmClubId } : null, role: normalizeRole(player.mainPosition), age: playerAge(player, new Date()), nationality: player.nationalities === "[]" ? null : player.nationalities.replace(/[\[\]"]/g, ""), contract: player.contractExpires?.toISOString().slice(0, 10) ?? null, representation: player.representationStatus, agency: player.agencyName, marketValue: player.marketValueEur, playingTime: player.performances[0]?.minutesPlayedPercent ?? null, opportunity: player.opportunityHistory[0]?.total ?? null, confidence: player.opportunityHistory[0]?.confidence ?? null }))} /> : <section className="opportunities-table-panel"><IntelligenceTable key={tab} label={tab === "needs" ? "Club needs" : "Player club matches"} columns={table!.columns} rows={table!.rows} /></section>}
+    {tab === "players" ? <PlayerTable rows={players.map((player) => ({ id: player.id, isFavorite: player.isFavorite, name: player.name, portraitUrl: player.portraitUrl, club: player.club ? { id: player.club.id, name: player.club.name, tmClubId: player.club.tmClubId } : null, role: normalizeRole(player.mainPosition), age: playerAge(player, new Date()), height: player.heightCm, foot: player.preferredFoot, nationality: player.nationalities === "[]" ? null : player.nationalities.replace(/[\[\]"]/g, ""), contract: player.contractExpires?.toISOString().slice(0, 10) ?? null, representation: player.representationStatus, agency: player.agencyName, marketValue: player.marketValueEur, playingTime: player.performances[0]?.minutesPlayedPercent ?? null, opportunity: player.opportunityHistory[0]?.total ?? null, confidence: player.opportunityHistory[0]?.confidence ?? null }))} /> : <section className="opportunities-table-panel"><IntelligenceTable key={tab} label={tab === "needs" ? "Club needs" : "Player club matches"} columns={table!.columns} rows={table!.rows} /></section>}
   </div>;
 }

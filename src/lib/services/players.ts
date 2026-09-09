@@ -1,3 +1,4 @@
+import type { Prisma } from "../../generated/prisma/client";
 import { db } from "../db";
 import { TransfermarktClient } from "../transfermarkt/client";
 import { TransfermarktProvider } from "../transfermarkt/provider";
@@ -5,7 +6,9 @@ import { playerUrl } from "../transfermarkt/endpoints";
 import type { parseProfile } from "../transfermarkt/parsers/profile";
 import type { Performance } from "../transfermarkt/types";
 import { currentLeaguePerformance } from "../transfermarkt/parsers/performance";
+import { ProviderError } from "../transfermarkt/errors";
 import { scoringInputs } from "../scoring";
+import { calculateAndPersistPlayerOpportunity } from "../intelligence/persistence";
 import { finishRun, withSyncLock } from "./runs";
 export type Counts = {
   playersCreated: number;
@@ -23,6 +26,43 @@ export const emptyCounts = (): Counts => ({
   performanceRowsCreated: 0,
   performanceRowsUpdated: 0,
 });
+
+export type PlayerScope = "UZBEKISTAN" | "OTHER" | "ALL";
+export type ManualImportOperation = "IMPORTED" | "UPDATED";
+
+export function playerScopeFromQuery(value: string | null | undefined): PlayerScope {
+  if (value === "other") return "OTHER";
+  if (value === "all") return "ALL";
+  return "UZBEKISTAN";
+}
+
+export function playerScopeWhere(scope: PlayerScope): Prisma.PlayerWhereInput {
+  if (scope === "ALL") return {};
+  if (scope === "UZBEKISTAN") {
+    return {
+      careerStatus: { notIn: ["FREE_AGENT", "RETIRED"] },
+      club: { is: { competition: { is: { tmCompetitionId: "UZ1" } } } },
+    };
+  }
+  return {
+    OR: [
+      { careerStatus: { in: ["FREE_AGENT", "RETIRED"] } },
+      { NOT: { club: { is: { competition: { is: { tmCompetitionId: "UZ1" } } } } } },
+    ],
+  };
+}
+
+export function isPerformanceUnavailable(error: unknown): error is ProviderError {
+  return error instanceof ProviderError && error.code === "HTTP" && error.status === 404;
+}
+/** Canonical Player identity is always the unique Transfermarkt player ID. */
+export async function resolveOrCreatePlayer<T extends Prisma.PlayerCreateInput>(data: T) {
+  return db.player.upsert({
+    where: { tmPlayerId: data.tmPlayerId },
+    create: data,
+    update: data,
+  });
+}
 const tracked = (p: {
   contractExpires: Date | null;
   representationStatus: string;
@@ -59,10 +99,10 @@ export async function saveProfile(
           name: currentClub.name,
           tmUrl: currentClub.tmUrl,
         },
-        update: { tmUrl: currentClub.tmUrl },
+        update: { name: currentClub.name, tmUrl: currentClub.tmUrl },
       });
       counts[previous ? "clubsUpdated" : "clubsCreated"]++;
-      if (clubId && clubId !== club.id)
+      if (clubId && clubId !== club.id && !manual)
         console.log(
           JSON.stringify({
             event: "club.disagreement",
@@ -74,17 +114,57 @@ export async function saveProfile(
         );
       else clubId = club.id;
     }
+    // A manual profile import is the current-club authority. It must be able
+    // to move a player between UZ1, other leagues, and free agency.
+    if (manual && !currentClub) clubId = null;
+    const keepKnown = <T>(incoming: T | null, known: T | null) => incoming ?? known;
+    const keepText = (incoming: string | null, known: string | null) =>
+      incoming?.trim() ? incoming : known;
+    const keepJson = (incoming: string | null, known: string) =>
+      incoming?.trim() && incoming.trim() !== "[]" ? incoming : known;
+    const preserved = existing
+      ? {
+          ...data,
+          portraitUrl: keepText(data.portraitUrl, existing.portraitUrl),
+          birthDate: keepKnown(data.birthDate, existing.birthDate),
+          age: keepKnown(data.age, existing.age),
+          birthPlace: keepText(data.birthPlace, existing.birthPlace),
+          nationalities: keepJson(data.nationalities, existing.nationalities),
+          heightCm: keepKnown(data.heightCm, existing.heightCm),
+          preferredFoot: data.preferredFoot === "UNKNOWN" ? existing.preferredFoot : data.preferredFoot,
+          mainPosition: keepText(data.mainPosition, existing.mainPosition),
+          positionGroup: keepText(data.positionGroup, existing.positionGroup),
+          secondaryPositions: keepText(data.secondaryPositions, existing.secondaryPositions),
+          shirtNumber: keepText(data.shirtNumber, existing.shirtNumber),
+          joinedDate: keepKnown(data.joinedDate, existing.joinedDate),
+          contractExpires: keepKnown(data.contractExpires, existing.contractExpires),
+          contractOption: keepText(data.contractOption, existing.contractOption),
+          agentRaw: keepText(data.agentRaw, existing.agentRaw),
+          agencyName: keepText(data.agencyName, existing.agencyName),
+          representationStatus:
+            data.representationStatus === "UNKNOWN" ? existing.representationStatus : data.representationStatus,
+          marketValueRaw: keepText(data.marketValueRaw, existing.marketValueRaw),
+          marketValueEur: keepKnown(data.marketValueEur, existing.marketValueEur),
+          // An incomplete profile must not downgrade a known active/free-agent/retired state.
+          careerStatus: data.careerStatus === "UNKNOWN" ? existing.careerStatus : data.careerStatus,
+          confirmedFreeAgent:
+            data.careerStatus === "UNKNOWN" ? existing.confirmedFreeAgent : data.confirmedFreeAgent,
+        }
+      : data;
     const player = await tx.player.upsert({
       where: { tmPlayerId: data.tmPlayerId },
       create: {
-        ...data,
+        ...preserved,
         clubId,
         manuallyAdded: manual,
         profileLastSyncedAt: new Date(),
       },
       update: {
-        ...data,
+        ...preserved,
         clubId,
+        // A current club ends a previously confirmed free-agent state.
+        careerStatus: preserved.careerStatus,
+        confirmedFreeAgent: preserved.careerStatus === "FREE_AGENT",
         ...(manual ? { manuallyAdded: true } : {}),
         profileLastSyncedAt: new Date(),
       },
@@ -138,6 +218,13 @@ export async function savePerformance(
       });
   });
 }
+/** Records a successful performance check with no available row (for example HTTP 404). */
+export async function markPerformanceChecked(playerId: string) {
+  await db.player.update({
+    where: { id: playerId },
+    data: { performanceLastSyncedAt: new Date() },
+  });
+}
 export async function importPlayerFromTransfermarktUrl(url: string) {
   const parsed = playerUrl(url);
   return withSyncLock(async () => {
@@ -152,17 +239,45 @@ export async function importPlayerFromTransfermarktUrl(url: string) {
         counts,
         true,
       );
-      await savePerformance(
-        player.id,
-        await provider.performance(parsed.id),
-        counts,
-      );
+      const operation: ManualImportOperation = counts.playersCreated === 1 ? "IMPORTED" : "UPDATED";
+      let performanceUnavailable = false;
+      try {
+        await savePerformance(
+          player.id,
+          await provider.performance(parsed.id),
+          counts,
+        );
+      } catch (error) {
+        if (!isPerformanceUnavailable(error)) throw error;
+        performanceUnavailable = true;
+      }
+      // The existing scorer owns history/current-row semantics. Individual
+      // opportunity remains valid outside the UZ1 intelligence universe.
+      await calculateAndPersistPlayerOpportunity(player.id);
       const complete = await db.player.findUniqueOrThrow({
         where: { id: player.id },
-        include: { club: true, performances: true },
+        include: {
+          club: true,
+          performances: true,
+          opportunityHistory: { where: { isCurrent: true }, take: 1 },
+        },
       });
+      const enriched = { ...complete, ...scoringInputs(complete), syncRunId: run.id };
+      if (performanceUnavailable) {
+        await finishRun(
+          run.id,
+          new ProviderError("HTTP", "Performance data unavailable (HTTP 404).", 404),
+          { counts },
+        );
+        return {
+          status: "PARTIAL" as const,
+          operation,
+          player: enriched,
+          warning: "Performance data is currently unavailable.",
+        };
+      }
       await finishRun(run.id, undefined, { counts });
-      return { ...complete, ...scoringInputs(complete), syncRunId: run.id };
+      return { status: operation, player: enriched };
     } catch (error) {
       await finishRun(run.id, error, { counts });
       throw error;

@@ -38,19 +38,19 @@ async function persistPlayer(
       where: { playerId: player.id, isCurrent: true },
       data: { isCurrent: false },
     });
-    const { reasons, warnings, confidenceReasons, ...values } = score;
+    const { reasons, warnings, confidenceReasons, rawOpportunity, adjustedOpportunity, knownScoreSum, knownMaxScoreSum, ...values } = score;
     const row = await tx.playerOpportunityHistory.create({
       data: {
         ...values,
         playerId: player.id,
-        reasonsJson: JSON.stringify(reasons),
+        reasonsJson: JSON.stringify({ reasons, rawOpportunity, adjustedOpportunity, knownScoreSum, knownMaxScoreSum }),
         warningsJson: JSON.stringify(warnings),
         confidenceReasonsJson: JSON.stringify(confidenceReasons),
         algorithmVersion: scoringConfig.algorithmVersion,
         calculatedAt: now,
       },
     });
-    const event = scoreChangeEvent(
+    const event = row.total === null ? null : scoreChangeEvent(
       "OPPORTUNITY_SCORE",
       previous?.total ?? null,
       row.total,
@@ -92,14 +92,28 @@ export async function calculateAndPersistPlayerOpportunity(
 export async function recalculateAllPlayerOpportunities(
   now = new Date(),
   currentUz1Only = false,
+  includeSnapshotEvents = true,
+  concurrency = 1,
+  playerIds?: ReadonlySet<string>,
 ) {
   const data = await loadScoringData(currentUz1Only);
-  if (currentUz1Only)
-    for (const player of data.players) await generateSnapshotEvents(player.id);
-  else await generateSnapshotEvents();
-  const results = [];
-  for (const player of data.players)
-    results.push(await persistPlayer(player, data.season, now));
+  const targetPlayers = playerIds
+    ? data.players.filter((player) => playerIds.has(player.id))
+    : data.players;
+  if (includeSnapshotEvents) {
+    if (currentUz1Only)
+      for (const player of targetPlayers) await generateSnapshotEvents(player.id);
+    else await generateSnapshotEvents();
+  }
+  const results: Awaited<ReturnType<typeof persistPlayer>>[] = [];
+  let next = 0;
+  const workers = Array.from({ length: Math.max(1, concurrency) }, async () => {
+    while (next < targetPlayers.length) {
+      const player = targetPlayers[next++];
+      results.push(await persistPlayer(player, data.season, now));
+    }
+  });
+  await Promise.all(workers);
   return results;
 }
 export async function recalculateAllClubNeeds(now = new Date()) {

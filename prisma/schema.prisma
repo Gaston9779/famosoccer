@@ -19,6 +19,18 @@ enum SyncStatus {
   FAILED
   BLOCKED
 }
+enum PreferredFoot {
+  RIGHT
+  LEFT
+  BOTH
+  UNKNOWN
+}
+enum PlayerCareerStatus {
+  ACTIVE
+  FREE_AGENT
+  RETIRED
+  UNKNOWN
+}
 model Competition {
   id String @id @default(cuid())
   tmCompetitionId String @unique
@@ -56,7 +68,7 @@ model Player {
   birthPlace String?
   nationalities String @default("[]")
   heightCm Int?
-  preferredFoot String?
+  preferredFoot PreferredFoot @default(UNKNOWN)
   mainPosition String?
   positionGroup String?
   secondaryPositions String?
@@ -73,6 +85,7 @@ model Player {
   representationStatus RepresentationStatus @default(UNKNOWN)
   manuallyAdded Boolean @default(false)
   profileLastSyncedAt DateTime?
+  preferredFootSyncedAt DateTime?
   performanceLastSyncedAt DateTime?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -83,6 +96,8 @@ model Player {
   notes PlayerNote[]
   tags PlayerTagAssignment[]
   confirmedFreeAgent Boolean @default(false)
+  careerStatus PlayerCareerStatus @default(UNKNOWN)
+  isFavorite Boolean @default(false)
 }
 model PlayerPerformance {
   id String @id @default(cuid())
@@ -137,12 +152,12 @@ model PlayerOpportunityHistory {
  id String @id @default(cuid())
  playerId String
  player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
- total Float
- contractScore Float
- representationScore Float
- playingTimeScore Float
- ageScore Float
- marketAccessibilityScore Float
+ total Float?
+ contractScore Float?
+ representationScore Float?
+ playingTimeScore Float?
+ ageScore Float?
+ marketAccessibilityScore Float?
  confidence Float
  reasonsJson String
  warningsJson String

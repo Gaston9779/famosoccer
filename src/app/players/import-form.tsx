@@ -22,7 +22,13 @@ export default function ImportForm() {
           const result = await response.json();
           if (!response.ok)
             throw new Error(result.error?.message ?? "Import failed");
-          setMessage(`Imported / updated ${result.player.name}`);
+          const operation = result.status === "PARTIAL" ? result.operation : result.status;
+          const action = operation === "UPDATED" ? "Updated" : "Imported";
+          setMessage(
+            result.status === "PARTIAL"
+              ? `${action} ${result.player.name}. Performance data is currently unavailable.`
+              : `${action} ${result.player.name}`,
+          );
           router.refresh();
         } catch (error) {
           setMessage(error instanceof Error ? error.message : "Import failed");

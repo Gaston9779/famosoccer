@@ -5,20 +5,65 @@ import { playerAge } from "../scoring/types";
 import { calculatePlayerClubMatch } from "../scoring/playerClubMatch";
 import type { ClubNeed } from "../scoring/clubNeed";
 import type { Representation } from "../transfermarkt/types";
+function parseOpportunityReasons(value: string) {
+  const parsed: unknown = JSON.parse(value);
+  if (Array.isArray(parsed)) return { reasons: parsed as string[], rawOpportunity: null, adjustedOpportunity: null, knownScoreSum: null, knownMaxScoreSum: null };
+  if (parsed && typeof parsed === "object") {
+    const data = parsed as Record<string, unknown>;
+    return {
+      reasons: Array.isArray(data.reasons) ? data.reasons as string[] : [],
+      rawOpportunity: typeof data.rawOpportunity === "number" ? data.rawOpportunity : null,
+      adjustedOpportunity: typeof data.adjustedOpportunity === "number" ? data.adjustedOpportunity : null,
+      knownScoreSum: typeof data.knownScoreSum === "number" ? data.knownScoreSum : null,
+      knownMaxScoreSum: typeof data.knownMaxScoreSum === "number" ? data.knownMaxScoreSum : null,
+    };
+  }
+  return { reasons: [], rawOpportunity: null, adjustedOpportunity: null, knownScoreSum: null, knownMaxScoreSum: null };
+}
 export async function loadIntelligenceView(currentUz1Only = false) {
-  // Fixed query count, regardless of squad size. Reads never write history or call providers.
-  const [players, clubs, opportunities, needs] = await db.$transaction([
+  // These independent read-only queries do not require a shared transaction snapshot.
+  // Run them concurrently so a long Neon read cannot expire Prisma's transaction timeout.
+  const [players, clubs, opportunities, needs] = await Promise.all([
     db.player.findMany({
       ...(currentUz1Only ? { where: { club: { competition: { tmCompetitionId: "UZ1" } } } } : {}),
-      include: { performances: true },
+      select: {
+        id: true,
+        tmPlayerId: true,
+        name: true,
+        clubId: true,
+        mainPosition: true,
+        secondaryPositions: true,
+        birthDate: true,
+        age: true,
+        contractExpires: true,
+        representationStatus: true,
+        marketValueEur: true,
+        profileLastSyncedAt: true,
+        performanceLastSyncedAt: true,
+        confirmedFreeAgent: true,
+        performances: {
+          select: {
+            season: true,
+            competitionCode: true,
+            minutesPlayedPercent: true,
+            sourceUpdatedAt: true,
+          },
+        },
+      },
       orderBy: { id: "asc" },
     }),
     db.club.findMany({
       where: { competition: { tmCompetitionId: "UZ1" } },
+      select: { id: true, name: true, tmClubId: true, lastSyncedAt: true },
       orderBy: { id: "asc" },
     }),
     db.playerOpportunityHistory.findMany({
-      where: { isCurrent: true },
+      where: {
+        isCurrent: true,
+        ...(currentUz1Only
+          ? { player: { club: { competition: { tmCompetitionId: "UZ1" } } } }
+          : {}),
+      },
       orderBy: [{ total: "desc" }, { playerId: "asc" }],
     }),
     db.clubNeedHistory.findMany({
@@ -37,7 +82,7 @@ export async function loadIntelligenceView(currentUz1Only = false) {
         ? [
             {
               ...row,
-              reasons: JSON.parse(row.reasonsJson) as string[],
+              ...parseOpportunityReasons(row.reasonsJson),
               warnings: JSON.parse(row.warningsJson) as string[],
               confidenceReasons: JSON.parse(
                 row.confidenceReasonsJson,
@@ -93,7 +138,7 @@ export function filterPlayerOpportunities(
 ) {
   const rows = view.opportunities.filter(
     (r) =>
-      r.total >= (filters.minScore ?? 0) &&
+      r.total !== null && r.total >= (filters.minScore ?? 0) &&
       (!filters.representationStatus ||
         r.player.representationStatus === filters.representationStatus) &&
       (!filters.role || r.player.role === filters.role) &&
@@ -110,7 +155,7 @@ export function filterPlayerOpportunities(
     const sort = filters.sort ?? "score_desc";
     const value =
       sort === "score_asc"
-        ? a.total - b.total
+        ? (a.total ?? Infinity) - (b.total ?? Infinity)
         : sort === "confidence_desc"
           ? b.confidence - a.confidence
           : sort === "age_asc"
@@ -118,7 +163,7 @@ export function filterPlayerOpportunities(
             : sort === "contract_asc"
               ? (a.player.contractExpires?.getTime() ?? Infinity) -
                 (b.player.contractExpires?.getTime() ?? Infinity)
-              : b.total - a.total;
+              : (b.total ?? -Infinity) - (a.total ?? -Infinity);
     return value || a.playerId.localeCompare(b.playerId);
   });
   return {
@@ -185,7 +230,7 @@ export function topMatches(
   for (const player of view.players) {
     if (filters.playerId && player.id !== filters.playerId) continue;
     const opportunity = scores.get(player.id);
-    if (!opportunity) continue;
+    if (!opportunity || opportunity.total === null) continue;
     for (const need of needs) {
       const match = calculatePlayerClubMatch(
         player,
@@ -237,7 +282,9 @@ export async function listEvents(
       : { readAt: filters.unread ? null : { not: null } }),
   };
   const limit = filters.limit ?? 50;
-  const [players, clubs] = await db.$transaction([
+  // These feeds are independent reads. Do not hold a Neon transaction open
+  // while either query waits for the network/database pool.
+  const [players, clubs] = await Promise.all([
     db.playerEvent.findMany({
       where,
       include: { player: { include: { club: true } } },
@@ -277,7 +324,7 @@ export async function dashboardSummary() {
     ).length;
   return {
     playerCount: view.players.length,
-    highOpportunityCount: view.opportunities.filter((row) => row.total >= 70).length,
+    highOpportunityCount: view.opportunities.filter((row) => row.total !== null && row.total >= 70).length,
     clubCount: view.clubs.length,
     openRepresentationCount: view.players.filter(
       (p) =>

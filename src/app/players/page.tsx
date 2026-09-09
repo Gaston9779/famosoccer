@@ -1,10 +1,72 @@
+import Link from "next/link";
 import { db } from "@/lib/db";
 import { normalizeRole } from "@/lib/scoring/roles";
 import { playerAge } from "@/lib/scoring/types";
+import { playerScopeFromQuery, playerScopeWhere } from "@/lib/services/players";
 import { PlayerTable } from "@/components/player-table";
+import { formatCompetitionShortCode } from "@/lib/competition-code";
+import ImportForm from "./import-form";
 import "./players.css";
+
 export const dynamic = "force-dynamic";
-export default async function Players() {
-  const players = await db.player.findMany({ where: { club: { competition: { tmCompetitionId: "UZ1" } } }, include: { club: true, performances: true, opportunityHistory: { where: { isCurrent: true }, take: 1 } }, orderBy: { name: "asc" } });
-  return <div className="players-page"><header className="players-page-header"><p className="eyebrow">Players</p><h1>All players</h1><p>Explore {players.length} players from Uzbekistan Super League</p></header><PlayerTable rows={players.map(p => ({ id:p.id, name:p.name, portraitUrl:p.portraitUrl, club:p.club ? {id:p.club.id,name:p.club.name,tmClubId:p.club.tmClubId} : null, role:normalizeRole(p.mainPosition), age:playerAge(p,new Date()), nationality:p.nationalities === "[]" ? null : p.nationalities.replace(/[\[\]"]/g,""), contract:p.contractExpires?.toISOString().slice(0,10) ?? null, representation:p.representationStatus, agency:p.agencyName, marketValue:p.marketValueEur, playingTime:p.performances[0]?.minutesPlayedPercent ?? null, opportunity:p.opportunityHistory[0]?.total ?? null, confidence:p.opportunityHistory[0]?.confidence ?? null }))}/></div>;
+
+type PlayerSearchParams = { search?: string; favorites?: string; scope?: string };
+
+function scopeHref(scope: "uzbekistan" | "other", search: string, favorites?: string) {
+  const params = new URLSearchParams();
+  if (scope === "other") params.set("scope", scope);
+  if (search) params.set("search", search);
+  if (favorites === "1") params.set("favorites", favorites);
+  const query = params.toString();
+  return query ? `/players?${query}` : "/players";
+}
+
+export default async function Players({ searchParams }: { searchParams: Promise<PlayerSearchParams> }) {
+  const { search = "", favorites, scope: scopeParam } = await searchParams;
+  const scope = playerScopeFromQuery(scopeParam);
+  const isOther = scope === "OTHER";
+  const players = await db.player.findMany({
+    where: { ...playerScopeWhere(scope), ...(favorites === "1" ? { isFavorite: true } : {}) },
+    select: {
+      id: true, isFavorite: true, name: true, portraitUrl: true, mainPosition: true, birthDate: true, age: true,
+      heightCm: true, preferredFoot: true,
+      nationalities: true, contractExpires: true, representationStatus: true, agencyName: true, marketValueEur: true,
+      club: { select: { id: true, name: true, tmClubId: true, competition: { select: { tmCompetitionId: true, name: true, country: true } } } },
+      performances: { select: { minutesPlayedPercent: true } },
+      opportunityHistory: { where: { isCurrent: true }, take: 1, select: { total: true, confidence: true } },
+    },
+    orderBy: { name: "asc" },
+  });
+
+  return <div className="players-page">
+    <header className="players-page-header">
+      <p className="eyebrow">Players</p>
+      <h1>{isOther ? "Other players" : "All players"}</h1>
+      <p>{isOther ? `Explore ${players.length} imported players outside Uzbekistan Super League` : `Explore ${players.length} players from Uzbekistan Super League`}</p>
+    </header>
+    <nav className="players-scope-tabs" aria-label="Player scope">
+      <Link href={scopeHref("uzbekistan", search, favorites)} aria-current={!isOther ? "page" : undefined} className={!isOther ? "active" : ""}>Uzbekistan</Link>
+      <Link href={scopeHref("other", search, favorites)} aria-current={isOther ? "page" : undefined} className={isOther ? "active" : ""}>Altro</Link>
+    </nav>
+    <ImportForm />
+    <PlayerTable key={`${search}-${favorites}-${scope}`} initialSearch={search} initialFavorites={favorites === "1"} rows={players.map((player) => ({
+      id: player.id,
+      isFavorite: player.isFavorite,
+      name: player.name,
+      portraitUrl: player.portraitUrl,
+      club: player.club ? { id: player.club.id, name: player.club.name, tmClubId: player.club.tmClubId, competitionCode: formatCompetitionShortCode(player.club.competition) } : null,
+      role: normalizeRole(player.mainPosition),
+      age: playerAge(player, new Date()),
+      height: player.heightCm,
+      foot: player.preferredFoot,
+      nationality: player.nationalities === "[]" ? null : player.nationalities.replace(/[\[\]"]/g, ""),
+      contract: player.contractExpires?.toISOString().slice(0, 10) ?? null,
+      representation: player.representationStatus,
+      agency: player.agencyName,
+      marketValue: player.marketValueEur,
+      playingTime: player.performances[0]?.minutesPlayedPercent ?? null,
+      opportunity: player.opportunityHistory[0]?.total ?? null,
+      confidence: player.opportunityHistory[0]?.confidence ?? null,
+    }))} />
+  </div>;
 }

@@ -5,7 +5,34 @@ import {
   normalizeRepresentation,
   parseDate,
 } from "../../normalization";
+import { genericRoleFallback } from "../../scoring/roles";
 import { ProviderError } from "../errors";
+
+export type PreferredFootValue = "RIGHT" | "LEFT" | "BOTH" | "UNKNOWN";
+
+export function normalizePreferredFoot(
+  raw: string | null | undefined,
+): PreferredFootValue {
+  const value = raw
+    ?.normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLowerCase()
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!value) return "UNKNOWN";
+  if (
+    /^(both|both feet|ambidextrous|two-footed|beidfußig|beidfussig|entrambi|ambidestro|ambidestro)$/i.test(
+      value,
+    )
+  )
+    return "BOTH";
+  if (/^(right|right foot|rechts|destro|piede destro)$/i.test(value))
+    return "RIGHT";
+  if (/^(left|left foot|links|sinistro|piede sinistro)$/i.test(value))
+    return "LEFT";
+  return "UNKNOWN";
+}
+
 export function parseProfile(html: string, id: string, url: string) {
   const $ = cheerio.load(html);
   const clean = (s: string) => s.replace(/\s+/g, " ").trim();
@@ -66,13 +93,22 @@ export function parseProfile(html: string, id: string, url: string) {
     "spielerberater",
     "agente",
   );
-  const mainPosition =
+  const rawMainPosition =
     field("position", "position:", "posizione") ??
     (clean($(".detail-position__position").first().text()) || null);
+  const broadRoleFallback = genericRoleFallback(rawMainPosition);
+  const mainPosition = broadRoleFallback?.mainPosition ?? rawMainPosition;
   const clubLink = $(
     '.data-header__club a[href*="/verein/"], .data-header__club-info a[href*="/verein/"]',
   ).first();
   const clubId = clubLink.attr("href")?.match(/\/verein\/(\d+)/)?.[1] ?? null;
+  // Transfermarkt explicitly labels clubless profiles; a null club relation
+  // alone is not enough evidence of free-agent availability.
+  const clubText = clean(clubLink.text()) || clubLink.attr("title") || "";
+  const profileText = `${clubText} ${clean($(".data-header__club, .data-header__club-info, .info-table").text())}`;
+  const retired = /\b(retired|retired since|karriere beendet|ritirato)\b/i.test(profileText);
+  const confirmedFreeAgent = !retired && /\b(without club|without club since|clubless|vereinslos|senza club)\b/i.test(profileText);
+  const careerStatus: "ACTIVE" | "FREE_AGENT" | "RETIRED" | "UNKNOWN" = retired ? "RETIRED" : confirmedFreeAgent ? "FREE_AGENT" : clubId ? "ACTIVE" : "UNKNOWN";
   const rawValue =
     clean(
       $(".data-header__market-value-wrapper")
@@ -124,9 +160,11 @@ export function parseProfile(html: string, id: string, url: string) {
     birthPlace: field("place of birth", "geburtsort", "luogo di nascita"),
     nationalities: JSON.stringify(nationalities),
     heightCm: height ? Number(height[1]) * 100 + Number(height[2]) : null,
-    preferredFoot: field("foot", "fuß", "piede"),
+    preferredFoot: normalizePreferredFoot(
+      field("foot", "strong foot", "fuß", "starker fuß", "piede"),
+    ),
     mainPosition,
-    positionGroup: normalizePosition(mainPosition),
+    positionGroup: broadRoleFallback?.positionGroup ?? normalizePosition(mainPosition),
     secondaryPositions: secondary.length ? JSON.stringify(secondary) : null,
     shirtNumber:
       clean($(".data-header__shirt-number").first().text()).replace(/^#/, "") ||
@@ -144,10 +182,12 @@ export function parseProfile(html: string, id: string, url: string) {
     ...normalizeRepresentation(agentRaw),
     marketValueRaw: rawValue,
     marketValueEur: marketValue(rawValue),
-    currentClub: clubId
+    confirmedFreeAgent,
+    careerStatus,
+    currentClub: clubId && !confirmedFreeAgent
       ? {
           tmClubId: clubId,
-          name: clean(clubLink.text()) || clubLink.attr("title") || null,
+          name: clubText || null,
           tmUrl: clubLink.attr("href") ?? null,
         }
       : null,

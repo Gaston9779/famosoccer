@@ -51,7 +51,7 @@ export class TransfermarktClient {
               Accept: format === "json" ? "application/json" : "text/html",
             },
             signal: AbortSignal.timeout(25000),
-            redirect: "manual",
+            redirect: "follow",
           });
         } catch (error) {
           await db.syncRun.update({
@@ -73,6 +73,8 @@ export class TransfermarktClient {
             attempt: attempt + 1,
           }),
         );
+        if (response.redirected && new URL(response.url).origin !== base.origin)
+          throw new ProviderError("INVALID_URL", "Provider redirect left the configured origin.");
         // Error status handling must not wait for (or depend on) the response body.
         let body = "";
         if (response.ok) {
