@@ -1,0 +1,696 @@
+{
+  "database": {
+    "name": "Uzbekistan Football Club Prospect Database",
+    "season": 2026,
+    "last_verified": "2026-09-10",
+    "scope": [
+      "Super League",
+      "Pro League"
+    ],
+    "club_count": 30,
+    "contact_count": 32,
+    "method": "Role-first prospecting: sporting/international/club decision makers, then personal profile/source verification."
+  },
+  "league": {
+    "name": "Uzbekistan Professional Football League",
+    "website": "https://pfl.uz/en/",
+    "phone": [
+      "+998 71 230 90 57",
+      "+998 71 230 90 58"
+    ],
+    "email": [
+      "info@pfl.uz",
+      "uzpfl@exat.uz"
+    ],
+    "general_director": {
+      "name": "Diyor Imamkhodjaev",
+      "role": "General Director",
+      "source": "https://pfl.uz/en/news/diyor-imamkhodjaev-re-elected-as-general-director-of-the-uzbekistan-professional-football-league"
+    }
+  },
+  "clubs": [
+    {
+      "club_id": "cmtqamzs200035rynduxkuhf4",
+      "club_name": "Pakhtakor",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Tashkent",
+      "contacts": [
+        {
+          "name": "Dmitry Adisman",
+          "role": "General Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://en.wikipedia.org/wiki/Pakhtakor_FC",
+          "profile_type": "club-personnel reference"
+        },
+        {
+          "name": "Jakhongir Artikkhodjayev",
+          "role": "President",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://en.wikipedia.org/wiki/Pakhtakor_FC",
+          "profile_type": "club-personnel reference"
+        },
+        {
+          "name": "Dilshod Karimov",
+          "role": "Vice-President",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://en.wikipedia.org/wiki/Pakhtakor_FC",
+          "profile_type": "club-personnel reference"
+        }
+      ],
+      "official_website": "https://www.pakhtakor.uz/",
+      "pfl_page": "https://pfl.uz/en/club/2",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzs400045rynq4ys8m72",
+      "club_name": "Nasaf",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Qarshi",
+      "contacts": [
+        {
+          "name": "Kobiljon Shodmonov",
+          "role": "Director of International Affairs and Commerce",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://www.linkedin.com/pub/dir/Qobiljon/%2B",
+          "profile_type": "LinkedIn lead"
+        },
+        {
+          "name": "Alisher Yusupov",
+          "role": "Manager / PFL Executive Committee member",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://en.wikipedia.org/wiki/Uzbekistan_Professional_Football_League",
+          "profile_type": "PFL reference"
+        }
+      ],
+      "official_website": null,
+      "pfl_page": "https://pfl.uz/en/club/4",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzrz00025rynl94hakzi",
+      "club_name": "Neftchi Fergana",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Fergana",
+      "contacts": [
+        {
+          "name": "Mansurjon Toshmatov",
+          "role": "General Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://gov.uz/en/ferghana/news/view/70186",
+          "profile_type": "government reference"
+        }
+      ],
+      "official_website": "https://fcneftchi.uz/",
+      "pfl_page": "https://pfl.uz/en/club/7",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzsb00085rynlbzg5z3m",
+      "club_name": "Navbahor",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Namangan",
+      "contacts": [
+        {
+          "name": "Alex Mos",
+          "role": "Head of Goalkeeping / Deputy Academy Director / Head of Project Management",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://uz.linkedin.com/in/alex-mos-23a589229",
+          "profile_type": "LinkedIn"
+        }
+      ],
+      "official_website": "https://navbahor-pfc.uz/en/",
+      "pfl_page": "https://pfl.uz/en/club/5",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzs900075rynfdq3wnbz",
+      "club_name": "OKMK",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Almalyk",
+      "contacts": [
+        {
+          "name": "Bahodir Mirzayev",
+          "role": "General Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://en.wikipedia.org/wiki/Uzbekistan_Professional_Football_League",
+          "profile_type": "PFL reference"
+        }
+      ],
+      "official_website": null,
+      "pfl_page": "https://pfl.uz/en/club/6",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzs800065ryn1prz9vco",
+      "club_name": "Bunyodkor",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Tashkent",
+      "contacts": [
+        {
+          "name": "Islom Inomov",
+          "role": "Director of Football / sporting management",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://www.transfermarkt.com/fc-bunyodkor/startseite/verein/19401",
+          "profile_type": "Transfermarkt club reference"
+        },
+        {
+          "name": "Murod Aliyev",
+          "role": "General Director",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://www.fcbunyodkor.com/",
+          "profile_type": "official club lead"
+        },
+        {
+          "name": "Shuhrat Maksudov",
+          "role": "General Director, Bunyodkor Football Academy",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://prosport.uz/en/news/10326/shuhrat-maksudov-is-the-general-director-of-bunyodkor-football-academy-3448-en",
+          "profile_type": "football media reference"
+        }
+      ],
+      "official_website": "https://www.fcbunyodkor.com/",
+      "pfl_page": "https://pfl.uz/en/club/15",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzsh000c5rynxo0erp8o",
+      "club_name": "Andijan",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Andijan",
+      "contacts": [
+        {
+          "name": "Ziyodbek Mashrapov",
+          "role": "General Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://zamin.uz/en/sport/190233-the-andijan-team-presented-its-squad-ahead-of-the-new-season.html",
+          "profile_type": "news reference"
+        },
+        {
+          "name": "Elbek Samatov",
+          "role": "Club manager / PFL Executive Committee member",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://en.wikipedia.org/wiki/Uzbekistan_Professional_Football_League",
+          "profile_type": "PFL reference"
+        }
+      ],
+      "official_website": "https://fcandijan.uz/",
+      "pfl_page": "https://pfl.uz/en/club/16",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzsd00095rynuqf3br7v",
+      "club_name": "Sogdiana",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Jizzakh",
+      "contacts": [
+        {
+          "name": "Ulugbek Bakayev",
+          "role": "Head Coach",
+          "priority": "C",
+          "confidence": "medium",
+          "profile_url": "https://en.wikipedia.org/wiki/2026_Uzbekistan_Super_League",
+          "profile_type": "current-season reference"
+        }
+      ],
+      "official_website": null,
+      "pfl_page": "https://pfl.uz/en/club/9",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzsg000b5rynlr5fs6hy",
+      "club_name": "Surkhon",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Termez",
+      "contacts": [
+        {
+          "name": "Nurali Nurullaev",
+          "role": "Club Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://prosport.uz/en/news/22856/adhamzoda-ismonaliev-aliboev-and-hamdamov-were-fined-disciplinary-committee-7640-en",
+          "profile_type": "PFL disciplinary reference"
+        },
+        {
+          "name": "Anvar Gafurov",
+          "role": "Head Coach",
+          "priority": "C",
+          "confidence": "medium",
+          "profile_url": "https://en.wikipedia.org/wiki/2026_Uzbekistan_Super_League",
+          "profile_type": "current-season reference"
+        }
+      ],
+      "official_website": "https://pfcsurkhon.uz/",
+      "pfl_page": "https://pfl.uz/en/club/13",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzso000h5rynfpyol5ql",
+      "club_name": "Lokomotiv Tashkent",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Tashkent",
+      "contacts": [
+        {
+          "name": "Tulabek Akramov",
+          "role": "President / PFL Executive Committee member",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://en.wikipedia.org/wiki/Uzbekistan_Professional_Football_League",
+          "profile_type": "PFL reference"
+        }
+      ],
+      "official_website": "http://lokomotiv.uz/?lang=uz",
+      "pfl_page": "https://pfl.uz/en/club/3",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzse000a5rynim8nz7o0",
+      "club_name": "Qizilqum",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Navoiy",
+      "contacts": [
+        {
+          "name": "Alisher Kholikov",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://www.transfermarkt.co.kr/fc-qizilqum/mitarbeiter/verein/20115",
+          "profile_type": "Transfermarkt staff reference"
+        },
+        {
+          "name": "Amin Ergashev",
+          "role": "Director",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://www.transfermarkt.co.kr/fc-qizilqum/mitarbeiter/verein/20115",
+          "profile_type": "Transfermarkt staff reference"
+        }
+      ],
+      "official_website": "https://pfcqizilqum.uz/",
+      "pfl_page": "https://pfl.uz/en/club/14",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzsk000e5ryn75ypbmnz",
+      "club_name": "Mash'al Mubarek",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Mubarek",
+      "contacts": [
+        {
+          "name": "Enver Alyadinov",
+          "role": "Head Director",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://ipfs.basearchive.ai/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/FK_Mash%CA%BCal_Mubarek.html",
+          "profile_type": "club personnel reference"
+        },
+        {
+          "name": "Salim Eshmuhamedov",
+          "role": "Technical Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://ipfs.basearchive.ai/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/FK_Mash%CA%BCal_Mubarek.html",
+          "profile_type": "club personnel reference"
+        },
+        {
+          "name": "Abdujamil Aralov",
+          "role": "Executive Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://ipfs.basearchive.ai/ipfs/QmXoypizjW3WknFiJnKLwHCnL72vedxjQkDDP1mXWo6uco/wiki/FK_Mash%CA%BCal_Mubarek.html",
+          "profile_type": "club personnel reference"
+        }
+      ],
+      "official_website": null,
+      "pfl_page": "https://pfl.uz/en/club/18",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzsj000d5ryndg9t5a1p",
+      "club_name": "Kokand-1912",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Kokand",
+      "contacts": [
+        {
+          "name": "Andrey Shipilov",
+          "role": "Head Coach; previously Sporting Director at Dinamo",
+          "priority": "C",
+          "confidence": "medium",
+          "profile_url": "https://www.transfermarkt.com/andrey-shipilov/profil/trainer/58287",
+          "profile_type": "Transfermarkt personal profile"
+        },
+        {
+          "name": "Mukhsin Nizametdinov",
+          "role": "Managing Director Sport (last verified role ended 2025)",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://www.transfermarkt.fm/mukhsin-nizametdinov/profil/trainer/115575",
+          "profile_type": "Transfermarkt personal profile"
+        }
+      ],
+      "official_website": "https://kokand1912.uz/",
+      "pfl_page": "https://pfl.uz/en/club/19",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzsn000g5ryn6i06kfmq",
+      "club_name": "Bukhara",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Bukhara",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": "https://pfl.uz/en/club/8",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzsm000f5rynta6jpqfp",
+      "club_name": "Khorazm",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Urgench",
+      "contacts": [
+        {
+          "name": "Mikhail Kim",
+          "role": "Head Scout",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://en.wikipedia.org/wiki/FC_Khorazm",
+          "profile_type": "club personnel reference"
+        },
+        {
+          "name": "Vali Sultonov",
+          "role": "Club Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://en.wikipedia.org/wiki/FC_Khorazm",
+          "profile_type": "club personnel reference"
+        },
+        {
+          "name": "Bobomurod Abdullaev",
+          "role": "Club Structure Director",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://en.wikipedia.org/wiki/FC_Khorazm",
+          "profile_type": "club personnel reference"
+        },
+        {
+          "name": "Nurulla Husanov",
+          "role": "President and Chairman",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://en.wikipedia.org/wiki/FC_Khorazm",
+          "profile_type": "club personnel reference"
+        }
+      ],
+      "official_website": null,
+      "pfl_page": "https://pfl.uz/en/club/23",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "cmtqamzs600055rynvy58tz7a",
+      "club_name": "Dinamo Samarqand",
+      "country": "Uzbekistan",
+      "league": "Super League",
+      "city": "Samarkand",
+      "contacts": [
+        {
+          "name": "Firdavs Karimov",
+          "role": "Director",
+          "priority": "B",
+          "confidence": "medium",
+          "profile_url": "https://en.wikipedia.org/wiki/FC_Dinamo_Samarqand",
+          "profile_type": "club reference"
+        },
+        {
+          "name": "Botir Qoraev",
+          "role": "Technical Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://www.transfermarkt.com/dinamo-samarqand/startseite/verein/19717",
+          "profile_type": "Transfermarkt club reference"
+        }
+      ],
+      "official_website": null,
+      "pfl_page": "https://pfl.uz/en/club/83",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-001",
+      "club_name": "Aral",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Nukus",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-002",
+      "club_name": "Respublika FA",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Tashkent",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-003",
+      "club_name": "Sho‘rtan",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "G‘uzor",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-004",
+      "club_name": "Olimpik MobiUZ",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Tashkent",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-005",
+      "club_name": "QMU Jayxun",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Karakalpakstan",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-006",
+      "club_name": "Kattaqo‘rg‘on",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Kattaqo‘rg‘on",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-007",
+      "club_name": "TerDU",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Surkhandarya",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-008",
+      "club_name": "Lochin",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Kashkadarya",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-009",
+      "club_name": "G‘azalkent",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Gazalkent",
+      "contacts": [
+        {
+          "name": "Stanislav Kudryashov",
+          "role": "Technical Director",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://www.transfermarkt.com/stanislav-kudryashov/profil/trainer/153751",
+          "profile_type": "Transfermarkt personal profile"
+        }
+      ],
+      "official_website": "https://gzlk.uz/",
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-010",
+      "club_name": "BuxDU",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Bukhara",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-011",
+      "club_name": "Yaypan",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Fergana region",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-012",
+      "club_name": "FarDU",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Fergana",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-013",
+      "club_name": "Paxtakor Farm",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Tashkent",
+      "contacts": [],
+      "official_website": null,
+      "pfl_page": null,
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    },
+    {
+      "club_id": "UZ-PL-014",
+      "club_name": "Metallurg",
+      "country": "Uzbekistan",
+      "league": "Pro League",
+      "city": "Bekabad",
+      "contacts": [
+        {
+          "name": "Ulugbek A. Mirzaev",
+          "role": "General Director (source dated June 2026; re-check current status)",
+          "priority": "A",
+          "confidence": "high",
+          "profile_url": "https://qolat.com/en/event-detail/16/speakers/29/",
+          "profile_type": "professional/event profile"
+        }
+      ],
+      "official_website": "https://www.fcmetallurg.uz/ru",
+      "pfl_page": "https://pfl.uz/en/club/10",
+      "direct_email": null,
+      "direct_phone": null,
+      "notes": "No personal contact details invented; null means not publicly verified in this research pass."
+    }
+  ]
+}
