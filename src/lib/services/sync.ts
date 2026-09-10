@@ -354,7 +354,7 @@ async function synchronize(type: "BOOTSTRAP" | "SMALL" | "DAILY") {
             const p = await db.player.findUniqueOrThrow({
               where: { tmPlayerId: id },
             });
-            await savePerformance(p.id, await provider.performance(id), counts);
+            await savePerformance(p.id, await provider.performance(p.tmPlayerId), counts);
           });
           state.performanceIndex++;
           await persist();

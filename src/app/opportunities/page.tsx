@@ -1,3 +1,4 @@
+import { groupMatchesByPlayer } from "@/lib/intelligence/match-ranking";
 import Link from "next/link";
 import { db } from "@/lib/db";
 import { loadIntelligenceView, topMatches } from "@/lib/intelligence/queries";
@@ -59,13 +60,10 @@ export default async function Opportunities({ searchParams }: { searchParams: Pr
       const allMatches = topMatches(view, { limit: Number.MAX_SAFE_INTEGER });
       matchTotal = allMatches.length;
       matchHighQuality = allMatches.filter((match) => match.matchScore >= 70).length;
-      // The browser table is paginated; shipping every low-score pairing bloats the RSC
-      // payload with no scouting value. Keep the top matches by score.
-      const MATCH_ROW_CAP = 2000;
-      matchRows = allMatches.slice(0, MATCH_ROW_CAP).map((match) => {
+      matchRows = groupMatchesByPlayer(allMatches).map(({ bestMatchForPlayer: match, additionalMatches }) => {
         const databasePlayer = databasePlayerMap.get(match.playerId);
         const targetClub = clubMap.get(match.clubId)!;
-        return { id: `${match.playerId}-${match.clubId}-${match.role}`, playerId: match.playerId, playerName: match.playerName, portraitUrl: databasePlayer?.portraitUrl ?? null, age: databasePlayer ? playerAge(databasePlayer, new Date()) : null, nationality: databasePlayer?.nationalities ?? "[]", role: match.role, currentClub: databasePlayer?.club ? { id: databasePlayer.club.id, name: databasePlayer.club.name, tmClubId: databasePlayer.club.tmClubId } : null, targetClub: { id: targetClub.id, name: targetClub.name, tmClubId: targetClub.tmClubId }, matchScore: match.matchScore, opportunity: opportunityMap.get(match.playerId) ?? null, contract: databasePlayer?.contractExpires?.toISOString().slice(0, 10) ?? null, marketValue: databasePlayer?.marketValueEur ?? null };
+        return { id: match.playerId, additionalMatches: additionalMatches.map((other) => ({ clubName: other.clubName, role: other.role, matchScore: other.matchScore })), playerId: match.playerId, playerName: match.playerName, portraitUrl: databasePlayer?.portraitUrl ?? null, age: databasePlayer ? playerAge(databasePlayer, new Date()) : null, nationality: databasePlayer?.nationalities ?? "[]", role: match.role, currentClub: databasePlayer?.club ? { id: databasePlayer.club.id, name: databasePlayer.club.name, tmClubId: databasePlayer.club.tmClubId } : null, targetClub: { id: targetClub.id, name: targetClub.name, tmClubId: targetClub.tmClubId }, matchScore: match.matchScore, opportunity: opportunityMap.get(match.playerId) ?? null, contract: databasePlayer?.contractExpires?.toISOString().slice(0, 10) ?? null, marketValue: databasePlayer?.marketValueEur ?? null };
       });
       console.log(JSON.stringify({ event: "MATCHES_CALC_COMPLETE", durationMs: Date.now() - calcStart, players: view.players.length, needs: view.needs.length, matchTotal, matchHighQuality, rowsShipped: matchRows.length }));
     } catch (error) {

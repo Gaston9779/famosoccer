@@ -5,7 +5,7 @@
 @media(max-width:480px){.players-grid-grid{grid-template-columns:1fr}.players-results-header>div{align-items:flex-start;flex-direction:column}.players-filter-panel{padding:12px}}
 
 .player-card{position:relative;color:inherit;text-decoration:none}.player-card-player-link{position:absolute;inset:0;border-radius:10px}.player-card-top,.player-card-identity,.player-card-club-row,.player-card-meta{position:relative;z-index:1;pointer-events:none}.player-card-club{pointer-events:auto;text-decoration:none}
-.favorite-toggle{position:relative;z-index:3;pointer-events:auto;border:0;background:transparent;color:#9db1c5;padding:4px;font-size:12px;cursor:pointer}.favorite-toggle:hover,.favorite-toggle:focus-visible{color:#ffe08a;outline:none}.favorite-toggle[aria-pressed="true"]{color:#f4bd3b}.favorite-toggle-compact{position:relative;display:inline-flex;align-items:center;justify-content:center;min-width:30px;min-height:30px;padding:0;font-size:0;line-height:1}.favorite-toggle-compact:first-letter{font-size:21px}.players-favorite-filter{margin:10px 0}.players-favorite-filter a{color:#d6e4f1;text-decoration:none}.players-favorite-filter a:hover{color:#ffd36b}
+.players-favorite-filter{margin:10px 0}.players-favorite-filter a{color:#d6e4f1;text-decoration:none}.players-favorite-filter a:hover{color:#ffd36b}
 
 .players-scope-tabs{display:flex;gap:5px;width:max-content;padding:4px;border:1px solid #274055;border-radius:8px;background:#0c1824}.players-scope-tabs a{padding:7px 13px;border-radius:5px;color:#9cb2c8;font-size:12px;font-weight:650;text-decoration:none}.players-scope-tabs a:hover{color:#e5f2fd;background:#152a3b}.players-scope-tabs a.active{background:#073c35;color:#22e0ad;box-shadow:inset 0 0 0 1px #0d7461}
 

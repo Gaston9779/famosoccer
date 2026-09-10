@@ -67,9 +67,26 @@ export function playerUrl(input: string) {
     url: `https://www.transfermarkt.com/${match[1]}/profil/spieler/${match[2]}`,
   };
 }
+
+/** Derive the public performance page from the persisted canonical profile URL. */
+export function performanceUrl(profileUrl: string) {
+  const profile = playerUrl(profileUrl);
+  return {
+    id: profile.id,
+    path: profile.path.replace("/profil/spieler/", "/leistungsdaten/spieler/"),
+    url: profile.url.replace("/profil/spieler/", "/leistungsdaten/spieler/"),
+  };
+}
+
+/** TM's Leistungsdaten web component requests this documented-in-bundle JSON resource. */
+export function tmapiPerformanceUrl(playerId: string) {
+  if (!/^[1-9]\d*$/.test(playerId))
+    throw new ProviderError("INVALID_URL", "A numeric Transfermarkt player ID is required for performance data.");
+  const path = `/player/${playerId}/performance-game`;
+  return { path, url: `https://tmapi.transfermarkt.technology${path}` };
+}
 export const endpoints = {
   teams: "/quickselect/teams/UZ1",
   players: (id: string) => `/quickselect/players/${id}`,
-  performance: (id: string) => `/ceapi/player/${id}/performance`,
   profile: (id: string) => `/player/profil/spieler/${id}`,
 };

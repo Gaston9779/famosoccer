@@ -71,15 +71,19 @@ export async function probe() {
         JSON.stringify({ id: p.id, url: profile.tmUrl }, null, 2),
       );
       stage = "performance";
-      const raw = await client.request(endpoints.performance(p.id));
+      const raw = await client.request(
+        `/player/${p.id}/performance-game`,
+        "json",
+        { baseUrl: "https://tmapi.transfermarkt.technology" },
+      );
       const rows = parsePerformance(raw);
       report.performance = "PASS";
       report.seasonRows = rows.length;
       report.currentLeaguePerformance = currentLeaguePerformance(rows);
       // Save only validated public statistical fields, not headers/cookies.
       await writeFile(
-        "tests/fixtures/transfermarkt/performance.live.json",
-        JSON.stringify(JSON.parse(raw), null, 2),
+        "tests/fixtures/transfermarkt/performance.live.html",
+        raw,
       );
       await finishRun(run.id, undefined, { report });
     } catch (error) {

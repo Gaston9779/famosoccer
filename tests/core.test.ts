@@ -192,9 +192,10 @@ test(
       "Right Midfield",
       "Left-Back",
     ]);
-    if (existsSync("tests/fixtures/transfermarkt/performance.live.json"))
-      assert.ok(
-        Array.isArray(parsePerformance(fixture("performance.live.json"))),
+    if (existsSync("tests/fixtures/transfermarkt/performance.live.html"))
+      assert.throws(
+        () => parsePerformance(fixture("performance.live.html")),
+        { code: "SCHEMA" },
       );
   },
 );

@@ -190,34 +190,48 @@ export async function savePerformance(
   rows: Performance[],
   counts = emptyCounts(),
 ) {
-  await db.$transaction(async (tx) => {
-    for (const row of rows) {
-      const where = {
-        playerId_season_competitionKey: {
-          playerId,
-          season: row.season,
-          competitionKey: row.competitionKey,
-        },
-      };
-      const previous = await tx.playerPerformance.findUnique({ where });
-      await tx.playerPerformance.upsert({
-        where,
-        create: { ...row, playerId, sourceUpdatedAt: new Date() },
-        update: { ...row, sourceUpdatedAt: new Date() },
-      });
-      counts[previous ? "performanceRowsUpdated" : "performanceRowsCreated"]++;
-    }
-    await tx.player.update({
-      where: { id: playerId },
-      data: { performanceLastSyncedAt: new Date() },
-    });
-    const current = currentLeaguePerformance(rows);
-    if (current)
-      await tx.competition.updateMany({
-        where: { tmCompetitionId: "UZ1" },
-        data: { season: current.season },
-      });
+  // Fields where an incoming null means "not reported this time" and must never
+  // clobber a previously stored value. 0 is real data and does overwrite.
+  const preservable = [
+    "possibleGames", "gamesPlayed", "goals", "assists", "yellowCards",
+    "secondYellowCards", "redCards", "startElevenPercent", "minutesPlayedPercent",
+    "minutesPlayed", "competitionCode",
+  ] as const;
+  // A TMAPI response can contain dozens of historical competition/season rows.
+  // Fetch existing rows once, then use one batched transaction. The old per-row
+  // read + upsert loop held a remote Postgres interactive transaction long enough
+  // to expire on large, valid responses.
+  const existing = await db.playerPerformance.findMany({
+    where: {
+      playerId,
+      OR: rows.map((row) => ({ season: row.season, competitionKey: row.competitionKey })),
+    },
   });
+  const existingByKey = new Map(existing.map((row) => [`${row.season}|${row.competitionKey}`, row]));
+  const now = new Date();
+  const creates: Performance[] = [];
+  const updates: { id: string; row: Performance }[] = [];
+  for (const incoming of rows) {
+    const previous = existingByKey.get(`${incoming.season}|${incoming.competitionKey}`);
+    const merged: Performance = { ...incoming };
+    if (previous)
+      for (const field of preservable)
+        if (merged[field] == null && previous[field] != null)
+          (merged[field] as unknown) = previous[field];
+    if (previous) updates.push({ id: previous.id, row: merged });
+    else creates.push(merged);
+  }
+  counts.performanceRowsCreated += creates.length;
+  counts.performanceRowsUpdated += updates.length;
+  const writes = [
+    ...(creates.length ? [db.playerPerformance.createMany({ data: creates.map((row) => ({ ...row, playerId, provider: "TRANSFERMARKT" as const, sourceUpdatedAt: now })) })] : []),
+    ...updates.map(({ id, row }) => db.playerPerformance.update({ where: { id }, data: { ...row, provider: "TRANSFERMARKT", sourceUpdatedAt: now } })),
+    db.player.update({ where: { id: playerId }, data: { performanceLastSyncedAt: now } }),
+  ];
+  const current = currentLeaguePerformance(rows);
+  if (current)
+    writes.push(db.competition.updateMany({ where: { tmCompetitionId: "UZ1" }, data: { season: current.season } }));
+  await db.$transaction(writes, { timeout: 60_000 });
 }
 /** Records a successful performance check with no available row (for example HTTP 404). */
 export async function markPerformanceChecked(playerId: string) {
@@ -236,7 +250,7 @@ export async function importPlayerFromTransfermarktUrl(url: string) {
     const run = await db.syncRun.create({ data: { type: "MANUAL" } });
     const counts = emptyCounts();
     const provider = new TransfermarktProvider(
-      new TransfermarktClient(run.id, 10),
+      new TransfermarktClient(run.id, 10, undefined, undefined, { noRetries: true }),
     );
     try {
       stage = "TM_FETCH_START";

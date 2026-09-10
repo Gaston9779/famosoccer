@@ -89,6 +89,23 @@ test("503 delays then opens circuit after three failures", async () => {
     3,
   );
 });
+test("noRetries option: one attempt, no back-off wait, no retry loop on 503/500", async () => {
+  for (const status of [503, 500]) {
+    const run = await db.syncRun.create({ data: { type: "TEST" } });
+    let calls = 0;
+    const waits: number[] = [];
+    const client = new TransfermarktClient(
+      run.id,
+      10,
+      async () => { calls++; return new Response("x", { status }); },
+      async (ms) => { waits.push(ms); },
+      { noRetries: true },
+    );
+    await assert.rejects(client.request("/one"), { code: "HTTP", status });
+    assert.equal(calls, 1);
+    assert.deepEqual(waits, []);
+  }
+});
 test("bootstrap budget cursor resumes without duplicating players; manual import updates", async () => {
   const { bootstrapUzbekistanSuperLeague } = await import(
     "../src/lib/services/sync"
@@ -118,7 +135,7 @@ test("bootstrap budget cursor resumes without duplicating players; manual import
           "utf8",
         ),
       );
-    if (path.includes("/performance"))
+    if (path.includes("/performance-game"))
       return new Response(
         readFileSync(
           "tests/fixtures/transfermarkt/performance.synthetic.json",
@@ -158,7 +175,7 @@ test("manual import creates once, then updates the same player when performance 
   globalThis.fetch = async (input) => {
     const path = new URL(String(input)).pathname;
     if (path.includes("/profil/spieler/321")) return new Response(profile);
-    if (path === "/ceapi/player/321/performance") return new Response(null, { status: 404 });
+    if (path === "/player/321/performance-game") return new Response(null, { status: 404 });
     throw new Error(`Unexpected request ${path}`);
   };
   try {
@@ -213,7 +230,7 @@ test("import route returns HTTP 200 with PARTIAL when profile import succeeds", 
   globalThis.fetch = async (input) => {
     const path = new URL(String(input)).pathname;
     if (path.includes("/profil/spieler/324")) return new Response(profile);
-    if (path === "/ceapi/player/324/performance") return new Response(null, { status: 404 });
+    if (path === "/player/324/performance-game") return new Response(null, { status: 404 });
     throw new Error(`Unexpected request ${path}`);
   };
   try {
@@ -241,6 +258,63 @@ test("import route returns HTTP 200 with PARTIAL when profile import succeeds", 
   }
 });
 
+test("one manual import = one profile request + one performance request; TM is the only source", async () => {
+  const original = globalThis.fetch;
+  const paths: string[] = [];
+  const profile = readFileSync("tests/fixtures/transfermarkt/profile.synthetic.html", "utf8").replaceAll("spieler/123", "spieler/525");
+  const performance = readFileSync("tests/fixtures/transfermarkt/performance.synthetic.json", "utf8");
+  globalThis.fetch = async (input) => {
+    const url = new URL(String(input));
+    assert.ok(["https://www.transfermarkt.com", "https://tmapi.transfermarkt.technology"].includes(url.origin), "only Transfermarkt-owned origins are ever contacted");
+    paths.push(url.pathname);
+    if (url.pathname === "/test-player/profil/spieler/525") return new Response(profile);
+    if (url.pathname === "/player/525/performance-game") return new Response(performance);
+    throw new Error(`Unexpected request ${url.pathname}`);
+  };
+  try {
+    const result = await importPlayerFromTransfermarktUrl("https://www.transfermarkt.com/test-player/profil/spieler/525");
+    assert.equal(result.status, "IMPORTED");
+    // exactly one profile + exactly one performance request, nothing else
+    assert.deepEqual(paths.sort(), ["/player/525/performance-game", "/test-player/profil/spieler/525"]);
+    assert.equal(paths.filter((p) => p.includes("/profil/spieler/")).length, 1);
+    assert.equal(paths.filter((p) => p.includes("/performance-game")).length, 1);
+
+    const rows = await db.playerPerformance.findMany({ where: { player: { tmPlayerId: "525" } }, orderBy: { season: "asc" } });
+    // every returned competition/season persisted, keyed by season + competitionKey
+    assert.deepEqual(rows.map((r) => `${r.season}/${r.competitionKey}`).sort(), ["2024/UZ1", "2025/UZ1", "2026/UZP"]);
+    for (const row of rows) {
+      assert.equal(row.provider, "TRANSFERMARKT");
+      // extended stats Transfermarkt's summary does not provide stay null (never fabricated to 0)
+      assert.equal(row.rating, null);
+      assert.equal(row.shotsTotal, null);
+      assert.equal(row.tacklesTotal, null);
+      assert.equal(row.passesTotal, null);
+      assert.equal(row.saves, null);
+      assert.equal(row.lineups, null);
+      assert.equal(row.captain, null);
+    }
+    const uz1_2025 = rows.find((r) => r.season === "2025" && r.competitionKey === "UZ1")!;
+    assert.equal(uz1_2025.goals, 3);
+    assert.equal(uz1_2025.assists, 2);
+    assert.equal(uz1_2025.gamesPlayed, 18);
+  } finally {
+    globalThis.fetch = original;
+  }
+});
+
+test("savePerformance keeps a stored stat when Transfermarkt omits it (null never overwrites a value)", async () => {
+  const { savePerformance } = await import("../src/lib/services/players");
+  const player = await db.player.create({ data: { tmPlayerId: "526", name: "Keep Player", tmUrl: "https://www.transfermarkt.com/keep/profil/spieler/526" } });
+  await savePerformance(player.id, [{ season: "2026", competitionName: "Superliga", competitionCode: "UZ1", competitionKey: "UZ1", possibleGames: 20, gamesPlayed: 15, goals: 5, assists: 3, yellowCards: 2, secondYellowCards: 0, redCards: 0, startElevenPercent: 60, minutesPlayedPercent: 55, minutesPlayed: 1200 }]);
+  // a later scrape returns the same competition with goals missing
+  await savePerformance(player.id, [{ season: "2026", competitionName: "Superliga", competitionCode: "UZ1", competitionKey: "UZ1", possibleGames: 22, gamesPlayed: 17, goals: null, assists: 4, yellowCards: null, secondYellowCards: null, redCards: null, startElevenPercent: null, minutesPlayedPercent: 58, minutesPlayed: 1300 }]);
+  const row = await db.playerPerformance.findFirstOrThrow({ where: { playerId: player.id, season: "2026", competitionKey: "UZ1" } });
+  assert.equal(row.goals, 5, "goals retained from the earlier scrape");
+  assert.equal(row.assists, 4, "assists updated");
+  assert.equal(row.minutesPlayed, 1300);
+  assert.equal(row.provider, "TRANSFERMARKT");
+});
+
 test("manual import does not silence a profile failure or a non-404 performance failure", async () => {
   const original = globalThis.fetch;
   try {
@@ -254,7 +328,7 @@ test("manual import does not silence a profile failure or a non-404 performance 
     globalThis.fetch = async (input) => {
       const path = new URL(String(input)).pathname;
       if (path.includes("/profil/spieler/323")) return new Response(profile);
-      if (path === "/ceapi/player/323/performance") return new Response("not-json");
+      if (path === "/player/323/performance-game") return new Response("not-json");
       throw new Error(`Unexpected request ${path}`);
     };
     await assert.rejects(

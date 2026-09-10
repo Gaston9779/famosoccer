@@ -1,5 +1,5 @@
 import { TransfermarktClient } from "./client";
-import { endpoints, playerUrl } from "./endpoints";
+import { endpoints, playerUrl, tmapiPerformanceUrl } from "./endpoints";
 import { parseListings } from "./parsers/listings";
 import { parseProfile } from "./parsers/profile";
 import { parsePerformance } from "./parsers/performance";
@@ -22,9 +22,14 @@ export class TransfermarktProvider {
       `https://www.transfermarkt.com${path}`,
     );
   }
-  async performance(id: string) {
+  async performance(playerId: string) {
+    const performance = tmapiPerformanceUrl(playerId);
     return parsePerformance(
-      await this.client.request(endpoints.performance(id)),
+      await this.client.request(
+        performance.path,
+        "json",
+        { baseUrl: "https://tmapi.transfermarkt.technology" },
+      ),
     );
   }
 }

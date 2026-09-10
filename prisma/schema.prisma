@@ -31,6 +31,10 @@ enum PlayerCareerStatus {
   RETIRED
   UNKNOWN
 }
+enum PerformanceSource {
+  TRANSFERMARKT
+  SEED
+}
 model Competition {
   id String @id @default(cuid())
   tmCompetitionId String @unique
@@ -117,6 +121,40 @@ model PlayerPerformance {
   startElevenPercent Float?
   minutesPlayedPercent Float?
   minutesPlayed Int?
+  // --- Extended sporting detail (all nullable; null = unknown, 0 = real). Populated
+  //     from Transfermarkt where available; the rest await a detailed-stats source. ---
+  lineups Int?
+  position String?
+  rating Float?
+  captain Boolean?
+  substituteIn Int?
+  substituteOut Int?
+  substituteBench Int?
+  goalsConceded Int?
+  saves Int?
+  shotsTotal Int?
+  shotsOn Int?
+  passesTotal Int?
+  passesKey Int?
+  passesAccuracy Float?
+  tacklesTotal Int?
+  tacklesBlocks Int?
+  tacklesInterceptions Int?
+  duelsTotal Int?
+  duelsWon Int?
+  dribblesAttempts Int?
+  dribblesSuccess Int?
+  dribblesPast Int?
+  foulsDrawn Int?
+  foulsCommitted Int?
+  penaltyWon Int?
+  penaltyCommitted Int?
+  penaltyScored Int?
+  penaltyMissed Int?
+  penaltySaved Int?
+  // --- Source attribution + lossless raw-source payload (provider-agnostic) ---
+  provider PerformanceSource @default(TRANSFERMARKT)
+  providerStats Json?
   sourceUpdatedAt DateTime
   createdAt DateTime @default(now())
   @@unique([playerId, season, competitionKey])

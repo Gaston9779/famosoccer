@@ -10,15 +10,20 @@ export class TransfermarktClient {
     private max: number,
     private transport: typeof fetch = fetch,
     private wait = sleep,
+    private options: { noRetries?: boolean; redirect?: RequestRedirect } = {},
   ) {}
   async request(
     path: string,
     format: "json" | "html" = "json",
+    requestOptions: { baseUrl?: string } = {},
   ): Promise<string> {
     if (this.stopped)
       throw new ProviderError("STOPPED", "Synchronization has been stopped.");
-    if (this.cache.has(path)) return this.cache.get(path)!;
-    for (let attempt = 0; attempt < 3; attempt++) {
+    const defaultBaseUrl = process.env.TM_BASE_URL ?? "https://www.transfermarkt.com";
+    const baseUrl = requestOptions.baseUrl ?? defaultBaseUrl;
+    const cacheKey = `${baseUrl}${path}`;
+    if (this.cache.has(cacheKey)) return this.cache.get(cacheKey)!;
+    for (let attempt = 0; attempt < (this.options.noRetries ? 1 : 3); attempt++) {
       const result = await limiter.schedule(async () => {
         if (this.stopped)
           throw new ProviderError("STOPPED", "Synchronization stopped.");
@@ -28,9 +33,7 @@ export class TransfermarktClient {
         if (run.status !== "RUNNING")
           throw new ProviderError("STOPPED", `Run is ${run.status}`);
         if (run.requestsAttempted >= this.max) throw new BudgetError();
-        const base = new URL(
-          process.env.TM_BASE_URL ?? "https://www.transfermarkt.com",
-        );
+        const base = new URL(baseUrl);
         const url = new URL(path, base);
         if (url.origin !== base.origin)
           throw new ProviderError(
@@ -53,7 +56,7 @@ export class TransfermarktClient {
               Accept: format === "json" ? "application/json" : "text/html",
             },
             signal: AbortSignal.timeout(25000),
-            redirect: "follow",
+            redirect: this.options.redirect ?? "follow",
           });
         } catch (error) {
           await db.syncRun.update({
@@ -146,17 +149,17 @@ export class TransfermarktClient {
           }
         }
         if (response.ok) {
-          this.cache.set(path, body);
+          this.cache.set(cacheKey, body);
           return { body, status };
         }
         return { body: null, status };
       });
       if (result.body !== null) return result.body;
-      if (result.status === 503 && attempt < 2) {
+      if (!this.options.noRetries && result.status === 503 && attempt < 2) {
         await this.wait(attempt === 0 ? 30000 : 90000);
         continue;
       }
-      if (result.status >= 500 && result.status !== 503 && attempt < 1) {
+      if (!this.options.noRetries && result.status >= 500 && result.status !== 503 && attempt < 1) {
         await this.wait(5000 * 2 ** attempt);
         continue;
       }

@@ -37,7 +37,7 @@ Transfermarkt has **no public official API for this use case**. These unofficial
 
 - `/quickselect/teams/UZ1`
 - `/quickselect/players/{clubId}`
-- `/ceapi/player/{playerId}/performance`
+- `/{slug}/leistungsdaten/spieler/{playerId}` (public performance page derived from the canonical profile URL)
 - Canonical `/player-slug/profil/spieler/{playerId}` HTML profile.
 
 All Transfermarkt HTTP requests pass through `src/lib/transfermarkt/client.ts`. A process-wide queue and cross-process lock serialize provider operations, including CLI and manual imports. Native fetch uses an identifying private-demo User-Agent, English language preference, explicit Accept, 25-second timeout, no automatic redirects, and per-run response caching. No proxies, CAPTCHA bypass, fingerprint spoofing or access-control circumvention. Unrecognized endpoint schemas fail explicitly; there is no unverified alternate-source fallback.

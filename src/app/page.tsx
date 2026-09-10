@@ -7,6 +7,7 @@ import { db } from "@/lib/db";
 import { normalizeRole } from "@/lib/scoring/roles";
 import { playerCoverage } from "@/lib/intelligence/coverage";
 import { CoverageCard } from "@/components/coverage-card";
+import { isCurrentUz1 } from "@/lib/services/uz1-performance-job";
 
 export const dynamic = "force-dynamic";
 
@@ -99,7 +100,7 @@ export default async function Home() {
     ["Contract", players.filter((p) => p.contractExpires).length],
     ["Market value", players.filter((p) => p.marketValueEur != null).length],
     ["Representation", players.filter((p) => p.representationStatus !== "UNKNOWN").length],
-    ["Performance", players.filter((p) => p.performances.length > 0).length],
+    ["Performance", players.filter((p) => p.performances.some(isCurrentUz1)).length],
   ] as const;
   const distribution = players.reduce(
     (counts, player) => {

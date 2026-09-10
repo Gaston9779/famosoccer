@@ -15,3 +15,5 @@
  .player-detail-actions .player-avatar-lg{width:64px;height:64px}
  .player-detail-name{font-size:24px}
 }
+
+.best-club-matches{display:grid;gap:8px;list-style:none;margin:0;padding:0}.best-club-match{display:grid;grid-template-columns:24px minmax(0,1fr) minmax(48px,auto) auto;align-items:center;gap:14px;padding:12px;border:1px solid #20384d;border-radius:8px;background:#0e1a26}.best-club-match-first{border-color:#31516a;background:#112334}.best-club-rank{color:#91a9c1;font-size:12px}.best-club-identity{display:flex;align-items:center;gap:10px;min-width:0;color:inherit;text-decoration:none}.best-club-identity strong{overflow-wrap:anywhere;font-size:13px}.best-club-identity .club-logo{flex:none}.best-club-role{display:grid;gap:4px;font-size:12px}.best-club-role small{color:#91a9c1;font-size:10px}.best-club-metrics{display:flex;gap:14px}.best-club-metrics>div{display:grid;gap:5px;text-align:center}.best-club-metrics>div>span{color:#91a9c1;font-size:10px}@media(max-width:600px){.best-club-match{grid-template-columns:24px minmax(0,1fr) auto;gap:10px}.best-club-metrics{grid-column:2 / -1;justify-content:flex-end;flex-wrap:wrap}}

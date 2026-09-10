@@ -1,3 +1,4 @@
+import { compareMatches } from "./match-ranking";
 import { db } from "../db";
 import { normalizeRole } from "../scoring/roles";
 import { addMonths, daysBetween, type KnownRole } from "../scoring/config";
@@ -248,13 +249,7 @@ export function topMatches(
   }
   // Sort once (not on every push): the previous in-loop sort was O(n² log n) and,
   // with a large `limit`, timed out serverless functions on the Matches page.
-  matched.sort(
-    (a, b) =>
-      b.matchScore - a.matchScore ||
-      a.playerId.localeCompare(b.playerId) ||
-      a.clubId.localeCompare(b.clubId) ||
-      a.role.localeCompare(b.role),
-  );
+  matched.sort(compareMatches);
   const best = matched.slice(0, limit);
   const names = new Map(view.players.map((p) => [p.id, p.name]));
   const clubNames = new Map(view.clubs.map((c) => [c.id, c.name]));

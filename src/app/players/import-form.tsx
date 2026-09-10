@@ -23,11 +23,11 @@ export default function ImportForm() {
           if (!response.ok)
             throw new Error(result.error?.message ?? "Import failed");
           const operation = result.status === "PARTIAL" ? result.operation : result.status;
-          const action = operation === "UPDATED" ? "Updated" : "Imported";
+          const verb = operation === "UPDATED" ? "updated" : "imported";
           setMessage(
             result.status === "PARTIAL"
-              ? `${action} ${result.player.name}. Performance data is currently unavailable.`
-              : `${action} ${result.player.name}`,
+              ? `${result.player.name}: profile ${verb}. Sporting data is currently unavailable.`
+              : `${result.player.name}: profile and Sporting data ${verb}.`,
           );
           router.refresh();
         } catch (error) {

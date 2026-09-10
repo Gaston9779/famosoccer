@@ -1,0 +1,21 @@
+{
+  "success": true,
+  "message": null,
+  "data": {
+    "playerId": "1177021",
+    "performance": [
+      {
+        "gameInformation": { "gameId": "4818236", "competitionId": "UZ1", "competitionTypeId": 1, "gameDuration": 90, "seasonId": 2025, "season": { "id": 2025, "display": "2026", "cyclicalName": "2026", "nonCyclicalName": "25/26" } },
+        "statistics": { "generalStatistics": { "participationState": "played" }, "goalStatistics": { "goalsScoredTotal": 1, "assists": 1 }, "cardStatistics": { "yellowCardNet": 1 }, "playingTimeStatistics": { "playedMinutes": 45, "isStarting": true } }
+      },
+      {
+        "gameInformation": { "gameId": "4818235", "competitionId": "UZ1", "competitionTypeId": 1, "gameDuration": 90, "seasonId": 2025, "season": { "id": 2025, "display": "2026", "cyclicalName": "2026", "nonCyclicalName": "25/26" } },
+        "statistics": { "generalStatistics": { "participationState": "in squad" }, "goalStatistics": { "goalsScoredTotal": null, "assists": null }, "cardStatistics": { "yellowCardNet": null }, "playingTimeStatistics": { "playedMinutes": null, "isStarting": false } }
+      },
+      {
+        "gameInformation": { "gameId": "5034002", "competitionId": "KOBU", "competitionTypeId": 8, "gameDuration": 90, "seasonId": 2025, "season": { "id": 2025, "display": "2026", "cyclicalName": "2026", "nonCyclicalName": "25/26" } },
+        "statistics": { "generalStatistics": { "participationState": "played" }, "goalStatistics": { "goalsScoredTotal": 0, "assists": 0 }, "cardStatistics": { "yellowCardNet": 0 }, "playingTimeStatistics": { "playedMinutes": 90, "isStarting": true } }
+      }
+    ]
+  }
+}

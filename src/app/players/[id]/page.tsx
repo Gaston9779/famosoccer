@@ -1,3 +1,7 @@
+import Link from "next/link";
+import { groupMatchesByPlayer } from "@/lib/intelligence/match-ranking";
+import { scoreTone } from "@/lib/score-tone";
+import "@/components/match-score.css";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { db } from "@/lib/db";
@@ -19,28 +23,24 @@ const FOOT_LABEL: Record<string, string> = { RIGHT: "Right foot", LEFT: "Left fo
 const CAREER_LABEL: Record<string, string> = { ACTIVE: "Active", FREE_AGENT: "Free agent", RETIRED: "Retired", UNKNOWN: "Status unknown" };
 
 async function BestClubMatches({ playerId, enabled }: { playerId: string; enabled: boolean }) {
-  const matches = enabled ? await topMatches(await loadIntelligenceView(true), { playerId, limit: 8 }) : [];
-  return (
-    <section className="panel">
-      <div className="section-title"><h2>Best club matches</h2></div>
-      {matches.length ? (
-        <div className="table-wrap">
-          <table>
-            <thead><tr><th>Target club</th><th>Role</th><th>Club need</th><th>Match</th></tr></thead>
-            <tbody>
-              {matches.map((match) => (
-                <tr key={`${match.playerId}-${match.clubId}-${match.role}`}>
-                  <td>{match.clubName}</td><td>{match.role}</td><td>{match.clubNeedScore}</td><td>{match.matchScore}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      ) : (
-        <p className="empty">{enabled ? "No eligible club matches in current data." : "Club matching is only available for players in the Uzbekistan Super League."}</p>
-      )}
-    </section>
-  );
+  const view = enabled ? await loadIntelligenceView(true) : null;
+  const matches = view ? groupMatchesByPlayer(topMatches(view, { playerId, limit: Number.MAX_SAFE_INTEGER }))[0]?.matches ?? [] : [];
+  const clubs = new Map(view?.clubs.map((club) => [club.id, club]) ?? []);
+  return <section className="panel">
+    <div className="section-title"><h2>Best club matches</h2>{matches.length > 8 && <span className="muted">Top 8 of {matches.length} opportunities</span>}</div>
+    {matches.length ? <ol className="best-club-matches">{matches.slice(0, 8).map((match, index) => <li className={`best-club-match ${index === 0 ? "best-club-match-first" : ""}`} key={`${match.clubId}-${match.role}`}>
+      <span className="best-club-rank">#{index + 1}</span>
+      <Link className="best-club-identity" href={`/clubs/${match.clubId}`}>
+        <ClubLogo name={match.clubName} tmClubId={clubs.get(match.clubId)?.tmClubId ?? ""} />
+        <strong>{match.clubName}</strong>
+      </Link>
+      <span className="best-club-role">{match.role}{index === 0 && <small>Best fit</small>}</span>
+      <div className="best-club-metrics">
+        <div><span>Club need</span><b className={`match-score match-score-${scoreTone(match.clubNeedScore)}`}>{match.clubNeedScore.toFixed(1)}</b></div>
+        <div><span>Match score</span><b className={`match-score match-score-${scoreTone(match.matchScore)}`}>{match.matchScore.toFixed(1)}</b></div>
+      </div>
+    </li>)}</ol> : <p className="empty">{enabled ? "No eligible club matches in current data." : "Club matching is only available for players in the Uzbekistan Super League."}</p>}
+  </section>;
 }
 
 export default async function PlayerDetail({ params }: { params: Promise<{ id: string }> }) {

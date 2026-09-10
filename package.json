@@ -34,6 +34,8 @@
     "enrich:uz1-age-role": "tsx scripts/enrich-uz1-age-role-profiles.ts",
     "enrich:uz1-unknown-role": "tsx scripts/enrich-uz1-unknown-role-profiles.ts",
     "enrich:uzb1-coverage-profiles": "tsx scripts/enrich-uzb1-coverage-profiles.ts",
+    "enrich:uz1-performances": "tsx scripts/enrich-current-uz1-performances.ts",
+    "enrich:uz1-performances:batch100": "tsx scripts/enrich-uz1-performances-batch100.ts",
     "enrich:performances": "tsx scripts/enrich-missing-performances.ts",
     "enrich:players": "tsx scripts/enrich-players.ts",
     "audit:players": "tsx scripts/audit-player-population.ts",
