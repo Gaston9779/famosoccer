@@ -13,6 +13,7 @@ type PlayerRow = {
   name: string;
   portraitUrl: string | null;
   club: { id: string; name: string; tmClubId: string; competitionCode?: string | null } | null;
+  clubCountry: string | null;
   role: string;
   age: number | null;
   height: number | null;
@@ -41,9 +42,10 @@ type Filters = {
   maxValue: string;
   minScore: string;
   maxScore: string;
+  excludedCountries: string[];
 };
 
-const emptyFilters: Filters = { search: "", role: "", club: "", nationality: "", contract: "", representation: "", minAge: "", maxAge: "", minValue: "", maxValue: "", minScore: "", maxScore: "" };
+const emptyFilters: Filters = { search: "", role: "", club: "", nationality: "", contract: "", representation: "", minAge: "", maxAge: "", minValue: "", maxValue: "", minScore: "", maxScore: "", excludedCountries: [] };
 const NO_CURRENT_CLUB = "__NO_CURRENT_CLUB__";
 const money = (value: number) => {
   if (value >= 1_000_000) return `€${(value / 1_000_000).toFixed(1).replace(/\.0$/, "")}m`;
@@ -69,6 +71,26 @@ const nationalityDisplay = (value: string | null) => {
   if (!primary) return { flag: "", code: "Nationality unknown" };
   const known = nationalityCodes[primary];
   return known ? { flag: known[0], code: known[1] } : { flag: "", code: primary.slice(0, 3).toUpperCase() };
+};
+const clubCountryCodes: Record<string, [string, string]> = {
+  Germania: ["🇩🇪", "GER"], Svizzera: ["🇨🇭", "SUI"], "Stati Uniti": ["🇺🇸", "USA"], Inghilterra: ["🏴󠁧󠁢󠁥󠁮󠁧󠁿", "ENG"],
+  Austria: ["🇦🇹", "AUT"], Francia: ["🇫🇷", "FRA"], Spagna: ["🇪🇸", "ESP"], Grecia: ["🇬🇷", "GRE"],
+  Liechtenstein: ["🇱🇮", "LIE"], Lussemburgo: ["🇱🇺", "LUX"], Portogallo: ["🇵🇹", "POR"], Slovenia: ["🇸🇮", "SVN"],
+  Estonia: ["🇪🇪", "EST"], Scozia: ["🏴󠁧󠁢󠁳󠁣󠁴󠁿", "SCO"], Belgio: ["🇧🇪", "BEL"], Ungheria: ["🇭🇺", "HUN"],
+  Olanda: ["🇳🇱", "NED"], Irlanda: ["🇮🇪", "IRL"], Danimarca: ["🇩🇰", "DEN"], "Taipei Cinese": ["🇹🇼", "TPE"],
+  Polonia: ["🇵🇱", "POL"], Lettonia: ["🇱🇻", "LAT"], Turchia: ["🇹🇷", "TUR"], Uzbekistan: ["🇺🇿", "UZB"],
+  Malta: ["🇲🇹", "MLT"], Albania: ["🇦🇱", "ALB"], Galles: ["🏴󠁧󠁢󠁷󠁬󠁳󠁿", "WAL"], "Hong Kong": ["🇭🇰", "HKG"],
+  Gibraltar: ["🇬🇮", "GIB"], Cipro: ["🇨🇾", "CYP"], Uruguay: ["🇺🇾", "URU"], "Arabia Saudita": ["🇸🇦", "KSA"],
+  Qatar: ["🇶🇦", "QAT"], Romania: ["🇷🇴", "ROU"], "Macedonia del Nord": ["🇲🇰", "MKD"], Svezia: ["🇸🇪", "SWE"],
+  Kirghizistan: ["🇰🇬", "KGZ"], Serbia: ["🇷🇸", "SRB"], Islanda: ["🇮🇸", "ISL"], Bulgaria: ["🇧🇬", "BUL"],
+  "Repubblica Ceca": ["🇨🇿", "CZE"], "Irlanda del Nord": ["🇬🇧", "NIR"], India: ["🇮🇳", "IND"], "Emirati Arabi Uniti": ["🇦🇪", "UAE"],
+  Myanmar: ["🇲🇲", "MYA"], Vietnam: ["🇻🇳", "VIE"], Giappone: ["🇯🇵", "JPN"], Ucraina: ["🇺🇦", "UKR"],
+  Lituania: ["🇱🇹", "LTU"], Kosovo: ["🇽🇰", "KOS"], Filippine: ["🇵🇭", "PHI"], Croazia: ["🇭🇷", "CRO"],
+  Libia: ["🇱🇾", "LBY"], Norvegia: ["🇳🇴", "NOR"], Slovacchia: ["🇸🇰", "SVK"], Italia: ["🇮🇹", "ITA"],
+};
+const clubCountryDisplay = (value: string) => {
+  const known = clubCountryCodes[value];
+  return known ? { flag: known[0], code: known[1] } : { flag: "", code: value.slice(0, 3).toUpperCase() };
 };
 const scoreTone = (score: number | null) => score == null ? "none" : score >= 70 ? "high" : score >= 40 ? "medium" : "low";
 
@@ -108,7 +130,9 @@ export function PlayerTable({ rows, initialSearch = "", initialFavorites = false
   const roles = useMemo(() => [...new Set(rows.map((row) => labelRole(row.role)))].sort(), [rows]);
   const clubs = useMemo(() => [...new Map(rows.flatMap((row) => row.club ? [[row.club.id, row.club.name] as const] : [])).entries()].sort((a, b) => a[1].localeCompare(b[1])), [rows]);
   const nationalities = useMemo(() => [...new Set(rows.map((row) => nationalityDisplay(row.nationality).code).filter((value) => value !== "Nationality unknown"))].sort(), [rows]);
+  const clubCountries = useMemo(() => [...new Set(rows.flatMap((row) => row.clubCountry ? [row.clubCountry] : []))].sort(), [rows]);
   const update = <Key extends keyof Filters>(key: Key, value: Filters[Key]) => { setFilters((current) => ({ ...current, [key]: value })); setPage(1); };
+  const toggleCountry = (country: string) => { setFilters((current) => ({ ...current, excludedCountries: current.excludedCountries.includes(country) ? current.excludedCountries.filter((value) => value !== country) : [...current.excludedCountries, country] })); setPage(1); };
   const visible = useMemo(() => rows.filter((row) => {
     const contractStatus = row.contract ? new Date(`${row.contract}T00:00:00Z`) : null;
     const now = new Date();
@@ -120,6 +144,7 @@ export function PlayerTable({ rows, initialSearch = "", initialFavorites = false
       && (!filters.nationality || nationalityDisplay(row.nationality).code === filters.nationality)
       && (!filters.representation || row.representation === filters.representation)
       && (!filters.contract || (filters.contract === "known" ? !!contractStatus : filters.contract === "expiring" ? !!contractStatus && contractStatus.getUTCFullYear() <= thisYear + 1 : !contractStatus))
+      && (!row.clubCountry || !filters.excludedCountries.includes(row.clubCountry))
       && numericRangeIncludes(row.age, filters.minAge, filters.maxAge)
       && numericRangeIncludes(row.marketValue, filters.minValue, filters.maxValue)
       && numericRangeIncludes(row.opportunity, filters.minScore, filters.maxScore);
@@ -156,6 +181,16 @@ export function PlayerTable({ rows, initialSearch = "", initialFavorites = false
         <label>Opportunity score <span><input type="number" min="0" max="100" value={filters.minScore} onChange={(event) => update("minScore", event.target.value)} aria-label="Minimum opportunity score" placeholder="Min" /><i /> <input type="number" min="0" max="100" value={filters.maxScore} onChange={(event) => update("maxScore", event.target.value)} aria-label="Maximum opportunity score" placeholder="Max" /></span></label>
         <button type="button" className="players-reset" onClick={reset}>↻ Reset</button>
       </div>
+      {clubCountries.length > 0 && <div className="players-filter-row players-filter-countries">
+        <span className="players-filter-countries-label">Escludi nazioni</span>
+        <div className="players-country-chips" role="group" aria-label="Escludi nazioni">
+          {clubCountries.map((country) => {
+            const { flag, code } = clubCountryDisplay(country);
+            const excluded = filters.excludedCountries.includes(country);
+            return <button key={country} type="button" className={`players-country-chip${excluded ? " excluded" : ""}`} aria-pressed={!excluded} title={country} onClick={() => toggleCountry(country)}>{flag && <span aria-hidden="true">{flag}</span>} {code}</button>;
+          })}
+        </div>
+      </div>}
     </section>
     <div className="players-favorite-filter"><Link href={initialFavorites ? `/players?search=${initialSearch}` : `/players?search=${initialSearch}&favorites=1`}>{initialFavorites ? "★ Favorites only — active" : "☆ Favorites only"}</Link></div>
     <section className="players-results-header">

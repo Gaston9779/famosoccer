@@ -57,6 +57,7 @@ export default async function Players({ searchParams }: { searchParams: Promise<
       name: player.name,
       portraitUrl: player.portraitUrl,
       club: player.club ? { id: player.club.id, name: player.club.name, tmClubId: player.club.tmClubId, competitionCode: formatCompetitionShortCode(player.club.competition) } : null,
+      clubCountry: player.club?.competition?.country ?? null,
       role: normalizeRole(player.mainPosition),
       age: playerAge(player, new Date()),
       height: player.heightCm,
