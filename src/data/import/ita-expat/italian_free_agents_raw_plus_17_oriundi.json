@@ -1,0 +1,2162 @@
+[
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "1,50 mln €",
+    "name": "Eddie Salcedo",
+    "tmPlayerId": "459661",
+    "tmUrl": "https://www.transfermarkt.it/eddie-salcedo/profil/spieler/459661"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "800 mila €",
+    "name": "Filippo Romagna",
+    "tmPlayerId": "256678",
+    "tmUrl": "https://www.transfermarkt.it/filippo-romagna/profil/spieler/256678"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "20/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "500 mila €",
+    "name": "Andrea Cistana",
+    "tmPlayerId": "337381",
+    "tmUrl": "https://www.transfermarkt.it/andrea-cistana/profil/spieler/337381"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "500 mila €",
+    "name": "Gaetano Castrovilli",
+    "tmPlayerId": "303116",
+    "tmUrl": "https://www.transfermarkt.it/gaetano-castrovilli/profil/spieler/303116"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "350 mila €",
+    "name": "Francesco Cassata",
+    "tmPlayerId": "301236",
+    "tmUrl": "https://www.transfermarkt.it/francesco-cassata/profil/spieler/301236"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "300 mila €",
+    "name": "Marco Angeletti",
+    "tmPlayerId": "534125",
+    "tmUrl": "https://www.transfermarkt.it/marco-angeletti/profil/spieler/534125"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "300 mila €",
+    "name": "Matteo Cotali",
+    "tmPlayerId": "382567",
+    "tmUrl": "https://www.transfermarkt.it/matteo-cotali/profil/spieler/382567"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "300 mila €",
+    "name": "Edoardo Soleri",
+    "tmPlayerId": "321065",
+    "tmUrl": "https://www.transfermarkt.it/edoardo-soleri/profil/spieler/321065"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "300 mila €",
+    "name": "Kevin Bonifazi",
+    "tmPlayerId": "247377",
+    "tmUrl": "https://www.transfermarkt.it/kevin-bonifazi/profil/spieler/247377"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "275 mila €",
+    "name": "Salvatore Boccia",
+    "tmPlayerId": "472176",
+    "tmUrl": "https://www.transfermarkt.it/salvatore-boccia/profil/spieler/472176"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "03/09/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "275 mila €",
+    "name": "Zakaria Hamadi",
+    "tmPlayerId": "343949",
+    "tmUrl": "https://www.transfermarkt.it/zakaria-hamadi/profil/spieler/343949"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "28/07/2026",
+    "lastClub": null,
+    "mainPosition": "Esterno di destra",
+    "marketValueRaw": "250 mila €",
+    "name": "Davide Munari",
+    "tmPlayerId": "485798",
+    "tmUrl": "https://www.transfermarkt.it/davide-munari/profil/spieler/485798"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "225 mila €",
+    "name": "William Rovida",
+    "tmPlayerId": "704337",
+    "tmUrl": "https://www.transfermarkt.it/william-rovida/profil/spieler/704337"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "225 mila €",
+    "name": "Davide Ferri",
+    "tmPlayerId": "692128",
+    "tmUrl": "https://www.transfermarkt.it/davide-ferri/profil/spieler/692128"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "02/09/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "225 mila €",
+    "name": "Davide De Marino",
+    "tmPlayerId": "459535",
+    "tmUrl": "https://www.transfermarkt.it/davide-de-marino/profil/spieler/459535"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "200 mila €",
+    "name": "Francesco D'Alterio",
+    "tmPlayerId": "621223",
+    "tmUrl": "https://www.transfermarkt.it/francesco-dalterio/profil/spieler/621223"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "05/09/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "200 mila €",
+    "name": "Andrea Invernizzi",
+    "tmPlayerId": "459127",
+    "tmUrl": "https://www.transfermarkt.it/andrea-invernizzi/profil/spieler/459127"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "200 mila €",
+    "name": "Filippo Nardi",
+    "tmPlayerId": "404969",
+    "tmUrl": "https://www.transfermarkt.it/filippo-nardi/profil/spieler/404969"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "200 mila €",
+    "name": "Matteo Anzolin",
+    "tmPlayerId": "395127",
+    "tmUrl": "https://www.transfermarkt.it/matteo-anzolin/profil/spieler/395127"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "200 mila €",
+    "name": "Giacomo Volpe",
+    "tmPlayerId": "340265",
+    "tmUrl": "https://www.transfermarkt.it/giacomo-volpe/profil/spieler/340265"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "175 mila €",
+    "name": "Mattia Ievoli",
+    "tmPlayerId": "932741",
+    "tmUrl": "https://www.transfermarkt.it/mattia-ievoli/profil/spieler/932741"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "175 mila €",
+    "name": "Bryan Bonucci",
+    "tmPlayerId": "650988",
+    "tmUrl": "https://www.transfermarkt.it/bryan-bonucci/profil/spieler/650988"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "175 mila €",
+    "name": "Lorenzo Colombini",
+    "tmPlayerId": "426244",
+    "tmUrl": "https://www.transfermarkt.it/lorenzo-colombini/profil/spieler/426244"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "175 mila €",
+    "name": "Vincenzo Garofalo",
+    "tmPlayerId": "399336",
+    "tmUrl": "https://www.transfermarkt.it/vincenzo-garofalo/profil/spieler/399336"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "150 mila €",
+    "name": "Juan Martín Ghia",
+    "tmPlayerId": "1376098",
+    "tmUrl": "https://www.transfermarkt.it/juan-martin-ghia/profil/spieler/1376098"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "150 mila €",
+    "name": "Manuele Penza",
+    "tmPlayerId": "1286738",
+    "tmUrl": "https://www.transfermarkt.it/manuele-penza/profil/spieler/1286738"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "150 mila €",
+    "name": "Marco Businarolo",
+    "tmPlayerId": "1178683",
+    "tmUrl": "https://www.transfermarkt.it/marco-businarolo/profil/spieler/1178683"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "150 mila €",
+    "name": "Andrea Bertoncini",
+    "tmPlayerId": "1057269",
+    "tmUrl": "https://www.transfermarkt.it/andrea-bertoncini/profil/spieler/1057269"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "31/08/2026",
+    "lastClub": null,
+    "mainPosition": "Esterno di destra",
+    "marketValueRaw": "150 mila €",
+    "name": "Stephen Nenè",
+    "tmPlayerId": "1049834",
+    "tmUrl": "https://www.transfermarkt.it/stephen-nene/profil/spieler/1049834"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "150 mila €",
+    "name": "Riccardo Domeniconi",
+    "tmPlayerId": "1040079",
+    "tmUrl": "https://www.transfermarkt.it/riccardo-domeniconi/profil/spieler/1040079"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "150 mila €",
+    "name": "Nicolò Turco",
+    "tmPlayerId": "650965",
+    "tmUrl": "https://www.transfermarkt.it/nicolo-turco/profil/spieler/650965"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "150 mila €",
+    "name": "Davide Barosi",
+    "tmPlayerId": "458134",
+    "tmUrl": "https://www.transfermarkt.it/davide-barosi/profil/spieler/458134"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "150 mila €",
+    "name": "Cesare Pogliano",
+    "tmPlayerId": "349905",
+    "tmUrl": "https://www.transfermarkt.it/cesare-pogliano/profil/spieler/349905"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "20/01/2025",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "150 mila €",
+    "name": "José Mauri",
+    "tmPlayerId": "240958",
+    "tmUrl": "https://www.transfermarkt.it/jose-mauri/profil/spieler/240958"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "125 mila €",
+    "name": "Cristiano La Sorsa",
+    "tmPlayerId": "1218725",
+    "tmUrl": "https://www.transfermarkt.it/cristiano-la-sorsa/profil/spieler/1218725"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "125 mila €",
+    "name": "Gregorio Salvati",
+    "tmPlayerId": "1194286",
+    "tmUrl": "https://www.transfermarkt.it/gregorio-salvati/profil/spieler/1194286"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "125 mila €",
+    "name": "Gerardo Iannaccone",
+    "tmPlayerId": "1182987",
+    "tmUrl": "https://www.transfermarkt.it/gerardo-iannaccone/profil/spieler/1182987"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "125 mila €",
+    "name": "Manuel Moretta",
+    "tmPlayerId": "934979",
+    "tmUrl": "https://www.transfermarkt.it/manuel-moretta/profil/spieler/934979"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Esterno di destra",
+    "marketValueRaw": "125 mila €",
+    "name": "Riccardo Spaggiari",
+    "tmPlayerId": "907688",
+    "tmUrl": "https://www.transfermarkt.it/riccardo-spaggiari/profil/spieler/907688"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "125 mila €",
+    "name": "Lorenzo Blesio",
+    "tmPlayerId": "814475",
+    "tmUrl": "https://www.transfermarkt.it/lorenzo-blesio/profil/spieler/814475"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "125 mila €",
+    "name": "Lorenzo Codutti",
+    "tmPlayerId": "704693",
+    "tmUrl": "https://www.transfermarkt.it/lorenzo-codutti/profil/spieler/704693"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "125 mila €",
+    "name": "Andrea D'Aniello",
+    "tmPlayerId": "640544",
+    "tmUrl": "https://www.transfermarkt.it/andrea-daniello/profil/spieler/640544"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "125 mila €",
+    "name": "Mattia Pagliuca",
+    "tmPlayerId": "616667",
+    "tmUrl": "https://www.transfermarkt.it/mattia-pagliuca/profil/spieler/616667"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": null,
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "125 mila €",
+    "name": "Orazio Pannitteri",
+    "tmPlayerId": "526021",
+    "tmUrl": "https://www.transfermarkt.it/orazio-pannitteri/profil/spieler/526021"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/12/2025",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "125 mila €",
+    "name": "Marco Milanese",
+    "tmPlayerId": "415042",
+    "tmUrl": "https://www.transfermarkt.it/marco-milanese/profil/spieler/415042"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "125 mila €",
+    "name": "Gabriele Ferrarini",
+    "tmPlayerId": "392033",
+    "tmUrl": "https://www.transfermarkt.it/gabriele-ferrarini/profil/spieler/392033"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Riccardo Prestigiacomo",
+    "tmPlayerId": "1288904",
+    "tmUrl": "https://www.transfermarkt.it/riccardo-prestigiacomo/profil/spieler/1288904"
+  },
+  {
+    "age": 18,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "100 mila €",
+    "name": "Omar Syll",
+    "tmPlayerId": "1188617",
+    "tmUrl": "https://www.transfermarkt.it/omar-syll/profil/spieler/1188617"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Francesco Pio D'Anna",
+    "tmPlayerId": "1187628",
+    "tmUrl": "https://www.transfermarkt.it/francesco-pio-danna/profil/spieler/1187628"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "100 mila €",
+    "name": "Antonio Guerriero",
+    "tmPlayerId": "1179405",
+    "tmUrl": "https://www.transfermarkt.it/antonio-guerriero/profil/spieler/1179405"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Esterno di sinistra",
+    "marketValueRaw": "100 mila €",
+    "name": "Mario Fierro",
+    "tmPlayerId": "1056044",
+    "tmUrl": "https://www.transfermarkt.it/mario-fierro/profil/spieler/1056044"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "29/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "100 mila €",
+    "name": "Gracien Deseri",
+    "tmPlayerId": "1012513",
+    "tmUrl": "https://www.transfermarkt.it/gracien-deseri/profil/spieler/1012513"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Tommaso Fazio",
+    "tmPlayerId": "1004488",
+    "tmUrl": "https://www.transfermarkt.it/tommaso-fazio/profil/spieler/1004488"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "100 mila €",
+    "name": "Lorenzo Piras",
+    "tmPlayerId": "999271",
+    "tmUrl": "https://www.transfermarkt.it/lorenzo-piras/profil/spieler/999271"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "100 mila €",
+    "name": "Luca Minozzi",
+    "tmPlayerId": "951728",
+    "tmUrl": "https://www.transfermarkt.it/luca-minozzi/profil/spieler/951728"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Andrea Toma",
+    "tmPlayerId": "935420",
+    "tmUrl": "https://www.transfermarkt.it/andrea-toma/profil/spieler/935420"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "100 mila €",
+    "name": "Matteo Piombino",
+    "tmPlayerId": "934453",
+    "tmUrl": "https://www.transfermarkt.it/matteo-piombino/profil/spieler/934453"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Esterno di sinistra",
+    "marketValueRaw": "100 mila €",
+    "name": "Michele Lupinacci",
+    "tmPlayerId": "934098",
+    "tmUrl": "https://www.transfermarkt.it/michele-lupinacci/profil/spieler/934098"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "100 mila €",
+    "name": "Matteo Galassi",
+    "tmPlayerId": "908764",
+    "tmUrl": "https://www.transfermarkt.it/matteo-galassi/profil/spieler/908764"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Seconda punta",
+    "marketValueRaw": "100 mila €",
+    "name": "Jordan Longhi",
+    "tmPlayerId": "902022",
+    "tmUrl": "https://www.transfermarkt.it/jordan-longhi/profil/spieler/902022"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "100 mila €",
+    "name": "Andrea Padalino",
+    "tmPlayerId": "865678",
+    "tmUrl": "https://www.transfermarkt.it/andrea-padalino/profil/spieler/865678"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "28/08/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Giovanni Farneti",
+    "tmPlayerId": "820693",
+    "tmUrl": "https://www.transfermarkt.it/giovanni-farneti/profil/spieler/820693"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Mediano",
+    "marketValueRaw": "100 mila €",
+    "name": "Samuel Maltoni",
+    "tmPlayerId": "818881",
+    "tmUrl": "https://www.transfermarkt.it/samuel-maltoni/profil/spieler/818881"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "100 mila €",
+    "name": "Renato Cascella",
+    "tmPlayerId": "817082",
+    "tmUrl": "https://www.transfermarkt.it/renato-cascella/profil/spieler/817082"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Mattia Pretato",
+    "tmPlayerId": "736340",
+    "tmUrl": "https://www.transfermarkt.it/mattia-pretato/profil/spieler/736340"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Etienne Catena",
+    "tmPlayerId": "669794",
+    "tmUrl": "https://www.transfermarkt.it/etienne-catena/profil/spieler/669794"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "100 mila €",
+    "name": "Denny Pucci",
+    "tmPlayerId": "657776",
+    "tmUrl": "https://www.transfermarkt.it/denny-pucci/profil/spieler/657776"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Tommaso Maressa",
+    "tmPlayerId": "651003",
+    "tmUrl": "https://www.transfermarkt.it/tommaso-maressa/profil/spieler/651003"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Ricky Maset",
+    "tmPlayerId": "639691",
+    "tmUrl": "https://www.transfermarkt.it/ricky-maset/profil/spieler/639691"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Mediano",
+    "marketValueRaw": "100 mila €",
+    "name": "Alessio Brambilla",
+    "tmPlayerId": "539131",
+    "tmUrl": "https://www.transfermarkt.it/alessio-brambilla/profil/spieler/539131"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Sebastiano Svidercoschi",
+    "tmPlayerId": "485103",
+    "tmUrl": "https://www.transfermarkt.it/sebastiano-svidercoschi/profil/spieler/485103"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": null,
+    "mainPosition": "Seconda punta",
+    "marketValueRaw": "100 mila €",
+    "name": "Federico Mastropietro",
+    "tmPlayerId": "386577",
+    "tmUrl": "https://www.transfermarkt.it/federico-mastropietro/profil/spieler/386577"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Thomas Schirò",
+    "tmPlayerId": "357997",
+    "tmUrl": "https://www.transfermarkt.it/thomas-schiro/profil/spieler/357997"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Filippo Damian",
+    "tmPlayerId": "287690",
+    "tmUrl": "https://www.transfermarkt.it/filippo-damian/profil/spieler/287690"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "100 mila €",
+    "name": "Simone Russini",
+    "tmPlayerId": "278309",
+    "tmUrl": "https://www.transfermarkt.it/simone-russini/profil/spieler/278309"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "75 mila €",
+    "name": "Lorenzo Hamati",
+    "tmPlayerId": "1459927",
+    "tmUrl": "https://www.transfermarkt.it/lorenzo-hamati/profil/spieler/1459927"
+  },
+  {
+    "age": 18,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Enea Merlini",
+    "tmPlayerId": "1254012",
+    "tmUrl": "https://www.transfermarkt.it/enea-merlini/profil/spieler/1254012"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "28/08/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "75 mila €",
+    "name": "David Edoardo Suazo",
+    "tmPlayerId": "1179399",
+    "tmUrl": "https://www.transfermarkt.it/david-edoardo-suazo/profil/spieler/1179399"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Luca Tosini",
+    "tmPlayerId": "1175308",
+    "tmUrl": "https://www.transfermarkt.it/luca-tosini/profil/spieler/1175308"
+  },
+  {
+    "age": 18,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "David Kola",
+    "tmPlayerId": "1116696",
+    "tmUrl": "https://www.transfermarkt.it/david-kola/profil/spieler/1116696"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "75 mila €",
+    "name": "Tommaso Caremoli",
+    "tmPlayerId": "1073676",
+    "tmUrl": "https://www.transfermarkt.it/tommaso-caremoli/profil/spieler/1073676"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Antonio Cotugno",
+    "tmPlayerId": "1068320",
+    "tmUrl": "https://www.transfermarkt.it/antonio-cotugno/profil/spieler/1068320"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "18/08/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "75 mila €",
+    "name": "Gianmarco Begheldo",
+    "tmPlayerId": "1065999",
+    "tmUrl": "https://www.transfermarkt.it/gianmarco-begheldo/profil/spieler/1065999"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Mediano",
+    "marketValueRaw": "75 mila €",
+    "name": "Orazio Pazienza",
+    "tmPlayerId": "1056213",
+    "tmUrl": "https://www.transfermarkt.it/orazio-pazienza/profil/spieler/1056213"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "75 mila €",
+    "name": "Luigi Buono",
+    "tmPlayerId": "1033929",
+    "tmUrl": "https://www.transfermarkt.it/luigi-buono/profil/spieler/1033929"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Michele Marano",
+    "tmPlayerId": "1016279",
+    "tmUrl": "https://www.transfermarkt.it/michele-marano/profil/spieler/1016279"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "75 mila €",
+    "name": "Simone Lambiase",
+    "tmPlayerId": "979354",
+    "tmUrl": "https://www.transfermarkt.it/simone-lambiase/profil/spieler/979354"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Alessandro Louati",
+    "tmPlayerId": "979009",
+    "tmUrl": "https://www.transfermarkt.it/alessandro-louati/profil/spieler/979009"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Giuseppe D'Amore",
+    "tmPlayerId": "968636",
+    "tmUrl": "https://www.transfermarkt.it/giuseppe-damore/profil/spieler/968636"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "75 mila €",
+    "name": "Niccolò Stampi",
+    "tmPlayerId": "960868",
+    "tmUrl": "https://www.transfermarkt.it/niccolo-stampi/profil/spieler/960868"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Gabriele Fresia",
+    "tmPlayerId": "960024",
+    "tmUrl": "https://www.transfermarkt.it/gabriele-fresia/profil/spieler/960024"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Esterno di sinistra",
+    "marketValueRaw": "75 mila €",
+    "name": "Jacopo Dalla Valle",
+    "tmPlayerId": "937501",
+    "tmUrl": "https://www.transfermarkt.it/jacopo-dalla-valle/profil/spieler/937501"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Stefano Currò",
+    "tmPlayerId": "937006",
+    "tmUrl": "https://www.transfermarkt.it/stefano-curro/profil/spieler/937006"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Lorenzo Facchetti",
+    "tmPlayerId": "930931",
+    "tmUrl": "https://www.transfermarkt.it/lorenzo-facchetti/profil/spieler/930931"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "75 mila €",
+    "name": "Gabriele Ciuffo",
+    "tmPlayerId": "930750",
+    "tmUrl": "https://www.transfermarkt.it/gabriele-ciuffo/profil/spieler/930750"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "75 mila €",
+    "name": "Riccardo Miconi",
+    "tmPlayerId": "930725",
+    "tmUrl": "https://www.transfermarkt.it/riccardo-miconi/profil/spieler/930725"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Esterno di sinistra",
+    "marketValueRaw": "75 mila €",
+    "name": "Alessandro Pini",
+    "tmPlayerId": "924697",
+    "tmUrl": "https://www.transfermarkt.it/alessandro-pini/profil/spieler/924697"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "75 mila €",
+    "name": "Giorgio Megna",
+    "tmPlayerId": "922546",
+    "tmUrl": "https://www.transfermarkt.it/giorgio-megna/profil/spieler/922546"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Giovanni Mileto",
+    "tmPlayerId": "893874",
+    "tmUrl": "https://www.transfermarkt.it/giovanni-mileto/profil/spieler/893874"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "75 mila €",
+    "name": "Nicolò Franzoni",
+    "tmPlayerId": "884229",
+    "tmUrl": "https://www.transfermarkt.it/nicolo-franzoni/profil/spieler/884229"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "75 mila €",
+    "name": "Marcel Perri",
+    "tmPlayerId": "882827",
+    "tmUrl": "https://www.transfermarkt.it/marcel-perri/profil/spieler/882827"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Gianluca Mazzi",
+    "tmPlayerId": "804632",
+    "tmUrl": "https://www.transfermarkt.it/gianluca-mazzi/profil/spieler/804632"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Manuel Botta",
+    "tmPlayerId": "737256",
+    "tmUrl": "https://www.transfermarkt.it/manuel-botta/profil/spieler/737256"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Alessandro Vilardi",
+    "tmPlayerId": "677958",
+    "tmUrl": "https://www.transfermarkt.it/alessandro-vilardi/profil/spieler/677958"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "75 mila €",
+    "name": "Luca Di Modugno",
+    "tmPlayerId": "649790",
+    "tmUrl": "https://www.transfermarkt.it/luca-di-modugno/profil/spieler/649790"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Niccolò Pietra",
+    "tmPlayerId": "632829",
+    "tmUrl": "https://www.transfermarkt.it/niccolo-pietra/profil/spieler/632829"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Alberto Rossi",
+    "tmPlayerId": "624437",
+    "tmUrl": "https://www.transfermarkt.it/alberto-rossi/profil/spieler/624437"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Filippo Neri",
+    "tmPlayerId": "616228",
+    "tmUrl": "https://www.transfermarkt.it/filippo-neri/profil/spieler/616228"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "75 mila €",
+    "name": "Nicholas Martini",
+    "tmPlayerId": "534070",
+    "tmUrl": "https://www.transfermarkt.it/nicholas-martini/profil/spieler/534070"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Simone Bolognese",
+    "tmPlayerId": "525526",
+    "tmUrl": "https://www.transfermarkt.it/simone-bolognese/profil/spieler/525526"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "75 mila €",
+    "name": "Luca Paudice",
+    "tmPlayerId": "477206",
+    "tmUrl": "https://www.transfermarkt.it/luca-paudice/profil/spieler/477206"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Marco Ballarini",
+    "tmPlayerId": "465279",
+    "tmUrl": "https://www.transfermarkt.it/marco-ballarini/profil/spieler/465279"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Fabio Corigliano",
+    "tmPlayerId": "459695",
+    "tmUrl": "https://www.transfermarkt.it/fabio-corigliano/profil/spieler/459695"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Seconda punta",
+    "marketValueRaw": "75 mila €",
+    "name": "Francesco Noccioli",
+    "tmPlayerId": "459579",
+    "tmUrl": "https://www.transfermarkt.it/francesco-noccioli/profil/spieler/459579"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Gabriele Cavalieri",
+    "tmPlayerId": "451217",
+    "tmUrl": "https://www.transfermarkt.it/gabriele-cavalieri/profil/spieler/451217"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Ludovico Gelmi",
+    "tmPlayerId": "421766",
+    "tmUrl": "https://www.transfermarkt.it/ludovico-gelmi/profil/spieler/421766"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "75 mila €",
+    "name": "Nicola De Vido",
+    "tmPlayerId": "404968",
+    "tmUrl": "https://www.transfermarkt.it/nicola-de-vido/profil/spieler/404968"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "75 mila €",
+    "name": "Federico Alonzi",
+    "tmPlayerId": "400098",
+    "tmUrl": "https://www.transfermarkt.it/federico-alonzi/profil/spieler/400098"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/01/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "75 mila €",
+    "name": "Agostino Rizzo",
+    "tmPlayerId": "386457",
+    "tmUrl": "https://www.transfermarkt.it/agostino-rizzo/profil/spieler/386457"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Edoardo Cizza",
+    "tmPlayerId": "355374",
+    "tmUrl": "https://www.transfermarkt.it/edoardo-cizza/profil/spieler/355374"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "75 mila €",
+    "name": "Antonio Matera",
+    "tmPlayerId": "320669",
+    "tmUrl": "https://www.transfermarkt.it/antonio-matera/profil/spieler/320669"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "75 mila €",
+    "name": "Stefano Aiolfi",
+    "tmPlayerId": "295761",
+    "tmUrl": "https://www.transfermarkt.it/stefano-aiolfi/profil/spieler/295761"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Mattia Furlan",
+    "tmPlayerId": "1513412",
+    "tmUrl": "https://www.transfermarkt.it/mattia-furlan/profil/spieler/1513412"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Enrico Cozzino",
+    "tmPlayerId": "1493498",
+    "tmUrl": "https://www.transfermarkt.it/enrico-cozzino/profil/spieler/1493498"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Riccardo Tosse",
+    "tmPlayerId": "1433562",
+    "tmUrl": "https://www.transfermarkt.it/riccardo-tosse/profil/spieler/1433562"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "10/02/2026",
+    "lastClub": null,
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "50 mila €",
+    "name": "Andrew Paolucci",
+    "tmPlayerId": "1433024",
+    "tmUrl": "https://www.transfermarkt.it/andrew-paolucci/profil/spieler/1433024"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "10/07/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "50 mila €",
+    "name": "Gabriel Barculli",
+    "tmPlayerId": "1431460",
+    "tmUrl": "https://www.transfermarkt.it/gabriel-barculli/profil/spieler/1431460"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "15/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Giulio Ponticelli",
+    "tmPlayerId": "1425584",
+    "tmUrl": "https://www.transfermarkt.it/giulio-ponticelli/profil/spieler/1425584"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Filippo Abruzzese",
+    "tmPlayerId": "1318154",
+    "tmUrl": "https://www.transfermarkt.it/filippo-abruzzese/profil/spieler/1318154"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Andrea De Angelis",
+    "tmPlayerId": "1310313",
+    "tmUrl": "https://www.transfermarkt.it/andrea-de-angelis/profil/spieler/1310313"
+  },
+  {
+    "age": 18,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Alessandro Bonora",
+    "tmPlayerId": "1308600",
+    "tmUrl": "https://www.transfermarkt.it/alessandro-bonora/profil/spieler/1308600"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Simone Dessena",
+    "tmPlayerId": "1308247",
+    "tmUrl": "https://www.transfermarkt.it/simone-dessena/profil/spieler/1308247"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Giuseppe Pio Carrozza",
+    "tmPlayerId": "1296885",
+    "tmUrl": "https://www.transfermarkt.it/giuseppe-pio-carrozza/profil/spieler/1296885"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Luca Villoni",
+    "tmPlayerId": "1290029",
+    "tmUrl": "https://www.transfermarkt.it/luca-villoni/profil/spieler/1290029"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Edoardo Bortolussi",
+    "tmPlayerId": "1289781",
+    "tmUrl": "https://www.transfermarkt.it/edoardo-bortolussi/profil/spieler/1289781"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Davide Fasan",
+    "tmPlayerId": "1289130",
+    "tmUrl": "https://www.transfermarkt.it/davide-fasan/profil/spieler/1289130"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "50 mila €",
+    "name": "Antonio Castagna",
+    "tmPlayerId": "1285053",
+    "tmUrl": "https://www.transfermarkt.it/antonio-castagna/profil/spieler/1285053"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Gabriel Di Coste",
+    "tmPlayerId": "1279791",
+    "tmUrl": "https://www.transfermarkt.it/gabriel-di-coste/profil/spieler/1279791"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Esterno di sinistra",
+    "marketValueRaw": "50 mila €",
+    "name": "Lorenzo Ciutti",
+    "tmPlayerId": "1260432",
+    "tmUrl": "https://www.transfermarkt.it/lorenzo-ciutti/profil/spieler/1260432"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Marco Misefari",
+    "tmPlayerId": "1216366",
+    "tmUrl": "https://www.transfermarkt.it/marco-misefari/profil/spieler/1216366"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Mehdi Ricci",
+    "tmPlayerId": "1214236",
+    "tmUrl": "https://www.transfermarkt.it/mehdi-ricci/profil/spieler/1214236"
+  },
+  {
+    "age": 18,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Davide Andronache",
+    "tmPlayerId": "1213005",
+    "tmUrl": "https://www.transfermarkt.it/davide-andronache/profil/spieler/1213005"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Marcello Piras",
+    "tmPlayerId": "1192144",
+    "tmUrl": "https://www.transfermarkt.it/marcello-piras/profil/spieler/1192144"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Simone Lanzillotta",
+    "tmPlayerId": "1186187",
+    "tmUrl": "https://www.transfermarkt.it/simone-lanzillotta/profil/spieler/1186187"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Matteo Enza",
+    "tmPlayerId": "1182963",
+    "tmUrl": "https://www.transfermarkt.it/matteo-enza/profil/spieler/1182963"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Matteo Arcamone",
+    "tmPlayerId": "1176553",
+    "tmUrl": "https://www.transfermarkt.it/matteo-arcamone/profil/spieler/1176553"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Mediano",
+    "marketValueRaw": "50 mila €",
+    "name": "Giovanni Di Lelio",
+    "tmPlayerId": "1129797",
+    "tmUrl": "https://www.transfermarkt.it/giovanni-di-lelio/profil/spieler/1129797"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Gianluca Gaido",
+    "tmPlayerId": "1097512",
+    "tmUrl": "https://www.transfermarkt.it/gianluca-gaido/profil/spieler/1097512"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Mattia Ciracì",
+    "tmPlayerId": "1068393",
+    "tmUrl": "https://www.transfermarkt.it/mattia-ciraci/profil/spieler/1068393"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Francesco Tuccitto",
+    "tmPlayerId": "1064273",
+    "tmUrl": "https://www.transfermarkt.it/francesco-tuccitto/profil/spieler/1064273"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Tommaso Paganessi",
+    "tmPlayerId": "1062691",
+    "tmUrl": "https://www.transfermarkt.it/tommaso-paganessi/profil/spieler/1062691"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Zaccaria Rioda",
+    "tmPlayerId": "1060379",
+    "tmUrl": "https://www.transfermarkt.it/zaccaria-rioda/profil/spieler/1060379"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Christian Galdo",
+    "tmPlayerId": "1059627",
+    "tmUrl": "https://www.transfermarkt.it/christian-galdo/profil/spieler/1059627"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Giuseppe Bitonto",
+    "tmPlayerId": "1059413",
+    "tmUrl": "https://www.transfermarkt.it/giuseppe-bitonto/profil/spieler/1059413"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Edoardo Salvador",
+    "tmPlayerId": "1058990",
+    "tmUrl": "https://www.transfermarkt.it/edoardo-salvador/profil/spieler/1058990"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Joseph Falli",
+    "tmPlayerId": "1056527",
+    "tmUrl": "https://www.transfermarkt.it/joseph-falli/profil/spieler/1056527"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Mattia Longo",
+    "tmPlayerId": "1056176",
+    "tmUrl": "https://www.transfermarkt.it/mattia-longo/profil/spieler/1056176"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Giacomo Barbaro",
+    "tmPlayerId": "1055066",
+    "tmUrl": "https://www.transfermarkt.it/giacomo-barbaro/profil/spieler/1055066"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Mediano",
+    "marketValueRaw": "50 mila €",
+    "name": "Elia Barbaro",
+    "tmPlayerId": "1054460",
+    "tmUrl": "https://www.transfermarkt.it/elia-barbaro/profil/spieler/1054460"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Esterno di destra",
+    "marketValueRaw": "50 mila €",
+    "name": "Sebastiano Cioffredi",
+    "tmPlayerId": "1053221",
+    "tmUrl": "https://www.transfermarkt.it/sebastiano-cioffredi/profil/spieler/1053221"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Filippo Malanchini",
+    "tmPlayerId": "1051460",
+    "tmUrl": "https://www.transfermarkt.it/filippo-malanchini/profil/spieler/1051460"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Samuele Magni",
+    "tmPlayerId": "1051090",
+    "tmUrl": "https://www.transfermarkt.it/samuele-magni/profil/spieler/1051090"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Angelo De Crescenzo",
+    "tmPlayerId": "1049855",
+    "tmUrl": "https://www.transfermarkt.it/angelo-de-crescenzo/profil/spieler/1049855"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "31/08/2026",
+    "lastClub": null,
+    "mainPosition": "Mediano",
+    "marketValueRaw": "50 mila €",
+    "name": "Mohamed Thiane",
+    "tmPlayerId": "1049832",
+    "tmUrl": "https://www.transfermarkt.it/mohamed-thiane/profil/spieler/1049832"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Andrea De Fazio",
+    "tmPlayerId": "1049303",
+    "tmUrl": "https://www.transfermarkt.it/andrea-de-fazio/profil/spieler/1049303"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Giovanni Alfano",
+    "tmPlayerId": "1048185",
+    "tmUrl": "https://www.transfermarkt.it/giovanni-alfano/profil/spieler/1048185"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Raffaello Torri",
+    "tmPlayerId": "1046458",
+    "tmUrl": "https://www.transfermarkt.it/raffaello-torri/profil/spieler/1046458"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": null,
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "50 mila €",
+    "name": "Riccardo Bastianelli",
+    "tmPlayerId": "1039927",
+    "tmUrl": "https://www.transfermarkt.it/riccardo-bastianelli/profil/spieler/1039927"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Pietro Salvi",
+    "tmPlayerId": "1035993",
+    "tmUrl": "https://www.transfermarkt.it/pietro-salvi/profil/spieler/1035993"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "50 mila €",
+    "name": "Tommaso Anzolin",
+    "tmPlayerId": "985857",
+    "tmUrl": "https://www.transfermarkt.it/tommaso-anzolin/profil/spieler/985857"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Giorgio Riga",
+    "tmPlayerId": "982075",
+    "tmUrl": "https://www.transfermarkt.it/giorgio-riga/profil/spieler/982075"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Mediano",
+    "marketValueRaw": "50 mila €",
+    "name": "Thomas Silvestri",
+    "tmPlayerId": "977729",
+    "tmUrl": "https://www.transfermarkt.it/thomas-silvestri/profil/spieler/977729"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Stefano Bombaci",
+    "tmPlayerId": "976210",
+    "tmUrl": "https://www.transfermarkt.it/stefano-bombaci/profil/spieler/976210"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Massimiliano Passeri",
+    "tmPlayerId": "967050",
+    "tmUrl": "https://www.transfermarkt.it/massimiliano-passeri/profil/spieler/967050"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Andrea Torriani",
+    "tmPlayerId": "964471",
+    "tmUrl": "https://www.transfermarkt.it/andrea-torriani/profil/spieler/964471"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Giacomo Freri",
+    "tmPlayerId": "960915",
+    "tmUrl": "https://www.transfermarkt.it/giacomo-freri/profil/spieler/960915"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Edoardo Scquizzato",
+    "tmPlayerId": "954016",
+    "tmUrl": "https://www.transfermarkt.it/edoardo-scquizzato/profil/spieler/954016"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Nicolò Giust",
+    "tmPlayerId": "953436",
+    "tmUrl": "https://www.transfermarkt.it/nicolo-giust/profil/spieler/953436"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Francesco Contaldo",
+    "tmPlayerId": "949194",
+    "tmUrl": "https://www.transfermarkt.it/francesco-contaldo/profil/spieler/949194"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Moné Italiano",
+    "tmPlayerId": "937626",
+    "tmUrl": "https://www.transfermarkt.it/mone-italiano/profil/spieler/937626"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Luca Siciliano",
+    "tmPlayerId": "937098",
+    "tmUrl": "https://www.transfermarkt.it/luca-siciliano/profil/spieler/937098"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Gabriele Chiggiato",
+    "tmPlayerId": "936734",
+    "tmUrl": "https://www.transfermarkt.it/gabriele-chiggiato/profil/spieler/936734"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Mediano",
+    "marketValueRaw": "50 mila €",
+    "name": "Alessio Marrale",
+    "tmPlayerId": "936222",
+    "tmUrl": "https://www.transfermarkt.it/alessio-marrale/profil/spieler/936222"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Giuseppe Cervellera",
+    "tmPlayerId": "935830",
+    "tmUrl": "https://www.transfermarkt.it/giuseppe-cervellera/profil/spieler/935830"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Tomas Tampucci",
+    "tmPlayerId": "935741",
+    "tmUrl": "https://www.transfermarkt.it/tomas-tampucci/profil/spieler/935741"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Filippo Faggiano",
+    "tmPlayerId": "934501",
+    "tmUrl": "https://www.transfermarkt.it/filippo-faggiano/profil/spieler/934501"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Michele Marchegiani",
+    "tmPlayerId": "934222",
+    "tmUrl": "https://www.transfermarkt.it/michele-marchegiani/profil/spieler/934222"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Riccardo Leone",
+    "tmPlayerId": "934150",
+    "tmUrl": "https://www.transfermarkt.it/riccardo-leone/profil/spieler/934150"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Lorenzo Penchini",
+    "tmPlayerId": "932736",
+    "tmUrl": "https://www.transfermarkt.it/lorenzo-penchini/profil/spieler/932736"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "50 mila €",
+    "name": "Lorenzo Catania",
+    "tmPlayerId": "929799",
+    "tmUrl": "https://www.transfermarkt.it/lorenzo-catania/profil/spieler/929799"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Giordano Cannatelli",
+    "tmPlayerId": "929745",
+    "tmUrl": "https://www.transfermarkt.it/giordano-cannatelli/profil/spieler/929745"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Andrea Petta",
+    "tmPlayerId": "929744",
+    "tmUrl": "https://www.transfermarkt.it/andrea-petta/profil/spieler/929744"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": null,
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Jean Paul Touadi",
+    "tmPlayerId": "927907",
+    "tmUrl": "https://www.transfermarkt.it/jean-paul-touadi/profil/spieler/927907"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Marco Amendola",
+    "tmPlayerId": "927109",
+    "tmUrl": "https://www.transfermarkt.it/marco-amendola/profil/spieler/927109"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Paolo De Angelis",
+    "tmPlayerId": "923454",
+    "tmUrl": "https://www.transfermarkt.it/paolo-de-angelis/profil/spieler/923454"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "50 mila €",
+    "name": "Jacopo Cerasani",
+    "tmPlayerId": "907634",
+    "tmUrl": "https://www.transfermarkt.it/jacopo-cerasani/profil/spieler/907634"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Federico Bellotti",
+    "tmPlayerId": "900114",
+    "tmUrl": "https://www.transfermarkt.it/federico-bellotti/profil/spieler/900114"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "50 mila €",
+    "name": "Marco Longoni",
+    "tmPlayerId": "899675",
+    "tmUrl": "https://www.transfermarkt.it/marco-longoni/profil/spieler/899675"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Matteo Langella",
+    "tmPlayerId": "891813",
+    "tmUrl": "https://www.transfermarkt.it/matteo-langella/profil/spieler/891813"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Calcio Desenzano",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "25 mila €",
+    "name": "Cristian Antonciuc",
+    "tmPlayerId": "944738",
+    "tmUrl": "https://www.transfermarkt.it/cristian-antonciuc/profil/spieler/944738"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Portogruaro Calcio",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "50 mila €",
+    "name": "Endri Dama",
+    "tmPlayerId": "894175",
+    "tmUrl": "https://www.transfermarkt.it/endri-dama/profil/spieler/894175"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "AC Este 1920",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "25 mila €",
+    "name": "Mohamed Bah",
+    "tmPlayerId": "937542",
+    "tmUrl": "https://www.transfermarkt.it/mohamed-bah/profil/spieler/937542"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Calcio Desenzano",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Michael Ntube",
+    "tmPlayerId": "421870",
+    "tmUrl": "https://www.transfermarkt.it/michael-ntube/profil/spieler/421870"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "SC Trestina",
+    "mainPosition": "Esterno di destra",
+    "marketValueRaw": "50 mila €",
+    "name": "Youssef Nouri",
+    "tmPlayerId": null,
+    "tmUrl": null
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/01/2026",
+    "lastClub": "Oltrepò",
+    "mainPosition": "Attacco",
+    "marketValueRaw": null,
+    "name": "Franco Busso",
+    "tmPlayerId": "1381502",
+    "tmUrl": "https://www.transfermarkt.it/franco-busso/profil/spieler/1381502"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Follonica Gavorrano",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Mateo Likaxhiu",
+    "tmPlayerId": "601841",
+    "tmUrl": "https://www.transfermarkt.it/mateo-likaxhiu/profil/spieler/601841"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Vibonese",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "50 mila €",
+    "name": "Wilkerg Castillo",
+    "tmPlayerId": "1180708",
+    "tmUrl": "https://www.transfermarkt.it/wilkerg-castillo/profil/spieler/1180708"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Livorno Primavera",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": null,
+    "name": "Klaudjo Haka",
+    "tmPlayerId": "1220506",
+    "tmUrl": "https://www.transfermarkt.it/klaudjo-haka/profil/spieler/1220506"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "AC Reggiana",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "350 mila €",
+    "name": "Cedric Gondo",
+    "tmPlayerId": "213854",
+    "tmUrl": "https://www.transfermarkt.it/cedric-gondo/profil/spieler/213854"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Ascoli Primavera",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "50 mila €",
+    "name": "Diego Finotti",
+    "tmPlayerId": "1078779",
+    "tmUrl": "https://www.transfermarkt.it/diego-finotti/profil/spieler/1078779"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Nocerina Calcio",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Larry Clark Guifo Bogne",
+    "tmPlayerId": "1178539",
+    "tmUrl": "https://www.transfermarkt.it/larry-clark-guifo-bogne/profil/spieler/1178539"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "10/01/2026",
+    "lastClub": "Legnago Salus",
+    "mainPosition": "Portiere",
+    "marketValueRaw": null,
+    "name": "Orgito Kuqi",
+    "tmPlayerId": null,
+    "tmUrl": null
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": null,
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": null,
+    "name": "Alessandro Zhupa",
+    "tmPlayerId": "901140",
+    "tmUrl": "https://www.transfermarkt.it/alessandro-zhupa/profil/spieler/901140"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Vibonese",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Benjamín Loza",
+    "tmPlayerId": "1186972",
+    "tmUrl": "https://www.transfermarkt.it/benjamin-loza/profil/spieler/1186972"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "02/01/2026",
+    "lastClub": "Audace Cerignola",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "125 mila €",
+    "name": "Santiago Visentin",
+    "tmPlayerId": "549681",
+    "tmUrl": "https://www.transfermarkt.it/santiago-visentin/profil/spieler/549681"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Virtus Verona",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "50 mila €",
+    "name": "Hachim Mastour",
+    "tmPlayerId": "253267",
+    "tmUrl": "https://www.transfermarkt.it/hachim-mastour/profil/spieler/253267"
+  }
+]

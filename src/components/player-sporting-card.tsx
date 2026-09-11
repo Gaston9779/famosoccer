@@ -56,7 +56,7 @@ export function PlayerSportingCard({
 
   return <section className="player-sporting-card" aria-labelledby="sporting-title">
     <header className="player-sporting-header">
-      <div><h2 id="sporting-title">Sporting</h2><p>{scope === "ITA" && performance ? `${performance.season} · ${performance.competitionName ?? performance.competitionKey}` : "2026 · Uzbekistan Super League"}</p></div>
+      <div><h2 id="sporting-title">Sporting</h2><p>{performance ? (scope === "ITA" ? `${performance.season} · ${performance.competitionName ?? performance.competitionKey}` : "2026 · Uzbekistan Super League") : null}</p></div>
       <span className="player-sporting-current">Current season</span>
     </header>
     <div className="player-sporting-primary">

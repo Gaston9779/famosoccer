@@ -44,6 +44,7 @@ type Filters = {
 };
 
 const emptyFilters: Filters = { search: "", role: "", club: "", nationality: "", contract: "", representation: "", minAge: "", maxAge: "", minValue: "", maxValue: "", minScore: "", maxScore: "" };
+const NO_CURRENT_CLUB = "__NO_CURRENT_CLUB__";
 const money = (value: number) => {
   if (value >= 1_000_000) return `€${(value / 1_000_000).toFixed(1).replace(/\.0$/, "")}m`;
   if (value >= 1_000) return `€${(value / 1_000).toFixed(value % 1_000 === 0 ? 0 : 1).replace(/\.0$/, "")}k`;
@@ -115,7 +116,7 @@ export function PlayerTable({ rows, initialSearch = "", initialFavorites = false
     const contains = (value: string | null | undefined, target: string) => !target || String(value ?? "").toLowerCase().includes(target.toLowerCase());
     return contains(row.name, filters.search)
       && (!filters.role || labelRole(row.role) === filters.role)
-      && (!filters.club || row.club?.id === filters.club)
+      && (!filters.club || (filters.club === NO_CURRENT_CLUB ? !row.club : row.club?.id === filters.club))
       && (!filters.nationality || nationalityDisplay(row.nationality).code === filters.nationality)
       && (!filters.representation || row.representation === filters.representation)
       && (!filters.contract || (filters.contract === "known" ? !!contractStatus : filters.contract === "expiring" ? !!contractStatus && contractStatus.getUTCFullYear() <= thisYear + 1 : !contractStatus))
@@ -144,7 +145,7 @@ export function PlayerTable({ rows, initialSearch = "", initialFavorites = false
       <div className="players-filter-row players-filter-main">
         <label className="players-search"><span aria-hidden="true">⌕</span><input value={filters.search} onChange={(event) => update("search", event.target.value)} placeholder="Search players…" aria-label="Search players" /></label>
         <select value={filters.role} onChange={(event) => update("role", event.target.value)} aria-label="Role"><option value="">All roles</option>{roles.map((role) => <option key={role}>{role}</option>)}</select>
-        <select value={filters.club} onChange={(event) => update("club", event.target.value)} aria-label="Club"><option value="">All clubs</option>{clubs.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select>
+        <select value={filters.club} onChange={(event) => update("club", event.target.value)} aria-label="Club"><option value="">All clubs</option><option value={NO_CURRENT_CLUB}>No current club</option>{clubs.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select>
         <select value={filters.nationality} onChange={(event) => update("nationality", event.target.value)} aria-label="Nationality"><option value="">All nationalities</option>{nationalities.map((nationality) => <option key={nationality}>{nationality}</option>)}</select>
         <select value={filters.contract} onChange={(event) => update("contract", event.target.value)} aria-label="Contract status"><option value="">All contract status</option><option value="known">Known contract</option><option value="expiring">Expiring within 12 months</option><option value="missing">Contract unknown</option></select>
         <select value={filters.representation} onChange={(event) => update("representation", event.target.value)} aria-label="Representation"><option value="">All representation</option><option value="NO_AGENT">No agent</option><option value="FAMILY">Family</option><option value="AGENCY">Represented</option><option value="NOT_LISTED">Not listed</option><option value="UNKNOWN">Unknown</option></select>

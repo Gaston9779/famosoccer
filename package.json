@@ -52,7 +52,8 @@
     "resolve:approved-identities": "tsx scripts/resolve-approved-identities.ts",
     "enrich:ita-json-profiles": "tsx scripts/enrich-ita-json-profiles.ts",
     "enrich:ita-json": "tsx scripts/enrich-ita-json.ts",
-    "recalculate:ita-opportunities": "tsx scripts/recalculate-ita-opportunities.ts"
+    "recalculate:ita-opportunities": "tsx scripts/recalculate-ita-opportunities.ts",
+    "normalize:ita-free-agents": "tsx scripts/normalize-ita-free-agents.ts"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",
