@@ -12,9 +12,9 @@ export const dynamic = "force-dynamic";
 
 type PlayerSearchParams = { search?: string; favorites?: string; scope?: string };
 
-function scopeHref(scope: "uzbekistan" | "other", search: string, favorites?: string) {
+function scopeHref(scope: "uzbekistan" | "ita" | "other", search: string, favorites?: string) {
   const params = new URLSearchParams();
-  if (scope === "other") params.set("scope", scope);
+  if (scope !== "uzbekistan") params.set("scope", scope);
   if (search) params.set("search", search);
   if (favorites === "1") params.set("favorites", favorites);
   const query = params.toString();
@@ -25,6 +25,7 @@ export default async function Players({ searchParams }: { searchParams: Promise<
   const { search = "", favorites, scope: scopeParam } = await searchParams;
   const scope = playerScopeFromQuery(scopeParam);
   const isOther = scope === "OTHER";
+  const isIta = scope === "ITA";
   const players = await db.player.findMany({
     where: { ...playerScopeWhere(scope), ...(favorites === "1" ? { isFavorite: true } : {}) },
     select: {
@@ -41,11 +42,12 @@ export default async function Players({ searchParams }: { searchParams: Promise<
   return <div className="players-page">
     <header className="players-page-header">
       <p className="eyebrow">Players</p>
-      <h1>{isOther ? "Other players" : "All players"}</h1>
-      <p>{isOther ? `Explore ${players.length} imported players outside Uzbekistan Super League` : `Explore ${players.length} players from Uzbekistan Super League`}</p>
+      <h1>{isIta ? "Italian abroad" : isOther ? "Other players" : "All players"}</h1>
+      <p>{isIta ? `Explore ${players.length} Italian players abroad` : isOther ? `Explore ${players.length} imported players outside Uzbekistan Super League` : `Explore ${players.length} players from Uzbekistan Super League`}</p>
     </header>
     <nav className="players-scope-tabs" aria-label="Player scope">
-      <Link href={scopeHref("uzbekistan", search, favorites)} aria-current={!isOther ? "page" : undefined} className={!isOther ? "active" : ""}>Uzbekistan</Link>
+      <Link href={scopeHref("uzbekistan", search, favorites)} aria-current={!isOther && !isIta ? "page" : undefined} className={!isOther && !isIta ? "active" : ""}>Uzbekistan</Link>
+      <Link href={scopeHref("ita", search, favorites)} aria-current={isIta ? "page" : undefined} className={isIta ? "active" : ""}>Italian abroad</Link>
       <Link href={scopeHref("other", search, favorites)} aria-current={isOther ? "page" : undefined} className={isOther ? "active" : ""}>Altro</Link>
     </nav>
     <ImportForm />

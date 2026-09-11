@@ -3,10 +3,14 @@ export function normalizePosition(
   raw?: string | null,
   positionId?: string | number | null,
 ): PositionGroup {
-  const p = raw
+  const original = raw
     ?.toLowerCase()
     .trim()
+    .replace(/^difesa\s*-\s*/, "")
+    .replace(/^centrocampo\s*-\s*/, "")
+    .replace(/^attacco\s*-\s*/, "")
     .replace(/^(goalkeeper|defender|midfield|attack)\s*-\s*/, "");
+  const p = original;
   const map: Record<string, PositionGroup> = {
     goalkeeper: "GK",
     torwart: "GK",
@@ -31,6 +35,9 @@ export function normalizePosition(
     "second striker": "ST",
   };
   if (p && map[p]) return map[p];
+  if (/^difesa\b/i.test(raw ?? "")) return "CB";
+  if (/^centrocampo\b/i.test(raw ?? "")) return "CM";
+  if (/^attacco\b/i.test(raw ?? "")) return "ST";
   // Quickselect IDs are coarse: observed 2 = defender, not a specific full-back.
   return String(positionId) === "1" ? "GK" : "UNKNOWN";
 }

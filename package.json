@@ -28,6 +28,7 @@
     "score:all": "tsx scripts/score.ts all",
     "score:free-agents": "tsx scripts/recalculate-confirmed-free-agents.ts",
     "seed:uzbekistan": "tsx scripts/import-uzbekistan-seed.ts",
+    "import:ita-expat": "tsx scripts/import-ita-expat.ts",
     "enrich:uz1-v3": "tsx scripts/enrich-uz1-v3.ts",
     "enrich:uz1-profiles": "tsx scripts/enrich-uz1-profiles.ts",
     "enrich:uz1-budgeted": "tsx scripts/enrich-uz1-budgeted.ts",
@@ -48,7 +49,10 @@
     "cleanup:residual-seeds": "tsx scripts/reconcile-seed-duplicates.ts --residual-cleanup",
     "reconcile:uz1-current": "tsx scripts/reconcile-uz1-current.ts",
     "import:uz1-squad-portraits": "tsx scripts/import-uz1-squad-portraits.ts",
-    "resolve:approved-identities": "tsx scripts/resolve-approved-identities.ts"
+    "resolve:approved-identities": "tsx scripts/resolve-approved-identities.ts",
+    "enrich:ita-json-profiles": "tsx scripts/enrich-ita-json-profiles.ts",
+    "enrich:ita-json": "tsx scripts/enrich-ita-json.ts",
+    "recalculate:ita-opportunities": "tsx scripts/recalculate-ita-opportunities.ts"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",

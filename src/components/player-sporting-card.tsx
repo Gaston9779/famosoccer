@@ -1,6 +1,9 @@
+import { playingTimePercent, selectCurrentPerformance } from "@/lib/current-performance";
+
 export type SportingPerformance = {
   season: string;
   competitionKey: string;
+  competitionName?: string;
   possibleGames: number | null;
   gamesPlayed: number | null;
   goals: number | null;
@@ -14,7 +17,7 @@ export type SportingPerformance = {
 };
 
 export function currentUz1Sporting<T extends Pick<SportingPerformance, "season" | "competitionKey">>(performances: T[]): T | null {
-  return performances.find((performance) => performance.season === "2026" && performance.competitionKey === "UZ1") ?? null;
+  return selectCurrentPerformance(performances, "UZ1");
 }
 
 export function displayStat(value: number | null | undefined) {
@@ -29,8 +32,14 @@ function displayMinutes(value: number | null | undefined) {
   return value == null || !Number.isFinite(value) ? "–" : `${new Intl.NumberFormat("en-US").format(value)}'`;
 }
 
-export function PlayerSportingCard({ performance }: { performance: SportingPerformance | null }) {
-  const involvement = performance?.minutesPlayedPercent;
+export function PlayerSportingCard({
+  performance,
+  scope = "UZ1",
+}: {
+  performance: SportingPerformance | null;
+  scope?: "UZ1" | "ITA";
+}) {
+  const involvement = playingTimePercent(performance);
   const involvementWidth = involvement == null || !Number.isFinite(involvement) ? 0 : Math.min(100, Math.max(0, involvement));
   const primary = performance ? [
     ["Appearances", displayStat(performance.gamesPlayed)],
@@ -40,14 +49,14 @@ export function PlayerSportingCard({ performance }: { performance: SportingPerfo
   ] : [["Appearances", "–"], ["Minutes", "–"], ["Goals", "–"], ["Assists", "–"]];
   const secondary = performance ? [
     ["Start XI", displayPercent(performance.startElevenPercent)],
-    ["Minutes %", displayPercent(performance.minutesPlayedPercent)],
+    ["Minutes %", displayPercent(involvement)],
     ["Possible games", displayStat(performance.possibleGames)],
     ["Yellow cards", displayStat(performance.yellowCards)],
   ] : [["Start XI", "–"], ["Minutes %", "–"], ["Possible games", "–"], ["Yellow cards", "–"]];
 
   return <section className="player-sporting-card" aria-labelledby="sporting-title">
     <header className="player-sporting-header">
-      <div><h2 id="sporting-title">Sporting</h2><p>2026 · Uzbekistan Super League</p></div>
+      <div><h2 id="sporting-title">Sporting</h2><p>{scope === "ITA" && performance ? `${performance.season} · ${performance.competitionName ?? performance.competitionKey}` : "2026 · Uzbekistan Super League"}</p></div>
       <span className="player-sporting-current">Current season</span>
     </header>
     <div className="player-sporting-primary">

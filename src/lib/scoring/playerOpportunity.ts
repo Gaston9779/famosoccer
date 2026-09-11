@@ -2,7 +2,9 @@ import { clamp, daysBetween, round, scoringConfig } from "./config";
 import { normalizeRole } from "./roles";
 import { playerAge, type IntelligencePlayer } from "./types";
 import type { Representation } from "../transfermarkt/types";
+import { playingTimePercent, selectCurrentPerformance } from "../current-performance";
 export type Component = { score: number | null; maxScore: number; status: "KNOWN" | "UNKNOWN"; reason: string; warning?: string };
+export type OpportunitySportingScope = "UZ1" | "ITA";
 const known = (score: number, maxScore: number, reason: string, warning?: string): Component => ({ score, maxScore, status: "KNOWN", reason, ...(warning ? { warning } : {}) });
 const unknown = (maxScore: number, reason: string): Component => ({ score: null, maxScore, status: "UNKNOWN", reason, warning: reason });
 export function scoreContractOpportunity(
@@ -98,26 +100,11 @@ export function scoreMarketAccessibility(value: number | null): Component {
 export function currentScoringPerformance<T extends IntelligencePlayer>(
   player: T,
   season: string | null,
-  now: Date,
+  _now: Date,
+  scope: OpportunitySportingScope = "UZ1",
 ): T["performances"][number] | null {
-  // Season must come from stored competition/source context, never an arbitrary older row.
-  if (!season || season === "UNVERIFIED") return null;
-  return (
-    player.performances
-      .filter(
-        (r) =>
-          r.competitionCode === "UZ1" &&
-          r.season === season &&
-          r.sourceUpdatedAt <= now &&
-          r.minutesPlayedPercent !== null &&
-          Number.isFinite(r.minutesPlayedPercent) &&
-          r.minutesPlayedPercent >= 0 &&
-          r.minutesPlayedPercent <= 100,
-      )
-      .sort(
-        (a, b) => b.sourceUpdatedAt.getTime() - a.sourceUpdatedAt.getTime(),
-      )[0] ?? null
-  );
+  if (scope === "UZ1" && (!season || season === "UNVERIFIED")) return null;
+  return selectCurrentPerformance(player.performances, scope);
 }
 export function calculateConfidence(components: Component[] | IntelligencePlayer, season?: string | null, now?: Date) {
   const values = Array.isArray(components) ? components : [
@@ -144,8 +131,9 @@ export function calculatePlayerOpportunity(
   player: IntelligencePlayer,
   season: string | null,
   now: Date,
+  scope: OpportunitySportingScope = "UZ1",
 ) {
-  const performance = currentScoringPerformance(player, season, now);
+  const performance = currentScoringPerformance(player, season, now, scope);
   const components = [
     scoreContractOpportunity(
       player.contractExpires,
@@ -155,7 +143,7 @@ export function calculatePlayerOpportunity(
       player.careerStatus,
     ),
     scoreRepresentationOpportunity(player.representationStatus),
-    scorePlayingTime(performance?.minutesPlayedPercent),
+    scorePlayingTime(playingTimePercent(performance)),
     scoreAgeOpportunity(playerAge(player, now)),
     scoreMarketAccessibility(player.marketValueEur),
   ];

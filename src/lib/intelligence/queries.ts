@@ -46,7 +46,10 @@ export async function loadIntelligenceView(currentUz1Only = false) {
           select: {
             season: true,
             competitionCode: true,
+            competitionKey: true,
             minutesPlayedPercent: true,
+            minutesPlayed: true,
+            possibleGames: true,
             sourceUpdatedAt: true,
           },
         },

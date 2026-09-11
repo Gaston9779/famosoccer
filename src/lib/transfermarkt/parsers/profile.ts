@@ -92,6 +92,7 @@ export function parseProfile(html: string, id: string, url: string) {
     "berater",
     "spielerberater",
     "agente",
+    "procuratore",
   );
   const rawMainPosition =
     field("position", "position:", "posizione") ??

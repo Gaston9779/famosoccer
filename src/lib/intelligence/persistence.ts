@@ -1,6 +1,9 @@
 import { createHash } from "node:crypto";
 import { db } from "../db";
-import { calculatePlayerOpportunity } from "../scoring/playerOpportunity";
+import {
+  calculatePlayerOpportunity,
+  type OpportunitySportingScope,
+} from "../scoring/playerOpportunity";
 import { calculateClubNeed } from "../scoring/clubNeed";
 import { normalizeRole } from "../scoring/roles";
 import { scoringConfig, type KnownRole } from "../scoring/config";
@@ -12,7 +15,7 @@ export async function loadScoringData(currentUz1Only = false) {
       ...(currentUz1Only
         ? { where: { club: { competition: { tmCompetitionId: "UZ1" } } } }
         : {}),
-      include: { performances: true },
+      include: { performances: true, pools: { select: { poolKey: true } } },
       orderBy: { id: "asc" },
     }),
     db.club.findMany({
@@ -24,11 +27,16 @@ export async function loadScoringData(currentUz1Only = false) {
   return { players, clubs, season: competition?.season ?? null };
 }
 async function persistPlayer(
-  player: IntelligencePlayer,
+  player: IntelligencePlayer & { pools?: { poolKey: string }[] },
   season: string | null,
   now: Date,
 ) {
-  const score = calculatePlayerOpportunity(player, season, now);
+  const scope: OpportunitySportingScope = player.pools?.some(
+    (pool) => pool.poolKey === "ITA",
+  )
+    ? "ITA"
+    : "UZ1";
+  const score = calculatePlayerOpportunity(player, season, now, scope);
   return db.$transaction(async (tx) => {
     const previous = await tx.playerOpportunityHistory.findFirst({
       where: { playerId: player.id, isCurrent: true },
@@ -81,7 +89,7 @@ export async function calculateAndPersistPlayerOpportunity(
 ) {
   const player = await db.player.findUniqueOrThrow({
     where: { id: playerId },
-    include: { performances: true },
+    include: { performances: true, pools: { select: { poolKey: true } } },
   });
   const competition = await db.competition.findUnique({
     where: { tmCompetitionId: "UZ1" },

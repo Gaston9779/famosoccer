@@ -28,11 +28,12 @@ export const emptyCounts = (): Counts => ({
   performanceRowsUpdated: 0,
 });
 
-export type PlayerScope = "UZBEKISTAN" | "OTHER" | "ALL";
+export type PlayerScope = "UZBEKISTAN" | "ITA" | "OTHER" | "ALL";
 export type ManualImportOperation = "IMPORTED" | "UPDATED";
 
 export function playerScopeFromQuery(value: string | null | undefined): PlayerScope {
   if (value === "other") return "OTHER";
+  if (value === "ita") return "ITA";
   if (value === "all") return "ALL";
   return "UZBEKISTAN";
 }
@@ -45,11 +46,12 @@ export function playerScopeWhere(scope: PlayerScope): Prisma.PlayerWhereInput {
       club: { is: { competition: { is: { tmCompetitionId: "UZ1" } } } },
     };
   }
+  if (scope === "ITA") return { pools: { some: { poolKey: "ITA" } } };
   return {
-    OR: [
+    AND: [{ pools: { none: { poolKey: "ITA" } } }, { OR: [
       { careerStatus: { in: ["FREE_AGENT", "RETIRED"] } },
       { NOT: { club: { is: { competition: { is: { tmCompetitionId: "UZ1" } } } } } },
-    ],
+    ] }],
   };
 }
 

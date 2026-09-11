@@ -18,7 +18,10 @@ export interface IntelligencePlayer {
   performances: {
     season: string;
     competitionCode: string | null;
+    competitionKey: string;
     minutesPlayedPercent: number | null;
+    minutesPlayed?: number | null;
+    possibleGames?: number | null;
     sourceUpdatedAt: Date;
   }[];
 }

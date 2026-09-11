@@ -99,9 +99,18 @@ model Player {
   events PlayerEvent[]
   notes PlayerNote[]
   tags PlayerTagAssignment[]
+  pools PlayerPool[]
   confirmedFreeAgent Boolean @default(false)
   careerStatus PlayerCareerStatus @default(UNKNOWN)
   isFavorite Boolean @default(false)
+}
+model PlayerPool {
+  playerId String
+  poolKey String
+  player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  @@id([playerId, poolKey])
+  @@index([poolKey])
 }
 model PlayerPerformance {
   id String @id @default(cuid())
