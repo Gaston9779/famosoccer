@@ -1,43 +1,75 @@
 import type { PositionGroup, Representation } from "./transfermarkt/types";
+
+const compactPosition = (value: string) => value
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .toLowerCase()
+  .trim()
+  .replace(/\s+/g, " ")
+  .replace(/^\s*(?:difesa|centrocampo|attacco|goalkeeper|defender|midfield|attack)\s*-\s*/, "");
+
+/**
+ * Canonical Transfermarkt-to-FamoSoccer position mapping.  The stored values
+ * are the project's established granular codes, shared by enrichment, scoring
+ * and UI role rendering.
+ */
+const positionAliases: Record<string, PositionGroup> = {
+  goalkeeper: "GK",
+  torwart: "GK",
+  portiere: "GK",
+  porta: "GK",
+  "centre-back": "CB",
+  "center-back": "CB",
+  innenverteidiger: "CB",
+  difesa: "CB",
+  difensore: "CB",
+  "difensore centrale": "CB",
+  "left-back": "FB",
+  "right-back": "FB",
+  "left wing-back": "FB",
+  "right wing-back": "FB",
+  "terzino destro": "FB",
+  "terzino sinistro": "FB",
+  "esterno destro di difesa": "FB",
+  "esterno sinistro di difesa": "FB",
+  "defensive midfield": "DM",
+  mediano: "DM",
+  "central midfield": "CM",
+  centrocampo: "CM",
+  centrocampista: "CM",
+  centrale: "CM",
+  mezzala: "CM",
+  "attacking midfield": "AM",
+  trequartista: "AM",
+  "left winger": "WINGER",
+  "right winger": "WINGER",
+  "left midfield": "WINGER",
+  "right midfield": "WINGER",
+  "ala destra": "WINGER",
+  "ala sinistra": "WINGER",
+  "esterno destro": "WINGER",
+  "esterno sinistro": "WINGER",
+  "esterno di destra": "WINGER",
+  "esterno di sinistra": "WINGER",
+  "centre-forward": "ST",
+  "center-forward": "ST",
+  "second striker": "ST",
+  attacco: "ST",
+  attaccante: "ST",
+  "seconda punta": "ST",
+  "punta centrale": "ST",
+  punta: "ST",
+};
+
 export function normalizePosition(
   raw?: string | null,
   positionId?: string | number | null,
 ): PositionGroup {
-  const original = raw
-    ?.toLowerCase()
-    .trim()
-    .replace(/^difesa\s*-\s*/, "")
-    .replace(/^centrocampo\s*-\s*/, "")
-    .replace(/^attacco\s*-\s*/, "")
-    .replace(/^(goalkeeper|defender|midfield|attack)\s*-\s*/, "");
-  const p = original;
-  const map: Record<string, PositionGroup> = {
-    goalkeeper: "GK",
-    torwart: "GK",
-    portiere: "GK",
-    "centre-back": "CB",
-    "center-back": "CB",
-    innenverteidiger: "CB",
-    "difensore centrale": "CB",
-    "left-back": "FB",
-    "right-back": "FB",
-    "left wing-back": "FB",
-    "right wing-back": "FB",
-    "defensive midfield": "DM",
-    "central midfield": "CM",
-    "attacking midfield": "AM",
-    "left winger": "WINGER",
-    "right winger": "WINGER",
-    "left midfield": "WINGER",
-    "right midfield": "WINGER",
-    "centre-forward": "ST",
-    "center-forward": "ST",
-    "second striker": "ST",
-  };
-  if (p && map[p]) return map[p];
-  if (/^difesa\b/i.test(raw ?? "")) return "CB";
-  if (/^centrocampo\b/i.test(raw ?? "")) return "CM";
-  if (/^attacco\b/i.test(raw ?? "")) return "ST";
+  const p = raw ? compactPosition(raw) : "";
+  if (p && positionAliases[p]) return positionAliases[p];
+  if (/^difesa\b/.test(compactPosition(raw ?? ""))) return "CB";
+  if (/^centrocampo\b/.test(compactPosition(raw ?? ""))) return "CM";
+  if (/^attacco\b/.test(compactPosition(raw ?? ""))) return "ST";
   // Quickselect IDs are coarse: observed 2 = defender, not a specific full-back.
   return String(positionId) === "1" ? "GK" : "UNKNOWN";
 }

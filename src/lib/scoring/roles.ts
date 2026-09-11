@@ -1,4 +1,5 @@
 import type { Role } from "./config";
+import { normalizePosition } from "../normalization";
 
 export type GenericRoleFallback = {
   mainPosition: Extract<Role, "CB" | "CM" | "ST">;
@@ -21,42 +22,13 @@ export function genericRoleFallback(raw?: string | null): GenericRoleFallback | 
 }
 
 export function normalizeRole(raw?: string | null): Role {
-  const p = raw
-    ?.trim()
-    .toLowerCase()
-    .replace(/^(goalkeeper|defender|midfield|attack)\s*-\s*/, "");
-  const roles: Record<string, Role> = {
-    goalkeeper: "GK",
-    torwart: "GK",
-    portiere: "GK",
-    "right-back": "RB",
-    "right wing-back": "RB",
-    "left-back": "LB",
-    "left wing-back": "LB",
-    "centre-back": "CB",
-    "center-back": "CB",
-    innenverteidiger: "CB",
-    "difensore centrale": "CB",
-    "defensive midfield": "DM",
-    "central midfield": "CM",
-    "attacking midfield": "AM",
-    "right winger": "RW",
-    "right midfield": "RW",
-    "left winger": "LW",
-    "left midfield": "LW",
-    "centre-forward": "ST",
-    "center-forward": "ST",
-    "second striker": "ST",
-    cb: "CB",
-    cm: "CM",
-    st: "ST",
-    defender: "CB",
-    midfield: "CM",
-    midfielder: "CM",
-    attack: "ST",
-    forward: "ST",
-  };
-  return p ? (roles[p] ?? "UNKNOWN") : "UNKNOWN";
+  const position = normalizePosition(raw);
+  if (position === "GK" || position === "CB" || position === "DM" || position === "CM" || position === "AM" || position === "ST")
+    return position;
+  const text = raw?.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase() ?? "";
+  if (position === "FB") return /left|sinistr/.test(text) ? "LB" : "RB";
+  if (position === "WINGER") return /left|sinistr/.test(text) ? "LW" : "RW";
+  return "UNKNOWN";
 }
 export function secondaryRoles(raw?: string | null): Role[] {
   if (!raw) return [];
