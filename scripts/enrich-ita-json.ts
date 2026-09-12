@@ -109,7 +109,7 @@ async function main() {
             );
             if (index === -1) {
               data.performances.push({
-                ...row, id: `ita_perf_${tmPlayerId}_${String(row.season)}_${String(row.competitionKey)}`,
+                ...row, id: `${String(player.id)}_perf_${String(row.season)}_${String(row.competitionKey)}`,
                 playerId: player.id,
               });
             } else {

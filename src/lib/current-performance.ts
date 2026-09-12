@@ -1,4 +1,4 @@
-export type CurrentPerformanceScope = "UZ1" | "ITA";
+export type CurrentPerformanceScope = "UZ1" | "ITA" | "FRA";
 
 export type CurrentPerformance = {
   season: string;

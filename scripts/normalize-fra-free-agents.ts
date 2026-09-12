@@ -1,12 +1,10 @@
 /**
- * STEP 1 — Normalizzazione svincolati italiani/oriundi nel formato standard FamoSoccer
- * già usato per il dataset "italiani all'estero" (vedi
- * famosoccer_italiani_estero_2026_27_REMAINING_917.json come riferimento di forma
- * pre-enrichment: stesso set di campi, stessa struttura {metadata, players,
- * performances, rosterContextByPlayer}).
+ * STEP 1 — Normalizzazione svincolati francesi (<=30 anni) nel formato standard
+ * FamoSoccer, stessa forma pre-enrichment già usata per il dataset ITA
+ * (vedi normalize-ita-free-agents.ts): {metadata, players, performances,
+ * rosterContextByPlayer}.
  *
- * Non fa alcuna richiesta di rete: usa solo il file raw + le 2 risoluzioni di
- * tmPlayerId già verificate manualmente (vedi RESOLVED_MISSING_TM_IDS).
+ * Non fa alcuna richiesta di rete: usa solo il file raw.
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { normalizePosition, marketValueItalianFormat } from "../src/lib/normalization";
@@ -22,30 +20,9 @@ type RawRecord = {
   tmUrl: string | null;
 };
 
-const dir = "src/data/import/ita-expat";
-const inputPath = `${dir}/italian_free_agents_raw_plus_17_oriundi.json`;
-const outputPath = `${dir}/famosoccer_italiani_svincolati_2026_27.json`;
-
-/**
- * I 2 record senza tmPlayerId/tmUrl nel raw sono stati risolti tramite ricerca
- * diretta su Transfermarkt (schnellsuche), NON inventati. Evidenza di match:
- *  - Youssef Nouri  -> unico risultato "svincolato", età 24, valore "50 mila €"
- *    (identico al raw) -> https://www.transfermarkt.it/youssef-nouri/profil/spieler/646874
- *  - Orgito Kuqi    -> unico risultato "svincolato", età 22, ruolo "POR" (Portiere,
- *    coerente col raw) -> https://www.transfermarkt.it/orgito-kuqi/profil/spieler/650251
- */
-const RESOLVED_MISSING_TM_IDS: Record<string, { tmPlayerId: string; tmUrl: string; evidence: string }> = {
-  "Youssef Nouri": {
-    tmPlayerId: "646874",
-    tmUrl: "https://www.transfermarkt.it/youssef-nouri/profil/spieler/646874",
-    evidence: "unico risultato TM 'svincolato', età 24 e valore di mercato '50 mila €' identici al raw",
-  },
-  "Orgito Kuqi": {
-    tmPlayerId: "650251",
-    tmUrl: "https://www.transfermarkt.it/orgito-kuqi/profil/spieler/650251",
-    evidence: "unico risultato TM 'svincolato', età 22 e ruolo 'POR' (Portiere) coerenti col raw",
-  },
-};
+const dir = "src/data/import/fra-free-agents";
+const inputPath = `${dir}/french_free_agents_under30_raw.json`;
+const outputPath = `${dir}/famosoccer_french_free_agents_2026_27.json`;
 
 function splitName(name: string): { firstName: string; lastName: string | null } {
   const parts = name.trim().split(/\s+/);
@@ -53,34 +30,38 @@ function splitName(name: string): { firstName: string; lastName: string | null }
   return { firstName, lastName: rest.length ? rest.join(" ") : null };
 }
 
+function tmIdFromUrl(url: string | null): string | null {
+  const match = url?.match(/\/spieler\/(\d+)/);
+  return match ? match[1] : null;
+}
+
 function main() {
   const raw: RawRecord[] = JSON.parse(readFileSync(inputPath, "utf8"));
 
-  const resolvedIds: { name: string; tmPlayerId: string }[] = [];
   const unresolved: RawRecord[] = [];
   const duplicateTmPlayerIds: string[] = [];
+  const ageExcluded: RawRecord[] = [];
+  const urlMismatches: { name: string; tmPlayerId: string; urlTmId: string | null }[] = [];
   const seenTmIds = new Set<string>();
 
   const players = [] as Record<string, unknown>[];
   const lastKnownClubByTmPlayerId: Record<string, { lastClub: string | null; freeAgentSince: string | null }> = {};
 
   for (const record of raw) {
-    let tmPlayerId = record.tmPlayerId;
-    let tmUrl = record.tmUrl;
+    const tmPlayerId = record.tmPlayerId;
+    const tmUrl = record.tmUrl;
 
-    if (!tmPlayerId || !tmUrl) {
-      const resolution = RESOLVED_MISSING_TM_IDS[record.name];
-      if (!resolution) {
-        unresolved.push(record);
-        continue; // non inventiamo l'ID: il record resta fuori dal dataset normalizzato
-      }
-      tmPlayerId = resolution.tmPlayerId;
-      tmUrl = resolution.tmUrl;
-      resolvedIds.push({ name: record.name, tmPlayerId });
-    }
-
-    if (!/^\d+$/.test(tmPlayerId)) {
+    if (!tmPlayerId || !tmUrl || !/^\d+$/.test(tmPlayerId)) {
       unresolved.push(record);
+      continue; // non inventiamo l'ID: il record resta fuori dal dataset normalizzato
+    }
+    const urlTmId = tmIdFromUrl(tmUrl);
+    if (urlTmId && urlTmId !== tmPlayerId) {
+      urlMismatches.push({ name: record.name, tmPlayerId, urlTmId });
+      continue;
+    }
+    if (record.age != null && record.age > 30) {
+      ageExcluded.push(record);
       continue;
     }
     if (seenTmIds.has(tmPlayerId)) {
@@ -106,7 +87,7 @@ function main() {
       contractOption: null,
       firstName,
       heightCm: null,
-      id: `ita_${tmPlayerId}`,
+      id: `fra_${tmPlayerId}`,
       isFavorite: false,
       joinedDate: null,
       lastName,
@@ -115,9 +96,7 @@ function main() {
       marketValueEur: marketValueItalianFormat(record.marketValueRaw),
       marketValueRaw: record.marketValueRaw ?? null,
       name: record.name,
-      // Sconosciuta a questo stadio (potrebbero essere oriundi con doppia
-      // cittadinanza): "[]" non è "meaningful" per lo script di enrichment,
-      // quindi verrà riempita correttamente dal profilo TM reale (STEP 2).
+      // Sconosciuta a questo stadio: verrà riempita dal profilo TM reale (enrichment).
       nationalities: "[]",
       performanceLastSyncedAt: null,
       portraitUrl: null,
@@ -140,22 +119,22 @@ function main() {
       generatedAt: new Date().toISOString(),
       seasonRequested: "2026/27",
       source: "Transfermarkt",
-      pool: "ITA",
+      pool: "FRA",
       criteria: {
-        status: "svincolato (free agent)",
+        status: "free agent",
         maxAgeInclusive: 30,
-        includesOriundi: true,
       },
       inputFile: inputPath,
       rawRecords: raw.length,
       normalizedPlayers: players.length,
-      resolvedMissingTmPlayerIds: resolvedIds,
       unresolvedRecords: unresolved.map((r) => ({ name: r.name, age: r.age })),
+      ageExcluded: ageExcluded.map((r) => ({ name: r.name, age: r.age })),
+      urlMismatches,
       duplicateTmPlayerIds,
       // Informativo, NON usato dall'import DB (rosterContextByPlayer resta {}
       // di proposito: nessun club va assegnato a questi giocatori).
       lastKnownClubByTmPlayerId,
-      note: "careerStatus=FREE_AGENT, confirmedFreeAgent=true, clubId=null per tutti i player di questo dataset. performances=[] in attesa dell'enrichment (STEP 2).",
+      note: "careerStatus=FREE_AGENT, confirmedFreeAgent=true, clubId=null per tutti i player di questo dataset. performances=[] in attesa dell'enrichment.",
     },
     players,
     performances: [] as unknown[],
@@ -168,8 +147,9 @@ function main() {
     "STEP 1 — NORMALIZZAZIONE": true,
     "raw records": raw.length,
     "missing tmPlayerId in raw": raw.filter((r) => !r.tmPlayerId).length,
-    "resolved via TM search (documented, not invented)": resolvedIds,
     "unresolved (excluded, need manual ID)": unresolved.map((r) => r.name),
+    "age excluded (>30, excluded)": ageExcluded.map((r) => r.name),
+    "tmUrl/tmPlayerId mismatches (excluded)": urlMismatches,
     "duplicate tmPlayerId (excluded)": duplicateTmPlayerIds,
     "normalized players written": players.length,
     "ageRange": players.length ? [Math.min(...players.map((p: any) => p.age)), Math.max(...players.map((p: any) => p.age))] : null,

@@ -8,8 +8,15 @@ const hasNationality = (value: string) => {
   catch { return false; }
 };
 
+const uz1Where = { club: { is: { competition: { is: { tmCompetitionId: "UZ1" } } } } };
+const nonUz1Where = { NOT: uz1Where };
+
 export async function playerCoverage(scope: CoverageScope = "EXACT_ROLE_COVERED") {
-  const rows = await db.player.findMany({ include: { club: { include: { competition: true } }, performances: { select: { id: true } }, opportunityHistory: { where: { isCurrent: true }, select: { id: true } } } });
+  // UZ1/EXACT_ROLE_COVERED and OTHER only ever need one side of the UZ1 split —
+  // narrow at the DB level instead of scanning every player (ITA/FRA/other pools
+  // included) just to discard most of them in JS.
+  const where = scope === "OTHER" ? nonUz1Where : scope === "ALL" ? {} : uz1Where;
+  const rows = await db.player.findMany({ where, include: { club: { include: { competition: true } }, performances: { select: { id: true } }, opportunityHistory: { where: { isCurrent: true }, select: { id: true } } } });
   const players = rows.filter((p) => {
     const uz1 = p.club?.competition?.tmCompetitionId === "UZ1";
     return scope === "ALL" || (scope === "UZ1" && uz1) || (scope === "OTHER" && !uz1) || (scope === "EXACT_ROLE_COVERED" && uz1 && normalizeRole(p.mainPosition) !== "UNKNOWN");

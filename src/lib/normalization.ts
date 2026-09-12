@@ -153,5 +153,19 @@ export function marketValue(raw: string | null): number | null {
   );
 }
 
+/**
+ * Handles transfermarkt.it's Italian-language market value format ("X mila €",
+ * "X,XX mln €"), distinct from marketValue() above which only parses TM.com's
+ * "€X.Xm" style. Used by free-agent seed scripts (ITA, FRA, ...).
+ */
+export function marketValueItalianFormat(raw: string | null): number | null {
+  if (!raw) return null;
+  const mila = raw.match(/^(\d+)\s*mila\s*€$/i);
+  if (mila) return Number(mila[1]) * 1_000;
+  const mln = raw.match(/^(\d+(?:,\d+)?)\s*mln\s*€$/i);
+  if (mln) return Math.round(Number(mln[1].replace(",", ".")) * 1_000_000);
+  return null;
+}
+
 // Exact intelligence roles supplement the backward-compatible macro position groups.
 export { normalizeRole } from "./scoring/roles";

@@ -1,8 +1,14 @@
 "use client";
 
 import { Suspense } from "react";
-import Link from "next/link";
+import Link, { useLinkStatus } from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
+import { Spinner } from "./spinner";
+
+function NavPendingIndicator() {
+  const { pending } = useLinkStatus();
+  return pending ? <Spinner size="sm" /> : null;
+}
 
 const items = [
   ["Dashboard", "/", "⌂"],
@@ -33,6 +39,7 @@ function SidebarNavContent({ onNavigate }: { onNavigate?: () => void }) {
           <Link key={label} href={href} className={matches ? "active" : ""} onClick={onNavigate}>
             <span aria-hidden="true">{icon}</span>
             {label}
+            <NavPendingIndicator />
           </Link>
         );
       })}

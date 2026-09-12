@@ -52,7 +52,7 @@ export default async function PlayerDetail({ params }: { params: Promise<{ id: s
       where: { id },
       include: {
         club: { include: { competition: true } },
-        performances: true, pools: { where: { poolKey: "ITA" }, select: { poolKey: true } },
+        performances: true, pools: { where: { poolKey: { in: ["ITA", "FRA"] } }, select: { poolKey: true } },
         opportunityHistory: { where: { isCurrent: true }, take: 1 },
         notes: { orderBy: { createdAt: "desc" } },
         tags: { include: { tag: true } },
@@ -73,8 +73,9 @@ export default async function PlayerDetail({ params }: { params: Promise<{ id: s
   const footLabel = FOOT_LABEL[p.preferredFoot] ?? null;
 
   const score = p.opportunityHistory[0];
-  const isIta = p.pools.length > 0;
-  const performanceScope = isIta ? "ITA" : "UZ1";
+  const performanceScope = p.pools.some((pool) => pool.poolKey === "ITA") ? "ITA"
+    : p.pools.some((pool) => pool.poolKey === "FRA") ? "FRA"
+    : "UZ1";
   const displayScore = score?.total ?? null;
   const confidencePercent = score ? Math.round((score.confidence <= 1 ? score.confidence : score.confidence / 100) * 100) : null;
   const contractComponent = scoreContractOpportunity(p.contractExpires, now, p.confirmedFreeAgent, p.clubId, p.careerStatus);

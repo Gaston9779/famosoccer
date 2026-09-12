@@ -121,8 +121,22 @@ function PlayerCard({ row }: { row: PlayerRow }) {
   );
 }
 
-export function PlayerTable({ rows, initialSearch = "", initialFavorites = false }: { rows: PlayerRow[]; initialSearch?: string; initialFavorites?: boolean }) {
-  const [filters, setFilters] = useState<Filters>({ ...emptyFilters, search: initialSearch });
+export function PlayerTable({
+  rows,
+  initialSearch = "",
+  initialFavorites = false,
+  initialMinScore = "",
+  initialContract = "",
+  initialRepresentation = "",
+}: {
+  rows: PlayerRow[];
+  initialSearch?: string;
+  initialFavorites?: boolean;
+  initialMinScore?: string;
+  initialContract?: string;
+  initialRepresentation?: string;
+}) {
+  const [filters, setFilters] = useState<Filters>({ ...emptyFilters, search: initialSearch, minScore: initialMinScore, contract: initialContract, representation: initialRepresentation });
   const [sort, setSort] = useState<SortKey>("opportunity");
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(20);
@@ -142,7 +156,7 @@ export function PlayerTable({ rows, initialSearch = "", initialFavorites = false
       && (!filters.role || labelRole(row.role) === filters.role)
       && (!filters.club || (filters.club === NO_CURRENT_CLUB ? !row.club : row.club?.id === filters.club))
       && (!filters.nationality || nationalityDisplay(row.nationality).code === filters.nationality)
-      && (!filters.representation || row.representation === filters.representation)
+      && (!filters.representation || (filters.representation === "OPEN" ? (row.representation === "NO_AGENT" || row.representation === "FAMILY") : row.representation === filters.representation))
       && (!filters.contract || (filters.contract === "known" ? !!contractStatus : filters.contract === "expiring" ? !!contractStatus && contractStatus.getUTCFullYear() <= thisYear + 1 : !contractStatus))
       && (!row.clubCountry || !filters.excludedCountries.includes(row.clubCountry))
       && numericRangeIncludes(row.age, filters.minAge, filters.maxAge)
@@ -173,7 +187,7 @@ export function PlayerTable({ rows, initialSearch = "", initialFavorites = false
         <select value={filters.club} onChange={(event) => update("club", event.target.value)} aria-label="Club"><option value="">All clubs</option><option value={NO_CURRENT_CLUB}>No current club</option>{clubs.map(([id, name]) => <option key={id} value={id}>{name}</option>)}</select>
         <select value={filters.nationality} onChange={(event) => update("nationality", event.target.value)} aria-label="Nationality"><option value="">All nationalities</option>{nationalities.map((nationality) => <option key={nationality}>{nationality}</option>)}</select>
         <select value={filters.contract} onChange={(event) => update("contract", event.target.value)} aria-label="Contract status"><option value="">All contract status</option><option value="known">Known contract</option><option value="expiring">Expiring within 12 months</option><option value="missing">Contract unknown</option></select>
-        <select value={filters.representation} onChange={(event) => update("representation", event.target.value)} aria-label="Representation"><option value="">All representation</option><option value="NO_AGENT">No agent</option><option value="FAMILY">Family</option><option value="AGENCY">Represented</option><option value="NOT_LISTED">Not listed</option><option value="UNKNOWN">Unknown</option></select>
+        <select value={filters.representation} onChange={(event) => update("representation", event.target.value)} aria-label="Representation"><option value="">All representation</option><option value="OPEN">Open (no agent/family)</option><option value="NO_AGENT">No agent</option><option value="FAMILY">Family</option><option value="AGENCY">Represented</option><option value="NOT_LISTED">Not listed</option><option value="UNKNOWN">Unknown</option></select>
       </div>
       <div className="players-filter-row players-filter-ranges">
         <label>Age range <span><input type="number" min="0" value={filters.minAge} onChange={(event) => update("minAge", event.target.value)} aria-label="Minimum age" placeholder="Min" /><i /> <input type="number" min="0" value={filters.maxAge} onChange={(event) => update("maxAge", event.target.value)} aria-label="Maximum age" placeholder="Max" /></span></label>

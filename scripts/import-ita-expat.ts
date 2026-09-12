@@ -9,6 +9,8 @@ const source = inputAt >= 0 ? args[inputAt + 1] : "src/data/import/ita-expat/fam
 const dryRun = args.includes("--dry-run");
 const limitAt = args.indexOf("--limit");
 const limit = limitAt >= 0 ? Number(args[limitAt + 1]) : Infinity;
+const poolAt = args.indexOf("--pool");
+const poolKey = poolAt >= 0 ? args[poolAt + 1] : "ITA";
 const data = JSON.parse(readFileSync(source, "utf8"));
 const normalize = (value: string | null | undefined) => (value ?? "").trim().toLowerCase().normalize("NFD").replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 const date = (value: string | null) => value ? new Date(value) : null;
@@ -32,7 +34,7 @@ async function main() {
   const validTmIds: string[] = Array.from(new Set<string>(valid.map((p: any): string => String(p.tmPlayerId))));
   const validSourceIds = new Set(valid.map((p: any) => p.id));
   const existing = await db.player.findMany({ where: { tmPlayerId: { in: validTmIds } }, select: { id: true, tmPlayerId: true } }) as Array<{ id: string; tmPlayerId: string }>;
-  const itaMemberships = await db.playerPool.findMany({ where: { playerId: { in: existing.map(player => player.id) }, poolKey: "ITA" }, select: { playerId: true } });
+  const itaMemberships = await db.playerPool.findMany({ where: { playerId: { in: existing.map(player => player.id) }, poolKey }, select: { playerId: true } });
   const itaMemberIds = new Set(itaMemberships.map(membership => membership.playerId));
   const existingByTmId = new Map(existing.map(player => [player.tmPlayerId, player]));
   const clubContexts = [...new Map(valid.map((player: any) => {
@@ -56,7 +58,7 @@ async function main() {
     "existing players": existing.length,
     "new players": validTmIds.length - existing.length,
     "players to update": existing.length,
-    "memberships ITA to create": validTmIds.filter(tmPlayerId => !itaMemberIds.has(existingByTmId.get(tmPlayerId)?.id ?? "")).length,
+    [`memberships ${poolKey} to create`]: validTmIds.filter(tmPlayerId => !itaMemberIds.has(existingByTmId.get(tmPlayerId)?.id ?? "")).length,
     "performances resolvable": performanceRows.length,
     "performances unresolved": unresolvedPerformances,
     "clubs new": tmClubIds.filter(tmClubId => !knownClubIds.has(tmClubId)).length,
@@ -81,11 +83,11 @@ async function main() {
       const existing = await db.player.findUnique({where:{tmPlayerId:item.tmPlayerId}});
       const row = nonNull({tmUrl:item.tmUrl,name:item.name,firstName:item.firstName,lastName:item.lastName,birthDate:date(item.birthDate),age:item.age,birthPlace:item.birthPlace,nationalities:item.nationalities,portraitUrl:item.portraitUrl,heightCm:item.heightCm,preferredFoot:item.preferredFoot,mainPosition:item.mainPosition,positionGroup:item.positionGroup,secondaryPositions:item.secondaryPositions,shirtNumber:item.shirtNumber,joinedDate:date(item.joinedDate),contractExpires:date(item.contractExpires),contractOption:item.contractOption,marketValueEur:item.marketValueEur,marketValueRaw:item.marketValueRaw,agentRaw:item.agentRaw,agencyName:item.agencyName,representationStatus:item.representationStatus,careerStatus:item.careerStatus,confirmedFreeAgent:item.confirmedFreeAgent,profileLastSyncedAt:date(item.profileLastSyncedAt),performanceLastSyncedAt:date(item.performanceLastSyncedAt),clubId});
       const player = await db.player.upsert({where:{tmPlayerId:item.tmPlayerId},create:{...row,tmPlayerId:item.tmPlayerId,tmUrl:item.tmUrl,name:item.name},update:row}); stats[existing?"playersUpdated":"playersInserted"]++; playerByTemp.set(item.id,player.id);
-      const membership = await db.playerPool.upsert({where:{playerId_poolKey:{playerId:player.id,poolKey:"ITA"}},create:{playerId:player.id,poolKey:"ITA"},update:{}}); if (membership.createdAt.getTime() >= Date.now()-10_000) stats.memberships++;
+      const membership = await db.playerPool.upsert({where:{playerId_poolKey:{playerId:player.id,poolKey}},create:{playerId:player.id,poolKey},update:{}}); if (membership.createdAt.getTime() >= Date.now()-10_000) stats.memberships++;
     } catch (error) { stats.errors.push(`${item.tmPlayerId}: ${error instanceof Error ? error.message : String(error)}`); }
   }
   for (const perf of performanceRows) { const playerId=playerByTemp.get(perf.playerId); if (!playerId) {stats.performancesSkipped++;continue;} const existing=await db.playerPerformance.findUnique({where:{playerId_season_competitionKey:{playerId,season:perf.season,competitionKey:perf.competitionKey}}}); const row=nonNull({competitionName:perf.competitionName,competitionCode:perf.competitionCode,possibleGames:perf.possibleGames,gamesPlayed:perf.gamesPlayed,goals:perf.goals,assists:perf.assists,yellowCards:perf.yellowCards,secondYellowCards:perf.secondYellowCards,redCards:perf.redCards,startElevenPercent:perf.startElevenPercent,minutesPlayedPercent:perf.minutesPlayedPercent,minutesPlayed:perf.minutesPlayed,provider:perf.provider,providerStats:perf.providerStats,sourceUpdatedAt:date(perf.sourceUpdatedAt)}); await db.playerPerformance.upsert({where:{playerId_season_competitionKey:{playerId,season:perf.season,competitionKey:perf.competitionKey}},create:{...row,playerId,season:perf.season,competitionKey:perf.competitionKey,competitionName:perf.competitionName,sourceUpdatedAt:date(perf.sourceUpdatedAt) ?? new Date()},update:row}); stats[existing?"performancesUpdated":"performancesInserted"]++; }
-  const [ita,uzb,other]=await Promise.all([db.player.count({where:{pools:{some:{poolKey:"ITA"}}}}),db.player.count({where:{club:{is:{competition:{is:{tmCompetitionId:"UZ1"}}}}}}),db.player.count({where:{AND:[{pools:{none:{poolKey:"ITA"}}},{NOT:{club:{is:{competition:{is:{tmCompetitionId:"UZ1"}}}}}}]}})]);
-  console.log(JSON.stringify({"ITA EXPAT IMPORT REPORT":true,...stats,"ITA players in DB":ita,"UZ1 players in DB":uzb,"Other players in DB":other},null,2));
+  const [pool,uzb,other]=await Promise.all([db.player.count({where:{pools:{some:{poolKey}}}}),db.player.count({where:{club:{is:{competition:{is:{tmCompetitionId:"UZ1"}}}}}}),db.player.count({where:{AND:[{pools:{none:{poolKey}}},{NOT:{club:{is:{competition:{is:{tmCompetitionId:"UZ1"}}}}}}]}})]);
+  console.log(JSON.stringify({[`${poolKey} EXPAT IMPORT REPORT`]:true,...stats,[`${poolKey} players in DB`]:pool,"UZ1 players in DB":uzb,"Other players in DB":other},null,2));
 }
 main().finally(()=>db.$disconnect());

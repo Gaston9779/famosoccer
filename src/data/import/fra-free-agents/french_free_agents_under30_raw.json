@@ -1,0 +1,1413 @@
+[
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Football Bourg-en-Bresse Péronnas 01",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "300 mila €",
+    "name": "Rayan Slimani",
+    "tmPlayerId": "1064905",
+    "tmUrl": "https://www.transfermarkt.it/rayan-slimani/profil/spieler/1064905"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "CF Esperança d'Andorra",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "250 mila €",
+    "name": "Erwinn Nikiéma",
+    "tmPlayerId": "1133801",
+    "tmUrl": "https://www.transfermarkt.it/erwinn-nikiema/profil/spieler/1133801"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Stade Lavallois",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "250 mila €",
+    "name": "William Benard",
+    "tmPlayerId": "808316",
+    "tmUrl": "https://www.transfermarkt.it/william-benard/profil/spieler/808316"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Penya Encarnada d'Andorra",
+    "mainPosition": null,
+    "marketValueRaw": "200 mila €",
+    "name": "Rony Jourson",
+    "tmPlayerId": "1119416",
+    "tmUrl": "https://www.transfermarkt.it/rony-jourson/profil/spieler/1119416"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Zébra Élites",
+    "mainPosition": "Esterno di sinistra",
+    "marketValueRaw": "200 mila €",
+    "name": "Yoann Cissé",
+    "tmPlayerId": "918251",
+    "tmUrl": "https://www.transfermarkt.it/yoann-cisse/profil/spieler/918251"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "16/07/2025",
+    "lastClub": "LASK",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "200 mila €",
+    "name": "Alexis Tibidi",
+    "tmPlayerId": "750886",
+    "tmUrl": "https://www.transfermarkt.it/alexis-tibidi/profil/spieler/750886"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Panserraikos",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "175 mila €",
+    "name": "Darnell Eric Bile",
+    "tmPlayerId": "1052719",
+    "tmUrl": "https://www.transfermarkt.it/darnell-eric-bile/profil/spieler/1052719"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "OGC Nizza U19",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "150 mila €",
+    "name": "Millan Brignone",
+    "tmPlayerId": "1191475",
+    "tmUrl": "https://www.transfermarkt.it/millan-brignone/profil/spieler/1191475"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "SC Aubagne Air Bel",
+    "mainPosition": "Portiere",
+    "marketValueRaw": "150 mila €",
+    "name": "Matthias Nouichi",
+    "tmPlayerId": "1180575",
+    "tmUrl": "https://www.transfermarkt.it/matthias-nouichi/profil/spieler/1180575"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "RWDM Brussels",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "150 mila €",
+    "name": "Yacouba Barry",
+    "tmPlayerId": "821136",
+    "tmUrl": "https://www.transfermarkt.it/yacouba-barry/profil/spieler/821136"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "16/01/2026",
+    "lastClub": "NK Maribor",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "150 mila €",
+    "name": "Mohamed Bamba",
+    "tmPlayerId": "745210",
+    "tmUrl": "https://www.transfermarkt.it/mohamed-bamba/profil/spieler/745210"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "03/08/2026",
+    "lastClub": "Xorazm Urganch",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "125 mila €",
+    "name": "Yanis Lhéry",
+    "tmPlayerId": "654414",
+    "tmUrl": "https://www.transfermarkt.it/yanis-lhery/profil/spieler/654414"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Football Bourg-en-Bresse Péronnas 01",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Mamadou Conté",
+    "tmPlayerId": "1165756",
+    "tmUrl": "https://www.transfermarkt.it/mamadou-conte/profil/spieler/1165756"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Hostert",
+    "mainPosition": "Portiere",
+    "marketValueRaw": "100 mila €",
+    "name": "Yvan Gomes",
+    "tmPlayerId": "982852",
+    "tmUrl": "https://www.transfermarkt.it/yvan-gomes/profil/spieler/982852"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Lokomotiv Gorna Oryahovitsa",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "100 mila €",
+    "name": "Ebenezer Simons de Fanti",
+    "tmPlayerId": "939980",
+    "tmUrl": "https://www.transfermarkt.it/ebenezer-simons-de-fanti/profil/spieler/939980"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "10/08/2026",
+    "lastClub": "Fulgor Chiavazzese RV",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Noa Yaguoubi",
+    "tmPlayerId": "838581",
+    "tmUrl": "https://www.transfermarkt.it/noa-yaguoubi/profil/spieler/838581"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Stade Nyonnais",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "75 mila €",
+    "name": "Hedy Bechar",
+    "tmPlayerId": "1208038",
+    "tmUrl": "https://www.transfermarkt.it/hedy-bechar/profil/spieler/1208038"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Nestos Chrysoupoli",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "75 mila €",
+    "name": "Dorian Fordos Harnisch",
+    "tmPlayerId": "1201168",
+    "tmUrl": "https://www.transfermarkt.it/dorian-fordos-harnisch/profil/spieler/1201168"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "20/08/2026",
+    "lastClub": "Union Titus Petange",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "75 mila €",
+    "name": "Yanis Zodehougan",
+    "tmPlayerId": "966550",
+    "tmUrl": "https://www.transfermarkt.it/yanis-zodehougan/profil/spieler/966550"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "TSG 1899 Hoffenheim II",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "75 mila €",
+    "name": "Daniel Labila",
+    "tmPlayerId": "749538",
+    "tmUrl": "https://www.transfermarkt.it/daniel-labila/profil/spieler/749538"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "F91 Dudelange",
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Marlon N‘Guessan",
+    "tmPlayerId": "1301924",
+    "tmUrl": "https://www.transfermarkt.it/marlon-nguessan/profil/spieler/1301924"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Red Star FC",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "50 mila €",
+    "name": "Vincent Kany",
+    "tmPlayerId": "1226637",
+    "tmUrl": "https://www.transfermarkt.it/vincent-kany/profil/spieler/1226637"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Vibonese",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Livingstone Dick",
+    "tmPlayerId": "1178607",
+    "tmUrl": "https://www.transfermarkt.it/livingstone-dick/profil/spieler/1178607"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "SV Wacker Burghausen",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Amadou Soumaré",
+    "tmPlayerId": "1169080",
+    "tmUrl": "https://www.transfermarkt.it/amadou-soumare/profil/spieler/1169080"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Standard Liegi 16 FC",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "50 mila €",
+    "name": "Andréa Dacourt",
+    "tmPlayerId": "1072902",
+    "tmUrl": "https://www.transfermarkt.it/andrea-dacourt/profil/spieler/1072902"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Portogruaro Calcio",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Lenny Sognog",
+    "tmPlayerId": "1071731",
+    "tmUrl": "https://www.transfermarkt.it/lenny-sognog/profil/spieler/1071731"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "OGC Nizza",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Yaël Nandjou",
+    "tmPlayerId": "984699",
+    "tmUrl": "https://www.transfermarkt.it/yael-nandjou/profil/spieler/984699"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Petrzalka",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Nathan Cruce-Corcy",
+    "tmPlayerId": "950213",
+    "tmUrl": "https://www.transfermarkt.it/nathan-cruce-corcy/profil/spieler/950213"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "AJ Auxerre",
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Tom Negrel",
+    "tmPlayerId": "866916",
+    "tmUrl": "https://www.transfermarkt.it/tom-negrel/profil/spieler/866916"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Jeunesse Canach",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Tao Sako",
+    "tmPlayerId": "855207",
+    "tmUrl": "https://www.transfermarkt.it/tao-sako/profil/spieler/855207"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "AS Monaco U21",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Romaric Etonde",
+    "tmPlayerId": "825441",
+    "tmUrl": "https://www.transfermarkt.it/romaric-etonde/profil/spieler/825441"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "25/08/2026",
+    "lastClub": "FC Koper",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "50 mila €",
+    "name": "Ilann Petrisot",
+    "tmPlayerId": "743531",
+    "tmUrl": "https://www.transfermarkt.it/ilann-petrisot/profil/spieler/743531"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "AJ Auxerre",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "50 mila €",
+    "name": "Nathan Buayi-Kiala",
+    "tmPlayerId": "743523",
+    "tmUrl": "https://www.transfermarkt.it/nathan-buayi-kiala/profil/spieler/743523"
+  },
+  {
+    "age": 23,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Al-Bidda SC",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "50 mila €",
+    "name": "José Capon",
+    "tmPlayerId": "620324",
+    "tmUrl": "https://www.transfermarkt.it/jose-capon/profil/spieler/620324"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Triestina Calcio 1918",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "25 mila €",
+    "name": "Jamaal Mullin",
+    "tmPlayerId": "1427613",
+    "tmUrl": "https://www.transfermarkt.it/jamaal-mullin/profil/spieler/1427613"
+  },
+  {
+    "age": 19,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Acireale Calcio",
+    "mainPosition": null,
+    "marketValueRaw": "25 mila €",
+    "name": "Theodoric Hebeck Tam",
+    "tmPlayerId": "1335745",
+    "tmUrl": "https://www.transfermarkt.it/theodoric-hebeck-tam/profil/spieler/1335745"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "CD Alcoyano",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "25 mila €",
+    "name": "Kalilou Camara",
+    "tmPlayerId": "1281064",
+    "tmUrl": "https://www.transfermarkt.it/kalilou-camara/profil/spieler/1281064"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "FC Sarnese 1926",
+    "mainPosition": "Esterno di sinistra",
+    "marketValueRaw": "25 mila €",
+    "name": "Ouassini Lfareh",
+    "tmPlayerId": "1165570",
+    "tmUrl": "https://www.transfermarkt.it/ouassini-lfareh/profil/spieler/1165570"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Stade-Lausanne-Ouchy",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "25 mila €",
+    "name": "Latta N'Dabrou",
+    "tmPlayerId": "948607",
+    "tmUrl": "https://www.transfermarkt.it/latta-ndabrou/profil/spieler/948607"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Penya Encarnada d'Andorra",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "10 mila €",
+    "name": "Donovan Tchamba",
+    "tmPlayerId": "1489341",
+    "tmUrl": "https://www.transfermarkt.it/donovan-tchamba/profil/spieler/1489341"
+  },
+  {
+    "age": 20,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Atlètic Club d'Escaldes",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "10 mila €",
+    "name": "Souleyman Talbi",
+    "tmPlayerId": "1322517",
+    "tmUrl": "https://www.transfermarkt.it/souleyman-talbi/profil/spieler/1322517"
+  },
+  {
+    "age": 21,
+    "freeAgentSince": "06/07/2026",
+    "lastClub": "Ittihad Tanger",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "10 mila €",
+    "name": "Adam Darazi",
+    "tmPlayerId": "1183709",
+    "tmUrl": "https://www.transfermarkt.it/adam-darazi/profil/spieler/1183709"
+  },
+  {
+    "age": 22,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Noah Erewan II",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "10 mila €",
+    "name": "Mohammed Bua Mbilia",
+    "tmPlayerId": "988277",
+    "tmUrl": "https://www.transfermarkt.it/mohammed-bua-mbilia/profil/spieler/988277"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "06/07/2026",
+    "lastClub": "CF Monterrey",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "3,50 mln €",
+    "name": "Anthony Martial",
+    "tmPlayerId": "182877",
+    "tmUrl": "https://www.transfermarkt.it/anthony-martial/profil/spieler/182877"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "OGC Nizza",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "2,50 mln €",
+    "name": "Tanguy Ndombélé",
+    "tmPlayerId": "450936",
+    "tmUrl": "https://www.transfermarkt.it/tanguy-ndombele/profil/spieler/450936"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Al-Kholood Club",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "1,00 mln €",
+    "name": "Kévin N'Doram",
+    "tmPlayerId": "342209",
+    "tmUrl": "https://www.transfermarkt.it/kevin-ndoram/profil/spieler/342209"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Stade Lavallois",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "800 mila €",
+    "name": "Thibaut Vargas",
+    "tmPlayerId": "627463",
+    "tmUrl": "https://www.transfermarkt.it/thibaut-vargas/profil/spieler/627463"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "AS Nancy-Lorraine",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "700 mila €",
+    "name": "Faitout Maouassa",
+    "tmPlayerId": "357072",
+    "tmUrl": "https://www.transfermarkt.it/faitout-maouassa/profil/spieler/357072"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/09/2026",
+    "lastClub": "Palermo FC",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "650 mila €",
+    "name": "Alexis Blin",
+    "tmPlayerId": "236041",
+    "tmUrl": "https://www.transfermarkt.it/alexis-blin/profil/spieler/236041"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "02/09/2026",
+    "lastClub": "Vancouver Whitecaps FC",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "600 mila €",
+    "name": "J.C. Ngando",
+    "tmPlayerId": "1089204",
+    "tmUrl": "https://www.transfermarkt.it/j-c-ngando/profil/spieler/1089204"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "RAAL La Louvière",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "500 mila €",
+    "name": "Owen Maës",
+    "tmPlayerId": "593286",
+    "tmUrl": "https://www.transfermarkt.it/owen-maes/profil/spieler/593286"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FK Spartak Subotica",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "500 mila €",
+    "name": "Yohan Bilingi",
+    "tmPlayerId": "522850",
+    "tmUrl": "https://www.transfermarkt.it/yohan-bilingi/profil/spieler/522850"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FCV Dender EH",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "500 mila €",
+    "name": "Bryan Goncalves",
+    "tmPlayerId": "340487",
+    "tmUrl": "https://www.transfermarkt.it/bryan-goncalves/profil/spieler/340487"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Magdeburgo",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "450 mila €",
+    "name": "Samuel Loric",
+    "tmPlayerId": "648886",
+    "tmUrl": "https://www.transfermarkt.it/samuel-loric/profil/spieler/648886"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Gaziantep FK",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "400 mila €",
+    "name": "Salem M'Bakata",
+    "tmPlayerId": "590926",
+    "tmUrl": "https://www.transfermarkt.it/salem-mbakata/profil/spieler/590926"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Pau FC",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "400 mila €",
+    "name": "Antonin Bobichon",
+    "tmPlayerId": "344575",
+    "tmUrl": "https://www.transfermarkt.it/antonin-bobichon/profil/spieler/344575"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "25/08/2026",
+    "lastClub": "FC Koper",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "350 mila €",
+    "name": "Omar El Manssouri",
+    "tmPlayerId": "891380",
+    "tmUrl": "https://www.transfermarkt.it/omar-el-manssouri/profil/spieler/891380"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "SC Bastia",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "350 mila €",
+    "name": "Dumè Guidi",
+    "tmPlayerId": "588645",
+    "tmUrl": "https://www.transfermarkt.it/dume-guidi/profil/spieler/588645"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "SC Aubagne Air Bel",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "300 mila €",
+    "name": "Billal El Kaddouri",
+    "tmPlayerId": "968594",
+    "tmUrl": "https://www.transfermarkt.it/billal-el-kaddouri/profil/spieler/968594"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "RAAL La Louvière",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "300 mila €",
+    "name": "Matthis Riou",
+    "tmPlayerId": "806043",
+    "tmUrl": "https://www.transfermarkt.it/matthis-riou/profil/spieler/806043"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "FC Annecy",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "300 mila €",
+    "name": "Hamjatou Soukouna",
+    "tmPlayerId": "804381",
+    "tmUrl": "https://www.transfermarkt.it/hamjatou-soukouna/profil/spieler/804381"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "08/09/2026",
+    "lastClub": "FK Oleksandriya",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "300 mila €",
+    "name": "Hussayn Touati",
+    "tmPlayerId": "618487",
+    "tmUrl": "https://www.transfermarkt.it/hussayn-touati/profil/spieler/618487"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "16/07/2026",
+    "lastClub": "Botev Plovdiv",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "300 mila €",
+    "name": "Enock Kwateng",
+    "tmPlayerId": "288241",
+    "tmUrl": "https://www.transfermarkt.it/enock-kwateng/profil/spieler/288241"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "27/07/2026",
+    "lastClub": "Digione FCO",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "250 mila €",
+    "name": "Fady Khatir",
+    "tmPlayerId": "811419",
+    "tmUrl": "https://www.transfermarkt.it/fady-khatir/profil/spieler/811419"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Birkirkara FC",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "250 mila €",
+    "name": "Jacques Bayo",
+    "tmPlayerId": "776061",
+    "tmUrl": "https://www.transfermarkt.it/jacques-bayo/profil/spieler/776061"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "04/09/2025",
+    "lastClub": "FC Aarau",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "250 mila €",
+    "name": "Sofian Bahloul",
+    "tmPlayerId": "578551",
+    "tmUrl": "https://www.transfermarkt.it/sofian-bahloul/profil/spieler/578551"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FK Qabala",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "250 mila €",
+    "name": "Sambou Sissoko",
+    "tmPlayerId": "522791",
+    "tmUrl": "https://www.transfermarkt.it/sambou-sissoko/profil/spieler/522791"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FCV Dender EH",
+    "mainPosition": "Portiere",
+    "marketValueRaw": "250 mila €",
+    "name": "Guillaume Dietsch",
+    "tmPlayerId": "463601",
+    "tmUrl": "https://www.transfermarkt.it/guillaume-dietsch/profil/spieler/463601"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Austria Vienna",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "250 mila €",
+    "name": "Hakim Guenouche",
+    "tmPlayerId": "395230",
+    "tmUrl": "https://www.transfermarkt.it/hakim-guenouche/profil/spieler/395230"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Arka Gdynia",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "250 mila €",
+    "name": "Aurélien Nguiamba",
+    "tmPlayerId": "344595",
+    "tmUrl": "https://www.transfermarkt.it/aurelien-nguiamba/profil/spieler/344595"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "AFC Unirea 04 Slobozia",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "225 mila €",
+    "name": "Rassambek Akhmatov",
+    "tmPlayerId": "605716",
+    "tmUrl": "https://www.transfermarkt.it/rassambek-akhmatov/profil/spieler/605716"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Kerala Blasters FC",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "200 mila €",
+    "name": "Kévin Yoke",
+    "tmPlayerId": "732097",
+    "tmUrl": "https://www.transfermarkt.it/kevin-yoke/profil/spieler/732097"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "02/02/2026",
+    "lastClub": "Ratchaburi FC",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "200 mila €",
+    "name": "Seydine N'Diaye",
+    "tmPlayerId": "604334",
+    "tmUrl": "https://www.transfermarkt.it/seydine-ndiaye/profil/spieler/604334"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Ferencvárosi TC",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "200 mila €",
+    "name": "Ismaïl Aaneba",
+    "tmPlayerId": "528178",
+    "tmUrl": "https://www.transfermarkt.it/ismail-aaneba/profil/spieler/528178"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Koper",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "200 mila €",
+    "name": "Abdoulaye Dabo",
+    "tmPlayerId": "463611",
+    "tmUrl": "https://www.transfermarkt.it/abdoulaye-dabo/profil/spieler/463611"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "11/03/2025",
+    "lastClub": "SC Sagamihara",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "200 mila €",
+    "name": "Robin Maulun",
+    "tmPlayerId": "250030",
+    "tmUrl": "https://www.transfermarkt.it/robin-maulun/profil/spieler/250030"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "1.FC Saarbrücken",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "175 mila €",
+    "name": "Amine Naïfi",
+    "tmPlayerId": "833372",
+    "tmUrl": "https://www.transfermarkt.it/amine-naifi/profil/spieler/833372"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Mondorf-Les-Bains",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "175 mila €",
+    "name": "Alexis Bourigeaud",
+    "tmPlayerId": "729485",
+    "tmUrl": "https://www.transfermarkt.it/alexis-bourigeaud/profil/spieler/729485"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Football Bourg-en-Bresse Péronnas 01",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "150 mila €",
+    "name": "Andy Pembélé",
+    "tmPlayerId": "798893",
+    "tmUrl": "https://www.transfermarkt.it/andy-pembele/profil/spieler/798893"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/01/2026",
+    "lastClub": "FK Auda",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "150 mila €",
+    "name": "Abdoulaye Coulibaly",
+    "tmPlayerId": "639758",
+    "tmUrl": "https://www.transfermarkt.it/abdoulaye-coulibaly/profil/spieler/639758"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "LB Châteauroux",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "150 mila €",
+    "name": "Gaoussou Traoré",
+    "tmPlayerId": "606450",
+    "tmUrl": "https://www.transfermarkt.it/gaoussou-traore/profil/spieler/606450"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "27/08/2026",
+    "lastClub": "K Lierse SK",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "150 mila €",
+    "name": "Mansour Sy",
+    "tmPlayerId": "524320",
+    "tmUrl": "https://www.transfermarkt.it/mansour-sy/profil/spieler/524320"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Quevilly - Rouen Métropole",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "150 mila €",
+    "name": "Namakoro Diallo",
+    "tmPlayerId": "391921",
+    "tmUrl": "https://www.transfermarkt.it/namakoro-diallo/profil/spieler/391921"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "Pau FC",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "150 mila €",
+    "name": "Mehdi Chahiri",
+    "tmPlayerId": "358509",
+    "tmUrl": "https://www.transfermarkt.it/mehdi-chahiri/profil/spieler/358509"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Villefranche-Beaujolais",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "150 mila €",
+    "name": "Nathan Dekoké",
+    "tmPlayerId": "250009",
+    "tmUrl": "https://www.transfermarkt.it/nathan-dekoke/profil/spieler/250009"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "07/04/2025",
+    "lastClub": "FC Sochaux-Montbéliard",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "150 mila €",
+    "name": "Roli Pereira de Sa",
+    "tmPlayerId": "243737",
+    "tmUrl": "https://www.transfermarkt.it/roli-pereira-de-sa/profil/spieler/243737"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "UN Käerjeng 97",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "125 mila €",
+    "name": "Yannis Bellali",
+    "tmPlayerId": "1146568",
+    "tmUrl": "https://www.transfermarkt.it/yannis-bellali/profil/spieler/1146568"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Swift Hesperange",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "125 mila €",
+    "name": "Mamadou Kaloga",
+    "tmPlayerId": "770644",
+    "tmUrl": "https://www.transfermarkt.it/mamadou-kaloga/profil/spieler/770644"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Hostert",
+    "mainPosition": "Esterno di sinistra",
+    "marketValueRaw": "125 mila €",
+    "name": "Mathieu Leroux",
+    "tmPlayerId": "737827",
+    "tmUrl": "https://www.transfermarkt.it/mathieu-leroux/profil/spieler/737827"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/03/2026",
+    "lastClub": "Tauranga City AFC",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Axel Acebo",
+    "tmPlayerId": "1381456",
+    "tmUrl": "https://www.transfermarkt.it/axel-acebo/profil/spieler/1381456"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Concarneau",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "100 mila €",
+    "name": "Amédé Kabongo",
+    "tmPlayerId": "1028615",
+    "tmUrl": "https://www.transfermarkt.it/amede-kabongo/profil/spieler/1028615"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Hostert",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "100 mila €",
+    "name": "El Hadji Diéme",
+    "tmPlayerId": "1000766",
+    "tmUrl": "https://www.transfermarkt.it/el-hadji-dieme/profil/spieler/1000766"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Swift Hesperange",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Mahamadou Cissé",
+    "tmPlayerId": "927049",
+    "tmUrl": "https://www.transfermarkt.it/mahamadou-cisse/profil/spieler/927049"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "CSM Olimpia Satu Mare",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Nestorly Lumbu",
+    "tmPlayerId": "921610",
+    "tmUrl": "https://www.transfermarkt.it/nestorly-lumbu/profil/spieler/921610"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Ordino",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Raymond Inwen",
+    "tmPlayerId": "917810",
+    "tmUrl": "https://www.transfermarkt.it/raymond-inwen/profil/spieler/917810"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "UE Santa Coloma",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Kylian Poumot",
+    "tmPlayerId": "855068",
+    "tmUrl": "https://www.transfermarkt.it/kylian-poumot/profil/spieler/855068"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "26/02/2026",
+    "lastClub": "Sacramento Republic FC",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Rayan Djédjé",
+    "tmPlayerId": "806792",
+    "tmUrl": "https://www.transfermarkt.it/rayan-djedje/profil/spieler/806792"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "UD Oliveirense",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Idrissa Dioh",
+    "tmPlayerId": "780146",
+    "tmUrl": "https://www.transfermarkt.it/idrissa-dioh/profil/spieler/780146"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "FC Lucerna",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "100 mila €",
+    "name": "Sofyan Chader",
+    "tmPlayerId": "748358",
+    "tmUrl": "https://www.transfermarkt.it/sofyan-chader/profil/spieler/748358"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Quevilly - Rouen Métropole",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Aeron Zinga",
+    "tmPlayerId": "748356",
+    "tmUrl": "https://www.transfermarkt.it/aeron-zinga/profil/spieler/748356"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Minyor Pernik",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "100 mila €",
+    "name": "Kévin Bemanga",
+    "tmPlayerId": "746589",
+    "tmUrl": "https://www.transfermarkt.it/kevin-bemanga/profil/spieler/746589"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Quevilly - Rouen Métropole",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "100 mila €",
+    "name": "Jason Tré",
+    "tmPlayerId": "693912",
+    "tmUrl": "https://www.transfermarkt.it/jason-tre/profil/spieler/693912"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Stade Nyonnais",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Thomas Perchaud",
+    "tmPlayerId": "583534",
+    "tmUrl": "https://www.transfermarkt.it/thomas-perchaud/profil/spieler/583534"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Zébra Élites",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "100 mila €",
+    "name": "Soudeysse Kari",
+    "tmPlayerId": "569365",
+    "tmUrl": "https://www.transfermarkt.it/soudeysse-kari/profil/spieler/569365"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "30/06/2026",
+    "lastClub": "Kaya FC-Iloilo",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "100 mila €",
+    "name": "Pathy Malumandsoko",
+    "tmPlayerId": "487194",
+    "tmUrl": "https://www.transfermarkt.it/pathy-malumandsoko/profil/spieler/487194"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Etoile Carouge FC",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "100 mila €",
+    "name": "Yassin Maouche",
+    "tmPlayerId": "369872",
+    "tmUrl": "https://www.transfermarkt.it/yassin-maouche/profil/spieler/369872"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Bala Town",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "75 mila €",
+    "name": "Nelson Digbeu",
+    "tmPlayerId": "1169013",
+    "tmUrl": "https://www.transfermarkt.it/nelson-digbeu/profil/spieler/1169013"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Mamer 32",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "75 mila €",
+    "name": "Axel Ezan",
+    "tmPlayerId": "1055986",
+    "tmUrl": "https://www.transfermarkt.it/axel-ezan/profil/spieler/1055986"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/01/2026",
+    "lastClub": "Tainan City TSG",
+    "mainPosition": "Trequartista",
+    "marketValueRaw": "75 mila €",
+    "name": "Mohamed Sakkouh",
+    "tmPlayerId": "962633",
+    "tmUrl": "https://www.transfermarkt.it/mohamed-sakkouh/profil/spieler/962633"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "05/08/2026",
+    "lastClub": "FC Supra du Québec",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "75 mila €",
+    "name": "Bakary Kaboré",
+    "tmPlayerId": "798768",
+    "tmUrl": "https://www.transfermarkt.it/bakary-kabore/profil/spieler/798768"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Kabaniakos",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "75 mila €",
+    "name": "Nasser Aboudou",
+    "tmPlayerId": "531356",
+    "tmUrl": "https://www.transfermarkt.it/nasser-aboudou/profil/spieler/531356"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "26/09/2025",
+    "lastClub": "FC Villefranche-Beaujolais",
+    "mainPosition": "Esterno di sinistra",
+    "marketValueRaw": "75 mila €",
+    "name": "Jordan Sebban",
+    "tmPlayerId": "495486",
+    "tmUrl": "https://www.transfermarkt.it/jordan-sebban/profil/spieler/495486"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "28/01/2026",
+    "lastClub": "LB Châteauroux",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "75 mila €",
+    "name": "Roger Tamba M'Pinda",
+    "tmPlayerId": "427502",
+    "tmUrl": "https://www.transfermarkt.it/roger-tamba-mpinda/profil/spieler/427502"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "09/04/2026",
+    "lastClub": "FK Zalgiris Vilnius",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "75 mila €",
+    "name": "Thomas Basila",
+    "tmPlayerId": "344592",
+    "tmUrl": "https://www.transfermarkt.it/thomas-basila/profil/spieler/344592"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "FC Pas de la Casa",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Redouane Sarakh",
+    "tmPlayerId": "1372206",
+    "tmUrl": "https://www.transfermarkt.it/redouane-sarakh/profil/spieler/1372206"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "FC Pas de la Casa",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Angel Selva",
+    "tmPlayerId": "1176525",
+    "tmUrl": "https://www.transfermarkt.it/angel-selva/profil/spieler/1176525"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Hoang Anh Gia Lai FC",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "50 mila €",
+    "name": "Ryan Ha",
+    "tmPlayerId": "974909",
+    "tmUrl": "https://www.transfermarkt.it/ryan-ha/profil/spieler/974909"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/01/2026",
+    "lastClub": "FC Ordino",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "50 mila €",
+    "name": "Riad Ouedraogo",
+    "tmPlayerId": "952002",
+    "tmUrl": "https://www.transfermarkt.it/riad-ouedraogo/profil/spieler/952002"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Jeunesse Canach",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "50 mila €",
+    "name": "Brian Rouffignac",
+    "tmPlayerId": "807823",
+    "tmUrl": "https://www.transfermarkt.it/brian-rouffignac/profil/spieler/807823"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Stallion Laguna FC",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "50 mila €",
+    "name": "Issa Gakou",
+    "tmPlayerId": "749849",
+    "tmUrl": "https://www.transfermarkt.it/issa-gakou/profil/spieler/749849"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "Hassania d'Agadir",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "50 mila €",
+    "name": "Brahim Dahmoun",
+    "tmPlayerId": "721408",
+    "tmUrl": "https://www.transfermarkt.it/brahim-dahmoun/profil/spieler/721408"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Metaloglobus Bucharest",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Martins Toutou",
+    "tmPlayerId": "651080",
+    "tmUrl": "https://www.transfermarkt.it/martins-toutou/profil/spieler/651080"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Concarneau",
+    "mainPosition": "Portiere",
+    "marketValueRaw": "50 mila €",
+    "name": "Rudy Boulais",
+    "tmPlayerId": "612702",
+    "tmUrl": "https://www.transfermarkt.it/rudy-boulais/profil/spieler/612702"
+  },
+  {
+    "age": 27,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "US Città di Pontedera",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Sanasi Sy",
+    "tmPlayerId": "606451",
+    "tmUrl": "https://www.transfermarkt.it/sanasi-sy/profil/spieler/606451"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "28/07/2025",
+    "lastClub": "FC Ararat Erewan",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Marvin Evouna",
+    "tmPlayerId": "593301",
+    "tmUrl": "https://www.transfermarkt.it/marvin-evouna/profil/spieler/593301"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "Cherno More Varna",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Derick Osei",
+    "tmPlayerId": "471243",
+    "tmUrl": "https://www.transfermarkt.it/derick-osei/profil/spieler/471243"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2025",
+    "lastClub": "FC Stade-Lausanne-Ouchy",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "50 mila €",
+    "name": "Mickaël Nanizayamo",
+    "tmPlayerId": "463744",
+    "tmUrl": "https://www.transfermarkt.it/mickael-nanizayamo/profil/spieler/463744"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Hamrun Spartans",
+    "mainPosition": "Terzino sinistro",
+    "marketValueRaw": "50 mila €",
+    "name": "Ivan Inzoudine",
+    "tmPlayerId": "344870",
+    "tmUrl": "https://www.transfermarkt.it/ivan-inzoudine/profil/spieler/344870"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Paris 13 Atletico",
+    "mainPosition": "Ala sinistra",
+    "marketValueRaw": "25 mila €",
+    "name": "Soumaila Sangaré",
+    "tmPlayerId": "1387319",
+    "tmUrl": "https://www.transfermarkt.it/soumaila-sangare/profil/spieler/1387319"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Glacis United",
+    "mainPosition": "Centrocampista",
+    "marketValueRaw": "25 mila €",
+    "name": "Vincent Folléa",
+    "tmPlayerId": "1185551",
+    "tmUrl": "https://www.transfermarkt.it/vincent-follea/profil/spieler/1185551"
+  },
+  {
+    "age": 30,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "KS Lushnja",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "25 mila €",
+    "name": "Fousseny Kamissoko",
+    "tmPlayerId": "1057898",
+    "tmUrl": "https://www.transfermarkt.it/fousseny-kamissoko/profil/spieler/1057898"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "AS Soliman",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "25 mila €",
+    "name": "Mouhamadou Konaté",
+    "tmPlayerId": "945354",
+    "tmUrl": "https://www.transfermarkt.it/mouhamadou-konate/profil/spieler/945354"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Club Athlétique Bizertin",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "25 mila €",
+    "name": "Firas Ben Othman",
+    "tmPlayerId": "918495",
+    "tmUrl": "https://www.transfermarkt.it/firas-ben-othman/profil/spieler/918495"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Tainan City TSG",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "25 mila €",
+    "name": "Diocounda Gory",
+    "tmPlayerId": "887669",
+    "tmUrl": "https://www.transfermarkt.it/diocounda-gory/profil/spieler/887669"
+  },
+  {
+    "age": 29,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Dynamo Ceske Budejovice",
+    "mainPosition": "Difensore centrale",
+    "marketValueRaw": "25 mila €",
+    "name": "Dollard Wandji",
+    "tmPlayerId": "804474",
+    "tmUrl": "https://www.transfermarkt.it/dollard-wandji/profil/spieler/804474"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "ASD Heraclea Calcio",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "25 mila €",
+    "name": "Brad Pirioua",
+    "tmPlayerId": "736969",
+    "tmUrl": "https://www.transfermarkt.it/brad-pirioua/profil/spieler/736969"
+  },
+  {
+    "age": 25,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "CSM Olimpia Satu Mare",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "25 mila €",
+    "name": "Kévin Mbala",
+    "tmPlayerId": "539062",
+    "tmUrl": "https://www.transfermarkt.it/kevin-mbala/profil/spieler/539062"
+  },
+  {
+    "age": 28,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "FC Manchester 62",
+    "mainPosition": "Mediano",
+    "marketValueRaw": "10 mila €",
+    "name": "Simon-Antoine Aoudou",
+    "tmPlayerId": "1071256",
+    "tmUrl": "https://www.transfermarkt.it/simon-antoine-aoudou/profil/spieler/1071256"
+  },
+  {
+    "age": 26,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Banik Lehota pod Vtacnikom",
+    "mainPosition": "Ala destra",
+    "marketValueRaw": "10 mila €",
+    "name": "Daouda Ouattara",
+    "tmPlayerId": "1042920",
+    "tmUrl": "https://www.transfermarkt.it/daouda-ouattara/profil/spieler/1042920"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Savannakhet Zelos",
+    "mainPosition": "Punta centrale",
+    "marketValueRaw": "10 mila €",
+    "name": "Jilo Niamké",
+    "tmPlayerId": "967275",
+    "tmUrl": "https://www.transfermarkt.it/jilo-niamke/profil/spieler/967275"
+  },
+  {
+    "age": 24,
+    "freeAgentSince": "01/07/2026",
+    "lastClub": "Ischia Isola Verde",
+    "mainPosition": "Terzino destro",
+    "marketValueRaw": "10 mila €",
+    "name": "César Kaziewicz",
+    "tmPlayerId": "606577",
+    "tmUrl": "https://www.transfermarkt.it/cesar-kaziewicz/profil/spieler/606577"
+  }
+]
+

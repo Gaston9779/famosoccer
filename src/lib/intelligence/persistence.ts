@@ -31,10 +31,10 @@ async function persistPlayer(
   season: string | null,
   now: Date,
 ) {
-  const scope: OpportunitySportingScope = player.pools?.some(
-    (pool) => pool.poolKey === "ITA",
-  )
+  const scope: OpportunitySportingScope = player.pools?.some((pool) => pool.poolKey === "ITA")
     ? "ITA"
+    : player.pools?.some((pool) => pool.poolKey === "FRA")
+    ? "FRA"
     : "UZ1";
   const score = calculatePlayerOpportunity(player, season, now, scope);
   return db.$transaction(async (tx) => {

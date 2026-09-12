@@ -37,7 +37,7 @@ export function PlayerSportingCard({
   scope = "UZ1",
 }: {
   performance: SportingPerformance | null;
-  scope?: "UZ1" | "ITA";
+  scope?: "UZ1" | "ITA" | "FRA";
 }) {
   const involvement = playingTimePercent(performance);
   const involvementWidth = involvement == null || !Number.isFinite(involvement) ? 0 : Math.min(100, Math.max(0, involvement));
@@ -56,7 +56,7 @@ export function PlayerSportingCard({
 
   return <section className="player-sporting-card" aria-labelledby="sporting-title">
     <header className="player-sporting-header">
-      <div><h2 id="sporting-title">Sporting</h2><p>{performance ? (scope === "ITA" ? `${performance.season} · ${performance.competitionName ?? performance.competitionKey}` : "2026 · Uzbekistan Super League") : null}</p></div>
+      <div><h2 id="sporting-title">Sporting</h2><p>{performance ? (scope === "UZ1" ? "2026 · Uzbekistan Super League" : `${performance.season} · ${performance.competitionName ?? performance.competitionKey}`) : null}</p></div>
       <span className="player-sporting-current">Current season</span>
     </header>
     <div className="player-sporting-primary">

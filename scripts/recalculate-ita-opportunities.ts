@@ -11,11 +11,19 @@ function readLimit(argv: string[]): number | null {
   return value;
 }
 
+function readPool(argv: string[]): "ITA" | "FRA" {
+  const index = argv.indexOf("--pool");
+  const value = index === -1 ? "ITA" : argv[index + 1];
+  if (value !== "ITA" && value !== "FRA") throw new Error("--pool must be ITA or FRA");
+  return value;
+}
+
 async function main() {
   const limit = readLimit(process.argv.slice(2));
+  const pool = readPool(process.argv.slice(2));
   const allPlayers = await db.player.findMany({
     where: {
-      pools: { some: { poolKey: "ITA" } },
+      pools: { some: { poolKey: pool } },
       opportunityHistory: { none: { isCurrent: true } },
     },
     select: { id: true, name: true, performances: true },
@@ -30,7 +38,7 @@ async function main() {
   for (const [index, player] of players.entries()) {
     try {
       const result = await calculateAndPersistPlayerOpportunity(player.id);
-      const performance = selectCurrentPerformance(player.performances, "ITA");
+      const performance = selectCurrentPerformance(player.performances, pool);
       const confidence = Math.round(result.confidence * 100);
       console.log(
         `[${index + 1}/${players.length}] ${player.name}\n` +
@@ -53,16 +61,17 @@ async function main() {
 
   const [currentRows, duplicateGroups] = await Promise.all([
     db.playerOpportunityHistory.count({
-      where: { isCurrent: true, player: { pools: { some: { poolKey: "ITA" } } } },
+      where: { isCurrent: true, player: { pools: { some: { poolKey: pool } } } },
     }),
     db.playerOpportunityHistory.groupBy({
       by: ["playerId"],
-      where: { isCurrent: true, player: { pools: { some: { poolKey: "ITA" } } } },
+      where: { isCurrent: true, player: { pools: { some: { poolKey: pool } } } },
       _count: { _all: true },
       having: { id: { _count: { gt: 1 } } },
     }),
   ]);
   console.log(JSON.stringify({
+    pool,
     eligibleWithoutCurrentOpportunity: allPlayers.length,
     processed: players.length,
     scored,
