@@ -83,7 +83,7 @@ export function normalizeRepresentation(agentRaw: string | null | undefined): {
   const value = agentRaw.trim();
   const v = value.toLowerCase().replace(/\s+/g, " ");
   if (
-    /^(no agent|without agent|without club\/agent|ohne berater|kein berater|senza agente|sin agente|sans agent)$/.test(
+    /^(no agent|without agent|without club\/agent|ohne berater|kein berater|senza agente|senza procuratore|sin agente|sans agent)$/.test(
       v,
     )
   )

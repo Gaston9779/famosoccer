@@ -2,6 +2,7 @@ import "dotenv/config";
 import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { db } from "../src/lib/db";
+import { normalizeRepresentation } from "../src/lib/normalization";
 
 const args = process.argv.slice(2);
 const inputAt = args.indexOf("--input");
@@ -82,6 +83,9 @@ async function main() {
       } else if (context?.name) { const matched = await db.club.findFirst({where:{name:{equals:context.name,mode:"insensitive"},competition:{is:{country:context.country ?? undefined,name:context.competitionName ?? undefined}}}}); if (matched) {clubId=matched.id;stats.clubsMatched++;} else stats.clubsUnresolved++; }
       const existing = await db.player.findUnique({where:{tmPlayerId:item.tmPlayerId}});
       const row = nonNull({tmUrl:item.tmUrl,name:item.name,firstName:item.firstName,lastName:item.lastName,birthDate:date(item.birthDate),age:item.age,birthPlace:item.birthPlace,nationalities:item.nationalities,portraitUrl:item.portraitUrl,heightCm:item.heightCm,preferredFoot:item.preferredFoot,mainPosition:item.mainPosition,positionGroup:item.positionGroup,secondaryPositions:item.secondaryPositions,shirtNumber:item.shirtNumber,joinedDate:date(item.joinedDate),contractExpires:date(item.contractExpires),contractOption:item.contractOption,marketValueEur:item.marketValueEur,marketValueRaw:item.marketValueRaw,agentRaw:item.agentRaw,agencyName:item.agencyName,representationStatus:item.representationStatus,careerStatus:item.careerStatus,confirmedFreeAgent:item.confirmedFreeAgent,profileLastSyncedAt:date(item.profileLastSyncedAt),performanceLastSyncedAt:date(item.performanceLastSyncedAt),clubId});
+      // Re-normalize source text: older enriched JSON can contain stale agency classifications.
+      const agentText = item.agentRaw?.trim() || item.agencyName?.trim();
+      if (agentText) Object.assign(row, normalizeRepresentation(agentText));
       const player = await db.player.upsert({where:{tmPlayerId:item.tmPlayerId},create:{...row,tmPlayerId:item.tmPlayerId,tmUrl:item.tmUrl,name:item.name},update:row}); stats[existing?"playersUpdated":"playersInserted"]++; playerByTemp.set(item.id,player.id);
       const membership = await db.playerPool.upsert({where:{playerId_poolKey:{playerId:player.id,poolKey}},create:{playerId:player.id,poolKey},update:{}}); if (membership.createdAt.getTime() >= Date.now()-10_000) stats.memberships++;
     } catch (error) { stats.errors.push(`${item.tmPlayerId}: ${error instanceof Error ? error.message : String(error)}`); }

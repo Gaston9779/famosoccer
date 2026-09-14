@@ -16,7 +16,8 @@ import {
 import { parseListings } from "../src/lib/transfermarkt/parsers/listings";
 import { scoringInputs, shouldFetchPerformance } from "../src/lib/scoring";
 import { RateLimiter } from "../src/lib/transfermarkt/rateLimiter";
-import { scorePlayingTimeOpportunity } from "../src/lib/scoring/playerOpportunity";
+import { scorePlayingTimeOpportunity, scoreRepresentationOpportunity } from "../src/lib/scoring/playerOpportunity";
+import { formatRepresentation } from "../src/lib/presentation";
 import { numericRangeIncludes } from "../src/lib/player-filters";
 test("empty numeric ranges keep players with unknown optional values visible", () => {
   assert.equal(numericRangeIncludes(null, "", ""), true);
@@ -81,6 +82,14 @@ test("representation absent vs unknown vs explicit agency", () => {
     normalizeRepresentation("Example Agency").agencyName,
     "Example Agency",
   );
+});
+test("Italian no-agent labels have canonical representation, display and score", () => {
+  for (const raw of ["Senza procuratore", " SENZA   PROCURATORE ", "Senza agente"]) {
+    const result = normalizeRepresentation(raw);
+    assert.deepEqual(result, { representationStatus: "NO_AGENT", agencyName: null });
+    assert.equal(scoreRepresentationOpportunity(result.representationStatus).score, 30);
+    assert.equal(formatRepresentation(result.representationStatus, result.agencyName), "No agent");
+  }
 });
 test("conservative dates and EUR values", () => {
   assert.equal(parseDate("Feb 30, 2026"), null);
