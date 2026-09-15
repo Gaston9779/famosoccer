@@ -2,12 +2,14 @@ import { z } from "zod";
 import { ROLES } from "../scoring/config";
 import { EVENT_TYPES } from "./events";
 import { isSameOrigin } from "../http-origin";
+import { CLUB_COMPETITIONS } from "../club-competitions";
 export const idSchema = z.string().min(1).max(128);
 const number = (max: number) => z.coerce.number().finite().min(0).max(max);
 const page = {
   limit: z.coerce.number().int().min(1).max(200).default(50),
   offset: z.coerce.number().int().min(0).max(100000).default(0),
 };
+const competition = z.enum(Object.keys(CLUB_COMPETITIONS) as ["UZ1", "IT1", "IT2"]).optional();
 export const playerFilters = z
   .object({
     minScore: number(100).optional(),
@@ -27,6 +29,7 @@ export const playerFilters = z
         "contract_asc",
       ])
       .default("score_desc"),
+    competition,
     ...page,
   })
   .strict();
@@ -35,6 +38,7 @@ export const clubFilters = z
     role: z.enum(ROLES).optional(),
     minScore: number(100).optional(),
     club: idSchema.optional(),
+    competition,
     ...page,
   })
   .strict();
@@ -47,6 +51,7 @@ export const matchFilters = z
     minScore: number(100).optional(),
     limit: page.limit,
     includeCurrentClub: bool.optional(),
+    competition,
   })
   .strict();
 export const eventFilters = z

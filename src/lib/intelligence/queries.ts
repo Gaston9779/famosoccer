@@ -6,6 +6,84 @@ import { playerAge } from "../scoring/types";
 import { calculatePlayerClubMatch } from "../scoring/playerClubMatch";
 import type { ClubNeed } from "../scoring/clubNeed";
 import type { Representation } from "../transfermarkt/types";
+import {
+  DEFAULT_CLUB_COMPETITION,
+  clubCompetitionWhere,
+  type ClubCompetitionId,
+} from "../club-competitions";
+
+export type IntelligenceViewOptions = {
+  targetCompetition?: ClubCompetitionId;
+  candidates?:
+    | { kind: "competition"; competition: ClubCompetitionId }
+    // Every eligible scouted player already in FamoSoccer (ITA/FRA pools, UZ1,
+    // IT1, IT2, ...), not just players whose current club sits in the target
+    // competition. Recruitment candidates and the target club's own squad are
+    // deliberately different collections — see targetRostersForClubs below.
+    | { kind: "all" };
+};
+
+const competitionPlayersWhere = (competition: ClubCompetitionId) => ({
+  club: clubCompetitionWhere(competition),
+});
+
+/**
+ * Recruitment candidates default to every scouted player for Italian target
+ * competitions (IT1/IT2): those clubs recruit from the whole scouted
+ * population (ITA/FRA pools, other Italian clubs, etc.), not only players
+ * already sitting at a club in the same competition. UZ1 keeps its original,
+ * competition-scoped default unchanged.
+ */
+function defaultCandidatesFor(targetCompetition: ClubCompetitionId) {
+  return targetCompetition === "UZ1"
+    ? { kind: "competition" as const, competition: targetCompetition }
+    : { kind: "all" as const };
+}
+
+export function intelligenceViewOptions(
+  options: IntelligenceViewOptions = {},
+) {
+  const targetCompetition = options.targetCompetition ?? DEFAULT_CLUB_COMPETITION;
+  return {
+    targetCompetition,
+    candidates: options.candidates ?? defaultCandidatesFor(targetCompetition),
+  };
+}
+
+export function intelligenceQueryScopes(options: IntelligenceViewOptions = {}) {
+  const scope = intelligenceViewOptions(options);
+  return {
+    ...scope,
+    targetClubWhere: clubCompetitionWhere(scope.targetCompetition),
+    candidatePlayerWhere:
+      scope.candidates.kind === "all"
+        ? {}
+        : competitionPlayersWhere(scope.candidates.competition),
+    clubNeedsWhere: {
+      isCurrent: true,
+      club: clubCompetitionWhere(scope.targetCompetition),
+    },
+  };
+}
+
+/** Shared club-list scope; the Clubs page can keep its UZ1 default for now. */
+export function clubsQueryForCompetition(
+  competition: ClubCompetitionId = DEFAULT_CLUB_COMPETITION,
+) {
+  return { where: clubCompetitionWhere(competition) };
+}
+
+export function targetRostersForClubs<
+  T extends { id: string },
+  P extends { clubId: string | null },
+>(clubs: readonly T[], targetSquadPlayers: readonly P[]) {
+  return new Map(
+    clubs.map((club) => [
+      club.id,
+      targetSquadPlayers.filter((player) => player.clubId === club.id),
+    ]),
+  );
+}
 function parseOpportunityReasons(value: string) {
   const parsed: unknown = JSON.parse(value);
   if (Array.isArray(parsed)) return { reasons: parsed as string[], rawOpportunity: null, adjustedOpportunity: null, knownScoreSum: null, knownMaxScoreSum: null };
@@ -21,12 +99,13 @@ function parseOpportunityReasons(value: string) {
   }
   return { reasons: [], rawOpportunity: null, adjustedOpportunity: null, knownScoreSum: null, knownMaxScoreSum: null };
 }
-export async function loadIntelligenceView(currentUz1Only = false) {
+export async function loadIntelligenceView(options: IntelligenceViewOptions = {}) {
+  const scope = intelligenceQueryScopes(options);
   // These independent read-only queries do not require a shared transaction snapshot.
   // Run them concurrently so a long Neon read cannot expire Prisma's transaction timeout.
-  const [players, clubs, opportunities, needs] = await Promise.all([
+  const [players, targetSquadPlayers, clubs, opportunities, needs] = await Promise.all([
     db.player.findMany({
-      ...(currentUz1Only ? { where: { club: { competition: { tmCompetitionId: "UZ1" } } } } : {}),
+      where: scope.candidatePlayerWhere,
       select: {
         id: true,
         tmPlayerId: true,
@@ -42,43 +121,60 @@ export async function loadIntelligenceView(currentUz1Only = false) {
         profileLastSyncedAt: true,
         performanceLastSyncedAt: true,
         confirmedFreeAgent: true,
-        performances: {
-          select: {
-            season: true,
-            competitionCode: true,
-            competitionKey: true,
-            minutesPlayedPercent: true,
-            minutesPlayed: true,
-            possibleGames: true,
-            sourceUpdatedAt: true,
-          },
-        },
+        // No `performances` here: recruitment matching (calculatePlayerClubMatch)
+        // and this view's callers never read it, and pulling every candidate's
+        // full performance history (thousands of rows) on every club-page render
+        // was the dominant cost once candidates widened beyond one competition.
+      },
+      orderBy: { id: "asc" },
+    }),
+    db.player.findMany({
+      where: competitionPlayersWhere(scope.targetCompetition),
+      select: {
+        id: true,
+        tmPlayerId: true,
+        name: true,
+        clubId: true,
+        mainPosition: true,
+        secondaryPositions: true,
+        birthDate: true,
+        age: true,
+        contractExpires: true,
+        representationStatus: true,
+        marketValueEur: true,
+        profileLastSyncedAt: true,
+        performanceLastSyncedAt: true,
+        confirmedFreeAgent: true,
+        // No `performances` here: recruitment matching (calculatePlayerClubMatch)
+        // and this view's callers never read it, and pulling every candidate's
+        // full performance history (thousands of rows) on every club-page render
+        // was the dominant cost once candidates widened beyond one competition.
       },
       orderBy: { id: "asc" },
     }),
     db.club.findMany({
-      where: { competition: { tmCompetitionId: "UZ1" } },
+      where: scope.targetClubWhere,
       select: { id: true, name: true, tmClubId: true, lastSyncedAt: true },
       orderBy: { id: "asc" },
     }),
     db.playerOpportunityHistory.findMany({
       where: {
         isCurrent: true,
-        ...(currentUz1Only
-          ? { player: { club: { competition: { tmCompetitionId: "UZ1" } } } }
-          : {}),
+        player: scope.candidatePlayerWhere,
       },
       orderBy: [{ total: "desc" }, { playerId: "asc" }],
     }),
     db.clubNeedHistory.findMany({
-      where: { isCurrent: true },
+      where: scope.clubNeedsWhere,
       orderBy: [{ total: "desc" }, { clubId: "asc" }, { role: "asc" }],
     }),
   ]);
   const playerMap = new Map(players.map((p) => [p.id, p]));
   const clubMap = new Map(clubs.map((c) => [c.id, c]));
   return {
+    targetCompetition: scope.targetCompetition,
     players,
+    targetSquadPlayers,
     clubs,
     opportunities: opportunities.flatMap((row) => {
       const p = playerMap.get(row.playerId);
@@ -225,12 +321,7 @@ export function topMatches(
       (!filters.clubId || n.clubId === filters.clubId) &&
       (!filters.role || n.role === filters.role),
   );
-  const rosters = new Map(
-    view.clubs.map((c) => [
-      c.id,
-      view.players.filter((p) => p.clubId === c.id),
-    ]),
-  );
+  const rosters = targetRostersForClubs(view.clubs, view.targetSquadPlayers);
   for (const player of view.players) {
     if (filters.playerId && player.id !== filters.playerId) continue;
     const opportunity = scores.get(player.id);
@@ -311,7 +402,7 @@ export async function listEvents(
 }
 export async function dashboardSummary() {
   const [view, latestEvents] = await Promise.all([
-    loadIntelligenceView(true),
+    loadIntelligenceView(),
     listEvents({ limit: 10 }),
   ]);
   const now = new Date();

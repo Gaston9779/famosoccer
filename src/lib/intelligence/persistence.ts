@@ -9,25 +9,40 @@ import { normalizeRole } from "../scoring/roles";
 import { scoringConfig, type KnownRole } from "../scoring/config";
 import { generateSnapshotEvents, scoreChangeEvent } from "./events";
 import type { IntelligencePlayer } from "../scoring/types";
-export async function loadScoringData(currentUz1Only = false) {
+import {
+  DEFAULT_CLUB_COMPETITION,
+  type ClubCompetitionId,
+} from "../club-competitions";
+
+export async function loadScoringData(
+  targetCompetition: ClubCompetitionId = DEFAULT_CLUB_COMPETITION,
+  currentCompetitionOnly = false,
+) {
   const [players, clubs, competition] = await Promise.all([
     db.player.findMany({
-      ...(currentUz1Only
-        ? { where: { club: { competition: { tmCompetitionId: "UZ1" } } } }
+      ...(currentCompetitionOnly
+        ? { where: { club: { competition: { tmCompetitionId: targetCompetition } } } }
         : {}),
-      include: { performances: true, pools: { select: { poolKey: true } } },
+      include: {
+        performances: true,
+        pools: { select: { poolKey: true } },
+        club: { include: { competition: { select: { tmCompetitionId: true } } } },
+      },
       orderBy: { id: "asc" },
     }),
     db.club.findMany({
-      where: { competition: { tmCompetitionId: "UZ1" } },
+      where: { competition: { tmCompetitionId: targetCompetition } },
       orderBy: { id: "asc" },
     }),
-    db.competition.findUnique({ where: { tmCompetitionId: "UZ1" } }),
+    db.competition.findUnique({ where: { tmCompetitionId: targetCompetition } }),
   ]);
   return { players, clubs, season: competition?.season ?? null };
 }
 async function persistPlayer(
-  player: IntelligencePlayer & { pools?: { poolKey: string }[] },
+  player: IntelligencePlayer & {
+    pools?: { poolKey: string }[];
+    club?: { competition?: { tmCompetitionId: string } | null } | null;
+  },
   season: string | null,
   now: Date,
 ) {
@@ -35,7 +50,11 @@ async function persistPlayer(
     ? "ITA"
     : player.pools?.some((pool) => pool.poolKey === "FRA")
     ? "FRA"
-    : "UZ1";
+    : player.club?.competition?.tmCompetitionId === "IT1"
+      ? "IT1"
+      : player.club?.competition?.tmCompetitionId === "IT2"
+        ? "IT2"
+        : "UZ1";
   const score = calculatePlayerOpportunity(player, season, now, scope);
   return db.$transaction(async (tx) => {
     const previous = await tx.playerOpportunityHistory.findFirst({
@@ -89,13 +108,18 @@ export async function calculateAndPersistPlayerOpportunity(
 ) {
   const player = await db.player.findUniqueOrThrow({
     where: { id: playerId },
-    include: { performances: true, pools: { select: { poolKey: true } } },
-  });
-  const competition = await db.competition.findUnique({
-    where: { tmCompetitionId: "UZ1" },
+    include: {
+      performances: true,
+      pools: { select: { poolKey: true } },
+      club: { include: { competition: { select: { tmCompetitionId: true, season: true } } } },
+    },
   });
   await generateSnapshotEvents(playerId);
-  return persistPlayer(player, competition?.season ?? null, now);
+  return persistPlayer(
+    player,
+    player.club?.competition?.season ?? null,
+    now,
+  );
 }
 export async function recalculateAllPlayerOpportunities(
   now = new Date(),
@@ -104,7 +128,7 @@ export async function recalculateAllPlayerOpportunities(
   concurrency = 1,
   playerIds?: ReadonlySet<string>,
 ) {
-  const data = await loadScoringData(currentUz1Only);
+  const data = await loadScoringData(DEFAULT_CLUB_COMPETITION, currentUz1Only);
   const targetPlayers = playerIds
     ? data.players.filter((player) => playerIds.has(player.id))
     : data.players;
@@ -124,8 +148,17 @@ export async function recalculateAllPlayerOpportunities(
   await Promise.all(workers);
   return results;
 }
-export async function recalculateAllClubNeeds(now = new Date()) {
-  const data = await loadScoringData();
+export async function recalculateAllClubNeeds(
+  targetCompetition: ClubCompetitionId | Date = DEFAULT_CLUB_COMPETITION,
+  now = new Date(),
+) {
+  // Retain the legacy `recalculateAllClubNeeds(now)` call shape while callers
+  // migrate to the explicit competition argument.
+  const competition = targetCompetition instanceof Date
+    ? DEFAULT_CLUB_COMPETITION
+    : targetCompetition;
+  const calculatedAt = targetCompetition instanceof Date ? targetCompetition : now;
+  const data = await loadScoringData(competition);
   const results = [];
   for (const club of data.clubs)
     for (const role of Object.keys(scoringConfig.idealDepth) as KnownRole[]) {
@@ -133,7 +166,7 @@ export async function recalculateAllClubNeeds(now = new Date()) {
         club.id,
         role,
         data.players,
-        now,
+        calculatedAt,
         club.lastSyncedAt,
       );
       const composition = data.players
@@ -156,7 +189,7 @@ export async function recalculateAllClubNeeds(now = new Date()) {
         const daily =
           scoringConfig.dailyNeedSnapshot &&
           previous?.calculatedAt.toISOString().slice(0, 10) !==
-            now.toISOString().slice(0, 10);
+            calculatedAt.toISOString().slice(0, 10);
         if (
           previous &&
           Math.abs(previous.total - score.total) <
@@ -178,7 +211,7 @@ export async function recalculateAllClubNeeds(now = new Date()) {
             reasonsJson: JSON.stringify(reasons),
             warningsJson: JSON.stringify(warnings),
             algorithmVersion: scoringConfig.algorithmVersion,
-            calculatedAt: now,
+            calculatedAt,
           },
         });
         // First observations and unassessed -> assessed transitions are not score-change claims.
@@ -206,9 +239,12 @@ export async function recalculateAllClubNeeds(now = new Date()) {
     }
   return results;
 }
-export async function recalculateAllScores(now = new Date()) {
+export async function recalculateAllScores(
+  now = new Date(),
+  targetCompetition: ClubCompetitionId = DEFAULT_CLUB_COMPETITION,
+) {
   const players = await recalculateAllPlayerOpportunities(now);
-  const clubs = await recalculateAllClubNeeds(now);
+  const clubs = await recalculateAllClubNeeds(targetCompetition, now);
   return {
     calculatedAt: now,
     players,

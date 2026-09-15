@@ -3,10 +3,14 @@ import { endpoints, playerUrl, tmapiPerformanceUrl } from "./endpoints";
 import { parseListings } from "./parsers/listings";
 import { parseProfile } from "./parsers/profile";
 import { parsePerformance } from "./parsers/performance";
+import {
+  DEFAULT_CLUB_COMPETITION,
+  type ClubCompetitionId,
+} from "../club-competitions";
 export class TransfermarktProvider {
   constructor(public client: TransfermarktClient) {}
-  async teams() {
-    return parseListings(await this.client.request(endpoints.teams));
+  async teams(competitionId: ClubCompetitionId = DEFAULT_CLUB_COMPETITION) {
+    return parseListings(await this.client.request(endpoints.teams(competitionId)));
   }
   async players(id: string) {
     return parseListings(await this.client.request(endpoints.players(id)));

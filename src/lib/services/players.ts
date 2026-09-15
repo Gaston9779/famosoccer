@@ -28,23 +28,33 @@ export const emptyCounts = (): Counts => ({
   performanceRowsUpdated: 0,
 });
 
-export type PlayerScope = "UZBEKISTAN" | "ITA" | "FRA" | "OTHER" | "ALL";
+export type PlayerScope = "UZBEKISTAN" | "ITA" | "FRA" | "IT1" | "IT2" | "OTHER" | "ALL";
 export type ManualImportOperation = "IMPORTED" | "UPDATED";
 
+/** Competitions with their own dedicated browsing scope; everything else falls to OTHER. */
+const SCOPED_COMPETITIONS = ["UZ1", "IT1", "IT2"] as const;
+
 export function playerScopeFromQuery(value: string | null | undefined): PlayerScope {
-  if (value === "other") return "OTHER";
-  if (value === "ita") return "ITA";
-  if (value === "fra") return "FRA";
-  if (value === "all") return "ALL";
+  const v = value?.trim().toLowerCase();
+  if (v === "other") return "OTHER";
+  if (v === "ita") return "ITA";
+  if (v === "fra") return "FRA";
+  if (v === "it1" || v === "seriea" || v === "serie-a") return "IT1";
+  if (v === "it2" || v === "serieb" || v === "serie-b") return "IT2";
+  if (v === "all") return "ALL";
   return "UZBEKISTAN";
 }
 
 export function playerScopeWhere(scope: PlayerScope): Prisma.PlayerWhereInput {
   if (scope === "ALL") return {};
-  if (scope === "UZBEKISTAN") {
+  // Serie A / Serie B are current club competition membership, not PlayerPool
+  // rows: no IT1/IT2 pool memberships exist or are created for this. A player
+  // can be in the ITA pool *and* currently at a Serie A club at the same time —
+  // scope only changes how the roster is browsed, never pool membership.
+  if (scope === "UZBEKISTAN" || scope === "IT1" || scope === "IT2") {
     return {
       careerStatus: { notIn: ["FREE_AGENT", "RETIRED"] },
-      club: { is: { competition: { is: { tmCompetitionId: "UZ1" } } } },
+      club: { is: { competition: { is: { tmCompetitionId: scope === "UZBEKISTAN" ? "UZ1" : scope } } } },
     };
   }
   if (scope === "ITA") return { pools: { some: { poolKey: "ITA" } } };
@@ -52,7 +62,7 @@ export function playerScopeWhere(scope: PlayerScope): Prisma.PlayerWhereInput {
   return {
     AND: [{ pools: { none: { poolKey: { in: ["ITA", "FRA"] } } } }, { OR: [
       { careerStatus: { in: ["FREE_AGENT", "RETIRED"] } },
-      { NOT: { club: { is: { competition: { is: { tmCompetitionId: "UZ1" } } } } } },
+      { NOT: { club: { is: { competition: { is: { tmCompetitionId: { in: [...SCOPED_COMPETITIONS] } } } } } } },
     ] }],
   };
 }

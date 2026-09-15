@@ -1,20 +1,21 @@
 import "dotenv/config";
 import { db } from "../src/lib/db";
 import { recalculateAllClubNeeds } from "../src/lib/intelligence/persistence";
+import { DEFAULT_CLUB_COMPETITION, isClubCompetitionId, type ClubCompetitionId } from "../src/lib/club-competitions";
 
 /**
- * Recomputes ClubNeedHistory for every current UZ1 club from persisted PostgreSQL
+ * Recomputes ClubNeedHistory for the requested target competition from persisted PostgreSQL
  * data only. No Transfermarkt / external requests. Safe to re-run (idempotent once
  * the algorithm version and roster composition are unchanged).
  *
- *   npm run recalculate:club-needs
+ *   npm run recalculate:club-needs -- IT1
  */
 
 type NeedSnapshot = { name: string; players: number; topRole: string | null; topScore: number | null; hasAvailableRow: boolean };
 
-async function snapshot(): Promise<Map<string, NeedSnapshot>> {
+async function snapshot(competition: ClubCompetitionId): Promise<Map<string, NeedSnapshot>> {
   const clubs = await db.club.findMany({
-    where: { competition: { tmCompetitionId: "UZ1" } },
+    where: { competition: { tmCompetitionId: competition } },
     select: {
       id: true,
       name: true,
@@ -44,11 +45,13 @@ async function snapshot(): Promise<Map<string, NeedSnapshot>> {
 }
 
 async function main() {
-  const before = await snapshot();
+  const competition = process.argv[2] ?? DEFAULT_CLUB_COMPETITION;
+  if (!isClubCompetitionId(competition)) throw new Error("Competition must be UZ1, IT1, or IT2");
+  const before = await snapshot(competition);
   const started = Date.now();
-  const results = await recalculateAllClubNeeds();
+  const results = await recalculateAllClubNeeds(competition);
   const rowsWritten = results.filter((r) => r.written).length;
-  const after = await snapshot();
+  const after = await snapshot(competition);
 
   const clubs = [...after.entries()].sort((a, b) => a[1].name.localeCompare(b[1].name));
   let calculated = 0;
@@ -101,7 +104,8 @@ async function main() {
         {
           event: "CLUB_NEEDS_RECALC_COMPLETE",
           durationMs: Date.now() - started,
-          uz1Clubs: clubs.length,
+          competition,
+          clubs: clubs.length,
           clubNeedRowsWritten: rowsWritten,
           calculated,
           genuineZero,

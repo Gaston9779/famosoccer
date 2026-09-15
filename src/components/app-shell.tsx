@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { SidebarNav } from "@/components/sidebar-nav";
+import { clubCompetition, clubCompetitionFromSearchParam } from "@/lib/club-competitions";
 
 export function AppShell({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = useState(false);
@@ -31,7 +32,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return <div className="app-shell">
     <aside className="sidebar" aria-label="Primary navigation">
       <Brand />
-      <p className="workspace">PRIVATE WORKSPACE<br />UZBEKISTAN · UZ1</p>
+      <WorkspaceLabel />
       <SidebarNav />
       <Footer />
     </aside>
@@ -50,6 +51,16 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <Footer />
     </aside>
   </div>;
+}
+
+function WorkspaceLabel() {
+  const pathname = usePathname();
+  const search = useSearchParams();
+  const competition = pathname === "/clubs" || pathname.startsWith("/clubs/")
+    ? clubCompetitionFromSearchParam(search.get("competition") ?? undefined)
+    : "UZ1";
+  const context = clubCompetition(competition);
+  return <p className="workspace">PRIVATE WORKSPACE<br />{context.country.toUpperCase()} · {context.tmCompetitionId}</p>;
 }
 
 function Brand() { return <Link href="/" className="brand"><b>◉</b>SOCCER<span>SCOUTING</span></Link>; }

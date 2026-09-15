@@ -146,7 +146,7 @@ async function synchronize(type: "BOOTSTRAP" | "SMALL" | "DAILY") {
         update: {},
       });
       if (state.phase === "teams") {
-        const clubs = await provider.teams();
+        const clubs = await provider.teams("UZ1");
         if (!clubs.length)
           throw new ProviderError("EMPTY_TEAMS", "UZ1 returned no clubs");
         for (const club of clubs) {

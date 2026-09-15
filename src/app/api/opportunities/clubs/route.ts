@@ -6,7 +6,13 @@ import {
 export const dynamic = "force-dynamic";
 export async function GET(request: Request) {
   return api(async () => {
-    const filters = query(request, clubFilters);
-    return filterClubNeeds(await loadIntelligenceView(true), filters);
+    const { competition, ...filters } = query(request, clubFilters);
+    return filterClubNeeds(
+      await loadIntelligenceView({
+        targetCompetition: competition,
+        candidates: competition ? { kind: "competition", competition } : undefined,
+      }),
+      filters,
+    );
   });
 }

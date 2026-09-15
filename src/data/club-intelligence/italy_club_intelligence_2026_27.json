@@ -1,0 +1,1298 @@
+{
+  "metadata": {
+    "season": "2026/27",
+    "generatedAt": "2026-09-14",
+    "scope": [
+      "IT1",
+      "IT2"
+    ],
+    "clubCount": 40,
+    "purpose": "FamoSoccer Club Intelligence seed",
+    "notes": [
+      "Priority A = football/sporting decision-maker.",
+      "Priority B = senior executive/ownership contact.",
+      "Only publicly verified contacts were populated; unavailable/unverified fields are null.",
+      "Sources favor official club/league pages. A few medium-confidence records use reputable public sources or Transfermarkt where no current official organizational page was found."
+    ]
+  },
+  "clubs": [
+    {
+      "tmClubId": "46",
+      "clubName": "Inter",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Dario Baccin",
+          "role": "Chief Sport Officer",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.inter.it/it/club/organigramma"
+        },
+        {
+          "name": "Giuseppe Marotta",
+          "role": "President & Chief Executive Officer",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.inter.it/it/club/organigramma"
+        }
+      ],
+      "officialContacts": {
+        "city": "Milano",
+        "address": "Viale della Liberazione 16/18, 20124 Milano",
+        "website": "https://www.inter.it",
+        "email": null,
+        "phone": "+39 02 82719080",
+        "leaguePage": "https://www.legaseriea.it/team/internazionale/stadium",
+        "sourceUrls": [
+          "https://www.inter.it/it/club/inter-contatti"
+        ]
+      }
+    },
+    {
+      "tmClubId": "506",
+      "clubName": "Juventus FC",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Marco Ottolini",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.juventus.com/it/news/articoli/marco-ottolini-nuovo-direttore-sportivo-juventus"
+        },
+        {
+          "name": "Frederic Massara",
+          "role": "Chief Football Officer",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.juventus.com/it/club/corporate-governance/leadership-team/"
+        },
+        {
+          "name": "Giovanni Carnevali",
+          "role": "Chief Executive Officer & General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.juventus.com/it/club/corporate-governance/leadership-team/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Torino",
+        "address": null,
+        "website": "https://www.juventus.com",
+        "email": null,
+        "phone": "+39 011 4530486",
+        "leaguePage": "https://www.legaseriea.it/team/juventus/stadium",
+        "sourceUrls": [
+          "https://www.juventus.com/it/contattaci/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "1047",
+      "clubName": "Como 1907",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Carloalberto Ludi",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/como/stadium"
+        },
+        {
+          "name": "Mirwan Suwarso",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/como/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Como",
+        "address": "Viale Giuseppe Sinigaglia 2, Como",
+        "website": "https://www.comofootball.com",
+        "email": null,
+        "phone": "+39 031 574425",
+        "leaguePage": "https://www.legaseriea.it/team/como/stadium",
+        "sourceUrls": [
+          "https://www.legaseriea.it/team/como/stadium",
+          "https://www.comofootball.com/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "12",
+      "clubName": "AS Roma",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Tony D'Amico",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.asroma.com/en/news/75447/tony-damico-to-be-appointed-as-the-clubs-new-sporting-director-from-the-202627-season"
+        },
+        {
+          "name": "Dan Friedkin",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/roma/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Roma",
+        "address": "Via di Trigoria Km 3.600, 00128 Roma",
+        "website": "https://www.asroma.com",
+        "email": "info@asroma.it",
+        "phone": "+39 06 65009005",
+        "leaguePage": "https://www.legaseriea.it/team/roma/stadium",
+        "sourceUrls": [
+          "https://www.asroma.com/it/club/contattaci",
+          "https://www.asroma.com/it/condizioni-generali-utilizzo"
+        ]
+      }
+    },
+    {
+      "tmClubId": "5",
+      "clubName": "AC Milan",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Massimo Calvelli",
+          "role": "Chief Executive Officer",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.acmilan.com/it/news/articoli/club/2026-06-26/comunicato-ufficiale-massimo-calvelli-nominato-chief-executive-officer-di-ac-milan"
+        },
+        {
+          "name": "Paolo Scaroni",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/milan/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Milano",
+        "address": "Via Aldo Rossi 8, 20149 Milano",
+        "website": "https://www.acmilan.com",
+        "email": null,
+        "phone": "+39 02 82958070",
+        "leaguePage": "https://www.legaseriea.it/team/milan/stadium",
+        "sourceUrls": [
+          "https://www.acmilan.com/it/contatti"
+        ]
+      },
+      "notes": "The club announced on 25 May 2026 that Sporting Director Igli Tare and Technical Director Geoffrey Moncada had left. No later official sporting-director appointment was verified in this research."
+    },
+    {
+      "tmClubId": "800",
+      "clubName": "Atalanta",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Cristiano Giuntoli",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.atalanta.it/news/cristiano-giuntoli-e-il-nuovo-direttore-sportivo-dell-atalanta"
+        },
+        {
+          "name": "Luca Percassi",
+          "role": "Chief Executive Officer",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://en.atalanta.it/organizational-chart"
+        }
+      ],
+      "officialContacts": {
+        "city": "Bergamo",
+        "address": null,
+        "website": "https://www.atalanta.it",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legaseriea.it/team/atalanta/stadium",
+        "sourceUrls": [
+          "https://en.atalanta.it/organizational-chart"
+        ]
+      }
+    },
+    {
+      "tmClubId": "6195",
+      "clubName": "SSC Napoli",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Giovanni Manna",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/napoli/stadium"
+        },
+        {
+          "name": "Aurelio De Laurentiis",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/napoli/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Napoli",
+        "address": "Via del Maio di Porto 9, 80133 Napoli",
+        "website": "https://sscnapoli.it",
+        "email": null,
+        "phone": "+39 081 5095344",
+        "leaguePage": "https://www.legaseriea.it/team/napoli/stadium",
+        "sourceUrls": [
+          "https://sscnapoli.it/contatti/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "430",
+      "clubName": "ACF Fiorentina",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Fabio Paratici",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/fiorentina/stadium"
+        },
+        {
+          "name": "Alessandro Ferrari",
+          "role": "General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/fiorentina/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Firenze",
+        "address": "Viale Manfredo Fanti 4, Firenze",
+        "website": "https://www.acffiorentina.com",
+        "email": null,
+        "phone": "+39 055 503011",
+        "leaguePage": "https://www.legaseriea.it/team/fiorentina/stadium",
+        "sourceUrls": [
+          "https://www.legaseriea.it/team/fiorentina/stadium"
+        ]
+      }
+    },
+    {
+      "tmClubId": "398",
+      "clubName": "SS Lazio",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Angelo Fabiani",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/lazio/stadium"
+        },
+        {
+          "name": "Claudio Lotito",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/lazio/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Roma",
+        "address": "Via di Santa Cornelia 1000, Formello",
+        "website": "https://www.sslazio.it",
+        "email": null,
+        "phone": "+39 06 97607111",
+        "leaguePage": "https://www.legaseriea.it/team/lazio/stadium",
+        "sourceUrls": [
+          "https://www.legaseriea.it/team/lazio/stadium"
+        ]
+      }
+    },
+    {
+      "tmClubId": "1025",
+      "clubName": "Bologna FC",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Giovanni Sartori",
+          "role": "Head of Technical Area",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/bologna/stadium"
+        },
+        {
+          "name": "Marco Di Vaio",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/bologna/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Bologna",
+        "address": "Via Casteldebole 10, Bologna",
+        "website": "https://www.bolognafc.it",
+        "email": null,
+        "phone": "+39 051 6111111",
+        "leaguePage": "https://www.legaseriea.it/team/bologna/stadium",
+        "sourceUrls": [
+          "https://www.legaseriea.it/team/bologna/stadium"
+        ]
+      }
+    },
+    {
+      "tmClubId": "6574",
+      "clubName": "US Sassuolo",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Francesco Palmieri",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.sassuolocalcio.it/club/organigramma/"
+        },
+        {
+          "name": "Veronica Squinzi",
+          "role": "Chief Executive Officer & General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.sassuolocalcio.it/club/organigramma/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Sassuolo",
+        "address": null,
+        "website": "https://www.sassuolocalcio.it",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legaseriea.it/team/sassuolo/stadium",
+        "sourceUrls": [
+          "https://www.sassuolocalcio.it/club/organigramma/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "416",
+      "clubName": "Torino FC",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Gianluca Petrachi",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.torinofc.it/club/organigramma"
+        },
+        {
+          "name": "Urbano Cairo",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.torinofc.it/club/organigramma"
+        }
+      ],
+      "officialContacts": {
+        "city": "Torino",
+        "address": "Via Giovanni Battista Viotti 9, 10121 Torino",
+        "website": "https://www.torinofc.it",
+        "email": null,
+        "phone": "+39 011 19700348",
+        "leaguePage": "https://www.legaseriea.it/team/torino/stadium",
+        "sourceUrls": [
+          "https://www.torinofc.it/contattaci"
+        ]
+      }
+    },
+    {
+      "tmClubId": "252",
+      "clubName": "Genoa CFC",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Diego Lopez",
+          "role": "Chief of Football",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://genoacfc.it/governance/"
+        },
+        {
+          "name": "Andrés Blázquez Ceballos",
+          "role": "Club CEO",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://genoacfc.it/governance/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Genova",
+        "address": "Via Ronchi 67, 16155 Genova Pegli",
+        "website": "https://genoacfc.it",
+        "email": null,
+        "phone": "+39 010 612831",
+        "leaguePage": "https://www.legaseriea.it/team/genoa/stadium",
+        "sourceUrls": [
+          "https://genoacfc.it/governance/",
+          "https://en.legaseriea.it/team/genoa/stadium"
+        ]
+      }
+    },
+    {
+      "tmClubId": "410",
+      "clubName": "Udinese Calcio",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Federico Balzaretti",
+          "role": "Head of Technical Area",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.udinese.it/club/key-club-figures"
+        },
+        {
+          "name": "Franco Collavino",
+          "role": "Board Member & General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.udinese.it/club/key-club-figures"
+        }
+      ],
+      "officialContacts": {
+        "city": "Udine",
+        "address": "Viale A. e A. Candolini 2, 33100 Udine",
+        "website": "https://www.udinese.it",
+        "email": "udinese@udinesespa.it",
+        "phone": "+39 0432 544911",
+        "leaguePage": "https://www.legaseriea.it/team/udinese/stadium",
+        "sourceUrls": [
+          "https://www.udinese.it/club/contatti"
+        ]
+      }
+    },
+    {
+      "tmClubId": "130",
+      "clubName": "Parma Calcio",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Alessandro Pettinà",
+          "role": "Football Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.parmacalcio1913.com/news/nota-del-club-nuovo-assetto-organizzativo-dellarea-football/"
+        },
+        {
+          "name": "Federico Cherubini",
+          "role": "Chief Executive Officer",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.parmacalcio1913.com/news/parma-calcio-comunicazione-ufficiale/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Parma",
+        "address": null,
+        "website": "https://www.parmacalcio1913.com",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legaseriea.it/team/parma/stadium",
+        "sourceUrls": [
+          "https://www.parmacalcio1913.com/news/parma-calcio-comunicazione-ufficiale/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "1390",
+      "clubName": "Cagliari Calcio",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Guido Angelozzi",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/cagliari/stadium"
+        },
+        {
+          "name": "Stefano Melis",
+          "role": "General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/cagliari/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Cagliari",
+        "address": "Località Sa Ruina, Cagliari",
+        "website": "https://www.cagliaricalcio.com",
+        "email": null,
+        "phone": "+39 070 604201",
+        "leaguePage": "https://www.legaseriea.it/team/cagliari/stadium",
+        "sourceUrls": [
+          "https://www.legaseriea.it/team/cagliari/stadium"
+        ]
+      }
+    },
+    {
+      "tmClubId": "607",
+      "clubName": "Venezia FC",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Filippo Antonelli",
+          "role": "Sporting Director & General Manager",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.veneziafc.it/club/organization"
+        },
+        {
+          "name": "Cristian Molinaro",
+          "role": "Technical Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.veneziafc.it/club/organization"
+        }
+      ],
+      "officialContacts": {
+        "city": "Venezia",
+        "address": "Via Vendramin 13/D, 30173 Mestre (VE)",
+        "website": "https://www.veneziafc.it",
+        "email": "info@veneziafc.it",
+        "phone": "+39 041 0988268",
+        "leaguePage": "https://www.legaseriea.it/team/venezia/stadium",
+        "sourceUrls": [
+          "https://www.veneziafc.it/club/contact"
+        ]
+      }
+    },
+    {
+      "tmClubId": "2919",
+      "clubName": "AC Monza",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Nicolas Burdisso",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/monza/stadium"
+        },
+        {
+          "name": "Mauro Baldissoni",
+          "role": "Chief Executive Officer",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/monza/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Monza",
+        "address": "Via Ragazzi del '99 14, Monza",
+        "website": "https://www.acmonza.com",
+        "email": null,
+        "phone": "+39 039 836664",
+        "leaguePage": "https://www.legaseriea.it/team/monza/stadium",
+        "sourceUrls": [
+          "https://www.legaseriea.it/team/monza/stadium"
+        ]
+      }
+    },
+    {
+      "tmClubId": "8970",
+      "clubName": "Frosinone Calcio",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Renzo Castagnini",
+          "role": "Director of Technical Area / Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.frosinonecalcio.com/quadri-dirigenziali-e-tecnici-stagione-2026-2027/"
+        },
+        {
+          "name": "Pietro Doronzo",
+          "role": "General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.frosinonecalcio.com/quadri-dirigenziali-e-tecnici-stagione-2026-2027/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Frosinone",
+        "address": "Viale Olimpia snc c/o Stadio Benito Stirpe, 03100 Frosinone",
+        "website": "https://www.frosinonecalcio.com",
+        "email": null,
+        "phone": "+39 0775 8190",
+        "leaguePage": "https://www.legaseriea.it/team/frosinone/stadium",
+        "sourceUrls": [
+          "https://www.frosinonecalcio.com/contatti/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "1005",
+      "clubName": "US Lecce",
+      "competitionKey": "IT1",
+      "decisionMakers": [
+        {
+          "name": "Pantaleo Corvino",
+          "role": "General Director - Technical Area",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/lecce/stadium"
+        },
+        {
+          "name": "Stefano Trinchera",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/lecce/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Lecce",
+        "address": "Via Colonnello Archimede Costadura 3, Lecce",
+        "website": "https://www.uslecce.it",
+        "email": null,
+        "phone": "+39 0832 241501",
+        "leaguePage": "https://www.legaseriea.it/team/lecce/stadium",
+        "sourceUrls": [
+          "https://www.legaseriea.it/team/lecce/stadium"
+        ]
+      }
+    },
+    {
+      "tmClubId": "4172",
+      "clubName": "Pisa Sporting Club",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Daniele Freggia",
+          "role": "Sporting Director & Operations Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/pisa/stadium"
+        },
+        {
+          "name": "Giuseppe Corrado",
+          "role": "President & General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.legaseriea.it/team/pisa/stadium"
+        }
+      ],
+      "officialContacts": {
+        "city": "Pisa",
+        "address": "Via Vincenzo Gioberti 39, 56124 Pisa",
+        "website": "https://pisasportingclub.com",
+        "email": null,
+        "phone": "+39 050 555930",
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/pisa",
+        "sourceUrls": [
+          "https://www.legaseriea.it/team/pisa/stadium"
+        ]
+      }
+    },
+    {
+      "tmClubId": "458",
+      "clubName": "Palermo FC",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Carlo Osti",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.palermofc.com/it/organigramma"
+        },
+        {
+          "name": "Giovanni Gardini",
+          "role": "Chief Executive Officer & General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.palermofc.com/it/organigramma"
+        }
+      ],
+      "officialContacts": {
+        "city": "Palermo",
+        "address": null,
+        "website": "https://www.palermofc.com",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/palermo",
+        "sourceUrls": [
+          "https://www.palermofc.com/it/organigramma"
+        ]
+      }
+    },
+    {
+      "tmClubId": "2239",
+      "clubName": "US Cremonese",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Simone Giacchetta",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://uscremonese.it/organigramma/"
+        },
+        {
+          "name": "Paolo Armenia",
+          "role": "General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://uscremonese.it/organigramma/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Cremona",
+        "address": "Largo degli Sportivi 18, 26100 Cremona",
+        "website": "https://uscremonese.it",
+        "email": "segreteria.sportiva@uscremonese.it",
+        "phone": "+39 0372 434016",
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/cremonese",
+        "sourceUrls": [
+          "https://uscremonese.it/organigramma/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "276",
+      "clubName": "Hellas Verona",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Sean Sogliano",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://hellasverona.it/news/la-conferenza-stampa-del-direttore-sportivo-sean-sogliano"
+        },
+        {
+          "name": "Dirk Swaneveld",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.hellasverona.it/fondazione/governance"
+        }
+      ],
+      "officialContacts": {
+        "city": "Verona",
+        "address": null,
+        "website": "https://www.hellasverona.it",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/h-verona",
+        "sourceUrls": [
+          "https://www.hellasverona.it/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "1038",
+      "clubName": "UC Sampdoria",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Américo Branco",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.sampdoria.it/organigramma/"
+        },
+        {
+          "name": "Jesper Fredberg",
+          "role": "Director & CEO Football Area",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.sampdoria.it/organigramma/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Genova",
+        "address": "Via Cavour 43-45, 16031 Bogliasco (GE)",
+        "website": "https://www.sampdoria.it",
+        "email": null,
+        "phone": "+39 010 5316711",
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/sampdoria",
+        "sourceUrls": [
+          "https://www.sampdoria.it/",
+          "https://www.sampdoria.it/organigramma/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "1385",
+      "clubName": "Modena FC",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Nereo Bonato",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://modenacalcio.com/organigramma/"
+        },
+        {
+          "name": "Andrea Catellani",
+          "role": "General Manager Sport",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://modenacalcio.com/organigramma/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Modena",
+        "address": null,
+        "website": "https://modenacalcio.com",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/modena",
+        "sourceUrls": [
+          "https://modenacalcio.com/organigramma/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "2331",
+      "clubName": "US Avellino 1912",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Mario Aiello",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.usavellino1912.com/club/governance-e-organigramma/"
+        },
+        {
+          "name": "Angelo Antonio D'Agostino",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.usavellino1912.com/club/governance-e-organigramma/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Avellino",
+        "address": null,
+        "website": "https://www.usavellino1912.com",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/avellino",
+        "sourceUrls": [
+          "https://www.usavellino1912.com/club/governance-e-organigramma/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "2581",
+      "clubName": "Mantova 1911",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Fabio Brutti",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "medium",
+          "sourceUrl": "https://www.transfermarkt.it/mantova-1911/mitarbeiter/verein/2581"
+        },
+        {
+          "name": "Filippo Piccoli",
+          "role": "President",
+          "priority": "B",
+          "confidence": "medium",
+          "sourceUrl": "https://www.transfermarkt.it/mantova-1911/mitarbeiter/verein/2581"
+        }
+      ],
+      "officialContacts": {
+        "city": "Mantova",
+        "address": null,
+        "website": "https://www.mantova1911.club",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/mantova",
+        "sourceUrls": [
+          "https://www.transfermarkt.it/mantova-1911/mitarbeiter/verein/2581"
+        ]
+      }
+    },
+    {
+      "tmClubId": "1429",
+      "clubName": "Cesena FC",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Andrea Mancini",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.cesenafc.com/it/society/organizational-structure"
+        },
+        {
+          "name": "Corrado Di Taranto",
+          "role": "General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.cesenafc.com/it/society/organizational-structure"
+        }
+      ],
+      "officialContacts": {
+        "city": "Cesena",
+        "address": null,
+        "website": "https://www.cesenafc.com",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/cesena",
+        "sourceUrls": [
+          "https://www.cesenafc.com/it/society/organizational-structure"
+        ]
+      }
+    },
+    {
+      "tmClubId": "3037",
+      "clubName": "Calcio Padova",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Massimiliano Mirabelli",
+          "role": "Head of Technical Area & Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.padovacalcio.it/societa/organigramma/"
+        },
+        {
+          "name": "Francesco Mario Peghin",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.padovacalcio.it/societa/organigramma/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Padova",
+        "address": "Viale Nereo Rocco 60, 35135 Padova",
+        "website": "https://www.padovacalcio.it",
+        "email": null,
+        "phone": "+39 049 604498",
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/padova",
+        "sourceUrls": [
+          "https://www.padovacalcio.it/societa/organigramma/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "4554",
+      "clubName": "FC Südtirol",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Matteo Lovisa",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "medium",
+          "sourceUrl": "https://www.rainews.it/amp/tgr/bolzano/articoli/2026/06/matteo-lovisa-e-il-nuovo-direttore-sportivo-dellfc-sudtirol-4a28c92e-8cf3-4045-9981-5bb9c749ce8b.html"
+        }
+      ],
+      "officialContacts": {
+        "city": "Bolzano",
+        "address": null,
+        "website": "https://www.fc-suedtirol.com",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/sudtirol",
+        "sourceUrls": [
+          "https://www.legab.it/seriebkt/squadra/sudtirol"
+        ]
+      }
+    },
+    {
+      "tmClubId": "4159",
+      "clubName": "Carrarese Calcio 1908",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Iacopo Pasciuti",
+          "role": "Chief Executive Officer & Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://carraresecalcio1908.it/organigramma-new/"
+        },
+        {
+          "name": "Manrico Gemignani",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://carraresecalcio1908.it/organigramma-new/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Carrara",
+        "address": null,
+        "website": "https://carraresecalcio1908.it",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/carrarese",
+        "sourceUrls": [
+          "https://carraresecalcio1908.it/organigramma-new/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "4097",
+      "clubName": "US Catanzaro",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Ciro Polito",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.uscatanzaro1929.com/societa-us-catanzaro-1929/"
+        },
+        {
+          "name": "Nicola Bignotti",
+          "role": "General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.uscatanzaro1929.com/societa-us-catanzaro-1929/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Catanzaro",
+        "address": "Via Gioacchino da Fiore 38, 88100 Catanzaro",
+        "website": "https://www.uscatanzaro1929.com",
+        "email": null,
+        "phone": "+39 0961 779802",
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/catanzaro",
+        "sourceUrls": [
+          "https://www.uscatanzaro1929.com/societa-us-catanzaro-1929/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "749",
+      "clubName": "Empoli FC",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Fabio Artico",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.empolifc.it/organigramma"
+        },
+        {
+          "name": "Rebecca Corsi",
+          "role": "Vice President & CEO",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.empolifc.it/organigramma"
+        }
+      ],
+      "officialContacts": {
+        "city": "Empoli",
+        "address": "Via di Pianezzoli snc, 50053 Empoli (FI)",
+        "website": "https://www.empolifc.it",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/empoli",
+        "sourceUrls": [
+          "https://www.empolifc.it/organigramma"
+        ]
+      }
+    },
+    {
+      "tmClubId": "4171",
+      "clubName": "Benevento Calcio",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Emanuele Padella",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.beneventocalcio.club/societa/organigramma/"
+        },
+        {
+          "name": "Marcello Carli",
+          "role": "Technical Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.beneventocalcio.club/societa/organigramma/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Benevento",
+        "address": "Via Santa Colomba 121, 82100 Benevento",
+        "website": "https://www.beneventocalcio.club",
+        "email": null,
+        "phone": "+39 0824 47922",
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/benevento",
+        "sourceUrls": [
+          "https://www.beneventocalcio.club/societa/organigramma/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "5587",
+      "clubName": "SS Juve Stabia",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Stefano Stefanelli",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.ssjuvestabia.it/tutte-le-news/"
+        },
+        {
+          "name": "Vincenzo De Vito",
+          "role": "Head of Technical Area & Project",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.ssjuvestabia.it/tutte-le-news/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Castellammare di Stabia",
+        "address": null,
+        "website": "https://www.ssjuvestabia.it",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/juve-stabia",
+        "sourceUrls": [
+          "https://www.ssjuvestabia.it/tutte-le-news/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "408",
+      "clubName": "Ascoli Calcio",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Matteo Patti",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "medium",
+          "sourceUrl": "https://www.rainews.it/tgr/marche/articoli/2026/07/calciomercato-ascoli-il-ds-patti-faremo-6-o-7-acquisti-per-la-serie-b-ma-senza-strapagarli-0aba1403-67e5-41cf-a86a-8b95b6872a9d.html"
+        }
+      ],
+      "officialContacts": {
+        "city": "Ascoli Piceno",
+        "address": null,
+        "website": "https://www.ascolicalcio1898.it",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/ascoli",
+        "sourceUrls": [
+          "https://www.ascolicalcio1898.it/ascoli-calcio-lorganigramma-sportivo-s-s-2025-26/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "2655",
+      "clubName": "LR Vicenza",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Giorgio Zamuner",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.lrvicenza.net/organigramma-societario/"
+        },
+        {
+          "name": "Werner Seeber",
+          "role": "General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.lrvicenza.net/organigramma-societario/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Vicenza",
+        "address": "Largo Paolo Rossi 9, 36100 Vicenza",
+        "website": "https://www.lrvicenza.net",
+        "email": "info@lrvicenza.net",
+        "phone": "+39 0444 1720128",
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/lr-vicenza",
+        "sourceUrls": [
+          "https://www.lrvicenza.net/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "4255",
+      "clubName": "SS Arezzo",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Aniello Cutolo",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://ssarezzo.it/organigramma/"
+        },
+        {
+          "name": "Guglielmo Manzo",
+          "role": "President",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://ssarezzo.it/organigramma/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Arezzo",
+        "address": null,
+        "website": "https://ssarezzo.it",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/arezzo",
+        "sourceUrls": [
+          "https://ssarezzo.it/organigramma/"
+        ]
+      }
+    },
+    {
+      "tmClubId": "20519",
+      "clubName": "Virtus Entella",
+      "competitionKey": "IT2",
+      "decisionMakers": [
+        {
+          "name": "Matteo Superbi",
+          "role": "Sporting Director",
+          "priority": "A",
+          "confidence": "high",
+          "sourceUrl": "https://www.entella.it/organigramma/"
+        },
+        {
+          "name": "Matteo Matteazzi",
+          "role": "General Manager",
+          "priority": "B",
+          "confidence": "high",
+          "sourceUrl": "https://www.entella.it/organigramma/"
+        }
+      ],
+      "officialContacts": {
+        "city": "Chiavari",
+        "address": null,
+        "website": "https://www.entella.it",
+        "email": null,
+        "phone": null,
+        "leaguePage": "https://www.legab.it/seriebkt/squadra/virtus-entella",
+        "sourceUrls": [
+          "https://www.entella.it/organigramma/"
+        ]
+      }
+    }
+  ]
+}

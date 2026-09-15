@@ -21,6 +21,14 @@ import {
 import { playerAge, type IntelligencePlayer } from "../src/lib/scoring/types";
 import { addMonths } from "../src/lib/scoring/config";
 import { formatPercentage } from "../src/lib/presentation";
+import {
+  clubsQueryForCompetition,
+  intelligenceQueryScopes,
+  intelligenceViewOptions,
+  targetRostersForClubs,
+  topMatches,
+  type IntelligenceView,
+} from "../src/lib/intelligence/queries";
 const now = new Date("2026-09-06T12:00:00Z");
 const fixture = JSON.parse(
   readFileSync("tests/fixtures/intelligence/uzbekistan.local.json", "utf8"),
@@ -43,6 +51,79 @@ const base: IntelligencePlayer = {
   age: 24,
 };
 const after = (days: number) => new Date(now.getTime() + days * 86400000);
+test("club queries and intelligence defaults stay isolated by target competition", () => {
+  for (const competition of ["UZ1", "IT1", "IT2"] as const) {
+    assert.deepEqual(clubsQueryForCompetition(competition), {
+      where: { competition: { tmCompetitionId: competition } },
+    });
+    assert.equal(intelligenceViewOptions({ targetCompetition: competition }).targetCompetition, competition);
+  }
+  // UZ1 keeps its original, competition-scoped candidate default...
+  assert.deepEqual(intelligenceViewOptions({ targetCompetition: "UZ1" }).candidates, {
+    kind: "competition",
+    competition: "UZ1",
+  });
+  // ...but Italian clubs recruit from the whole scouted population by default,
+  // not only players already at a club in the same competition.
+  assert.deepEqual(intelligenceViewOptions({ targetCompetition: "IT1" }).candidates, { kind: "all" });
+  assert.deepEqual(intelligenceViewOptions({ targetCompetition: "IT2" }).candidates, { kind: "all" });
+  assert.deepEqual(intelligenceQueryScopes({ targetCompetition: "IT1" }).candidatePlayerWhere, {});
+  const crossCompetition = intelligenceQueryScopes({
+    targetCompetition: "IT1",
+    candidates: { kind: "competition", competition: "UZ1" },
+  });
+  assert.deepEqual(crossCompetition.clubNeedsWhere, {
+    isCurrent: true,
+    club: { competition: { tmCompetitionId: "IT1" } },
+  });
+  assert.deepEqual(crossCompetition.candidatePlayerWhere, {
+    club: { competition: { tmCompetitionId: "UZ1" } },
+  });
+  assert.equal(intelligenceViewOptions().targetCompetition, "UZ1");
+});
+test("target squad market context is independent of recruitment candidates", () => {
+  const clubs = [{ id: "it-club" }];
+  const squad = [
+    { clubId: "it-club", marketValueEur: 100_000 },
+    { clubId: "it-club", marketValueEur: 200_000 },
+    { clubId: "it-club", marketValueEur: 300_000 },
+    { clubId: "it-club", marketValueEur: 400_000 },
+    { clubId: "it-club", marketValueEur: 500_000 },
+  ];
+  const rosters = targetRostersForClubs(clubs, squad);
+  assert.deepEqual(rosters.get("it-club"), squad);
+  // Candidate filtering must never be able to replace this target-squad set.
+  const filteredCandidates = [{ clubId: "other-club", marketValueEur: 9_000_000 }];
+  assert.deepEqual(rosters.get("it-club"), squad);
+  assert.notDeepEqual(rosters.get("it-club"), filteredCandidates);
+});
+test("matching uses the target club squad, not the candidate population, for market fit", () => {
+  const candidate = {
+    ...base,
+    id: "candidate",
+    tmPlayerId: "999",
+    name: "Candidate",
+    clubId: "source-club",
+    mainPosition: "Centre-Forward",
+    marketValueEur: 200_000,
+  };
+  const targetSquad = [100_000, 200_000, 300_000, 400_000, 500_000].map((marketValueEur, index) => ({
+    ...base,
+    id: `target-${index}`,
+    tmPlayerId: String(index + 1),
+    clubId: "target-club",
+    mainPosition: "Centre-Forward",
+    marketValueEur,
+  }));
+  const view = {
+    players: [candidate],
+    targetSquadPlayers: targetSquad,
+    clubs: [{ id: "target-club", name: "Target", tmClubId: "1", lastSyncedAt: now }],
+    opportunities: [{ playerId: candidate.id, total: 60, warnings: [] }],
+    needs: [{ clubId: "target-club", role: "ST", total: 50, available: true, warnings: [] }],
+  } as unknown as IntelligenceView;
+  assert.equal(topMatches(view)[0].marketFit, 100);
+});
 test("contract opportunity: exact thresholds, statuses and unavailable contract data", () => {
   for (const [days, expected] of [
     [179, 32],

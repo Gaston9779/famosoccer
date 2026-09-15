@@ -24,7 +24,7 @@ export async function probe() {
     let stage = "teams";
     console.log("TRANSFERMARKT PROBE");
     try {
-      const teamsText = await client.request(endpoints.teams);
+      const teamsText = await client.request(endpoints.teams("UZ1"));
       const teams = parseListings(teamsText);
       if (!teams.length)
         throw new ProviderError("EMPTY_TEAMS", "No UZ1 clubs returned");

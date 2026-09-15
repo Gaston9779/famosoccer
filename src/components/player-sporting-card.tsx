@@ -1,4 +1,4 @@
-import { playingTimePercent, selectCurrentPerformance } from "@/lib/current-performance";
+import { playingTimePercent, selectCurrentPerformance, type CurrentPerformanceScope } from "@/lib/current-performance";
 
 export type SportingPerformance = {
   season: string;
@@ -37,7 +37,7 @@ export function PlayerSportingCard({
   scope = "UZ1",
 }: {
   performance: SportingPerformance | null;
-  scope?: "UZ1" | "ITA" | "FRA";
+  scope?: CurrentPerformanceScope;
 }) {
   const involvement = playingTimePercent(performance);
   const involvementWidth = involvement == null || !Number.isFinite(involvement) ? 0 : Math.min(100, Math.max(0, involvement));

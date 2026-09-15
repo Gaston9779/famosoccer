@@ -7,6 +7,7 @@ import { playerAge } from "@/lib/scoring/types";
 import { IntelligenceTable, type TableColumn, type TableRow } from "@/components/intelligence-table";
 import { PlayerTable } from "@/components/player-table";
 import { MatchesBrowser, type MatchRow } from "@/components/matches-browser";
+import { DEFAULT_CLUB_COMPETITION } from "@/lib/club-competitions";
 import "../players/players.css";
 import "./opportunities.css";
 import "./matches.css";
@@ -23,9 +24,9 @@ export default async function Opportunities({ searchParams }: { searchParams: Pr
   const dbStart = Date.now();
   if (tab === "matches") console.log(JSON.stringify({ event: "MATCHES_START" }));
   const [view, players] = await Promise.all([
-    loadIntelligenceView(true),
+    loadIntelligenceView(),
     db.player.findMany({
-      where: { club: { competition: { tmCompetitionId: "UZ1" } } },
+      where: { club: { competition: { tmCompetitionId: DEFAULT_CLUB_COMPETITION } } },
       include: { club: true, performances: true, opportunityHistory: { where: { isCurrent: true }, take: 1 } },
       orderBy: { name: "asc" },
     }),

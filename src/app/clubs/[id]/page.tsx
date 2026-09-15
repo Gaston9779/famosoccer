@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { db } from "@/lib/db";
 import { loadIntelligenceView, topMatches } from "@/lib/intelligence/queries";
 import { formatNationality } from "@/lib/presentation";
@@ -10,6 +10,7 @@ import { ScoreBadge } from "@/components/scouting-ui";
 import { ClubSquadTable } from "@/components/club-squad-table";
 import { ClubIntelligence } from "@/components/club-intelligence";
 import { getClubContactData } from "@/lib/intelligence/club-contact-data";
+import { DEFAULT_CLUB_COMPETITION, isClubCompetitionId } from "@/lib/club-competitions";
 import "./club-detail.css";
 
 export const dynamic = "force-dynamic";
@@ -25,25 +26,32 @@ function NeedPitch ( { needs, unknownCount }: { needs: { role: string; total: nu
   return <section className="club-pitch-card" id="club-needs"><header className="club-section-heading"><div><h2>Squad needs by position</h2><p>Visual overview of recruitment needs based on current squad data</p></div><span title="Club Need estimates recruitment priority for each exact role based on current squad depth, contract risk, age risk and market-value depth.">ⓘ How it works</span></header><div className="club-pitch"><div className="pitch-halfway" /><div className="pitch-circle" /><div className="pitch-box pitch-box-top" /><div className="pitch-box pitch-box-bottom" />{ tacticalRoles.map( ( role ) => { const score = scoreByRole.get( role ); const tone = needTone( score ); return <div className={ `pitch-marker pitch-marker-${ role } pitch-marker-${ tone }` } key={ role }><b>{ role }</b><span>{ score == null ? "—" : score.toFixed( 0 ) }</span></div>; } ) }</div><footer className="club-pitch-footer"><div><i className="pitch-dot pitch-dot-high" />High need (≥60)</div><div><i className="pitch-dot pitch-dot-medium" />Medium need (30–59)</div><div><i className="pitch-dot pitch-dot-low" />Low need (&lt;30)</div><div><i className="pitch-dot pitch-dot-none" />No data</div>{ unknownCount > 0 && <p>{ unknownCount } players without an exact role</p> }</footer></section>;
 }
 
-export default async function Club ( { params }: { params: Promise<{ id: string }> } )
+export default async function Club ( { params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ competition?: string | string[] }> } )
 {
   const { id } = await params;
-  const [ club, view, currentPlayers ] = await Promise.all( [
-    db.club.findUnique( { where: { id }, include: { competition: true, players: { include: { opportunityHistory: { where: { isCurrent: true }, take: 1 } }, orderBy: { name: "asc" } }, needHistory: { where: { isCurrent: true, available: true }, orderBy: { role: "asc" } } } } ),
-    loadIntelligenceView( true ),
-    db.player.findMany( { where: { club: { competition: { tmCompetitionId: "UZ1" } } }, include: { club: true } } ),
-  ] );
+  const club = await db.club.findUnique( { where: { id }, include: { competition: true, players: { include: { opportunityHistory: { where: { isCurrent: true }, take: 1 } }, orderBy: { name: "asc" } }, needHistory: { where: { isCurrent: true, available: true }, orderBy: { role: "asc" } } } } );
   if ( !club ) notFound();
+  const clubCompetitionId = club.competition?.tmCompetitionId;
+  const targetCompetition = isClubCompetitionId(clubCompetitionId ?? "")
+    ? clubCompetitionId as "UZ1" | "IT1" | "IT2"
+    : DEFAULT_CLUB_COMPETITION;
+  const requestedCompetition = ( await searchParams ).competition;
+  const requestedValue = Array.isArray( requestedCompetition ) ? requestedCompetition[ 0 ] : requestedCompetition;
+  if ( requestedValue !== targetCompetition ) redirect( `/clubs/${ id }?competition=${ targetCompetition }` );
+  const [ view, currentPlayers ] = await Promise.all( [
+    loadIntelligenceView( { targetCompetition } ),
+    db.player.findMany( { where: { club: { competition: { tmCompetitionId: targetCompetition } } }, include: { club: true } } ),
+  ] );
   const matches = await topMatches( view, { clubId: id, limit: 5 } );
   const playerById = new Map( currentPlayers.map( ( player ) => [ player.id, player ] ) );
   const ages = club.players.map( ( player ) => playerAge( player, new Date() ) ).filter( ( age ): age is number => age != null );
   const totalValue = club.players.reduce( ( total, player ) => total + ( player.marketValueEur ?? 0 ), 0 );
   const country = formatNationality( club.competition?.country );
   const unknownCount = club.players.filter( ( player ) => normalizeRole( player.mainPosition ) === "UNKNOWN" ).length;
-  const clubContactData = getClubContactData( club.id );
+  const clubContactData = getClubContactData( { id: club.id, tmClubId: club.tmClubId, competition: targetCompetition } );
 
   return <div className="club-detail-page">
-    <header className="club-detail-header"><div className="club-identity"><p className="club-breadcrumb"><Link href="/clubs">Clubs</Link><span>›</span>{ club.name }</p><div><ClubLogo name={ club.name } tmClubId={ club.tmClubId } size="lg" /><section><h1>{ club.name }</h1><p>{ club.competition?.name ?? "Competition unavailable" } <span>{ country.flag } { country.code }</span></p></section></div></div><div className="club-kpis">{ [ [ "Squad size", club.players.length, "players" ], [ "Average age", ages.length ? ( ages.reduce( ( total, age ) => total + age, 0 ) / ages.length ).toFixed( 1 ) : "—", ages.length ? "known ages" : "No age data" ], [ "Estimated value", totalValue ? compactMoney( totalValue ) : "—", totalValue ? "known values" : "No value data" ] ].map( ( [ label, value, note ] ) => <article key={ String( label ) }><span>{ label }</span><strong>{ value }</strong><small>{ note }</small></article> ) }</div></header>
+    <header className="club-detail-header"><div className="club-identity"><p className="club-breadcrumb"><Link href={ `/clubs?competition=${ targetCompetition }` }>Clubs</Link><span>›</span>{ club.name }</p><div><ClubLogo name={ club.name } tmClubId={ club.tmClubId } size="lg" /><section><h1>{ club.name }</h1><p>{ club.competition?.name ?? "Competition unavailable" } <span>{ country.flag } { country.code }</span></p></section></div></div><div className="club-kpis">{ [ [ "Squad size", club.players.length, "players" ], [ "Average age", ages.length ? ( ages.reduce( ( total, age ) => total + age, 0 ) / ages.length ).toFixed( 1 ) : "—", ages.length ? "known ages" : "No age data" ], [ "Estimated value", totalValue ? compactMoney( totalValue ) : "—", totalValue ? "known values" : "No value data" ] ].map( ( [ label, value, note ] ) => <article key={ String( label ) }><span>{ label }</span><strong>{ value }</strong><small>{ note }</small></article> ) }</div></header>
     <main className="club-main-grid" id="overview"><NeedPitch needs={ club.needHistory } unknownCount={ unknownCount } /><section className="club-recommendations" id="target-players"><header className="club-section-heading"><div><h2>Recommended players</h2><p>Best matching players for { club.name }&apos;s needs</p></div><Link href="/opportunities?tab=matches">View all →</Link></header><div>{ matches.map( ( match ) => { const player = playerById.get( match.playerId ); const nationality = formatNationality( player?.nationalities ); return <Link href={ `/players/${ match.playerId }` } className="club-recommendation-row" key={ `${ match.playerId }-${ match.clubId }-${ match.role }` }><PlayerAvatar name={ match.playerName } portraitUrl={ player?.portraitUrl } /><span><strong>{ match.playerName }</strong><small>{ match.role }{ player ? ` · ${ playerAge( player, new Date() ) ?? "Age unavailable" }${ playerAge( player, new Date() ) != null ? " years old" : "" }` : "" }</small><em>{ player?.club ? <><ClubLogo name={ player.club.name } tmClubId={ player.club.tmClubId } />{ player.club.name }</> : "Current club unavailable" }</em></span><i>{ nationality.flag } { nationality.code }</i><div><small>Match</small><ScoreBadge score={ match.matchScore } /></div></Link>; } ) }</div>{ !matches.length && <p className="empty">No eligible recommendations.</p> }</section></main>
     <ClubIntelligence data={ clubContactData } />
     <div id="matches" className="club-squad-anchor"><ClubSquadTable clubName={ club.name } players={ club.players.map( ( player ) => ( { id: player.id, name: player.name, portraitUrl: player.portraitUrl, nationality: player.nationalities, age: playerAge( player, new Date() ), role: normalizeRole( player.mainPosition ), contract: player.contractExpires?.toISOString().slice( 0, 10 ) ?? null, marketValue: player.marketValueEur, representation: player.representationStatus, agency: player.agencyName, opportunity: player.opportunityHistory[ 0 ]?.total ?? null } ) ) } /></div>

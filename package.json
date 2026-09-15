@@ -25,10 +25,12 @@
     "score:opportunity-confidence": "tsx scripts/recalculate-opportunities-confidence.ts",
     "score:clubs": "tsx scripts/score.ts clubs",
     "recalculate:club-needs": "tsx scripts/recalculate-club-needs.ts",
+    "recalculate:missing-opportunities": "tsx scripts/recalculate-missing-opportunities.ts",
     "score:all": "tsx scripts/score.ts all",
     "score:free-agents": "tsx scripts/recalculate-confirmed-free-agents.ts",
     "seed:uzbekistan": "tsx scripts/import-uzbekistan-seed.ts",
     "import:ita-expat": "tsx scripts/import-ita-expat.ts",
+    "import:italy-clubs": "tsx scripts/import-italy-clubs.ts",
     "enrich:uz1-v3": "tsx scripts/enrich-uz1-v3.ts",
     "enrich:uz1-profiles": "tsx scripts/enrich-uz1-profiles.ts",
     "enrich:uz1-budgeted": "tsx scripts/enrich-uz1-budgeted.ts",
@@ -54,7 +56,8 @@
     "enrich:ita-json": "tsx scripts/enrich-ita-json.ts",
     "recalculate:ita-opportunities": "tsx scripts/recalculate-ita-opportunities.ts",
     "normalize:ita-free-agents": "tsx scripts/normalize-ita-free-agents.ts",
-    "normalize:fra-free-agents": "tsx scripts/normalize-fra-free-agents.ts"
+    "normalize:fra-free-agents": "tsx scripts/normalize-fra-free-agents.ts",
+    "backfill:it-representation": "tsx scripts/backfill-it-representation.ts"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.10.0",

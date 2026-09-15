@@ -3,12 +3,20 @@ import { db } from "@/lib/db";
 import { money, PageHeader, Badge } from "@/components/scouting-ui";
 import { ClubLogo } from "@/components/media";
 import { playerAge } from "@/lib/scoring/types";
+import { clubsQueryForCompetition } from "@/lib/intelligence/queries";
+import { clubCompetition, clubCompetitionFromSearchParam } from "@/lib/club-competitions";
 
 export const dynamic = "force-dynamic";
 
-export default async function Clubs() {
+export default async function Clubs({
+  searchParams,
+}: {
+  searchParams: Promise<{ competition?: string | string[] }>;
+}) {
+  const competitionId = clubCompetitionFromSearchParam((await searchParams).competition);
+  const competition = clubCompetition(competitionId);
   const clubs = await db.club.findMany({
-    where: { competition: { tmCompetitionId: "UZ1" } },
+    ...clubsQueryForCompetition(competitionId),
     select: {
       id: true,
       name: true,
@@ -25,14 +33,14 @@ export default async function Clubs() {
   });
 
   return <>
-    <PageHeader title="Clubs" eyebrow="UZ1 squad intelligence" />
+    <PageHeader title="Clubs" eyebrow={`${competition.displayName} squad intelligence`} />
     <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))" }}>
       {clubs.map((club) => {
         const ages = club.players.map((player) => playerAge(player, new Date())).filter((age): age is number => age != null);
         const value = club.players.reduce((total, player) => total + (player.marketValueEur ?? 0), 0);
         const need = club.needHistory[0];
 
-        return <Link href={`/clubs/${club.id}`} className="card" style={{ padding: 20, textDecoration: "none", color: "inherit" }} key={club.id}>
+        return <Link href={`/clubs/${club.id}?competition=${competitionId}`} className="card" style={{ padding: 20, textDecoration: "none", color: "inherit" }} key={club.id}>
           <div className="section-title">
             <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
               <ClubLogo name={club.name} tmClubId={club.tmClubId} size="md" />
@@ -46,5 +54,6 @@ export default async function Clubs() {
         </Link>;
       })}
     </div>
+    {!clubs.length && <p className="empty">No clubs available for {competition.displayName}.</p>}
   </>;
 }

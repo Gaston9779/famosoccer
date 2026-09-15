@@ -1,4 +1,9 @@
-export type CurrentPerformanceScope = "UZ1" | "ITA" | "FRA";
+import {
+  competitionSeasonMatches,
+  type ClubCompetitionId,
+} from "./club-competitions";
+
+export type CurrentPerformanceScope = ClubCompetitionId | "ITA" | "FRA";
 
 export type CurrentPerformance = {
   season: string;
@@ -12,10 +17,11 @@ export function selectCurrentPerformance<T extends CurrentPerformance>(
   performances: readonly T[],
   scope: CurrentPerformanceScope,
 ): T | null {
-  if (scope === "UZ1")
+  if (scope === "UZ1" || scope === "IT1" || scope === "IT2")
     return performances.find(
       (performance) =>
-        performance.season === "2026" && performance.competitionKey === "UZ1",
+        performance.competitionKey === scope &&
+        competitionSeasonMatches(performance.season, scope),
     ) ?? null;
 
   return (performances

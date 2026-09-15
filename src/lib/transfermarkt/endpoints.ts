@@ -1,4 +1,8 @@
 import { ProviderError } from "./errors";
+import {
+  DEFAULT_CLUB_COMPETITION,
+  type ClubCompetitionId,
+} from "../club-competitions";
 const domains = new Set([
   "com",
   "it",
@@ -86,7 +90,8 @@ export function tmapiPerformanceUrl(playerId: string) {
   return { path, url: `https://tmapi.transfermarkt.technology${path}` };
 }
 export const endpoints = {
-  teams: "/quickselect/teams/UZ1",
+  teams: (competitionId: ClubCompetitionId = DEFAULT_CLUB_COMPETITION) =>
+    `/quickselect/teams/${competitionId}`,
   players: (id: string) => `/quickselect/players/${id}`,
   profile: (id: string) => `/player/profil/spieler/${id}`,
 };

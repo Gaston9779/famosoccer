@@ -3,8 +3,9 @@ import { normalizeRole } from "./roles";
 import { playerAge, type IntelligencePlayer } from "./types";
 import type { Representation } from "../transfermarkt/types";
 import { playingTimePercent, selectCurrentPerformance } from "../current-performance";
+import type { ClubCompetitionId } from "../club-competitions";
 export type Component = { score: number | null; maxScore: number; status: "KNOWN" | "UNKNOWN"; reason: string; warning?: string };
-export type OpportunitySportingScope = "UZ1" | "ITA" | "FRA";
+export type OpportunitySportingScope = ClubCompetitionId | "ITA" | "FRA";
 const known = (score: number, maxScore: number, reason: string, warning?: string): Component => ({ score, maxScore, status: "KNOWN", reason, ...(warning ? { warning } : {}) });
 const unknown = (maxScore: number, reason: string): Component => ({ score: null, maxScore, status: "UNKNOWN", reason, warning: reason });
 export function scoreContractOpportunity(

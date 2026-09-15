@@ -2,11 +2,14 @@ import { clamp, round, scoringConfig, type KnownRole } from "./config";
 import { normalizeRole, secondaryRoles } from "./roles";
 import { playerAge, type IntelligencePlayer } from "./types";
 import type { ClubNeed } from "./clubNeed";
+// Recruitment matching never reads performance history (only club-need /
+// opportunity scoring does), so its inputs don't need to carry it.
+type MatchCandidate = Omit<IntelligencePlayer, "performances">;
 export function calculatePlayerClubMatch(
-  player: IntelligencePlayer,
+  player: MatchCandidate,
   need: ClubNeed,
   opportunity: number,
-  clubPlayers: IntelligencePlayer[],
+  clubPlayers: MatchCandidate[],
   now: Date,
   includeCurrentClub = false,
 ) {

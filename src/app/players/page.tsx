@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
 
 type PlayerSearchParams = { search?: string; favorites?: string; scope?: string; minScore?: string; contract?: string; representation?: string };
 
-function scopeHref(scope: "uzbekistan" | "ita" | "fra" | "other", search: string, favorites?: string) {
+function scopeHref(scope: "uzbekistan" | "ita" | "fra" | "it1" | "it2" | "other", search: string, favorites?: string) {
   const params = new URLSearchParams();
   if (scope !== "uzbekistan") params.set("scope", scope);
   if (search) params.set("search", search);
@@ -28,6 +28,8 @@ export default async function Players({ searchParams }: { searchParams: Promise<
   const isOther = scope === "OTHER";
   const isIta = scope === "ITA";
   const isFra = scope === "FRA";
+  const isSerieA = scope === "IT1";
+  const isSerieB = scope === "IT2";
   const players = await db.player.findMany({
     where: { ...playerScopeWhere(scope), ...(favorites === "1" ? { isFavorite: true } : {}) },
     select: {
@@ -44,13 +46,15 @@ export default async function Players({ searchParams }: { searchParams: Promise<
   return <div className="players-page">
     <header className="players-page-header">
       <p className="eyebrow">Players</p>
-      <h1>{isIta ? "Italian abroad" : isFra ? "France" : isOther ? "Other players" : "All players"}</h1>
-      <p>{isIta ? `Explore ${players.length} Italian players abroad` : isFra ? `Explore ${players.length} French free agents` : isOther ? `Explore ${players.length} imported players outside Uzbekistan Super League` : `Explore ${players.length} players from Uzbekistan Super League`}</p>
+      <h1>{isIta ? "Italian abroad" : isFra ? "France" : isSerieA ? "Serie A" : isSerieB ? "Serie B" : isOther ? "Other players" : "All players"}</h1>
+      <p>{isIta ? `Explore ${players.length} Italian players abroad` : isFra ? `Explore ${players.length} French free agents` : isSerieA ? `Explore ${players.length} players currently at a Serie A club` : isSerieB ? `Explore ${players.length} players currently at a Serie B club` : isOther ? `Explore ${players.length} imported players outside Uzbekistan Super League` : `Explore ${players.length} players from Uzbekistan Super League`}</p>
     </header>
     <PlayerScopeTabs tabs={[
       { label: "Uzbekistan", href: scopeHref("uzbekistan", search, favorites), active: isUzbekistan },
       { label: "Italian abroad", href: scopeHref("ita", search, favorites), active: isIta },
       { label: "France", href: scopeHref("fra", search, favorites), active: isFra },
+      { label: "Serie A", href: scopeHref("it1", search, favorites), active: isSerieA },
+      { label: "Serie B", href: scopeHref("it2", search, favorites), active: isSerieB },
       { label: "Altro", href: scopeHref("other", search, favorites), active: isOther },
     ]}>
       <ImportForm />

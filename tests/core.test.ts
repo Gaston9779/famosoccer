@@ -1,7 +1,8 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, existsSync } from "node:fs";
-import { playerUrl } from "../src/lib/transfermarkt/endpoints";
+import { endpoints, playerUrl } from "../src/lib/transfermarkt/endpoints";
+import { CLUB_COMPETITIONS, clubCompetitionFromSearchParam } from "../src/lib/club-competitions";
 import {
   normalizePosition,
   normalizeRepresentation,
@@ -48,6 +49,19 @@ test("player IDs across country domains; rejects lookalikes and unrelated paths"
     "ftp://transfermarkt.com/a/profil/spieler/123",
   ])
     assert.throws(() => playerUrl(url));
+});
+test("club competition contexts and team endpoints are explicit", () => {
+  assert.deepEqual(Object.keys(CLUB_COMPETITIONS), ["UZ1", "IT1", "IT2"]);
+  assert.equal(endpoints.teams("UZ1"), "/quickselect/teams/UZ1");
+  assert.equal(endpoints.teams("IT1"), "/quickselect/teams/IT1");
+  assert.equal(endpoints.teams("IT2"), "/quickselect/teams/IT2");
+});
+test("club route competition defaults safely to UZ1 and accepts only supported scopes", () => {
+  assert.equal(clubCompetitionFromSearchParam(undefined), "UZ1");
+  assert.equal(clubCompetitionFromSearchParam("UZ1"), "UZ1");
+  assert.equal(clubCompetitionFromSearchParam("IT1"), "IT1");
+  assert.equal(clubCompetitionFromSearchParam("IT2"), "IT2");
+  assert.equal(clubCompetitionFromSearchParam("ITA"), "UZ1");
 });
 test("positions preserve macro semantics", () => {
   for (const [raw, group] of [

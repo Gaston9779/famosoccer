@@ -192,11 +192,13 @@ test("note and tag API contracts: validation, idempotent assignment, removal and
   assert.equal(await db.playerTagAssignment.count(), 0);
 });
 test("Zod rejects invalid filters and parses false literally", async () => {
-  const { playerFilters, eventFilters, matchFilters } = await import(
+  const { playerFilters, eventFilters, matchFilters, clubFilters } = await import(
     "../src/lib/intelligence/api"
   );
   assert.equal(playerFilters.safeParse({ minScore: 101 }).success, false);
   assert.equal(playerFilters.safeParse({ role: "FB" }).success, false);
   assert.equal(eventFilters.parse({ unread: "false" }).unread, false);
   assert.equal(matchFilters.safeParse({ limit: 9999 }).success, false);
+  assert.equal(clubFilters.parse({ competition: "IT1" }).competition, "IT1");
+  assert.equal(matchFilters.safeParse({ competition: "IT3" }).success, false);
 });
