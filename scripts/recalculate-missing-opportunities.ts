@@ -14,6 +14,7 @@ import { isClubCompetitionId, type ClubCompetitionId } from "../src/lib/club-com
  */
 
 async function main() {
+  const forceAll = process.argv.includes("--all");
   const competition = process.argv[2];
   if (!competition || !isClubCompetitionId(competition))
     throw new Error("Usage: recalculate-missing-opportunities.ts <UZ1|IT1|IT2>");
@@ -23,7 +24,7 @@ async function main() {
     where: { club: { competition: { tmCompetitionId: comp } } },
     select: { id: true, name: true, opportunityHistory: { where: { isCurrent: true }, select: { id: true } } },
   });
-  const missing = candidates.filter((p) => p.opportunityHistory.length === 0);
+  const missing = forceAll ? candidates : candidates.filter((p) => p.opportunityHistory.length === 0);
 
   console.log(JSON.stringify({
     event: "MISSING_OPPORTUNITY_RECALC_START",
@@ -31,6 +32,7 @@ async function main() {
     candidatePlayers: candidates.length,
     withOpportunity: candidates.length - missing.length,
     missingOpportunity: missing.length,
+    forceAll,
   }));
 
   const CONCURRENCY = 8;

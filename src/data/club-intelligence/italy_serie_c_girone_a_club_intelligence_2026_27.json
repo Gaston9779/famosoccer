@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "season": "2026/27",
+    "scope": ["IT3A"],
+    "purpose": "FamoSoccer Club Intelligence seed",
+    "notes": ["Only public, official club contacts and staff appointments are included.", "Unverified clubs intentionally have no record rather than inferred contacts."]
+  },
+  "clubs": [
+    {
+      "tmClubId": "4095",
+      "clubName": "AC Trento",
+      "competitionKey": "IT3A",
+      "decisionMakers": [
+        { "name": "Moreno Zocchi", "role": "Sporting Director & Head of Men's Technical Area", "priority": "A", "confidence": "high", "sourceUrl": "https://www.actrento.com/organigramma-2/" },
+        { "name": "Luca Piazzi", "role": "General Director", "priority": "B", "confidence": "high", "sourceUrl": "https://www.actrento.com/organigramma-2/" },
+        { "name": "Mauro Giacca", "role": "President", "priority": "B", "confidence": "high", "sourceUrl": "https://www.actrento.com/organigramma-2/" }
+      ],
+      "officialContacts": { "city": "Trento", "address": "Via Roberto da Sanseverino, 41, 38122 Trento (TN)", "website": "https://www.actrento.com", "email": null, "phone": null, "leaguePage": null, "sourceUrls": ["https://www.actrento.com/organigramma-2/"] }
+    },
+    {
+      "tmClubId": "26789",
+      "clubName": "FC Pro Vercelli 1892",
+      "competitionKey": "IT3A",
+      "decisionMakers": [
+        { "name": "Massimo Alagona", "role": "General & Sporting Secretary", "priority": "A", "confidence": "high", "sourceUrl": "https://www.fcprovercelli.it/news/tutte-le-news/1361-definita-la-nuova-struttura-operativa-e-tecnica-per-la-stagione-2026-27" },
+        { "name": "Filomeno Rocco Fimmanò", "role": "General Manager", "priority": "B", "confidence": "high", "sourceUrl": "https://www.fcprovercelli.it/news/tutte-le-news/1361-definita-la-nuova-struttura-operativa-e-tecnica-per-la-stagione-2026-27" }
+      ],
+      "officialContacts": { "city": "Vercelli", "address": "Via Vicenza, 22, Vercelli", "website": "https://www.fcprovercelli.it", "email": "segreteria@fcprovercelli.it", "phone": "+39 351 746 6341", "leaguePage": null, "sourceUrls": ["https://www.fcprovercelli.it/contatti"] }
+    },
+    {
+      "tmClubId": "4102",
+      "clubName": "AC Carpi",
+      "competitionKey": "IT3A",
+      "decisionMakers": [
+        { "name": "Claudio Lazzaretti", "role": "President", "priority": "B", "confidence": "high", "sourceUrl": "https://www.carpicalcio.it/organigramma/" },
+        { "name": "Enrico Bonzanini", "role": "General Director", "priority": "A", "confidence": "high", "sourceUrl": "https://www.carpicalcio.it/organigramma/" }
+      ],
+      "officialContacts": { "city": "Carpi", "address": "Viale dell'Industria, 95, 41012 Carpi (MO)", "website": "https://www.carpicalcio.it", "email": "segreteria@carpicalcio.it", "phone": "+39 347 2755428", "leaguePage": null, "sourceUrls": ["https://www.carpicalcio.it/organigramma/"] }
+    }
+  ]
+}

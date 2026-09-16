@@ -8,6 +8,12 @@ import { clubCompetition, clubCompetitionFromSearchParam } from "@/lib/club-comp
 
 export const dynamic = "force-dynamic";
 
+function needTone(score: number) {
+  if (score >= 60) return "green" as const;
+  if (score >= 30) return "amber" as const;
+  return "red" as const;
+}
+
 export default async function Clubs({
   searchParams,
 }: {
@@ -46,7 +52,7 @@ export default async function Clubs({
               <ClubLogo name={club.name} tmClubId={club.tmClubId} size="md" />
               <h2>{club.name}</h2>
             </span>
-            {need && <Badge tone={need.total >= 70 ? "amber" : "slate"}>{need.total}</Badge>}
+            {need && <Badge tone={needTone(need.total)}>{need.total.toFixed(1)}</Badge>}
           </div>
           <p className="muted">{club.players.length} players · {ages.length ? `Avg. age ${(ages.reduce((sum, age) => sum + age, 0) / ages.length).toFixed(1)}` : "Average age unavailable"}</p>
           <p className="muted">Squad value {value ? money(value) : "—"}</p>

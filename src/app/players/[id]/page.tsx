@@ -75,7 +75,7 @@ export default async function PlayerDetail({ params }: { params: Promise<{ id: s
   const performanceScope: OpportunitySportingScope = p.pools.some((pool) => pool.poolKey === "ITA") ? "ITA"
     : p.pools.some((pool) => pool.poolKey === "FRA") ? "FRA"
     : isClubCompetitionId(clubCompetitionId ?? "")
-      ? clubCompetitionId as "UZ1" | "IT1" | "IT2"
+      ? clubCompetitionId as ClubCompetitionId
       : "UZ1";
   const displayScore = score?.total ?? null;
   const confidencePercent = score ? Math.round((score.confidence <= 1 ? score.confidence : score.confidence / 100) * 100) : null;

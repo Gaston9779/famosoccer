@@ -17,7 +17,7 @@ export function selectCurrentPerformance<T extends CurrentPerformance>(
   performances: readonly T[],
   scope: CurrentPerformanceScope,
 ): T | null {
-  if (scope === "UZ1" || scope === "IT1" || scope === "IT2")
+  if (scope === "UZ1" || scope === "IT1" || scope === "IT2" || scope === "IT3A")
     return performances.find(
       (performance) =>
         performance.competitionKey === scope &&

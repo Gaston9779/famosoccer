@@ -23,6 +23,7 @@ const clubCompetitions = [
   ["Uzbekistan", "UZ1"],
   ["Serie A", "IT1"],
   ["Serie B", "IT2"],
+  ["Serie C - Girone A", "IT3A"],
 ] as const;
 
 const playerScopes = [
@@ -31,13 +32,16 @@ const playerScopes = [
   ["France", "fra"],
   ["Serie A", "it1"],
   ["Serie B", "it2"],
+  ["Serie C", "it3a"],
   ["Altro", "other"],
 ] as const;
 
 function SidebarNavContent({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
   const search = useSearchParams();
-  const [openMenu, setOpenMenu] = useState<"Players" | "Clubs" | null>(null);
+  // Menu visibility is a user-controlled UI preference. It must not be tied
+  // to the current route: a selected scope remains highlighted when closed.
+  const [openMenus, setOpenMenus] = useState({ Players: false, Clubs: false });
 
   return (
     <nav className="sidebar-nav">
@@ -52,7 +56,7 @@ function SidebarNavContent({ onNavigate }: { onNavigate?: () => void }) {
             : pathname === href || pathname.startsWith(`${href}/`);
 
         if (label === "Players" || label === "Clubs") {
-          const isOpen = openMenu === label || matches;
+          const isOpen = openMenus[label];
           const optionsId = `sidebar-nav-${label.toLowerCase()}-options`;
           return (
             <div key={label} className={`sidebar-nav-clubs${matches ? " active" : ""}`}>
@@ -67,7 +71,7 @@ function SidebarNavContent({ onNavigate }: { onNavigate?: () => void }) {
                   className="sidebar-nav-accordion-toggle"
                   aria-expanded={isOpen}
                   aria-controls={optionsId}
-                  onClick={() => setOpenMenu(isOpen ? null : label)}
+                  onClick={() => setOpenMenus((menus) => ({ ...menus, [label]: !menus[label] }))}
                 >
                   <span aria-hidden="true">{isOpen ? "▾" : "▸"}</span>
                 </button>
