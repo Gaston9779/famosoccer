@@ -1,0 +1,5249 @@
+[
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "970683",
+    "name": "Piotr Pardel",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1170822",
+    "name": "Gabriel Bugli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1186932",
+    "name": "Edoardo Zanchi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "667060",
+    "name": "Tommaso Bertini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1298953",
+    "name": "Alessandro Anelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1064015",
+    "name": "Ljubo Puljić",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "962154",
+    "name": "Albert Navarro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "940553",
+    "name": "Relja Obrić",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1053222",
+    "name": "Jacopo Mirra",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "929871",
+    "name": "Matteo Plaia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "903218",
+    "name": "Gabriel Ramaj",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1008567",
+    "name": "Manuel Maffessoli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "667066",
+    "name": "Alessio Guerini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "895927",
+    "name": "Mattia Tavanti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1295111",
+    "name": "Isaac Isoa",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1048080",
+    "name": "Federico Simonetto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "536837",
+    "name": "Federico Bergonzi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "942091",
+    "name": "Filippo Mencaraglia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "892165",
+    "name": "Sergej Levak",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1178213",
+    "name": "Federico Steffanoni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "936755",
+    "name": "Alberto Manzoni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1134119",
+    "name": "Digne Kaelas Pounga",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1177512",
+    "name": "Gerard Ruiz",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1170813",
+    "name": "Javison Idele",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "421769",
+    "name": "Davide Ghislandi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1170843",
+    "name": "Marco Leandri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1048145",
+    "name": "Andrea Bonanomi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1073421",
+    "name": "Nicolò Artesani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1057853",
+    "name": "Gabriele Bertolini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "622031",
+    "name": "Tommaso De Nipoti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "984708",
+    "name": "Siren Diao",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1005997",
+    "name": "Nicolò Baldo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "928046",
+    "name": "Giulio Misitano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "955427",
+    "name": "Henry Camara",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1101344",
+    "name": "Emanuele Zanaboni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Atalanta U23",
+    "tmPlayerId": "1048143",
+    "name": "Frederick Ndongue",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "167685",
+    "name": "Alessandro Micai",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "535740",
+    "name": "Giuseppe Ciocci",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "1244150",
+    "name": "Tommaso Altemura",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "242078",
+    "name": "Ales Mateju",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "616142",
+    "name": "Jonathan Spedalieri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "731467",
+    "name": "Simone Giorgeschi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "706017",
+    "name": "Riccardo Sganzerla",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "457237",
+    "name": "Sergio Kalaj",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "819378",
+    "name": "Motiejus Šapola",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "882980",
+    "name": "Mattia Benvenuto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "1049862",
+    "name": "Samuele Capolupo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "535742",
+    "name": "Damiano Cancellieri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NO_AGENT",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "917376",
+    "name": "Jérémy Oyono",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "934575",
+    "name": "Galo Capomaggio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "776737",
+    "name": "Joselito",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "619326",
+    "name": "Aldo Florenzi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "257751",
+    "name": "Simone Bastoni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "724437",
+    "name": "Kaleb Jiménez",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "934386",
+    "name": "Pietro Candelari",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "704453",
+    "name": "Kevin Bright",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "978815",
+    "name": "Carmelo Limonelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "976446",
+    "name": "Alessandro Cardinali",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "458816",
+    "name": "Kevin Cannavò",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "1053566",
+    "name": "Mert Durmush",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "815543",
+    "name": "Denis Cazzadori",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "539582",
+    "name": "Massimo Zilli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "532040",
+    "name": "Giuseppe Di Serio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "337809",
+    "name": "Simone Mazzocchi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Spezia Calcio",
+    "tmPlayerId": "1057273",
+    "name": "Riccardo Fontanarosa",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "613533",
+    "name": "Ivan Saio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "728490",
+    "name": "Enis Ujkaj",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "55000",
+    "name": "Vincenzo Fiorillo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1307069",
+    "name": "Jacopo La Barba",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "354909",
+    "name": "Giorgio Altare",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1175301",
+    "name": "Federico Nardin",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "406842",
+    "name": "Riccardo Capellini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "389841",
+    "name": "Filippo Pellacani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NO_AGENT",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1317348",
+    "name": "Lapo Valori",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1367742",
+    "name": "Emanuele Troiano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "937342",
+    "name": "Matteo Motta",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "525660",
+    "name": "Francesco Donati",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "160560",
+    "name": "Gaetano Letizia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1176568",
+    "name": "Matteo Milan",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "935508",
+    "name": "Victor Eletu",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "459147",
+    "name": "Erdis Kraja",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1368686",
+    "name": "Christian D'Errico",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "993212",
+    "name": "Jacopo Sardo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "287663",
+    "name": "Luca Valzania",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "252743",
+    "name": "Filippo Guccione",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "539685",
+    "name": "Bilal Erradi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1079312",
+    "name": "Massimo Gatto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "534166",
+    "name": "Lorenzo Meazzi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "928032",
+    "name": "Leonardo Graziani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "623036",
+    "name": "Michele D'Ausilio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1175714",
+    "name": "Giuseppe Saccomanni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "708079",
+    "name": "Andrea Ferraris",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "496270",
+    "name": "Gianmarco Cangiano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "357998",
+    "name": "Davide Merola",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "811397",
+    "name": "Pablo Vitali",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1266902",
+    "name": "Luigi Morazzini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "254708",
+    "name": "Giacomo Parigi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "159337",
+    "name": "Roberto Inglese",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Delfino Pescara 1936",
+    "tmPlayerId": "1084276",
+    "name": "Michael Zeppieri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "163652",
+    "name": "Jacopo Furlan",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "687640",
+    "name": "Matteo Sorzi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "882775",
+    "name": "Francesco Borriello",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "267014",
+    "name": "Matteo Battistini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "817468",
+    "name": "Tomas Lepri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "61617",
+    "name": "Paolo Rozzio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "396307",
+    "name": "Danilo Quaranta",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "1187584",
+    "name": "Ashton Ezinwa",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "937289",
+    "name": "Simone Bonetti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "534082",
+    "name": "Fabio Ponsi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "357176",
+    "name": "Alessandro Tripaldelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "341481",
+    "name": "Lorenzo Libutti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "110928",
+    "name": "Lorenzo Crisetig",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "195335",
+    "name": "Michele Castagnetti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "1176347",
+    "name": "Samuel Ledain",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "394352",
+    "name": "Massimo Bertagnoli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "935782",
+    "name": "Francesco Vallarelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "651356",
+    "name": "Kristófer Jónsson",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "199971",
+    "name": "Michele Cavion",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "1081943",
+    "name": "Matteo Tessitori",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "392577",
+    "name": "Matteo Rover",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "611861",
+    "name": "Natan Girma",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "394304",
+    "name": "Manolo Portanova",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "740617",
+    "name": "Damiano Basili",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "412513",
+    "name": "Thomas Henry",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "FAMILY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "425781",
+    "name": "Leon Sipos",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Reggiana 1919",
+    "tmPlayerId": "1208731",
+    "name": "Edoardo Cavaliere",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "120236",
+    "name": "Giacomo Venturi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "1032778",
+    "name": "Tommaso Ciardi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "1200023",
+    "name": "Tommaso Stagni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "199583",
+    "name": "Giovanni Zaro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "462267",
+    "name": "Adriano Esposito",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "136135",
+    "name": "Matteo Solini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "395123",
+    "name": "Alessandro Bianconi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "391057",
+    "name": "Cristiano Bani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "88684",
+    "name": "Giulio Donati",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "525653",
+    "name": "Lorenzo Lonardi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "527180",
+    "name": "Joshua Tenkorang",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "FAMILY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "431581",
+    "name": "Edoardo Duca",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "1082804",
+    "name": "Vinicius",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "119357",
+    "name": "Carlo Ilari",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "1095963",
+    "name": "Giacomo Calandrini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "1044795",
+    "name": "Lorenzo Da Pozzo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "457236",
+    "name": "Luca Falbo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "199272",
+    "name": "Daniele Casiraghi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "85393",
+    "name": "Nicolas Viola",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "808155",
+    "name": "Marcelo Orellana",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "3373",
+    "name": "Ronaldinho",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "936646",
+    "name": "Matteo Maggio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "538936",
+    "name": "Cristian Spini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "482792",
+    "name": "Simone Rabbi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "321065",
+    "name": "Edoardo Soleri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "102379",
+    "name": "Manuel Fischnaller",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Ravenna FC",
+    "tmPlayerId": "864101",
+    "name": "Abdel Zagrè",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "1073023",
+    "name": "Radoslaw Zelezny",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "738112",
+    "name": "Luca Moro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "821043",
+    "name": "Ruben Rinaldini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "1430314",
+    "name": "Sebastian Strappini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "621122",
+    "name": "Matteo Angeli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "536341",
+    "name": "Diego Stramaccioni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "286259",
+    "name": "Davide Riccardi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "704675",
+    "name": "Matteo Borsoi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "954357",
+    "name": "Giacomo Cavallini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "1108253",
+    "name": "Dimitar Papazov",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "616903",
+    "name": "Moustapha Yabre",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "487846",
+    "name": "Guillaume Renault",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "569579",
+    "name": "Alessandro Tozzuolo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "707449",
+    "name": "Ettore Quirini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NO_AGENT",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "463790",
+    "name": "Christian Langella",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "300156",
+    "name": "Linas Megelaitis",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "459452",
+    "name": "Riccardo Ladinetti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "1057854",
+    "name": "Gabriele Conti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "281900",
+    "name": "Paolo Bartolomei",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "398576",
+    "name": "Giuseppe Carriero",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "1239712",
+    "name": "Christian Dottori",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "200057",
+    "name": "Elvis Kabashi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "1072763",
+    "name": "Filippo Dodde",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "426179",
+    "name": "Andrea Cisco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "532919",
+    "name": "Matteo Cortesi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "776915",
+    "name": "Sayha Seha",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "859660",
+    "name": "Francesco Attanasio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "188436",
+    "name": "Luigi Canotto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "262613",
+    "name": "Pelle van Amersfoort",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "421780",
+    "name": "Edoardo Vergani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "FAMILY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AC Perugia Calcio",
+    "tmPlayerId": "1178107",
+    "name": "Antonio Sabbatani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "482789",
+    "name": "Giacomo Drago",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "901035",
+    "name": "Giovanni Stellato",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "410372",
+    "name": "Stefano Esempio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "324472",
+    "name": "Diego Borghini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NO_AGENT",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "240424",
+    "name": "Cristian Riggio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "392521",
+    "name": "Erasmo Mulè",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "398025",
+    "name": "Riccardo Baroni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "104332",
+    "name": "Alessandro Malomo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "952366",
+    "name": "Robert Toma",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "535139",
+    "name": "Mattia Tonetto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "165885",
+    "name": "Paolo Frascatore",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "331472",
+    "name": "Orlando Viteritti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "719802",
+    "name": "Michele Picardi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "392571",
+    "name": "Enrico Celeghin",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "506650",
+    "name": "Salvatore Santoro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "289061",
+    "name": "Alessandro Murgia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "373381",
+    "name": "Pasquale Giannotti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "356144",
+    "name": "Simone Tascone",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "583646",
+    "name": "Daniel Sannipoli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "459725",
+    "name": "Valerio Mastrantonio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "1180711",
+    "name": "Serafino Calzone",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "390120",
+    "name": "Davide Zappella",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "885886",
+    "name": "Raffaele Marchioro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "464682",
+    "name": "Andrea Errico",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "340444",
+    "name": "Christian D'Urso",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "1442605",
+    "name": "Leonardo Di Blasio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "814459",
+    "name": "Alessandro Spavone",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "708275",
+    "name": "Alessandro Falleni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "409553",
+    "name": "Franco Ferrari",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Guidonia Montecelio 1937 FC",
+    "tmPlayerId": "433685",
+    "name": "Eetu Vertainen",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "1107574",
+    "name": "Roberts Apsits",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "367618",
+    "name": "Andrea Spurio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "1221528",
+    "name": "Antonio Martínez",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "564721",
+    "name": "Emmanuele Salines",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "423614",
+    "name": "Gabriele Corbo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "535031",
+    "name": "Federico Papini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "562287",
+    "name": "Christian Celesia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "1116216",
+    "name": "Cristian Aragona",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "672865",
+    "name": "Lorenzo Coccia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "489468",
+    "name": "Mattia Capoferri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "904893",
+    "name": "Matteo Lanza",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "542570",
+    "name": "Roberto Pierno",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "938452",
+    "name": "Claudio Cristallo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "831728",
+    "name": "Francesco Parisi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "1595483",
+    "name": "Leonardo Blasi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "814000",
+    "name": "Riccardo Fogliata",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "242469",
+    "name": "Mario Gargiulo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "1222050",
+    "name": "Rocco Di Vico",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "814482",
+    "name": "Alessandro Pellitteri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "197468",
+    "name": "Davide Agazzi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "981323",
+    "name": "Antonello Serra",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "719706",
+    "name": "Francesco Maisto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "286276",
+    "name": "Alfredo Bifulco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "976219",
+    "name": "Lorenzo Carfora",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "526992",
+    "name": "Alessandro Galeandro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "391899",
+    "name": "Matteo Stoppa",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "882963",
+    "name": "Simone Leonardi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Campobasso FC",
+    "tmPlayerId": "373287",
+    "name": "Isaac",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "703227",
+    "name": "Davide Mastrantonio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "821202",
+    "name": "Matteo Basti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "1306968",
+    "name": "Alessandro Iosa",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "1194818",
+    "name": "Christian Sbaccanti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "340267",
+    "name": "Giulio Parodi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "704129",
+    "name": "Filippo Marenco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "546529",
+    "name": "Bernardo Calabrese",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "240338",
+    "name": "Luigi Carillo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "1348257",
+    "name": "Davide De Marchi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "469899",
+    "name": "Federico Pace",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "330289",
+    "name": "Cheick Keita",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "FAMILY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "567444",
+    "name": "Emanuel Ercolano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "603524",
+    "name": "Christian Sussi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "56618",
+    "name": "Matteo Bruscagin",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "534164",
+    "name": "Iacopo Lipani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "431735",
+    "name": "Rodrigo De Ciancio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "421765",
+    "name": "Alessio Riccardi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "927251",
+    "name": "Gianmarco Castorri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "525492",
+    "name": "Antonio De Cristofaro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "343827",
+    "name": "Sonny D'Angelo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "1305213",
+    "name": "Diego Catasus",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "1180705",
+    "name": "Mattia Porro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "238654",
+    "name": "Jaime Báez",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "566936",
+    "name": "Antonio Cioffi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "418035",
+    "name": "Giacomo Tomaselli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "348520",
+    "name": "Vincenzo Plescia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NO_AGENT",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "494928",
+    "name": "Youssouph Cheikh Sylla",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "396682",
+    "name": "Luca Gagliano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Latina Calcio 1932",
+    "tmPlayerId": "1282674",
+    "name": "Gabriele Di Giovannantonio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "446457",
+    "name": "Miguel Ángel Martínez",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "886180",
+    "name": "Danko Ciobanu",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "1091656",
+    "name": "Filippo Tani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "113797",
+    "name": "Matteo Bachini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "111433",
+    "name": "Frédéric Veseli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "FAMILY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "934863",
+    "name": "Tommaso Pittino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "183031",
+    "name": "Koffi Djidji",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "641553",
+    "name": "Alessio Rizza",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "176180",
+    "name": "Nicola Falasco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "817045",
+    "name": "Samuele Regazzetti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "679271",
+    "name": "Davide Gentile",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "338104",
+    "name": "Francesco Menarini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "192638",
+    "name": "Nicolas Haas",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "199070",
+    "name": "Tommaso Arrigoni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "1429210",
+    "name": "Luca Alberto Calabrò",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "1059776",
+    "name": "Andrea Bacciardi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "831786",
+    "name": "Luca Bonassi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "1205631",
+    "name": "Chaihane Badoro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "1005191",
+    "name": "Jesus Christ Mawete",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "698110",
+    "name": "Lorenzo Malagrida",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "200188",
+    "name": "Mattia Aramu",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "256659",
+    "name": "Diego Peralta",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "420472",
+    "name": "Gregorio Morachioli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "451354",
+    "name": "Manuele Malotti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "1255844",
+    "name": "Jacopo Marinari",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "897668",
+    "name": "Giacomo Gabbiani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "659416",
+    "name": "Tommaso Mancini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Livorno 1915",
+    "tmPlayerId": "45389",
+    "name": "Samuel Di Carmine",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "936220",
+    "name": "Luca Martelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "886189",
+    "name": "Daniel Theiner",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "925504",
+    "name": "Giulio Veliaj",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1507047",
+    "name": "Alessandro Tagliaferri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1582556",
+    "name": "Gioele Locatelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1582557",
+    "name": "Luca Cappelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "619324",
+    "name": "Luca Munaretti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "621153",
+    "name": "Luigi Palomba",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "933673",
+    "name": "Matteo Onofri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "927254",
+    "name": "Federico Valentini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "935185",
+    "name": "Saer Diop",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1426015",
+    "name": "Alessandro Spinelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "927252",
+    "name": "Diego Rossi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "704090",
+    "name": "Filippo Ercolani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "818896",
+    "name": "Nicola Mandrelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1066168",
+    "name": "Filippo Valentini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "935173",
+    "name": "Manuel Rosetti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1040077",
+    "name": "Giovanni Mattioli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "159466",
+    "name": "Carlo De Risio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "290418",
+    "name": "Riccardo Gaiola",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "459577",
+    "name": "Gabriele Perretta",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "398306",
+    "name": "Davide Macrì",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1429903",
+    "name": "Matteo Attasi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "306643",
+    "name": "Jacopo Scaccabarozzi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "536589",
+    "name": "Nicola Farinelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1158761",
+    "name": "Patrizio Zerbo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "927268",
+    "name": "Valentino Coveri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1040080",
+    "name": "Tommaso Gabellini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "477027",
+    "name": "Elia Petrelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "895946",
+    "name": "Giovanni Perini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Forlì FC",
+    "tmPlayerId": "1055084",
+    "name": "Nicolò Tordiglione",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "353609",
+    "name": "Titas Krapikas",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "1275903",
+    "name": "Tommaso Orsini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "678392",
+    "name": "Giovanni Cultraro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "1567018",
+    "name": "Alberto Barraco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "240400",
+    "name": "Agostino Camigliano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "356010",
+    "name": "Alessio Zini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "290716",
+    "name": "Nicolò Gigli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "603676",
+    "name": "Leonardo Pezzola",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "1385686",
+    "name": "Simone Kosijer",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "1187789",
+    "name": "Mirko Chelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "807897",
+    "name": "Leo Buljan",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "629574",
+    "name": "Marco Piccoli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "428977",
+    "name": "Kevin Candellori",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "1166501",
+    "name": "Moussa Touré",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "363610",
+    "name": "Georgi Tunjov",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "458805",
+    "name": "Simone Nicoli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "953372",
+    "name": "Francesco Perrotta",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "1314205",
+    "name": "Mathias Margarita",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "1085031",
+    "name": "Elia Plicco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "355104",
+    "name": "Pepín Machín",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "703246",
+    "name": "Pasquale Marranzino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "535797",
+    "name": "Lorenzo Sgarbi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "651008",
+    "name": "Davide Pio Stabile",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "136114",
+    "name": "Simone Magnaghi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Sambenedettese",
+    "tmPlayerId": "488515",
+    "name": "Alessandro Faggioli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "967812",
+    "name": "Andrea Bellocci",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "120347",
+    "name": "Andrea Sala",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "818929",
+    "name": "Simone Calvani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "162955",
+    "name": "Luca Piana",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "1059527",
+    "name": "Lorenzo Malanca",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "976428",
+    "name": "Lorenzo Costantino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "402335",
+    "name": "Mirko Saltarelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "558882",
+    "name": "Federico Gulinelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "1081435",
+    "name": "Cristian Carlini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "709539",
+    "name": "Filippo Saiani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "930769",
+    "name": "Michael Ndianefo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "616024",
+    "name": "Luca Dellepiane",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "1315663",
+    "name": "Nicolò Agostino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "392563",
+    "name": "Alessandro Di Munno",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "240807",
+    "name": "Zaccaria Hamlili",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "1567946",
+    "name": "Enrico Saracco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "392961",
+    "name": "Denis Hergheligiu",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "700995",
+    "name": "Matteo De Rinaldis",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "479712",
+    "name": "Giorgio Lionetti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "611155",
+    "name": "Mirko Lazzarini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "167287",
+    "name": "Maiko Candiano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "398080",
+    "name": "Matteo Alluci",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "1129564",
+    "name": "Diego Tampieri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NO_AGENT",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "399590",
+    "name": "Andrea Bussaglia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "536460",
+    "name": "Andrea Ghezzi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "1317515",
+    "name": "Filippo Rosa",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "883051",
+    "name": "Kevin Bruno",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "866216",
+    "name": "Jacopo Simonetta",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "1086463",
+    "name": "Leroy Cecchinato",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "821188",
+    "name": "Matteo Ferro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "1050787",
+    "name": "Lorenzo Lischetti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "234882",
+    "name": "Iacopo Cernigoi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "FC Vado",
+    "tmPlayerId": "195364",
+    "name": "Diego Vita",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "199078",
+    "name": "Alessandro Tonti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "724099",
+    "name": "Claudio Turi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "287639",
+    "name": "Domenico Frare",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "823550",
+    "name": "Francesco Corradini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "731510",
+    "name": "Giovanni Di Renzo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "536962",
+    "name": "Giovanni Alessandretti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "459345",
+    "name": "Anass Serbouti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "895562",
+    "name": "Simone Ienco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "331199",
+    "name": "Tommaso D'Orazio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "1152997",
+    "name": "Mateo Scheffer Bracco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "644156",
+    "name": "Luca Lombardi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "1123209",
+    "name": "Giulio Nebuloso",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "1035536",
+    "name": "Gianluca Germinario",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "929748",
+    "name": "Marco Oliva",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "935189",
+    "name": "Daniel Ferrante",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "1051741",
+    "name": "Ank Bølling Asmussen",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "899543",
+    "name": "Marco Delle Monache",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "537360",
+    "name": "Giuseppe Guadagni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "928054",
+    "name": "Alessandro Pellegrino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "1168033",
+    "name": "Simone Ardizzone",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "392540",
+    "name": "Riccardo Forte",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "930623",
+    "name": "Gianluca Vigliotti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "895596",
+    "name": "Alessandro Selvini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Pineto Calcio",
+    "tmPlayerId": "1109659",
+    "name": "Silvano Biggi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "1059771",
+    "name": "Filippo Vertua",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "918804",
+    "name": "Alessandro Morlupo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "1582641",
+    "name": "Alessio Fabiano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "89034",
+    "name": "Riccardo Brosco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "672868",
+    "name": "Pietro Giordani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "207197",
+    "name": "Danilo Piroli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "1170243",
+    "name": "Anej Koroša",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "862392",
+    "name": "Marco Orfano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "942805",
+    "name": "Antonio Castaldo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "1123259",
+    "name": "Emanuele Tesauro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "536355",
+    "name": "Matteo Vagnoni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "659649",
+    "name": "Federico Casolari",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "410075",
+    "name": "Danilo Greco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "291266",
+    "name": "Godfred Donsah",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "242096",
+    "name": "Davide Buono",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "239584",
+    "name": "Matteo Gerbaudo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "1310348",
+    "name": "Niccolò Felici",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "158569",
+    "name": "Marco Spinosa",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "FAMILY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "1369322",
+    "name": "Francesco Galastri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "954688",
+    "name": "Filippo Carbone",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "238981",
+    "name": "Vittorio Parigini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "1055075",
+    "name": "Flavio Ferrari",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "819326",
+    "name": "Ismaila Badje",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "1299492",
+    "name": "Ibrahima Papa Wade",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "459892",
+    "name": "Filippo D'Andrea",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "1024766",
+    "name": "Frederik Tosku",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Ostiamare Lido Calcio",
+    "tmPlayerId": "421773",
+    "name": "Riccardo Tonin",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "742235",
+    "name": "Michele Pezzolato",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "979859",
+    "name": "Gianluca Astaldi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "1385604",
+    "name": "Andrea Zambuto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "885230",
+    "name": "Nicola Pintus",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "500507",
+    "name": "Luca Ercolani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "721228",
+    "name": "Francesco Chesti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "525662",
+    "name": "Lorenzo Masetti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "408904",
+    "name": "Matteo Gorelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "285776",
+    "name": "Gabriele Morelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "613539",
+    "name": "Marco Bertini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "814015",
+    "name": "Matteo Colombo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "1059525",
+    "name": "Tommaso Casalino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "536954",
+    "name": "Francesco Proietto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NO_AGENT",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "450167",
+    "name": "Leonardo Di Cosmo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "1153015",
+    "name": "Manuel Tirelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "459149",
+    "name": "Lorenzo Peli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "820695",
+    "name": "Lorenzo Vigiani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "1187298",
+    "name": "Claudio Martey",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "574889",
+    "name": "Simone Ianesi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "1178509",
+    "name": "Kleidi Xhani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "1188639",
+    "name": "Carlo Maria Testa",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "1162026",
+    "name": "Gabriele Negri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "910436",
+    "name": "Leonardo Bellini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Pianese",
+    "tmPlayerId": "478766",
+    "name": "Luca Fabrizi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "291314",
+    "name": "Andrea Zaccagno",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "1174327",
+    "name": "Domiziano Tirelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "567476",
+    "name": "Gabriele Berto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "708700",
+    "name": "Mattia Scaringi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "127763",
+    "name": "Nicolò Antonelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "1166624",
+    "name": "Mamadou Kebbeh",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "315874",
+    "name": "Gianmaria Zanandrea",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "158043",
+    "name": "Daniele Giorico",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "373898",
+    "name": "Nicholas Pennington",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "397950",
+    "name": "Giuseppe Mastinu",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "564793",
+    "name": "Michael Brentan",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "641556",
+    "name": "Francesco Nunziatini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "337511",
+    "name": "Alessandro Masala",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "1546366",
+    "name": "Marcello Sotgiu",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "339892",
+    "name": "Francesco Corsinelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "320456",
+    "name": "Giacomo Zecca",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "136113",
+    "name": "Matteo Liviero",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "813973",
+    "name": "Michele Carboni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "641204",
+    "name": "Mohamed Ayman Sanat",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "678212",
+    "name": "Alberto Lunghi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "650255",
+    "name": "Lorenzo Di Stefano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "700631",
+    "name": "Daniele Sorrentino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "266217",
+    "name": "Cristian Bunino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "140105",
+    "name": "Luigi Scotto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "SEF Torres 1903",
+    "tmPlayerId": "1520754",
+    "name": "Sodiq Olayiwola",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "818892",
+    "name": "Nicola Bagnolini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "347353",
+    "name": "Leonardo Marson",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "932733",
+    "name": "Leonardo Baroncelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "56682",
+    "name": "Andrea Signorini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "390724",
+    "name": "Manuel Ferrini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "1201926",
+    "name": "Oumar Barry",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "1182950",
+    "name": "Bruno Zorzetto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "938673",
+    "name": "Luca Barani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "937669",
+    "name": "Edoardo Meconi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "711352",
+    "name": "Francesco Zallu",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "816897",
+    "name": "Lorenzo Podda",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "197744",
+    "name": "Nicolò Fazzi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "62718",
+    "name": "Federico Carraro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "163264",
+    "name": "Giovanni Di Noia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "164020",
+    "name": "Marco Pinato",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "62750",
+    "name": "Giacomo Rosaia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "1059716",
+    "name": "Alessandro Cardascio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "895947",
+    "name": "Manuel Cesari",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "1249656",
+    "name": "Amoako Minta",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "262521",
+    "name": "Enrico Baldini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "397860",
+    "name": "Marco Spina",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "930944",
+    "name": "Tommaso Ghirardello",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "134983",
+    "name": "Andrea La Mantia",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "AS Gubbio 1910",
+    "tmPlayerId": "91241",
+    "name": "Giacomo Beretta",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "917317",
+    "name": "Mattia Piersanti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "392530",
+    "name": "Alessandro Guarnone",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "605650",
+    "name": "Mattia Mariani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "88705",
+    "name": "Michele Rigione",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1253774",
+    "name": "Pietro Giorgini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "60732",
+    "name": "Denis Tonucci",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "525480",
+    "name": "Alessandro Tomassini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "979415",
+    "name": "Lorenzo Beghetto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1060110",
+    "name": "Gioacchino Barranco",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1057265",
+    "name": "Sebastiano Ebano",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1366360",
+    "name": "Federico Pompilio",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "997907",
+    "name": "Alessandro Ventre",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1058981",
+    "name": "Giorgio Bailo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1313201",
+    "name": "Niccolò Conti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1595630",
+    "name": "Alessandro Vichi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1524079",
+    "name": "Nicolò Genovese",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1370789",
+    "name": "Edoardo Mariani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "337315",
+    "name": "Manuel Di Paola",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "898316",
+    "name": "Nicolò Berengo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "163683",
+    "name": "Manuel Pucciarelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "721288",
+    "name": "Christian Nina",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "935519",
+    "name": "Federico Tavernaro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1002758",
+    "name": "Giacomo Maucci",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1176438",
+    "name": "Simone Ascione",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "908492",
+    "name": "Amadou Konate",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1153592",
+    "name": "Giovanni Gambino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "817333",
+    "name": "Francesco Dell'Aquila",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "534055",
+    "name": "Romeo Giovannini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "130498",
+    "name": "Francesco Nicastro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1060107",
+    "name": "Christian Vaccaro",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "933044",
+    "name": "Nicolò Lari",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1370790",
+    "name": "Santino Roman Ruiz Tombesi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "Vis Pesaro 1898",
+    "tmPlayerId": "1193942",
+    "name": "Francesco Sculli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1124103",
+    "name": "Alessio Marcu",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1036533",
+    "name": "Matteo Cabella",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "956555",
+    "name": "Giovanni Leoni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1433606",
+    "name": "Daniele Menicucci",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1486259",
+    "name": "Umberto Grandinetti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "935810",
+    "name": "Matteo Mannelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "618155",
+    "name": "Federico Ampollini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "452548",
+    "name": "Duccio Brenna",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1170742",
+    "name": "Lorenzo Alfani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "163072",
+    "name": "Lorenzo Gonnelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "620481",
+    "name": "Alberto Montini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "932737",
+    "name": "Enea Pitti",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1186079",
+    "name": "Samuel Postorino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "943106",
+    "name": "Tommaso Della Mora",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1057836",
+    "name": "Alessio Ciraudo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "704709",
+    "name": "Mattia Damiani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1089767",
+    "name": "Emmanuele Lorenzelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "459231",
+    "name": "Francesco Cerretelli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1054287",
+    "name": "Lorenzo Andreoli",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1527623",
+    "name": "Raffaele Gallucci",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1568032",
+    "name": "Daniele Amedeo",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "678208",
+    "name": "Francesco Fabri",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "995070",
+    "name": "Pietro Fiorini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "577593",
+    "name": "Marco Fiorani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "557556",
+    "name": "Lorenzo Sabattini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "390116",
+    "name": "Filippo Bellini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1057838",
+    "name": "Edoardo Vascotto",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1578696",
+    "name": "Kauan Savini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "291522",
+    "name": "Tommaso Fantacci",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "696619",
+    "name": "Mattia Gaddini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "525023",
+    "name": "Filippo Gerardini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1246891",
+    "name": "Adam Hasani",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1191079",
+    "name": "Lorenzo Tosi",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "820636",
+    "name": "Lorenzo Gori",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "146642",
+    "name": "Ferdinando Mastroianni",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "AGENCY",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1078787",
+    "name": "Sergio Cosentino",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1181775",
+    "name": "Alessandro Brancato",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  },
+  {
+    "club": "US Grosseto 1912",
+    "tmPlayerId": "1469887",
+    "name": "Jacopo Lorenzini",
+    "profileStatus": "SUCCESS",
+    "performanceStatus": "SUCCESS",
+    "representationStatus": "NOT_LISTED",
+    "hasCurrentCompetition": false
+  }
+]

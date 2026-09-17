@@ -24,6 +24,7 @@ const clubCompetitions = [
   ["Serie A", "IT1"],
   ["Serie B", "IT2"],
   ["Serie C - Girone A", "IT3A"],
+  ["Serie C - Girone B", "IT3B"],
 ] as const;
 
 const playerScopes = [
@@ -32,7 +33,8 @@ const playerScopes = [
   ["France", "fra"],
   ["Serie A", "it1"],
   ["Serie B", "it2"],
-  ["Serie C", "it3a"],
+  ["Serie C - Girone A", "it3a"],
+  ["Serie C - Girone B", "it3b"],
   ["Altro", "other"],
 ] as const;
 

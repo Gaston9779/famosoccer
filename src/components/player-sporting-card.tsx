@@ -34,18 +34,21 @@ function displayMinutes(value: number | null | undefined) {
 
 export function PlayerSportingCard({
   performance,
+  seasonTotal,
   scope = "UZ1",
 }: {
   performance: SportingPerformance | null;
+  seasonTotal?: SportingPerformance | null;
   scope?: CurrentPerformanceScope;
 }) {
+  const displayed = seasonTotal ?? performance;
   const involvement = playingTimePercent(performance);
   const involvementWidth = involvement == null || !Number.isFinite(involvement) ? 0 : Math.min(100, Math.max(0, involvement));
-  const primary = performance ? [
-    ["Appearances", displayStat(performance.gamesPlayed)],
-    ["Minutes", displayMinutes(performance.minutesPlayed)],
-    ["Goals", displayStat(performance.goals)],
-    ["Assists", displayStat(performance.assists)],
+  const primary = displayed ? [
+    ["Appearances", displayStat(displayed.gamesPlayed)],
+    ["Minutes", displayMinutes(displayed.minutesPlayed)],
+    ["Goals", displayStat(displayed.goals)],
+    ["Assists", displayStat(displayed.assists)],
   ] : [["Appearances", "–"], ["Minutes", "–"], ["Goals", "–"], ["Assists", "–"]];
   const secondary = performance ? [
     ["Start XI", displayPercent(performance.startElevenPercent)],
@@ -56,8 +59,8 @@ export function PlayerSportingCard({
 
   return <section className="player-sporting-card" aria-labelledby="sporting-title">
     <header className="player-sporting-header">
-      <div><h2 id="sporting-title">Sporting</h2><p>{performance ? (scope === "UZ1" ? "2026 · Uzbekistan Super League" : `${performance.season} · ${performance.competitionName ?? performance.competitionKey}`) : null}</p></div>
-      <span className="player-sporting-current">Current season</span>
+      <div><h2 id="sporting-title">Sporting</h2><p>{displayed ? (seasonTotal ? "2026/27 · All competitions" : scope === "UZ1" ? "2026 · Uzbekistan Super League" : `${displayed.season} · ${displayed.competitionName ?? displayed.competitionKey}`) : null}</p></div>
+      <span className="player-sporting-current">{seasonTotal ? "Season total" : "Current season"}</span>
     </header>
     <div className="player-sporting-primary">
       {primary.map(([label, value]) => <div key={label}><b>{value}</b><span>{label}</span></div>)}

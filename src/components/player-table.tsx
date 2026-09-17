@@ -26,6 +26,7 @@ type PlayerRow = {
   playingTime: number | null;
   opportunity: number | null;
   confidence: number | null;
+  note?: string | null;
 };
 
 type SortKey = "opportunity" | "marketValue" | "age" | "contract" | "name";
@@ -103,6 +104,7 @@ function PlayerCard({ row }: { row: PlayerRow }) {
         <PlayerAvatar name={row.name} portraitUrl={row.portraitUrl} />
         <span className={`player-card-score player-card-score-${scoreTone(row.opportunity)}`}>{row.opportunity == null ? "—" : row.opportunity.toFixed(1)}</span>
       </div>
+      {row.note && <span className="player-card-note" tabIndex={0} aria-label="Scouting note available">✎<span className="player-card-note-tooltip" role="tooltip">{row.note}</span></span>}
       <div className="player-card-identity">
         <strong title={row.name}>{row.name}</strong>
         <span>{row.age == null ? "Age —" : `${row.age} yrs`}{row.nationality && ` · ${nationalityDisplay(row.nationality).flag} ${nationalityDisplay(row.nationality).code}`}</span>

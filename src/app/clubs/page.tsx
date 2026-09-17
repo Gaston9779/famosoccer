@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { existsSync, readFileSync } from "node:fs";
 import { db } from "@/lib/db";
 import { money, PageHeader, Badge } from "@/components/scouting-ui";
 import { ClubLogo } from "@/components/media";
@@ -37,9 +38,27 @@ export default async function Clubs({
     },
     orderBy: { name: "asc" },
   });
+  const syncedPlayers = clubs.reduce((total, club) => total + club.players.length, 0);
+  let enrichmentProgress: { profiles: number; performances: number; total: number; updatedAt: string | null } | null = null;
+  if (competitionId === "IT3B") {
+    const checkpoint = "src/data/import/italy-clubs/checkpoints/it3b_2026_27_enrichment_checkpoint.json";
+    if (existsSync(checkpoint)) {
+      const data = JSON.parse(readFileSync(checkpoint, "utf8"));
+      const states = Object.values(data.players ?? {}) as Array<{ profileStatus: string; performanceStatus: string }>;
+      enrichmentProgress = {
+        profiles: states.filter((state) => state.profileStatus === "SUCCESS").length,
+        performances: states.filter((state) => state.performanceStatus === "SUCCESS").length,
+        total: 583,
+        updatedAt: data.updatedAt ?? null,
+      };
+    }
+  }
 
   return <>
     <PageHeader title="Clubs" eyebrow={`${competition.displayName} squad intelligence`} />
+    {enrichmentProgress && <p className="muted" style={{ marginBottom: 16 }}>
+      Live enrichment progress: {enrichmentProgress.profiles}/{enrichmentProgress.total} profiles · {enrichmentProgress.performances}/{enrichmentProgress.total} performance payloads · {syncedPlayers}/{enrichmentProgress.total} players visible in this workspace{enrichmentProgress.updatedAt ? ` · updated ${new Date(enrichmentProgress.updatedAt).toLocaleTimeString("it-IT")}` : ""}
+    </p>}
     <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))" }}>
       {clubs.map((club) => {
         const ages = club.players.map((player) => playerAge(player, new Date())).filter((age): age is number => age != null);

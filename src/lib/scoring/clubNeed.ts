@@ -47,12 +47,7 @@ export function calculateClubNeed(
   if (ages.length < members.length) warnings.push("Some ages unavailable");
   const depthScore = available
     ? round(
-        40 *
-          clamp(
-            (idealDepth - projectedDepth12Months - unknownRoleCount) /
-              idealDepth,
-            1,
-          ),
+        40 * clamp((idealDepth - projectedDepth12Months - unknownRoleCount) / idealDepth, 1),
       )
     : 0;
   const contractRiskScore =
@@ -63,27 +58,13 @@ export function calculateClubNeed(
               (0.35 * expiring12Months) / currentDepth),
         )
       : 0;
-  // Composition-wide proportions avoid penalizing a healthy role for one older backup.
-  const ageRiskScore =
-    available && currentDepth
-      ? round(
-          20 *
-            ((0.5 * ages.filter((a) => a >= 30).length) / currentDepth +
-              (0.3 * ages.filter((a) => a >= 33).length) / currentDepth +
-              0.2 * (avgAge === null ? 0 : clamp((avgAge - 28) / 7, 1))),
-        )
-      : 0;
-  const values = members
-    .map((p) => p.marketValueEur)
-    .filter((v): v is number => v !== null && v > 0)
-    .sort((a, b) => b - a);
+  const ageRiskScore = available && currentDepth
+    ? round(20 * ((0.5 * ages.filter((a) => a >= 30).length) / currentDepth + (0.3 * ages.filter((a) => a >= 33).length) / currentDepth + 0.2 * (avgAge === null ? 0 : clamp((avgAge - 28) / 7, 1))))
+    : 0;
+  const values = members.map((p) => p.marketValueEur).filter((v): v is number => v !== null && v > 0).sort((a, b) => b - a);
   let qualityDepthScore = 0;
-  if (available && values.length >= 2 && unknownRoleCount === 0)
-    qualityDepthScore = round(
-      10 * clamp((values[0] / values.reduce((a, b) => a + b, 0) - 0.5) * 2, 1),
-    );
-  else
-    warnings.push("Insufficient value/role coverage for the value-depth proxy");
+  if (available && values.length >= 2 && unknownRoleCount === 0) qualityDepthScore = round(10 * clamp((values[0] / values.reduce((a, b) => a + b, 0) - 0.5) * 2, 1));
+  else warnings.push("Insufficient value/role coverage for the value-depth proxy");
   const reasons = [
     `Projected known depth ${projectedDepth12Months}/${idealDepth}; uncertainty-adjusted depth +${depthScore}`,
     `${expiring6Months}/${currentDepth} contracts at risk within 6 months; ${expiring12Months}/${currentDepth} within 12 months: +${contractRiskScore}`,

@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
 
 type PlayerSearchParams = { search?: string; favorites?: string; scope?: string; minScore?: string; contract?: string; representation?: string };
 
-function scopeHref(scope: "uzbekistan" | "ita" | "fra" | "it1" | "it2" | "it3a" | "other", search: string, favorites?: string) {
+function scopeHref(scope: "uzbekistan" | "ita" | "fra" | "it1" | "it2" | "it3a" | "it3b" | "other", search: string, favorites?: string) {
   const params = new URLSearchParams();
   if (scope !== "uzbekistan") params.set("scope", scope);
   if (search) params.set("search", search);
@@ -27,6 +27,7 @@ export default async function Players({ searchParams }: { searchParams: Promise<
   const isUzbekistan = scope === "UZBEKISTAN";
   const isOther = scope === "OTHER";
   const isSerieC = scope === "IT3A";
+  const isSerieCB = scope === "IT3B";
   const isIta = scope === "ITA";
   const isFra = scope === "FRA";
   const isSerieA = scope === "IT1";
@@ -39,6 +40,7 @@ export default async function Players({ searchParams }: { searchParams: Promise<
       nationalities: true, contractExpires: true, representationStatus: true, agencyName: true, marketValueEur: true,
       club: { select: { id: true, name: true, tmClubId: true, competition: { select: { tmCompetitionId: true, name: true, country: true } } } },
       performances: { select: { minutesPlayedPercent: true } },
+      notes: { orderBy: [{ createdAt: "desc" }, { id: "desc" }], take: 1, select: { content: true } },
       opportunityHistory: { where: { isCurrent: true }, take: 1, select: { total: true, confidence: true } },
     },
     orderBy: { name: "asc" },
@@ -47,8 +49,8 @@ export default async function Players({ searchParams }: { searchParams: Promise<
   return <div className="players-page">
     <header className="players-page-header">
       <p className="eyebrow">Players</p>
-      <h1>{isIta ? "Italian abroad" : isFra ? "France" : isSerieA ? "Serie A" : isSerieB ? "Serie B" : isSerieC ? "Serie C" : isOther ? "Other players" : "All players"}</h1>
-      <p>{isIta ? `Explore ${players.length} Italian players abroad` : isFra ? `Explore ${players.length} French free agents` : isSerieA ? `Explore ${players.length} players currently at a Serie A club` : isSerieB ? `Explore ${players.length} players currently at a Serie B club` : isSerieC ? `Explore ${players.length} players currently in Serie C Girone A` : isOther ? `Explore ${players.length} imported players outside dedicated competitions` : `Explore ${players.length} players from Uzbekistan Super League`}</p>
+      <h1>{isIta ? "Italian abroad" : isFra ? "France" : isSerieA ? "Serie A" : isSerieB ? "Serie B" : isSerieC ? "Serie C - Girone A" : isSerieCB ? "Serie C - Girone B" : isOther ? "Other players" : "All players"}</h1>
+      <p>{isIta ? `Explore ${players.length} Italian players abroad` : isFra ? `Explore ${players.length} French free agents` : isSerieA ? `Explore ${players.length} players currently at a Serie A club` : isSerieB ? `Explore ${players.length} players currently at a Serie B club` : isSerieC ? `Explore ${players.length} players currently in Serie C Girone A` : isSerieCB ? `Explore ${players.length} players currently in Serie C Girone B` : isOther ? `Explore ${players.length} imported players outside dedicated competitions` : `Explore ${players.length} players from Uzbekistan Super League`}</p>
     </header>
     <PlayerScopeTabs tabs={[
       { label: "Uzbekistan", href: scopeHref("uzbekistan", search, favorites), active: isUzbekistan },
@@ -57,6 +59,7 @@ export default async function Players({ searchParams }: { searchParams: Promise<
       { label: "Serie A", href: scopeHref("it1", search, favorites), active: isSerieA },
       { label: "Serie B", href: scopeHref("it2", search, favorites), active: isSerieB },
       { label: "Serie C", href: scopeHref("it3a", search, favorites), active: isSerieC },
+      { label: "Serie C - B", href: scopeHref("it3b", search, favorites), active: isSerieCB },
       { label: "Altro", href: scopeHref("other", search, favorites), active: isOther },
     ]}>
       <ImportForm />
@@ -79,6 +82,7 @@ export default async function Players({ searchParams }: { searchParams: Promise<
         playingTime: player.performances[0]?.minutesPlayedPercent ?? null,
         opportunity: player.opportunityHistory[0]?.total ?? null,
         confidence: player.opportunityHistory[0]?.confidence ?? null,
+        note: player.notes[0]?.content ?? null,
       }))} />
     </PlayerScopeTabs>
   </div>;

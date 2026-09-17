@@ -1,41 +1,22 @@
-{
-  "metadata": {
-    "season": "2026/27",
-    "scope": ["IT3A"],
-    "purpose": "FamoSoccer Club Intelligence seed",
-    "notes": ["Only public, official club contacts and staff appointments are included.", "Unverified clubs intentionally have no record rather than inferred contacts."]
-  },
-  "clubs": [
-    {
-      "tmClubId": "4095",
-      "clubName": "AC Trento",
-      "competitionKey": "IT3A",
-      "decisionMakers": [
-        { "name": "Moreno Zocchi", "role": "Sporting Director & Head of Men's Technical Area", "priority": "A", "confidence": "high", "sourceUrl": "https://www.actrento.com/organigramma-2/" },
-        { "name": "Luca Piazzi", "role": "General Director", "priority": "B", "confidence": "high", "sourceUrl": "https://www.actrento.com/organigramma-2/" },
-        { "name": "Mauro Giacca", "role": "President", "priority": "B", "confidence": "high", "sourceUrl": "https://www.actrento.com/organigramma-2/" }
-      ],
-      "officialContacts": { "city": "Trento", "address": "Via Roberto da Sanseverino, 41, 38122 Trento (TN)", "website": "https://www.actrento.com", "email": null, "phone": null, "leaguePage": null, "sourceUrls": ["https://www.actrento.com/organigramma-2/"] }
-    },
-    {
-      "tmClubId": "26789",
-      "clubName": "FC Pro Vercelli 1892",
-      "competitionKey": "IT3A",
-      "decisionMakers": [
-        { "name": "Massimo Alagona", "role": "General & Sporting Secretary", "priority": "A", "confidence": "high", "sourceUrl": "https://www.fcprovercelli.it/news/tutte-le-news/1361-definita-la-nuova-struttura-operativa-e-tecnica-per-la-stagione-2026-27" },
-        { "name": "Filomeno Rocco Fimmanò", "role": "General Manager", "priority": "B", "confidence": "high", "sourceUrl": "https://www.fcprovercelli.it/news/tutte-le-news/1361-definita-la-nuova-struttura-operativa-e-tecnica-per-la-stagione-2026-27" }
-      ],
-      "officialContacts": { "city": "Vercelli", "address": "Via Vicenza, 22, Vercelli", "website": "https://www.fcprovercelli.it", "email": "segreteria@fcprovercelli.it", "phone": "+39 351 746 6341", "leaguePage": null, "sourceUrls": ["https://www.fcprovercelli.it/contatti"] }
-    },
-    {
-      "tmClubId": "4102",
-      "clubName": "AC Carpi",
-      "competitionKey": "IT3A",
-      "decisionMakers": [
-        { "name": "Claudio Lazzaretti", "role": "President", "priority": "B", "confidence": "high", "sourceUrl": "https://www.carpicalcio.it/organigramma/" },
-        { "name": "Enrico Bonzanini", "role": "General Director", "priority": "A", "confidence": "high", "sourceUrl": "https://www.carpicalcio.it/organigramma/" }
-      ],
-      "officialContacts": { "city": "Carpi", "address": "Viale dell'Industria, 95, 41012 Carpi (MO)", "website": "https://www.carpicalcio.it", "email": "segreteria@carpicalcio.it", "phone": "+39 347 2755428", "leaguePage": null, "sourceUrls": ["https://www.carpicalcio.it/organigramma/"] }
-    }
-  ]
-}
+{"metadata":{"season":"2026/27","scope":["IT3A"],"purpose":"FamoSoccer Club Intelligence seed","notes":["Only public official club contacts and staff appointments are included.","Missing fields are intentionally null and must not be inferred."]},"clubs":[
+{"tmClubId":"41101","clubName":"Juventus Next Gen","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Torino","address":null,"website":"https://www.juventus.com","email":null,"phone":null,"leaguePage":null,"sourceUrls":["https://www.juventus.com"]}},
+{"tmClubId":"132806","clubName":"Union Brescia","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Brescia","address":"Via Giovanni Novagani 8, 25133 Brescia","website":"https://unionbrescia.com","email":"info@unionbrescia.com","phone":null,"leaguePage":null,"sourceUrls":["https://unionbrescia.com/contatti"]}},
+{"tmClubId":"91510","clubName":"Dolomiti Bellunesi","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Belluno","address":"Piazzale della Resistenza 27, 32100 Belluno","website":"https://www.dolomitibellunesicalcio.com","email":"info@dolomitibellunesicalcio.com","phone":null,"leaguePage":null,"sourceUrls":["https://www.dolomitibellunesicalcio.com/wp-content/uploads/2026/01/INFORMATIVA-TIFOSI-OSPTI.pdf"]}},
+{"tmClubId":"5514","clubName":"Calcio Lecco 1912","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Lecco","address":"Stadio Rigamonti-Ceppi, Via Don Giuseppe Pozzi 6, 23900 Lecco","website":"https://calciolecco1912.com","email":"aclecco@aclecco.it","phone":"0341 283209","leaguePage":null,"sourceUrls":["https://calciolecco1912.com/organigramma/"]}},
+{"tmClubId":"6692","clubName":"Novara FC","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Novara","address":"Viale Luciano Marmo 8, Novara","website":"https://www.novarafootballclub.it","email":"info@novarafootballclub.it","phone":null,"leaguePage":null,"sourceUrls":["https://www.novarafootballclub.it/sponsor/"]}},
+{"tmClubId":"4084","clubName":"AS Cittadella","competitionKey":"IT3A","decisionMakers":[{"name":"Andrea Depoli","role":"General Secretary","priority":"A","confidence":"high","sourceUrl":"https://www.ascittadella.it/ascittadella/contatti/"},{"name":"Stefano Zonta","role":"Sporting Secretary","priority":"A","confidence":"high","sourceUrl":"https://www.ascittadella.it/ascittadella/contatti/"}],"officialContacts":{"city":"Cittadella","address":"Via Ca’ Dai Pase 41/b, 35013 Cittadella (PD)","website":"https://www.ascittadella.it","email":"info@ascittadella.it","phone":"049 5972693","leaguePage":null,"sourceUrls":["https://www.ascittadella.it/ascittadella/contatti/"]}},
+{"tmClubId":"52687","clubName":"Alcione Milano","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Milano","address":"Via A. Olivieri 13, 20152 Milano","website":"https://www.milanorange1952.com","email":"info@alcionemilano1952.it","phone":"+39 392 6473769","leaguePage":null,"sourceUrls":["https://www.milanorange1952.com/i-nostri-partners/"]}},
+{"tmClubId":"4095","clubName":"AC Trento","competitionKey":"IT3A","decisionMakers":[{"name":"Moreno Zocchi","role":"Sporting Director & Head of Men's Technical Area","priority":"A","confidence":"high","sourceUrl":"https://www.actrento.com/organigramma-2/"},{"name":"Luca Piazzi","role":"General Director","priority":"B","confidence":"high","sourceUrl":"https://www.actrento.com/organigramma-2/"},{"name":"Mauro Giacca","role":"President","priority":"B","confidence":"high","sourceUrl":"https://www.actrento.com/organigramma-2/"}],"officialContacts":{"city":"Trento","address":"Via Roberto da Sanseverino, 41, 38122 Trento (TN)","website":"https://www.actrento.com","email":null,"phone":null,"leaguePage":null,"sourceUrls":["https://www.actrento.com/organigramma-2/"]}},
+{"tmClubId":"24898","clubName":"AC Renate","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Renate","address":null,"website":"https://www.acrenate.it","email":null,"phone":null,"leaguePage":null,"sourceUrls":["https://www.acrenate.it"]}},
+{"tmClubId":"46619","clubName":"Arzignano Valchiampo","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Arzignano","address":"Viale dello Sport 9/10, 36071 Arzignano (VI)","website":"https://www.arzignanovalchiampo.it","email":"calcioarzignano@gmail.com","phone":"+39 0444 452609","leaguePage":null,"sourceUrls":["https://www.arzignanovalchiampo.it/contatti/"]}},
+{"tmClubId":"26789","clubName":"FC Pro Vercelli 1892","competitionKey":"IT3A","decisionMakers":[{"name":"Massimo Alagona","role":"General & Sporting Secretary","priority":"A","confidence":"high","sourceUrl":"https://www.fcprovercelli.it/news/tutte-le-news/1361-definita-la-nuova-struttura-operativa-e-tecnica-per-la-stagione-2026-27"}],"officialContacts":{"city":"Vercelli","address":"Via Vicenza, 22, Vercelli","website":"https://www.fcprovercelli.it","email":"segreteria@fcprovercelli.it","phone":"+39 351 746 6341","leaguePage":null,"sourceUrls":["https://www.fcprovercelli.it/contatti"]}},
+{"tmClubId":"26251","clubName":"US Folgore Caratese","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Carate Brianza","address":"Via XXV Aprile 13, Carate Brianza","website":"https://www.folgorecaratese.it","email":"segreteria@folgorecaratese.it","phone":"0362 1730714","leaguePage":null,"sourceUrls":["https://www.comune.caratebrianza.mb.it/it/page/associazioni-del-territorio-826b146d-e482-403a-95c8-736ad192b439"]}},
+{"tmClubId":"4541","clubName":"UC AlbinoLeffe","competitionKey":"IT3A","decisionMakers":[{"name":"Simone Farina","role":"General Secretary & General Director","priority":"A","confidence":"high","sourceUrl":"https://www.albinoleffe.com/club/organigramma.html"},{"name":"Antonio Obbedio","role":"Sporting Director","priority":"A","confidence":"high","sourceUrl":"https://www.albinoleffe.com/club/organigramma.html"}],"officialContacts":{"city":"Zanica","address":"Via Comun Nuovo 26–28, 24050 Zanica (BG)","website":"https://www.albinoleffe.com","email":"info@albinoleffe.com","phone":"035.670532","leaguePage":null,"sourceUrls":["https://www.albinoleffe.com/contatti.html"]}},
+{"tmClubId":"4103","clubName":"FC Lumezzane","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Lumezzane","address":"Via Magenta 14, 25065 Lumezzane (BS)","website":"https://www.fclumezzane.it","email":"segreteria@fclumezzane.it","phone":"+39 030 8970083","leaguePage":null,"sourceUrls":["https://www.fclumezzane.it/contatti/"]}},
+{"tmClubId":"2251","clubName":"Treviso FBC 1993","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Treviso","address":"Via Ugo Foscolo 3, 31100 Treviso","website":"https://trevisocalcio.tv","email":"segreteria@trevisocalcio.tv","phone":"04221287881","leaguePage":null,"sourceUrls":["https://trevisocalcio.tv/"]}},
+{"tmClubId":"4102","clubName":"AC Carpi","competitionKey":"IT3A","decisionMakers":[{"name":"Enrico Bonzanini","role":"General Director","priority":"A","confidence":"high","sourceUrl":"https://www.carpicalcio.it/organigramma/"}],"officialContacts":{"city":"Carpi","address":"Viale dell'Industria, 95, 41012 Carpi (MO)","website":"https://www.carpicalcio.it","email":"segreteria@carpicalcio.it","phone":"+39 347 2755428","leaguePage":null,"sourceUrls":["https://www.carpicalcio.it/organigramma/"]}},
+{"tmClubId":"44223","clubName":"AS Giana Erminio","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Gorgonzola","address":"Via Milano 3, 20064 Gorgonzola (MI)","website":"https://www.asgiana.com","email":"info@asgiana.it","phone":"+39 02 95301988","leaguePage":null,"sourceUrls":["https://www.asgiana.com/"]}},
+{"tmClubId":"5542","clubName":"CPR Ospitaletto","competitionKey":"IT3A","decisionMakers":[{"name":"Giovanni Brotto","role":"Youth Sector Manager","priority":"C","confidence":"high","sourceUrl":"https://www.acospitalettofranciacorta.com/contatti"}],"officialContacts":{"city":"Ospitaletto","address":"Via Giacomo Leopardi 33, 25035 Ospitaletto (BS)","website":"https://www.acospitalettofranciacorta.com","email":"segreteria@acospitaletto.it","phone":"+39 340 7905729","leaguePage":null,"sourceUrls":["https://www.acospitalettofranciacorta.com/contatti"]}},
+{"tmClubId":"56265","clubName":"Calcio Desenzano","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Desenzano del Garda","address":"Via Durighello 48, 25015 Desenzano del Garda","website":"https://www.calciodesenzano.it","email":"segreteria@calciodesenzano.it","phone":"030 9914202","leaguePage":null,"sourceUrls":["https://www.calciodesenzano.it/page/169/"]}},
+{"tmClubId":"4553","clubName":"US Pergolettese 1932","competitionKey":"IT3A","decisionMakers":[],"officialContacts":{"city":"Crema","address":"Viale A. De Gasperi 67, 26013 Crema (CR)","website":"https://www.uspergolettese1932.it","email":null,"phone":null,"leaguePage":null,"sourceUrls":["https://www.uspergolettese1932.it/page/privacy-policy.php"]}}
+]}
