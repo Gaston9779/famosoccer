@@ -16,7 +16,9 @@ try {
     throw new Error("Competition must be UZ1, IT1, or IT2");
   const result =
     command === "players"
-      ? await recalculateAllPlayerOpportunities()
+      // This is a deterministic score rebuild. Snapshot generation is a
+      // separate concern and made a full correction run unnecessarily serial.
+      ? await recalculateAllPlayerOpportunities(new Date(), false, false, 16)
       : command === "players-current"
         ? await recalculateAllPlayerOpportunities(new Date(), true)
       : command === "clubs"

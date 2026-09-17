@@ -1,6 +1,8 @@
 import { db } from "@/lib/db";
 import { normalizeRole } from "@/lib/scoring/roles";
 import { playerAge } from "@/lib/scoring/types";
+import { calculatePlayerOpportunity, currentScoringPerformance, type OpportunitySportingScope } from "@/lib/scoring/playerOpportunity";
+import { playingTimePercent } from "@/lib/current-performance";
 import { playerScopeFromQuery, playerScopeWhere } from "@/lib/services/players";
 import { PlayerTable } from "@/components/player-table";
 import { PlayerScopeTabs } from "@/components/player-scope-tabs";
@@ -35,16 +37,19 @@ export default async function Players({ searchParams }: { searchParams: Promise<
   const players = await db.player.findMany({
     where: { ...playerScopeWhere(scope), ...(favorites === "1" ? { isFavorite: true } : {}) },
     select: {
-      id: true, isFavorite: true, name: true, portraitUrl: true, mainPosition: true, birthDate: true, age: true,
+      id: true, tmPlayerId: true, clubId: true, isFavorite: true, name: true, portraitUrl: true, mainPosition: true, secondaryPositions: true, birthDate: true, age: true,
       heightCm: true, preferredFoot: true,
-      nationalities: true, contractExpires: true, representationStatus: true, agencyName: true, marketValueEur: true,
+      nationalities: true, contractExpires: true, representationStatus: true, agencyName: true, marketValueEur: true, profileLastSyncedAt: true, performanceLastSyncedAt: true, confirmedFreeAgent: true, careerStatus: true,
       club: { select: { id: true, name: true, tmClubId: true, competition: { select: { tmCompetitionId: true, name: true, country: true } } } },
-      performances: { select: { minutesPlayedPercent: true } },
+      performances: true,
+      pools: { select: { poolKey: true } },
       notes: { orderBy: [{ createdAt: "desc" }, { id: "desc" }], take: 1, select: { content: true } },
       opportunityHistory: { where: { isCurrent: true }, take: 1, select: { total: true, confidence: true } },
     },
     orderBy: { name: "asc" },
   });
+  const now = new Date();
+  const opportunityScope: OpportunitySportingScope = isIta ? "ITA" : isFra ? "FRA" : isSerieA ? "IT1" : isSerieB ? "IT2" : isSerieC ? "IT3A" : isSerieCB ? "IT3B" : "UZ1";
 
   return <div className="players-page">
     <header className="players-page-header">
@@ -63,7 +68,10 @@ export default async function Players({ searchParams }: { searchParams: Promise<
       { label: "Altro", href: scopeHref("other", search, favorites), active: isOther },
     ]}>
       <ImportForm />
-      <PlayerTable key={`${search}-${favorites}-${scope}`} initialSearch={search} initialFavorites={favorites === "1"} initialMinScore={minScore} initialContract={contract} initialRepresentation={representation} rows={players.map((player) => ({
+      <PlayerTable key={`${search}-${favorites}-${scope}`} initialSearch={search} initialFavorites={favorites === "1"} initialMinScore={minScore} initialContract={contract} initialRepresentation={representation} rows={players.map((player) => {
+        const liveScore = calculatePlayerOpportunity(player, player.club?.competition ? (opportunityScope === "IT3A" || opportunityScope === "IT3B" ? "2026" : player.club.competition.name) : null, now, opportunityScope);
+        const performance = currentScoringPerformance(player, null, now, opportunityScope);
+        return ({
         id: player.id,
         isFavorite: player.isFavorite,
         name: player.name,
@@ -71,7 +79,7 @@ export default async function Players({ searchParams }: { searchParams: Promise<
         club: player.club ? { id: player.club.id, name: player.club.name, tmClubId: player.club.tmClubId, competitionCode: formatCompetitionShortCode(player.club.competition) } : null,
         clubCountry: player.club?.competition?.country ?? null,
         role: normalizeRole(player.mainPosition),
-        age: playerAge(player, new Date()),
+        age: playerAge(player, now),
         height: player.heightCm,
         foot: player.preferredFoot,
         nationality: player.nationalities === "[]" ? null : player.nationalities.replace(/[\[\]"]/g, ""),
@@ -79,11 +87,11 @@ export default async function Players({ searchParams }: { searchParams: Promise<
         representation: player.representationStatus,
         agency: player.agencyName,
         marketValue: player.marketValueEur,
-        playingTime: player.performances[0]?.minutesPlayedPercent ?? null,
-        opportunity: player.opportunityHistory[0]?.total ?? null,
-        confidence: player.opportunityHistory[0]?.confidence ?? null,
+        playingTime: playingTimePercent(performance),
+        opportunity: liveScore.total,
+        confidence: liveScore.confidence,
         note: player.notes[0]?.content ?? null,
-      }))} />
+      });})} />
     </PlayerScopeTabs>
   </div>;
 }

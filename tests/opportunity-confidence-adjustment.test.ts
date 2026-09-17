@@ -1,18 +1,16 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { adjustOpportunity } from "../src/lib/scoring/playerOpportunity";
+import { adjustOpportunity, type Component } from "../src/lib/scoring/playerOpportunity";
 
-test("confidence-adjusted opportunity pulls raw scores toward neutral", () => {
-  const cases: Array<[string, number | null, number, number | null]> = [
-    ["full confidence", 100, 1, 100],
-    ["market value missing", 100, 0.9, 95],
-    ["playing time missing", 100, 0.85, 92.5],
-    ["contract missing", 100, 0.65, 82.5],
-    ["contract and value missing", 100, 0.55, 77.5],
-    ["only age known", 100, 0.1, 55],
-    ["low raw and low confidence", 20, 0.1, 47],
-    ["no known data", null, 0, null],
-  ];
-  for (const [label, raw, confidence, expected] of cases)
-    assert.equal(adjustOpportunity(raw, confidence), expected, label);
+const known = (score: number, maxScore: number): Component => ({ score, maxScore, status: "KNOWN", reason: "test" });
+const unknown = (maxScore: number): Component => ({ score: null, maxScore, status: "UNKNOWN", reason: "test" });
+
+test("one gap is neutral; two or more gaps receive factor-weighted neutral estimates", () => {
+  assert.equal(adjustOpportunity(100, [known(35, 35), known(30, 30), known(15, 15), known(10, 10), known(10, 10)]), 100);
+  assert.equal(adjustOpportunity(100, [known(35, 35), known(30, 30), known(15, 15), known(10, 10), unknown(10)]), 100);
+  // Unknown contract and representation cannot be represented as either a
+  // long deal/agent or as a free agent/no agent: use their conservative priors.
+  assert.equal(adjustOpportunity(100, [unknown(35), unknown(30), known(15, 15), known(10, 10), known(10, 10)]), 59);
+  assert.equal(adjustOpportunity(100, [unknown(35), unknown(30), unknown(15), known(10, 10), known(10, 10)]), 51);
+  assert.equal(adjustOpportunity(null, [unknown(35), unknown(30)]), null);
 });

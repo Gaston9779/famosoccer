@@ -4,6 +4,8 @@ import { db } from "@/lib/db";
 import { loadIntelligenceView, topMatches } from "@/lib/intelligence/queries";
 import { normalizeRole } from "@/lib/scoring/roles";
 import { playerAge } from "@/lib/scoring/types";
+import { calculatePlayerOpportunity, currentScoringPerformance } from "@/lib/scoring/playerOpportunity";
+import { playingTimePercent } from "@/lib/current-performance";
 import { IntelligenceTable, type TableColumn, type TableRow } from "@/components/intelligence-table";
 import { PlayerTable } from "@/components/player-table";
 import { MatchesBrowser, type MatchRow } from "@/components/matches-browser";
@@ -32,7 +34,9 @@ export default async function Opportunities({ searchParams }: { searchParams: Pr
     }),
   ]);
   if (tab === "matches") console.log(JSON.stringify({ event: "MATCHES_DB_COMPLETE", durationMs: Date.now() - dbStart, players: view.players.length, clubs: view.clubs.length, opportunities: view.opportunities.length, needs: view.needs.length }));
-  const scored = players.flatMap((player) => player.opportunityHistory[0]?.total == null ? [] : [player.opportunityHistory[0].total]);
+  const now = new Date();
+  const playerScore = (player: typeof players[number]) => calculatePlayerOpportunity(player, "2026", now, "UZ1");
+  const scored = players.flatMap((player) => playerScore(player).total == null ? [] : [playerScore(player).total!]);
   const averageOpportunity = scored.length ? scored.reduce((total, score) => total + score, 0) / scored.length : null;
   const highOpportunityCount = scored.filter((score) => score >= 70).length;
   const contractsExpiring12Months = players.filter((player) => {
@@ -89,6 +93,6 @@ export default async function Opportunities({ searchParams }: { searchParams: Pr
       ].map(([icon, tone, value, label, detail]) => <article className="opportunities-kpi" key={String(label)}><div><MetricIcon icon={String(icon)} tone={String(tone)} /><strong>{value}</strong></div><h2>{label}</h2><p>{detail}</p></article>)}
     </section>
     <nav aria-label="Opportunity views" className="opportunities-tabs">{[["players", "Player opportunities"], ["needs", "Club needs"], ["matches", "Player ↔ Club matches"]].map(([key, label]) => <Link key={key} href={`/opportunities?tab=${key}`} aria-current={tab === key ? "page" : undefined} className={tab === key ? "active" : ""}>{label}</Link>)}</nav>
-    {tab === "players" ? <PlayerTable rows={players.map((player) => ({ id: player.id, isFavorite: player.isFavorite, name: player.name, portraitUrl: player.portraitUrl, club: player.club ? { id: player.club.id, name: player.club.name, tmClubId: player.club.tmClubId } : null, clubCountry: null, role: normalizeRole(player.mainPosition), age: playerAge(player, new Date()), height: player.heightCm, foot: player.preferredFoot, nationality: player.nationalities === "[]" ? null : player.nationalities.replace(/[\[\]"]/g, ""), contract: player.contractExpires?.toISOString().slice(0, 10) ?? null, representation: player.representationStatus, agency: player.agencyName, marketValue: player.marketValueEur, playingTime: player.performances[0]?.minutesPlayedPercent ?? null, opportunity: player.opportunityHistory[0]?.total ?? null, confidence: player.opportunityHistory[0]?.confidence ?? null, note: player.notes[0]?.content ?? null }))} /> : <section className="opportunities-table-panel"><IntelligenceTable key={tab} label={tab === "needs" ? "Club needs" : "Player club matches"} columns={table!.columns} rows={table!.rows} /></section>}
+    {tab === "players" ? <PlayerTable rows={players.map((player) => { const liveScore = playerScore(player); return ({ id: player.id, isFavorite: player.isFavorite, name: player.name, portraitUrl: player.portraitUrl, club: player.club ? { id: player.club.id, name: player.club.name, tmClubId: player.club.tmClubId } : null, clubCountry: null, role: normalizeRole(player.mainPosition), age: playerAge(player, now), height: player.heightCm, foot: player.preferredFoot, nationality: player.nationalities === "[]" ? null : player.nationalities.replace(/[\[\]"]/g, ""), contract: player.contractExpires?.toISOString().slice(0, 10) ?? null, representation: player.representationStatus, agency: player.agencyName, marketValue: player.marketValueEur, playingTime: playingTimePercent(currentScoringPerformance(player, "2026", now, "UZ1")), opportunity: liveScore.total, confidence: liveScore.confidence, note: player.notes[0]?.content ?? null }); })} /> : <section className="opportunities-table-panel"><IntelligenceTable key={tab} label={tab === "needs" ? "Club needs" : "Player club matches"} columns={table!.columns} rows={table!.rows} /></section>}
   </div>;
 }

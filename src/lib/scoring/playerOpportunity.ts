@@ -124,9 +124,27 @@ export function calculateConfidence(components: Component[] | IntelligencePlayer
     reasons: values.map((c) => `${c.maxScore}-point ${c.reason}: ${c.status}`),
   };
 }
-export function adjustOpportunity(rawOpportunity: number | null, confidence: number): number | null {
+export function adjustOpportunity(
+  rawOpportunity: number | null,
+  components: readonly Component[],
+): number | null {
   if (rawOpportunity === null) return null;
-  return round(50 + (rawOpportunity - 50) * confidence);
+  const unknown = components.filter((component) => component.status === "UNKNOWN");
+  // One absent source is normal in a scouting feed: do not price it as a
+  // negative signal. With two or more gaps, impute a conservative neutral
+  // score for each missing factor. This respects the importance of the
+  // factor: an unknown contract or agent is more consequential than an
+  // unknown market value or minutes figure.
+  if (unknown.length <= 1) return rawOpportunity;
+  const neutralByMaxScore: Record<number, number> = { 35: 12, 30: 12, 15: 7, 10: 5 };
+  const observed = components.reduce(
+    (sum, component) => sum + (component.status === "KNOWN" ? component.score ?? 0 : 0),
+    0,
+  );
+  return round(observed + unknown.reduce(
+    (sum, component) => sum + (neutralByMaxScore[component.maxScore] ?? component.maxScore / 2),
+    0,
+  ));
 }
 export function calculatePlayerOpportunity(
   player: IntelligencePlayer,
@@ -153,7 +171,7 @@ export function calculatePlayerOpportunity(
   const rawOpportunity = coverage.knownMaxScoreSum
     ? round(knownScoreSum / coverage.knownMaxScoreSum * 100)
     : null;
-  const adjustedOpportunity = adjustOpportunity(rawOpportunity, coverage.confidence);
+  const adjustedOpportunity = adjustOpportunity(rawOpportunity, components);
   const warnings = components.flatMap((c) => (c.warning ? [c.warning] : []));
   if (!player.profileLastSyncedAt)
     warnings.push("Profile not imported; score is provisional");
@@ -166,7 +184,8 @@ export function calculatePlayerOpportunity(
   if (normalizeRole(player.mainPosition) === "UNKNOWN")
     warnings.push("Main role unavailable");
   return {
-    // `total` is the product score: confidence-adjusted, not raw known-data score.
+    // One missing input is neutral; multiple gaps receive factor-weighted,
+    // conservative neutral estimates rather than an artificial zero or 100.
     total: adjustedOpportunity,
     rawOpportunity,
     adjustedOpportunity,

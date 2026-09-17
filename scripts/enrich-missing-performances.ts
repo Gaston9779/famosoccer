@@ -13,9 +13,11 @@ const args = process.argv.slice(2);
 const dryRun = args.includes("--dry-run");
 const missing = args.includes("--missing");
 const limitArg = args.find((arg) => arg.startsWith("--limit="));
+const tmPlayerIdArg = args.find((arg) => arg.startsWith("--tm-player-id="));
 const limit = limitArg ? Number(limitArg.slice(8)) : undefined;
-if (!missing || (limit !== undefined && (!Number.isInteger(limit) || limit < 1)))
-  throw new Error("Use --missing [--dry-run] [--limit=N]");
+const targetTmPlayerId = tmPlayerIdArg?.slice("--tm-player-id=".length);
+if (!missing || (limit !== undefined && (!Number.isInteger(limit) || limit < 1)) || (targetTmPlayerId !== undefined && !/^\d+$/.test(targetTmPlayerId)))
+  throw new Error("Use --missing [--dry-run] [--limit=N] [--tm-player-id=ID]");
 
 const validTmPlayerId = (id: string) => /^\d+$/.test(id);
 const needsPerformance = {
@@ -28,7 +30,7 @@ const needsPerformance = {
 async function main() {
   const [totalPlayers, missingPlayers, alreadyPopulated, invalidIdentity] = await Promise.all([
     db.player.count(),
-    db.player.findMany({ where: needsPerformance, orderBy: { id: "asc" } }),
+    db.player.findMany({ where: targetTmPlayerId ? { tmPlayerId: targetTmPlayerId } : needsPerformance, orderBy: { id: "asc" } }),
     db.player.count({ where: { NOT: needsPerformance } }),
     db.player.findMany({ where: needsPerformance, select: { tmPlayerId: true } }),
   ]);

@@ -13,7 +13,7 @@ import { Spinner } from "@/components/spinner";
 import { formatCompetitionShortCode } from "@/lib/competition-code";
 import { FavoriteToggle } from "@/components/favorite-toggle";
 import { playerAge } from "@/lib/scoring/types";
-import { currentScoringPerformance, scoreAgeOpportunity, scoreContractOpportunity, scoreMarketAccessibility, scorePlayingTime, scoreRepresentationOpportunity, type OpportunitySportingScope } from "@/lib/scoring/playerOpportunity";
+import { calculatePlayerOpportunity, currentScoringPerformance, scoreAgeOpportunity, scoreContractOpportunity, scoreMarketAccessibility, scorePlayingTime, scoreRepresentationOpportunity, type OpportunitySportingScope } from "@/lib/scoring/playerOpportunity";
 import { playingTimePercent, selectCurrentPerformance } from "@/lib/current-performance";
 import { formatPercentage, formatRepresentation } from "@/lib/presentation";
 import { PlayerSportingCard } from "@/components/player-sporting-card";
@@ -78,8 +78,16 @@ export default async function PlayerDetail({ params }: { params: Promise<{ id: s
     : isClubCompetitionId(clubCompetitionId ?? "")
       ? clubCompetitionId as ClubCompetitionId
       : "UZ1";
-  const displayScore = score?.total ?? null;
-  const confidencePercent = score ? Math.round((score.confidence <= 1 ? score.confidence : score.confidence / 100) * 100) : null;
+  // The detail must reflect the current scoring policy immediately.  Stored
+  // history still powers ordering elsewhere and is rebuilt separately.
+  const liveScore = calculatePlayerOpportunity(
+    p,
+    currentClub?.competition?.season ?? null,
+    now,
+    performanceScope,
+  );
+  const displayScore = liveScore.total;
+  const confidencePercent = Math.round(liveScore.confidence * 100);
   const contractComponent = scoreContractOpportunity(p.contractExpires, now, p.confirmedFreeAgent, p.clubId, p.careerStatus);
   const isConfirmedFreeAgent = p.careerStatus === "FREE_AGENT" || p.confirmedFreeAgent;
   const contractMeta = isConfirmedFreeAgent ? "Availability" : "Contract expiry";
@@ -149,7 +157,7 @@ export default async function PlayerDetail({ params }: { params: Promise<{ id: s
         ["Market value", money(p.marketValueEur)],
         ["Contract", p.careerStatus === "FREE_AGENT" ? "Free agent" : p.careerStatus === "RETIRED" ? "Retired" : p.careerStatus === "UNKNOWN" ? "Club unavailable" : day(p.contractExpires)],
         ["Representation", formatRepresentation(p.representationStatus, p.agencyName)],
-        ["Opportunity", score?.total ?? "—"],
+        ["Opportunity", displayScore ?? "—"],
         ["Confidence", confidencePercent === null ? "—" : `${confidencePercent}%`],
       ].map(([label, value]) => (
         <div className="card kpi" key={label as string}><span>{label}</span><b style={{ fontSize: 16 }}>{value}</b></div>

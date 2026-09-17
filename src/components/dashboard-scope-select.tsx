@@ -9,12 +9,16 @@ const OPTIONS = [
   { value: "uzbekistan", label: "Uzbekistan" },
   { value: "ita", label: "Italian abroad" },
   { value: "fra", label: "France" },
+  { value: "it1", label: "Serie A" },
+  { value: "it2", label: "Serie B" },
+  { value: "it3a", label: "Serie C - Girone A" },
+  { value: "it3b", label: "Serie C - Girone B" },
   { value: "other", label: "Altro" },
 ] as const;
 
 /**
  * Drives the dashboard's scope filter via a native select instead of tabs (the
- * dashboard has 5 scopes to the players page's 4, and reads as a single
+ * dashboard has several scopes and reads as a single
  * "viewing as" setting rather than a set of sibling sections). Same
  * pending/dimming treatment as the players scope tabs, since this triggers the
  * same kind of full-page server re-fetch.
