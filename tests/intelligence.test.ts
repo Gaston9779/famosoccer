@@ -201,7 +201,7 @@ test("percentage display rounds to one decimal without floating-point noise", ()
 });
 test("age score boundaries and minors", () => {
   for (const [age, score] of [
-    [17, 0],
+    [17, 10],
     [18, 10],
     [21, 10],
     [22, 8],
@@ -213,7 +213,7 @@ test("age score boundaries and minors", () => {
     [31, 0],
   ])
     assert.equal(scoreAgeOpportunity(age).score, score);
-  assert.equal(scoreAgeOpportunity(17).warning, "Minor player");
+  assert.equal(scoreAgeOpportunity(17).warning, "Minor player: verify safeguarding and representation requirements");
   assert.equal(
     playerAge({ birthDate: new Date("2000-09-07"), age: 99 }, now),
     25,

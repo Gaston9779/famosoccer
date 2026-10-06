@@ -58,6 +58,8 @@ async function persistPlayer(
           ? "IT3A"
           : player.club?.competition?.tmCompetitionId === "IT3B"
             ? "IT3B"
+            : player.club?.competition?.tmCompetitionId === "IT3C"
+              ? "IT3C"
         : "UZ1";
   const score = calculatePlayerOpportunity(player, season, now, scope);
   return db.$transaction(async (tx) => {

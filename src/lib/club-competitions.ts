@@ -28,6 +28,7 @@ export const CLUB_COMPETITIONS = {
     currentSeason: "2026/27",
   },
   IT3B: { tmCompetitionId: "IT3B", displayName: "Serie C - Girone B", country: "Italy", currentSeason: "2026/27" },
+  IT3C: { tmCompetitionId: "IT3C", displayName: "Serie C - Girone C", country: "Italy", currentSeason: "2026/27" },
 } as const;
 
 export type ClubCompetitionId = keyof typeof CLUB_COMPETITIONS;
@@ -66,7 +67,7 @@ export function competitionSeasonMatches(
   if (value === season) return true;
   // PlayerPerformance stores the current Serie C season under the canonical
   // application year, while TMAPI returns it as a compact European season.
-  if ((competition === "IT3A" || competition === "IT3B") && value === "2026") return true;
+  if ((competition === "IT3A" || competition === "IT3B" || competition === "IT3C") && value === "2026") return true;
   // Transfermarkt uses both compact and expanded European-season formats.
   return season === "2026/27" && (value === "26/27" || value === "2026/27");
 }

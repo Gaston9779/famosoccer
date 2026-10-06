@@ -29,14 +29,14 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  return <div className="app-shell">
+  return <div className="app-shell" suppressHydrationWarning>
     <aside className="sidebar" aria-label="Primary navigation">
       <Brand />
       <WorkspaceLabel />
       <SidebarNav />
       <Footer />
     </aside>
-    <div className="content">
+    <div className="content" suppressHydrationWarning>
       <header className="topbar">
         <button className="mobile-menu" type="button" aria-label="Open navigation" aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(true)}>☰</button>
         <GlobalPlayerSearch />

@@ -42,7 +42,7 @@ type ItalyDecisionMaker = {
 type ItalyClubRecord = {
   tmClubId: string;
   clubName: string;
-  competitionKey: "IT1" | "IT2" | "IT3A" | "IT3B";
+  competitionKey: "IT1" | "IT2" | "IT3A" | "IT3B" | "IT3C";
   decisionMakers: ItalyDecisionMaker[];
   officialContacts: {
     city: string | null;
@@ -63,7 +63,7 @@ function normalizeItalyClub(record: ItalyClubRecord): ClubContactData {
     club_id: record.tmClubId,
     club_name: record.clubName,
     country: "Italy",
-    league: record.competitionKey === "IT1" ? "Serie A" : record.competitionKey === "IT2" ? "Serie B" : record.competitionKey === "IT3A" ? "Serie C - Girone A" : "Serie C - Girone B",
+    league: record.competitionKey === "IT1" ? "Serie A" : record.competitionKey === "IT2" ? "Serie B" : record.competitionKey === "IT3A" ? "Serie C - Girone A" : record.competitionKey === "IT3B" ? "Serie C - Girone B" : "Serie C - Girone C",
     city: record.officialContacts.city,
     contacts: record.decisionMakers.map((person) => ({
       name: person.name,
@@ -96,7 +96,7 @@ export type ClubIdentity = {
 export function getClubContactData(club: ClubIdentity): ClubContactData | null {
   if (club.competition === "UZ1")
     return uzbekistanClubs.find((row) => row.club_id === club.id) ?? null;
-  if (club.competition === "IT1" || club.competition === "IT2" || club.competition === "IT3A" || club.competition === "IT3B") {
+  if (club.competition === "IT1" || club.competition === "IT2" || club.competition === "IT3A" || club.competition === "IT3B" || club.competition === "IT3C") {
     const record = [...italyClubs, ...italySerieCClubs, ...italySerieCGironeBClubs].find(
       (row) => row.tmClubId === club.tmClubId && row.competitionKey === club.competition,
     );

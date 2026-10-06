@@ -4,8 +4,8 @@ import { db } from "../src/lib/db";
 import { normalizePosition } from "../src/lib/normalization";
 
 const competitionKey = (process.argv.find((v) => v.startsWith("--competition="))?.slice(14) ?? "IT3A").toUpperCase();
-if (competitionKey !== "IT3A" && competitionKey !== "IT3B") throw new Error("--competition must be IT3A or IT3B");
-const girone = competitionKey === "IT3A" ? "a" : "b";
+if (competitionKey !== "IT3A" && competitionKey !== "IT3B" && competitionKey !== "IT3C") throw new Error("--competition must be IT3A, IT3B or IT3C");
+const girone = competitionKey === "IT3A" ? "a" : competitionKey === "IT3B" ? "b" : "c";
 const input = process.argv.find((v) => v.startsWith("--input="))?.slice(8) ?? `src/data/import/italy-clubs/italy_serie_c_girone_${girone}_players_2026_27_enriched.json`;
 const apply = process.argv.includes("--apply");
 const dry = process.argv.includes("--dry-run");
@@ -25,7 +25,7 @@ async function main() {
   const report = { mode: apply ? "APPLY" : "DRY_RUN", clubs: data.clubs.length, players: rows.length, uniqueTmPlayerIds: new Set(ids).size, existingPlayers: existing.length, newPlayers: rows.length - existing.length, duplicates: ids.length - new Set(ids).size };
   console.log(JSON.stringify(report, null, 2));
   if (!apply) return;
-  const name = competitionKey === "IT3A" ? "Serie C - Girone A" : "Serie C - Girone B";
+  const name = competitionKey === "IT3A" ? "Serie C - Girone A" : competitionKey === "IT3B" ? "Serie C - Girone B" : "Serie C - Girone C";
   const competition = await db.competition.upsert({ where: { tmCompetitionId: competitionKey }, create: { tmCompetitionId: competitionKey, name, country: "Italy", season: "2026/27" }, update: { name, country: "Italy", season: "2026/27" } });
   const clubs = new Map<string, string>();
   for (const raw of data.clubs) {

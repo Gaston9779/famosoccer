@@ -15,6 +15,7 @@ const items = [
   ["Players", "/players", "♙"],
   ["Clubs", "/clubs", "▥"],
   ["Opportunities", "/opportunities", "♢"],
+  ["Contattati", "/contattati", "☏"],
   ["Matches", "/opportunities?tab=matches", "⌘"],
   ["Market Radar", "/market-radar", "◌"],
 ] as const;
@@ -25,6 +26,7 @@ const clubCompetitions = [
   ["Serie B", "IT2"],
   ["Serie C - Girone A", "IT3A"],
   ["Serie C - Girone B", "IT3B"],
+  ["Serie C - Girone C", "IT3C"],
 ] as const;
 
 const playerScopes = [
@@ -35,6 +37,7 @@ const playerScopes = [
   ["Serie B", "it2"],
   ["Serie C - Girone A", "it3a"],
   ["Serie C - Girone B", "it3b"],
+  ["Serie C - Girone C", "it3c"],
   ["Altro", "other"],
 ] as const;
 

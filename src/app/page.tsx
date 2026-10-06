@@ -19,10 +19,10 @@ type DashboardSearchParams = { scope?: string };
 // all/uzbekistan/ita/fra/other; IT1/IT2 entries below exist solely so these
 // Records stay exhaustive over the shared PlayerScope type.
 const SCOPE_QUERY_VALUE: Record<PlayerScope, string> = {
-  ALL: "all", UZBEKISTAN: "uzbekistan", ITA: "ita", FRA: "fra", IT1: "it1", IT2: "it2", IT3A: "it3a", IT3B: "it3b", OTHER: "other",
+  ALL: "all", UZBEKISTAN: "uzbekistan", ITA: "ita", FRA: "fra", IT1: "it1", IT2: "it2", IT3A: "it3a", IT3B: "it3b", IT3C: "it3c", OTHER: "other",
 };
 const SCOPE_EYEBROW: Record<PlayerScope, string> = {
-  ALL: "All pools", UZBEKISTAN: "UZ1", ITA: "ITA", FRA: "FRA", IT1: "Serie A", IT2: "Serie B", IT3A: "Serie C - Girone A", IT3B: "Serie C - Girone B", OTHER: "Other",
+  ALL: "All pools", UZBEKISTAN: "UZ1", ITA: "ITA", FRA: "FRA", IT1: "Serie A", IT2: "Serie B", IT3A: "Serie C - Girone A", IT3B: "Serie C - Girone B", IT3C: "Serie C - Girone C", OTHER: "Other",
 };
 const SCOPE_SUBTITLE: Record<PlayerScope, string> = {
   ALL: "Key market insights across every scouted player",
@@ -33,6 +33,7 @@ const SCOPE_SUBTITLE: Record<PlayerScope, string> = {
   IT2: "Key market insights for players currently at a Serie B club",
   IT3A: "Key market insights for players currently in Serie C Girone A",
   IT3B: "Key market insights for players currently in Serie C Girone B",
+  IT3C: "Key market insights for players currently in Serie C Girone C",
   OTHER: "Key market insights for other imported players",
 };
 /** A performance row counts as "current season" regardless of which pool its player belongs to. */

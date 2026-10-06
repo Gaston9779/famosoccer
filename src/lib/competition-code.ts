@@ -12,7 +12,7 @@ export function formatCompetitionShortCode(competition: Competition): string | n
   const country = countryCodes[competition.country];
   if (!country) return null;
   if (competition.tmCompetitionId === "UZ1") return "UZB1";
-  if (competition.tmCompetitionId === "IT3A" || competition.tmCompetitionId === "IT3B") return "ITA";
+  if (competition.tmCompetitionId === "IT3A" || competition.tmCompetitionId === "IT3B" || competition.tmCompetitionId === "IT3C") return "ITA";
   const text = `${competition.name} ${competition.tmCompetitionId}`.toLowerCase();
   const tier = /(?:\b(?:pro liga|second division|serie b|2\. bundesliga|regionalliga)\b|(?:^|\D)2(?:\D|$))/.test(text) ? 2
     : /(?:\b(?:fourth division|regionalliga)\b|(?:^|\D)4(?:\D|$))/.test(text) ? 4

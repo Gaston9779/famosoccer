@@ -35,6 +35,12 @@ enum PerformanceSource {
   TRANSFERMARKT
   SEED
 }
+enum ContactedPlayerStatus {
+  DA_CONTATTARE
+  CONTATTATO
+  RIFIUTATO
+  STALLO
+}
 model Competition {
   id String @id @default(cuid())
   tmCompetitionId String @unique
@@ -98,11 +104,35 @@ model Player {
   opportunityHistory PlayerOpportunityHistory[]
   events PlayerEvent[]
   notes PlayerNote[]
+  contactedEntries ContactedPlayer[]
   tags PlayerTagAssignment[]
   pools PlayerPool[]
   confirmedFreeAgent Boolean @default(false)
   careerStatus PlayerCareerStatus @default(UNKNOWN)
   isFavorite Boolean @default(false)
+}
+model ContactedPlayer {
+ id String @id @default(cuid())
+ playerId String @unique
+ player Player @relation(fields: [playerId], references: [id], onDelete: Cascade)
+ status ContactedPlayerStatus @default(DA_CONTATTARE)
+ note String?
+ addedAt DateTime @default(now())
+ firstContactedAt DateTime?
+ lastStatusAt DateTime @default(now())
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ statusEvents ContactedPlayerStatusEvent[]
+ @@index([status, lastStatusAt])
+}
+model ContactedPlayerStatusEvent {
+ id String @id @default(cuid())
+ contactedPlayerId String
+ contactedPlayer ContactedPlayer @relation(fields: [contactedPlayerId], references: [id], onDelete: Cascade)
+ status ContactedPlayerStatus
+ note String?
+ changedAt DateTime @default(now())
+ @@index([contactedPlayerId, changedAt])
 }
 model PlayerPool {
   playerId String

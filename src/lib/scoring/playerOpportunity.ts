@@ -85,7 +85,7 @@ export function scoreAgeOpportunity(age: number | null): Component {
   if (age === null || !Number.isFinite(age) || age < 0)
     return unknown(10, "Age unavailable");
   if (age < 18)
-    return known(0, 10, "Under 18: +0", "Minor player");
+    return known(10, 10, "Under 18: +10", "Minor player: verify safeguarding and representation requirements");
   const score =
     age <= 21 ? 10 : age <= 24 ? 8 : age <= 27 ? 5 : age <= 30 ? 2 : 0;
   return known(score, 10, `Age ${age}: +${score}`);

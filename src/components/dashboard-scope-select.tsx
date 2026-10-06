@@ -13,6 +13,7 @@ const OPTIONS = [
   { value: "it2", label: "Serie B" },
   { value: "it3a", label: "Serie C - Girone A" },
   { value: "it3b", label: "Serie C - Girone B" },
+  { value: "it3c", label: "Serie C - Girone C" },
   { value: "other", label: "Altro" },
 ] as const;
 

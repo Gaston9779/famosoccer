@@ -51,7 +51,7 @@ test("player IDs across country domains; rejects lookalikes and unrelated paths"
     assert.throws(() => playerUrl(url));
 });
 test("club competition contexts and team endpoints are explicit", () => {
-  assert.deepEqual(Object.keys(CLUB_COMPETITIONS), ["UZ1", "IT1", "IT2"]);
+  assert.deepEqual(Object.keys(CLUB_COMPETITIONS), ["UZ1", "IT1", "IT2", "IT3A", "IT3B", "IT3C"]);
   assert.equal(endpoints.teams("UZ1"), "/quickselect/teams/UZ1");
   assert.equal(endpoints.teams("IT1"), "/quickselect/teams/IT1");
   assert.equal(endpoints.teams("IT2"), "/quickselect/teams/IT2");

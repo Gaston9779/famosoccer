@@ -17,7 +17,7 @@ async function main() {
   const forceAll = process.argv.includes("--all");
   const competition = process.argv[2];
   if (!competition || !isClubCompetitionId(competition))
-    throw new Error("Usage: recalculate-missing-opportunities.ts <UZ1|IT1|IT2>");
+    throw new Error("Usage: recalculate-missing-opportunities.ts <UZ1|IT1|IT2|IT3A|IT3B|IT3C>");
   const comp = competition as ClubCompetitionId;
 
   const candidates = await db.player.findMany({

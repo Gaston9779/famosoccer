@@ -7,8 +7,8 @@ import { TransfermarktProvider } from "../src/lib/transfermarkt/provider";
 
 const dir = "src/data/import/italy-clubs";
 const competition = (process.argv.find((arg) => arg.startsWith("--competition="))?.split("=")[1] ?? "IT3A").toUpperCase();
-if (competition !== "IT3A" && competition !== "IT3B") throw new Error("--competition must be IT3A or IT3B");
-const girone = competition === "IT3A" ? "a" : "b";
+if (competition !== "IT3A" && competition !== "IT3B" && competition !== "IT3C") throw new Error("--competition must be IT3A, IT3B or IT3C");
+const girone = competition === "IT3A" ? "a" : competition === "IT3B" ? "b" : "c";
 const input = `${dir}/italy_serie_c_girone_${girone}_squads_2026_27_raw.json`;
 const output = `${dir}/italy_serie_c_girone_${girone}_players_2026_27_enriched.json`;
 const checkpointPath = `${dir}/checkpoints/${competition.toLowerCase()}_2026_27_enrichment_checkpoint.json`;
